@@ -20,6 +20,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import f1_score
 from sklearn.datasets import dump_svmlight_file, load_svmlight_file
 
+
 '''
 This function loads the privacy links lexicon
 '''
@@ -82,7 +83,7 @@ def save_results(dataset, features, cost_factor, ts, accuracies, f1_l, f1_rel_l,
 '''
 This function evaluates the obtained predictions and returns the number of true positives, true negatives, false positives and false negatives
 '''
-def evaluate(predictions):
+def evaluate(val, predictions):
         tp, tn, fp, fn = 0, 0, 0, 0
         for a, b in zip(val,predictions):
                 if np.sign(a) == np.sign(b): # true
@@ -387,7 +388,7 @@ def data_sondhi():
         os.chdir(root)
         return np.array(X), np.array(Y)
 
-def start(dataset="Sondhi", features="allKeep", dump="yes", standard=True):
+def start(dataset="Sondhi", features="link", dump="yes", standard=True):
 
         if dataset == "Sondhi":
                 X, Y = data_sondhi()
@@ -485,7 +486,7 @@ def start(dataset="Sondhi", features="allKeep", dump="yes", standard=True):
                         predictions = svmlight.classify(model, test)
                         print("Predicting it=", it, "cost-factor=", cost_factor+1)
 
-                        tp, tn, fp, fn = evaluate(predictions)
+                        tp, tn, fp, fn = evaluate(val, predictions)
                         accuracies.append(weighted_accuracy(cost_factor+1,tn,tp,fn,fp)*100)
                         predictions = np.array(predictions)
                         predictions[predictions<0] = -1
