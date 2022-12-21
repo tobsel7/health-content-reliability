@@ -1,0 +1,506 @@
+
+
+
+
+
+
+
+
+<script language="JavaScript">
+// Disable edit cell tab.
+   parent.editCell.className    = "tab-button-dis";
+
+function saveForm() {
+    location.replace("/admin/displayeditcell.do?action=save");
+}
+
+   function editCell(ruleID, itemID, slotID, itemType) {
+        parent.editDisplay.className     = "tab-button";
+        if(typeof(parent.displayRules)!="undefined") {
+            parent.displayRules.className = "tab-button";
+        }
+        parent.editCell.className    = "tab-button-on";
+
+        location.replace("/admin/displayeditcell.do?action=init&itemID=" + itemID + "&ruleID=" + ruleID + "&slotID="+ slotID + "&itemType=" + itemType );
+//        parent.parent.frames('toolbarbottom').altButtons.style.display= "inline";
+    }
+      function clickIt()
+      {
+          if(window.event.srcElement.id != "good") {
+              window.event.returnValue = false;
+           }
+      }
+</script>
+<!-- <link rel="stylesheet" href="/admin/include/styles/adminbrowser.css" type="text/css"> -->
+
+ 
+    <!-- Place marker for administrative stylesheet. You are browsing--> 
+ 
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+    
+<!-- Mirrored from www.beachbody.com/product/fitness_programs/p90x.do?code=YAHOO_SEM_P90X by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:28:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+        
+
+
+
+
+<script src="http://www.beachbody.com/includes/mbox.js"></script>
+
+
+
+    <title>
+      
+        P90X&#174; - Fitness, Nutrition, Diet, Weight Loss Official Web site
+        
+      
+     
+    </title>
+  
+
+
+
+    <meta name="description" content="P90X - Tony Horton - 12 extreme workouts using the science of Muscle Confusion to get you absolutely ripped in 90 days. Plus get Tony&#039;s Ab Ripper X and 3-Phase Nutrition Plan as FREE gifts to keep!" />
+  
+
+
+
+    <meta name="keywords" content="P90X, Tony Horton, muscle confusion, extreme, workout, work, out, muscle, confusion, ripped, 90, days, 12, revolutionary, tranform, body, nutrition, plan, fitness, guide, calendar, progress, trainer, personal, lean, bulk, motivated, chest, back, plyometrics, gym, weights, lower cholesterol, shoulders, arms, yoga, x, legs, kenpo, cardiovascular, punching, stretch, core, synergistics, triceps, biceps, ripper, risk, free, guarantee, home, system, beachbody, p90x.com, PX90, px90.com, how to get fit," />
+  
+
+
+
+
+
+
+
+
+	<meta name="robots" content="index, follow" /> 
+	<meta name="revisit-after" content="5 days" /> 
+
+ 
+<meta name="google-site-verification" content="au8wX-fJSpxqFxwIdk1PfpMYyT0aWIJmId8To9h48JQ" />
+<meta name="google-site-verification" content="hslriHpocB5NgLjgE3tU0Q5yzSj-pMY2A_9BOIl2TSo" />
+
+<!-- FACEBOOK META TAGS --> 
+<meta property="og:site_name" content="Beachbody"/> 
+<meta property="og:description" content="Beachbody, creator of the nation's most popular in-home fitness and weight loss solutions, was founded in 1998 by Product Partners, LLC."/>
+<meta property="fb:app_id" content="128354667197786"/>
+        <LINK REL="stylesheet" TYPE="text/css" HREF="http://www.beachbody.com/text/css/stylesheet.css" TITLE="style">
+        <script src="http://www.beachbody.com/includes/common.js"></script>
+        <script src="http://www.beachbody.com/includes/flyopen.js"></script>
+        <script src="http://www.beachbody.com/includes/rollover.js"></script>
+        <script src="http://www.beachbody.com/includes/cleartext.js"></script>
+        
+		<LINK REL="stylesheet" TYPE="text/css" HREF="http://www.beachbody.com/text/css/bbv6_stylesheet.css" TITLE="style">
+		<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="/text/css/bbv6_ie.css" title="style" />
+		<![endif]-->
+		<script type="text/javascript" src="http://www.beachbody.com/text/js/jquery.js"></script>
+	<script language="javascript">
+	function BBPopupUnload()
+	{
+		if (window.event && (window.event.clientX < 0)  ||(window.event.clientY < 0)&& false) //X button is clicked
+		{
+			return flyopen(480,200,'','Infomercial','blur');
+		}
+	}
+	</script>
+
+		
+			
+			
+			
+			
+	
+	</head>
+<body onUnload="BBPopupUnload();">
+<div class="mboxDefault"></div>
+<script type="text/javascript">
+mboxCreate('product_redirect_template','orderId='+mboxFactoryDefault.getSessionId().getId(),'productPurchasedId='+mboxFactoryDefault.getPCId().getId(),'orderTotal=0.0');
+</script>
+
+<!-- FACEBOOK JAVASCRIP SDK CODE - INSERT RIGHT AFTER BODY OPEN TAG --> 
+<div id="fb-root"></div> 
+<script> 
+  window.fbAsyncInit = function() { 
+    FB.init({appId: '128354667197786', status: true, cookie: true, 
+             xfbml: true}); 
+  }; 
+  (function() { 
+    var e = document.createElement('script'); e.async = true; 
+    e.src = document.location.protocol + 
+      '//connect.facebook.net/en_US/all.js'; 
+    document.getElementById('fb-root').appendChild(e); 
+  }()); 
+</script> 
+
+<!--[if lte IE 6]> 
+<div id="ie6">
+Warning: Your browser is no longer supported. Please upgrade to a modern browser.
+<a href="http://www.getfirefox.com/" target="_blank" title="Download Firefox"><img src="/images/en_US/global/bbv6/ie6/firefox.png" width="22" height="22" border="0" alt="Download Firefox" align="absmiddle" /> Firefox</a> <a href="http://www.google.com/chrome" target="_blank" title="Download Google Chrome"><img src="/images/en_US/global/bbv6/ie6/chrome.png" width="22" height="22" border="0" alt="Download Google Chrome" align="absmiddle" /> Google Chrome</a>  <a href="http://www.apple.com/safari/" target="_blank" title="Download Safari"><img src="/images/en_US/global/bbv6/ie6/safari.png" width="22" height="22" border="0" alt="Download Safari" align="absmiddle" /> Safari</a> <a href="http://www.microsoft.com/windows/internet-explorer/" target="_blank" title="Download Internet Explorer"><img src="/images/en_US/global/bbv6/ie6/ie.png" width="22" height="22"  border="0" alt="Download Internet Explorer" align="absmiddle" /> Internet Explorer</a> 
+</div>
+<![endif]-->
+
+<div id="bbv6_wrap">
+
+<div id="header">
+<!--TopNav Start-->
+
+
+
+
+
+
+
+
+
+<script>
+  function checkKeyword(keyword, defaultText) {
+    var minKeywordLength = 0;
+    var maxKeywordLength = 0;
+    minKeywordLength += 3;
+    maxKeywordLength += 30;
+    var errMsg = '';
+    //alert("minKeywordLength " + minKeywordLength);
+    var searchTerms = '';
+    searchTerms = keyword.value;
+    //alert("searchTerms.length " + searchTerms.length);
+
+    var noSearchTerm = 'Please enter a keyword or item number';
+    var shortSearchTerm = 'Your keyword or item number must be at least 3 characters long';
+
+    if (searchTerms == defaultText) {
+        alert(noSearchTerm);
+        return false;
+    }
+    if (searchTerms == '') {
+        alert(noSearchTerm);
+        return false;
+    } else if ( searchTerms.length < minKeywordLength ) {
+        alert(shortSearchTerm);
+        return false;
+    } else {
+      return true;
+    }
+  }
+ function changeUrl(frm, thisurl) {
+   var optionurl = thisurl.options[thisurl.selectedIndex].value;
+   if (optionurl == "0"){
+        return;
+    }
+    location.href = optionurl
+  }
+  function logTopNavLink() {
+    var s=window.s;s.linkTrackVars='eVar11';s.eVar11='Top Navigation Bar';s.tl(true,'o','Top Nav Link');
+  }
+  function logVideoLink() {
+    var s=window.s;s.linkTrackVars='eVar11';s.eVar11='Videos';s.tl(true,'o','Video Link');
+  }
+  function logLink(linkname,linkabv) {
+    var s=window.s;s.linkTrackVars='eVar11';s.eVar11=linkname;s.tl(true,'o',linkabv);
+  }
+</script>
+<a href="http://www.beachbody.com/home.do" class="logo" title="Beachbody&#174;">Beachbody&#174;</a>
+<div id="phone">Call now <strong>1 (800) 714-7254</strong> or order online. <span>Mon&ndash;Fri 9 AM&ndash;7 PM, Sat&ndash;Sun 10 AM&ndash;6 PM ET</span>
+<a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/pops/international.html','myWindow','width=550,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=No,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);" class="intl">We Ship Worldwide.</a>
+</div>
+<div id="dropdown"><select onchange="var s=window.s;s.linkTrackVars='eVar11';s.eVar11='Drop Down Box';s.tl(true,'o','Drop Down Box');changeUrl(this.form,this)" name="cs_popup_name_1" class="drop_down_menu"><option value="#" selected>Choose A Product . . .</option><option value="/home.do">Beachbody Home Page</option><option value="#" class="sb">------------------------------</option><option value="/category/fitness_programs/best_sellers.do" class="hdr">FITNESS PRODUCTS AS SEEN ON TV</option><option value="#" class="sb">------------------------------</option><option value="/product/fitness_programs/p90x.do">P90X&#174;</option><option value="/product/fitness_programs/insanity.do">INSANITY&reg;</option><option value="/product/fitness_programs/brazil_butt_lift.do">Brazil Butt Lift&#174;</option><option value="/product/fitness_programs/slim_in_6.do">Slim in 6&#174;</option><option value="/product/fitness_programs/10_minute_trainer.do">10-Minute Trainer&#174;</option><option value="/product/fitness_programs/turbo-jam.do">Turbo Jam&#174;</option><option value="/product/fitness_programs/hip_hop_abs.do">Hip Hop Abs&#174;</option><option value="#" class="sb">---------------------------</option><option value="/category/fitness_programs/best_sellers.do" class="hdr">MORE FITNESS PROGRAMS</option><option value="#" class="sb">---------------------------</option><option value="/product/fitness_programs/10_minute_trainer_deluxe.do">10-Minute Trainer&#174; Deluxe</option><option value="/product/club/10_minute_trainer_club.do">10-Minute Trainer&#174;&#151;More exciting products</option><!--<option value="/product/fitness_programs/brazil_butt_lift.do">Brazil Butt Lift&#174;</option>--><option value="/product/fitness_programs/body-gospel.do">Body Gospel&#174;</option><option value="/product/fitness_programs/chalean_extreme.do">ChaLEAN Extreme&#174;</option><option value="/product/fitness_programs/chalean_extreme_deluxe.do">ChaLEAN Extreme&#174; Deluxe Upgrade</option><option value="/product/club/chalean_extreme_club.do">ChaLEAN Extreme&#174;&#151;More exciting products</option><option value="/product/fitness_programs/turbo_jam_get_on_the_ball.do">Chalene Johnson's Get On the Ball!</option><option value="/product/fitness_programs/get_real.do">Get Real with Shaun T&#153;</option><option value="/product/fitness_programs/great_body_guaranteed.do">Great Body Guaranteed!&#153;</option><option value="/product/fitness_programs/hip_hop_abs.do">Hip Hop Abs&#174;</option><option value="/product/fitness_programs/hip_hop_abs_ultimate_results.do">Hip Hop Abs&#174; Ultimate Results!</option><option value="/product/club/hip_hop_abs_club.do">Hip Hop Abs&#174;&#151;More exciting products</option><option value="/product/fitness_programs/specialty_programs/ho_ala_ke_kino.do">Ho'Ala ke Kino</option><option value="/product/fitness_programs/advanced/insanity_deluxe.do">Insanity&#174; Deluxe</option><option value="/product/fitness_programs/kathy_smiths_project_you.do">Kathy Smith's Project:YOU! Type 2&#153;</option><option value="/product/fitness_programs/p90x-mc2-workout-the-next-p90x.do">P90X:MC2&#153;</option><option value="/product/fitness_programs/p90x-one-on-one-workout.do">P90X One on One&#153;</option><option value="/product/fitness_programs/p90x_plus.do">P90X Plus&#151;The Next Level</option><option value="/category/p90x-online/shop.do">P90X&#174&#151;More exciting products</option><option value="/product/fitness_programs/power90.do">Power 90&#174;</option><option value="/product/fitness_programs/power_90_master_series.do">Power 90&#174; Master Series</option><option value="/product/club/power90_club.do">Power 90&#174;&#151;More exciting products</option><option value="/product/fitness_programs/power_half_hour.do">Power Half Hour&#174;</option><option value="/product/fitness_programs/revabs.do">RevAbs&#174;</option><option value="/product/club/revabs_club.do">RevAbs&#174;&#151;More exciting products</option><option value="/product/fitness_programs/rockin_body.do">Rockin' Body&#174;</option><option value="/product/fitness_programs/hip_hop_abs_dance_party_series.do">Shaun T's Dance Party Series</option><option value="/product/fitness_programs/fit_kids_club.do">Shaun T's Fit Kids&#153; Club</option><option value="/product/fitness_programs/slim_series.do">Slim Series&#174;</option><option value="/product/fitness_programs/slim_series_express.do">Slim Series&#174; Express</option><option value="/product/club/slim_in_6_club.do">Slim in 6&#174;&#151;More exciting products</option><option value="/product/fitness_programs/total_body_solution.do">Total Body Solution&#153;</option><option value="/product/fitness_programs/turbofire.do">TurboFire&#174;</option><option value="/product/fitness_programs/turbo_jam_fat_burning_elite.do">Turbo Jam&#174; Fat Burning Elite</option><option value="/product/fitness_programs/turbo_jam_live.do">Turbo Jam&#174; LIVE!</option><option value="/product/club/turbo_jam_club.do">Turbo Jam&#174;&#151;More exciting products</option><option value="/product/club/yoga_booty_ballet.do">Yoga Booty Ballet&#174; Ab &amp; Butt Makeover</option><option value="/product/fitness_programs/yoga_booty_ballet_baby.do">Yoga Booty Ballet&#174; Baby On the Way</option><option value="/product/fitness_programs/yoga_booty_ballet_master_series.do">Yoga Booty Ballet&#174; Master Series</option><option value="/product/fitness_programs/yoga_booty_ballet_pure.do">Yoga Booty Ballet&#174; Pure &amp; Simple Yoga</option><option value="/product/club/yoga_booty_ballet_club.do">Yoga Booty Ballet&#174;&#151;More exciting products</option><option value="#" class="sb">---------------------------</option><option value="/category/supplements/best_sellers.do" class="hdr">NUTRITION &amp; SUPPLEMENTS</option><option value="#" class="sb">---------------------------</option><option value="/product/supplements/nutrition-health-shake/shakeology.do">Shakeology&#174;</option><option value="/product/supplements/best_sellers/2day_fast_formula.do">2-Day Fast Formula&#174; shake</option><option value="/product/supplements/best_sellers/activit_multivitamins.do">ActiVit&#174; Multivitamins</option><!--<option value="/product/supplements/meal_replacement/beachbody_shaker_cup.do">Beachbody Shaker Cup</option> --><!--<option value="/product/supplements/weight_loss/chitosan_plus.do">Chitosan Plus</option> --><option value="/product/supplements/best_sellers/cal_mag.do">Core Cal-Mag&#153;</option><option value="/product/supplements/best_sellers/omega3.do">Core Omega-3&#153;</option><option value="/product/supplements/best_sellers/core_nutrition_pack_metabolism.do">Core Nutrition Pack</option><option value="/product/supplements//herbal_immune_boost.do">Herbal Immune Boost</option><option value="/product/supplements/wellness/joint_support_super_formula.do">Joint Support Super Formula</option><option value="/product/supplements/meal_replacement/meal_replacement_shake.do">Meal Replacement Shake</option><option value="/product/supplements/p90x_peak_performance/p90x_peak_health_formula.do">P90X&#174; Peak Health Formula</option><option value="/product/supplements/p90x_peak_performance/p90x_peak_performance_protein_bars.do">P90X&#174; Peak Performance Protein Bars</option><option value="/product/supplements/p90x_peak_performance/p90x_peak_recovery_formula.do">P90X&#174; Results and Recovery Formula</option><option value="/product/supplements/muscle_enhancement/performance_formula.do">Performance Formula</option><option value="/product/supplements/muscle_enhancement/pure_creatine.do">Pure Creatine</option><option value="/product/supplements/weight_loss/slimming_formula.do">Slimming Formula</option><option value="/product/supplements/muscle_enhancement/strength_and_muscle_mens_formula.do">Strength &amp; Muscle Men's Formula</option><option value="/product/supplements/wellness/total_health_womens_formula.do">Total Health Women's Formula</option><option value="/product/supplements/meal_replacement/whey_protein_powder.do">Whey Protein Powder</option><option value="#" class="sb">---------------------------</option><option value="/category/fitness_gear/best_sellers.do" class="hdr">FITNESS GEAR</option><option value="#" class="sb">---------------------------</option><option value="/product/fitness_gear/bands_balls_weights/ankle_weights.do">Ankle Weights</option><option value="/product/fitness_gear/bands_balls_weights/balance_ball.do">Balance Ball</option><option value="/product/fitness_gear/beachbody_logo_wear/beachbody_backpack.do">Beachbody Backpack</option><!--<option value="/product/fitness_gear/beachbody_logo_wear/beachbody_shaker_cup.do">Beachbody Shaker Cup</option> --><option value="/product/fitness_gear/bands_balls_weights/squishy_ball.do">Beachbody Squishy Ball</option><option value="/product/fitness_gear/beachbody_logo_wear/men_beachbody_shirts.do">Beachbody T-Shirts Men's</option><option value="/product/fitness_gear/beachbody_logo_wear/women_beachbody_shirts.do">Beachbody T-Shirts Women's</option><option value="/category/fitness_gear/bands_balls_weights.do">Bands, Balls &amp; Weights</option><option value="/product/fitness_gear/progress_tools/body_fat_tester.do">Body Fat Tester</option><option value="/category/fitness_gear/core_yoga_gear.do">Core/Yoga Gear</option><option value="/product/fitness_gear/bands_balls_weights/dumbbell_set.do">Dumbbell Set</option><option value="/product/fitness_gear/progress_tools/bowflex_heart_rate_monitor.do">Heart Rate Monitor &ndash; Bowflex&reg; Fit Trainer</option><option value="/product/fitness_gear/progress_tools/bowflex_heart_rate_monitor_strapless.do">Heart Rate Monitor &ndash; Bowflex&reg; Strapless</option><option value="/product/fitness_gear/progress_tools/bowflex_heart_rate_monitor_strap.do">Heart Rate Monitor &ndash; Bowflex&reg; with Chest Strap</option><!--<option value="/product/fitness_gear/best_sellers/jump_rope.do">Jump Rope</option>--><!-- OUT OF STOCK 9/13 -- <option value="/product/fitness_gear/bands_balls_weights/dumbbell_set.do">Dumbbell Set</option> --><!--<option value="/product/fitness_gear/bands_balls_weights/medicine_ball.do">Medicine Balls</option>--><option value="/category/fitness_gear/p90x_gear.do">P90X&#174; Gear </option><option value="/product/fitness_gear/p90x_gear/p90x_chin_up_bar.do">P90X&#174; Chin-Up Bar</option><option value="/product/fitness_gear/p90x_gear/p90x_posters.do">P90X&#174; Posters</option><option value="/product/fitness_gear/p90x_gear/p90x_tank.do">P90X&#174; Tanks</option><option value="/product/fitness_gear/p90x_gear/p90x_men_tees.do">P90X&#174; T-Shirts Men's</option><option value="/product/fitness_gear/p90x_gear/p90x_tees_women.do">P90X&#174; T-Shirts Women's</option><option value="/product/fitness_gear/p90x_gear/plyometrics_mat.do">Plyometrics Mat</option><option value="/product/fitness_gear/p90x_gear/pushup_stands.do">Push-Up Stands</option><option value="/product/fitness_gear/bands_balls_weights/blines_comfort_grip_handles.do">Resistance Bands&#151;Handles</option><option value="/product/fitness_gear/bands_balls_weights/resistance_band_pink.do">Resistance Bands&#151;Individual </option><option value="/product/fitness_gear/bands_balls_weights/standard_kit.do">Resistance Bands&#151;Standard Kit </option><option value="/product/fitness_gear/bands_balls_weights/super_kit.do">Resistance Bands&#151;Super Kit </option><option value="/product/fitness_gear/bands_balls_weights/extreme_kit.do">Resistance Bands&#151;Extreme Kit </option><option value="/product/fitness_gear/bands_balls_weights/complete_kit.do">Resistance Bands&#151;Complete Kit </option><option value="/product/fitness_gear/bands_balls_weights/blines_upgrade_kit.do">Resistance Bands&#151;Upgrade Kit</option><option value="/product/fitness_gear/core_yoga_gear/sculpting_bands.do">Sculpting Bands</option><option value="/product/fitness_gear/powerstands.do">Tony Horton's PowerStands&#174;</option><option value="/category/fitness_gear/turbo_jam_gear.do">Turbo Jam&#174; Gear </option><option value="/product/fitness_gear/beachbody_logo_wear/turbo_jam_tanks.do">Turbo Jam&#174; Tanks </option><option value="/product/fitness_gear/walking-bands.do">Walking Bands</option><option value="/product/fitness_gear/bands_balls_weights/weighted_gloves.do">Weighted Gloves </option><option value="/product/fitness_gear/core_yoga_gear/yoga_blocks.do">Yoga Blocks</option><option value="/product/fitness_gear/core_yoga_gear/yoga_monster_mat.do">Yoga Monster Mat</option><option value="#" class="sb">---------------------------</option><option value="#" class="hdr">DIET AND SUPPORT TOOLS</option><option value="#" class="sb">---------------------------</option><option value="/product/fitness_gear/progress_tools/6day_express_diet_plan.do">6-Day Express&#153; Diet Plan</option><option value="http://click.websitegear.com/track.asp?id=24047">Chatrooms</option><option value="http://click.websitegear.com/track.asp?id=24048">Message Boards</option><option value="http://teambeachbody.com/eat-smart/michis-ladder">Michi's Ladder</option><option value="http://click.websitegear.com/track.asp?id=24049">Team Beachbody&#174; Club</option><option value="http://click.websitegear.com/track.asp?id=24050">WOWY&#174; Online gym</option></select></div>
+
+<script type="text/javascript" src="http://www.beachbody.com/text/js/menu.js"></script>	
+ <ul><li><a 
+ 	href="http://www.beachbody.com/home.do" onClick="logTopNavLink();">Home</a></li><li class="submenu"><a 
+ 	href="http://www.beachbody.com/category/fitness_programs/best_sellers.do" onClick="logTopNavLink();" onmouseover="cssdropdown.dropit(this,event,'dropmenu1')">Fitness Programs</a></li><li class="submenu"><a 
+ 	href="http://www.beachbody.com/category/supplements/best_sellers.do" onClick="logTopNavLink();" onmouseover="cssdropdown.dropit(this,event,'dropmenu2')">Supplements</a></li><li class="submenu"><a 
+ 	href="http://www.beachbody.com/category/fitness_gear/best_sellers.do" onClick="logTopNavLink();" onmouseover="cssdropdown.dropit(this,event,'dropmenu3')">Gear</a></li><li><a 
+ 	href="http://www.beachbody.com/category/success_stories.do" onClick="logLink('Success Stories','Success Stories Link');">Success Stories</a></li><li class="submenu"><a 
+ 	href="http://www.beachbody.com/category/video.do?bclid=6615764001" onClick="logVideoLink();"  onmouseover="cssdropdown.dropit(this,event,'dropmenu4')">Videos</a></li><li class="submenu"><a 
+ 	href="http://www.teambeachbody.com/" onClick="logTopNavLink();" target="_blank" onmouseover="cssdropdown.dropit(this,event,'dropmenu5')">Community &amp; Support</a></li><li><a 
+ 	href="http://www.beachbody.com/basket.do?nav=%2Fcategory%2Fid%2F4%2F106454" onClick="logTopNavLink();">Shopping Cart</a></li><li class="search"><form 
+ 		name="gs" method="GET" action="http://search.beachbody.com/search"><input type="text" name="q" size="18" maxlength="256" value="Search" onfocus="this.value='';return false;" class="search" /><button 
+ 		value="Search" class="searchbtn">Search</button><!--<input type="image" value="Search" src="/images/en_US/global/bbv6/search_btn.png" class="searchbtn" />--><input 
+ 		type="hidden" name="ie" value=""><input type="hidden" name="site" value="Test_Collection"><input type="hidden" name="output" value="xml_no_dtd"><input 
+ 		type="hidden" name="client" value="Test_Collection"><input type="hidden" name="lr" value=""><input 
+ 		type="hidden" name="proxystylesheet" value="Test_Collection"><input type="hidden" name="oe" value=""></form></li></ul>
+
+ <!--1st drop down menu / fitness programs -->                                                   
+<div id="dropmenu1" class="dropmenu"><ul><li><a 
+	href="http://www.beachbody.com/category/fitness_programs/best_sellers.do" onClick="logTopNavLink();">Best Sellers</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_programs/weight_loss.do" onClick="logTopNavLink();">Weight Loss</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_programs/advanced.do" onClick="logTopNavLink();">Advanced</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_programs/express.do" onClick="logTopNavLink();">Express</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_programs/abs_core.do" onClick="logTopNavLink();">Abs/Core</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_programs/dance.do" onClick="logTopNavLink();">Dance</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_programs/extreme.do" onClick="logTopNavLink();">Extreme Results</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_programs/cardio.do" onClick="logTopNavLink();">Cardio/Fat Burning</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_programs/getting_started.do" onClick="logTopNavLink();">Getting Started</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_programs/specialty_programs.do" onClick="logTopNavLink();">Specialty Programs</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_programs/compare_fitness_programs.do" onClick="logTopNavLink();">Compare Fitness Programs</a></li></ul></div>
+
+<!--2nd drop down menu / supplements -->                                                
+<div id="dropmenu2" class="dropmenu"><ul><li><a 
+	href="http://www.beachbody.com/category/supplements/best_sellers.do" onClick="logTopNavLink();">Best Sellers</a></li><li><a 
+	href="http://www.beachbody.com/category/supplements/meal_replacement.do" onClick="logTopNavLink();">Meal Replacement</a></li><li><a 
+	href="http://www.beachbody.com/category/supplements/muscle_enhancement.do" onClick="logTopNavLink();">Muscle Enhancement</a></li><li><a 
+	href="http://www.beachbody.com/category/supplements/p90x_peak_performance.do" onClick="logTopNavLink();">P90X&#174; Peak Performance</a></li><li><a 
+	href="http://www.beachbody.com/category/supplements/weight_loss.do" onClick="logTopNavLink();">Weight Loss</a></li><li><a 
+	href="http://www.beachbody.com/category/supplements/wellness.do" onClick="logTopNavLink();">Wellness</a></li></ul></div>
+
+<!--3rd anchor link and menu / fitness gear -->                                                 
+<div id="dropmenu3" class="dropmenu"><ul><li><a 
+	href="http://www.beachbody.com/category/fitness_gear/best_sellers.do" onClick="logTopNavLink();">Best Sellers</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_gear/bands_balls_weights.do" onClick="logTopNavLink();">Bands, Balls &amp; Weights</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_gear/p90x_gear.do" onClick="logTopNavLink();">P90X&#174; Gear</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_gear/turbo_jam_gear.do" onClick="logTopNavLink();">Turbo Jam&#174; Gear</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_gear/core_yoga_gear.do" onClick="logTopNavLink();">Core/Yoga Gear</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_gear/progress_tools.do" onClick="logTopNavLink();">Fitness Trackers</a></li><li><a 
+	href="http://www.beachbody.com/category/fitness_gear/beachbody_logo_wear.do" onClick="logTopNavLink();">Beachbody Logo Wear</a></li></ul></div>
+
+<!--4th anchor link and menu / video -->                                                 
+<div id="dropmenu4" class="dropmenu"><ul><li><a 
+	href="http://www.beachbody.com/category/video.do?bclid=6615764001" onClick="logVideoLink();">Beachbody Videos</a></li><li><a 
+	href="http://www.beachbody.com/category/video.do?bclid=6614435001" onClick="logVideoLink();">P90X&#174; Videos</a></li><li><a 
+	href="http://www.beachbody.com/category/video.do?bclid=6622707001" onClick="logVideoLink();">Turbo Jam&#174; Videos</a></li><li><a 
+	href="http://www.beachbody.com/category/video.do?bclid=67394813001" onClick="logVideoLink();">TurboFire&#174; Videos</a></li><li><a 
+	href="http://www.beachbody.com/category/video.do?bclid=6622713001" onClick="logVideoLink();">10 Minute Trainer&#174; Videos</a></li><li><a 
+	href="http://www.beachbody.com/category/video.do?bclid=6614438001" onClick="logVideoLink();">P90X ONE on ONE&trade; Videos</a></li><li><a 
+	href="http://www.beachbody.com/category/video.do?bclid=6615759001" onClick="logVideoLink();">ChaLEAN Extreme&#174; Videos</a></li><li><a 
+	href="http://www.beachbody.com/category/video.do?bclid=6614439001" onClick="logVideoLink();">Slim in 6&#174; Videos</a></li><li><a 
+	href="http://www.beachbody.com/category/video.do?bclid=6614436001" onClick="logVideoLink();">Hip Hop Abs&#174; Videos</a></li><li><a 
+	href="http://www.beachbody.com/category/video.do?bclid=6615761001" onClick="logVideoLink();">Rockin' Body&#174; Videos</a></li></ul></div>
+
+
+
+<!--5th anchor link and menu / team beachbody -->                                                 
+<div id="dropmenu5" class="dropmenu"><ul><li><a 
+	href="http://www.beachbody.com/category/newsletters.do">Beachbody&#174; Newsletter</a></li><li><a 
+	href="http://www.beachbody.com/category/p90x-online.do">P90X&#174; Extreme Newsletter</a></li><li><a 
+	href="http://teambeachbody.com/c/portal/login" target="_blank">Team Beachbody&#174; Login</a></li><li><a 
+	href="http://teambeachbody.com/signup" target="_blank">Join Team Beachbody&#174; Club</a></li><li><a 
+    href="http://coachdestinations.com/" target="_blank">Coach Destinations</a></li><li><a 
+	href="http://teambeachbody.com/connect/message-boards" target="_blank">Message Boards</a></li><li><a 
+	href="http://teambeachbody.com/connect/chat-rooms" target="_blank">Chat Rooms</a></li><li><a 
+	href="http://www.wowy.com/" target="_blank">WOWY&#174; SuperGym</a></li><li><a 
+	href="http://beachbody.custhelp.com/">Customer Support</a></li><li><a 
+	href="http://beachbody.custhelp.com/">Contact Us</a></li></ul></div>
+	
+
+<div class="clear"></div>
+</div>
+   
+
+<div id="content">
+
+
+
+
+
+
+
+<script language="JavaScript">
+// Disable edit cell tab.
+   parent.editCell.className    = "tab-button-dis";
+
+function saveForm() {
+    location.replace("/admin/displayeditcell.do?action=save");
+}
+
+   function editCell(ruleID, itemID, slotID, itemType) {
+        parent.editDisplay.className     = "tab-button";
+        if(typeof(parent.displayRules)!="undefined") {
+            parent.displayRules.className = "tab-button";
+        }
+        parent.editCell.className    = "tab-button-on";
+
+        location.replace("/admin/displayeditcell.do?action=init&itemID=" + itemID + "&ruleID=" + ruleID + "&slotID="+ slotID + "&itemType=" + itemType );
+//        parent.parent.frames('toolbarbottom').altButtons.style.display= "inline";
+    }
+      function clickIt()
+      {
+          if(window.event.srcElement.id != "good") {
+              window.event.returnValue = false;
+           }
+      }
+</script>
+<!-- <link rel="stylesheet" href="/admin/include/styles/adminbrowser.css" type="text/css"> -->
+
+ 
+    <!-- Place marker for administrative stylesheet. You are browsing--> 
+ 
+
+
+<style type="text/css" media="all">body {	text-align: center;	background: #000 url(http://www.beachbody.com/images/en_US/products/programs/p90x/bg.gif) repeat-x 0 -80px; }#header {display: none;} /* hide BB header */#content {text-align: center;}#content #wrapper {	width: 760px;	font: 11px/1.4em "Trebuchet MS", Trebuchet, sans-serif;	color: #fff;	text-align: center;	margin-right: auto;	margin-left: auto;}#content ul.phone, #content .phone {	list-style: none;	height: 20px;	margin: 0;	padding: 5px;	background-color: #c4eefa;}#content ul.phone li {	float: left; 	display: block;	background: none;	color: #090a1a;	font-size: 13px;	font-weight: bold;}#content ul.phone li.right {float: right;}#content .gift h2 { height: 50px!important; margin: 10px;}#content .content .btn h4 {font-size: 12px; color: #ffb400; margin: 0px 0px 18px 0px; text-align:center;}#content .content .leftcolumn h4 strong{margin-left: 100px;}#content .content {	clear: both;	background-color: #1b1b1b;	border: solid 3px #333;	text-align: left;}#content .leftcolumn {width: 567px; float: left;}#content .leftcolumn2 {width: 550px; }#content .rightcolumn {width: 187px; float: right; padding-bottom: 10px;}#content #jon_quote {position: relative; z-index: 22; margin-top: -40px;}#content #johnquote {position: relative; z-index: 23; display: block; margin: -40px 0px 0px 5px; border: none;}#content .clear {clear: both;}#content p {	font-size: 13px;	line-height: 1.5em;	padding-top: 0.5em;	margin: 0 10px 1em;}#content .leftcolumn p {margin: 10px 30px 10px 15px;}#content h2 {	margin: 0 10px;	padding-top: 0.5em;	color: #C4EEFA;	font: 22px/1em "Trebuchet MS", Trebuchet, sans-serif;	font-style: oblique;	font-weight: bold;	text-transform: uppercase;	text-shadow: #000 2px 2px 2px;}#content .btn h2 {	height: 33px;	margin: 0;	padding: 0 0 0 15px;	font-size: 21px;	text-transform: none;}#content h2.gift {	width: 460px;	height: 45px;	margin-top: 5px;	padding-top: 12px;	font-size: 18px;	color: #f00;	background: url(http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_102.gif) no-repeat right top;}#content .leftcolumn h4 {margin: 10px; padding-right: 20px;}#content h4 {font-size: 12px; color: #ffb400;}#content h4 em {font-size: 10px;}#content strong {color: #ffb400;}#content ul.bullet {	float: left;	width: 360px;	list-style: none;	margin: 0;	padding: 10px 0 0;}#content ul.bullet li {	list-style: none;	background: url(http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_37.gif) no-repeat 0px 0px;	margin: 0;	padding: 0 0 4px 20px;	font-size: 12px;}#content ul.bullet strong {font-size: 13px;}#content a.arrow2, #content a.arrow2:link, #content a.arrow2:visited {	padding-left: 16px;	background: url(http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_19.gif) no-repeat 0 50%;	color: #b8b8b8;	font-size: 12px;	text-decoration: none;}#content a.arrow2:hover, #content a.arrow2:active {	padding-left: 16px;	background: url(http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_19.gif) no-repeat 0 50%;	color: #ffb400; 	text-decoration: underline;}#content #workouts {margin: 0; padding-left: 8px;}#content #workouts dl {	float:left;	display: inline;	width: 160px;	padding: 10px 0;	margin: 0 0 0 20px;}#content #workouts dt {	padding: 0;	margin: 0;	text-align: center;}#content #workouts dd {	padding: 0 8px;	margin: 5px 0 0;}#content #workouts a, #content #workout a:link, #content #workout a:visited {	font-size: 13px;	color: #ffb400;	text-decoration: none;}#content #workout a:hover, #content #workout a:active {text-decoration: underline;}#content .btn {margin: 0 40px;}#content .left {float: left;}#content .gift {	width: 460px;	margin-top: 5px;	margin-left: 5px;}#content #express {	margin: 0;	border: solid 2px #ffb400;	padding: 5px 90px 5px 5px;	font-size: 12px;	font-weight: bold;	color: #333;	text-align: center;	background: #fff url(http://www.beachbody.com/images/en_US/products/common/truck.gif) no-repeat 370px 50%;	height: 55px;}#content #express cite {	font-weight: normal;	font-size: 10px;	color: #666;	line-height: 1.2em;}#content #express strong {color: #f00;}#content .legal {	margin-top: 10px;	font-size: 10px;	line-height: 1.2em;	text-align: center;	color: #888;}#content .mbg_seal_left {float: left; margin: 0px 10px 0px 15px; border: none;}#content .mbg_seal_right {float: right; margin: 5px 10px 5px 10px; border: none;}	/* ML REVIEWS AND TELL A FRIEND */#content div#mlreviews {	width: 760px;	text-align: center;}#content div#mlreviews ul, #content div#mlreviews ul li {	list-style: none;	margin: 0;	padding: 0;}#content div#mlreviews ul li { 	float: left;	display: inline;	width: 200px;	margin-left: 45px;	background: none;}#content div#mlreviews ul li a, #content div#mlreviews ul li a:link, #content div#mlreviews ul li a:visited {	float: left;	text-align: left;	padding-top: 3px;	padding-bottom: 3px;}#content .clear { clear: both;}#content a.intl, #content a.intl:link, #content a.intl:visited { background: url(http://www.beachbody.com/images/en_US/global/bbv6/international_p90x_icon.png) no-repeat 0 50%; padding-left: 30px; margin-left: 4px; _margin-left: 0px; color: #555; font: 11px; font-weight: normal;}#content a.intl:hover, #content a.intl:active { color:#0079C1;}/* GLOBAL FOOTER */#footer { background:  none;}#footer_bar { display: none;}#footer p.links, #footer p.legal { color: #ccc;}#footer p.links a { color: #ffb400; }#footer p.links a:hover, #footer p.links a:active { text-decoration: underline; }</style><!--------------------- START OF FAKE POPUP ----------------------><script type="text/javascript" src="http://www.beachbody.com/text/js/fakePopup2.js"></script><script type="text/javascript">window.onload = function() {	/* Parameters: Number of seconds, Height(number in pixels or auto), Width(number in pixels or auto) */    runFakePopup(90, "auto", "auto");}</script><div id="fake_popup" style="display: none;"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_fakepop_abripper.jpg" width="420" height="287" border="0" usemap="#popup_ad_map" />  <map name="popup_ad_map"> <area shape="rect" coords="344,45,399,61" href="javascript: closeLayer();" alt="Close" > <area shape="rect" coords="55,71,394,261" href="http://www.beachbody.com/product/code/P90XK36-K1.do?actionkey=ADDTOBASKET" alt="YES! I'd like to try P90X today!" > </map></div><!--------------------- END OF FAKE POPUP ----------------------><div id="wrapper"><ul class="phone"><li>100% Satisfaction Guaranteed</li><li class="right">To order by phone, call toll free: 1 (800) 461-1535 <a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/pops/international.html','myWindow','width=550,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=No,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);" class="intl">We Ship Worldwide.</a></li></ul><br /><div class="content"><div class="leftcolumn"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_03.jpg" alt="Trainer Tony Horton with Traci Morrow getting ripped with P90X&reg;!" title="Trainer Tony Horton with Traci Morrow getting ripped with P90X&reg;!" width="216" height="214" /><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_04.jpg" alt="Get absolutely ripped in just 90 days with P90X&reg;!" title="Get absolutely ripped in just 90 days with P90X&reg;!" width="351" height="214" />  <p>P90X<sup>&reg;</sup> is a revolutionary system of 12 sweat-inducing, muscle-pumping workouts, designed to transform your body from regular to ripped in just 90 days. You'll also receive a comprehensive 3-phase nutrition plan, specially designed supplement options, a detailed fitness guide, a calendar to track your progress, online peer support, and much more. Your personal trainer, Tony Horton, will keep you engaged every step of the way, and you won't believe your results!</p><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/mbg.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_09.gif" alt="P90X - 90-Day Money-Back Guarantee!" title="P90X - 90-Day Money-Back Guarantee!" width="70" height="70" class="mbg_seal_left"/></a><h4 align="center"><a href="http://www.beachbody.com/product/code/P90XK36-K1.do?actionkey=ADDTOBASKET"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_red_13.gif" alt="YES! I'd like to try P90X today!" title="YES! I'd like to try P90X today!" width="359" height="45" vspace="5" border="0" /></a><br />A $600.00 value for only 3 monthly payments of $39.95 <em>(+$19.95 s&amp;h)</em><br /><strong style="display: block">Or select a single payment option during checkout. </strong></h4><h2>Why is P90X so effective?</h2><p>The secret behind the P90X system is an advanced training technique called Muscle Confusion<sup>&trade;</sup>, which accelerates the results process by constantly introducing new moves and routines so your body never plateaus, and you never get bored! Whether you want to get lean, bulk up, or just plain get ripped, there's an endless variety of ways to mix and match the routines to keep you motivated the full 90 days and beyond!</p></div><!-- end .leftcolumn --><div class="rightcolumn"><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/package.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_DVD.jpg" alt="P90X DVD package" title="P90X DVD Package" width="187" height="227" border="0" /></a><div id="jon_quote"><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/jonc.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_homepageparse_jon.png" alt="P90X - Jon C." title="P90X - Jon C." width="147" height="220" border="0" /></a><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/jonc.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_homepageparse_jonquote.png" alt="P90X - Jon C. Quote" title="P90X - Jon C. Quote" width="176" height="63" id="johnquote"/></a><p><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/anthonyl.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);" class="arrow2">See more Success Stories </a><br /><a href="javascript:NewWindow=window.open('/product/fitness_programs/best_sellers/p90x/ReviewView.do','myWindow','width=550,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);" class="arrow2">Read Customer Reviews</a></p></div><!-- begin graph -->        <script language="javascript">AC_FL_RunContent = 0;</script><script src="http://images.beachbody.com/flash/common/AC_RunActiveContent.js" language="javascript"></script><script language="javascript">	if (AC_FL_RunContent == 0) {		alert("This page requires AC_RunActiveContent.js.");	} else {		AC_FL_RunContent(			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0',			'width', '180',			'height', '180',			'src', 'http://images.beachbody.com/flash/products/programs/p90x/muscleconfuse_graph-clickTAG',			'quality', 'high',			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',			'align', 'middle',			'play', 'true',			'loop', 'true',			'scale', 'showall',			'wmode', 'transparent',			'devicefont', 'false',			'id', 'muscleconfuse_graph_control',			'bgcolor', '#1b1b1b',			'name', 'muscleconfuse_graph_control',			'menu', 'true',			'allowFullScreen', 'false',			'allowScriptAccess','always',			'movie', 'http://images.beachbody.com/flash/products/programs/p90x/muscleconfuse_graph-clickTAG',			'salign', '',			'flashvars','http://www.beachbody.com/product/fitness_programs/clickTag=/text/products/programs/p90x/popups_control/muscleconfusion.jsp?pn=18004611535'			); 	}</script>        <noscript>            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" name="muscleconfuse_graph_control" width="180" height="180" align="middle" id="muscleconfuse_graph_control">            <param name="allowScriptAccess" value="always" />            <param name="allowFullScreen" value="false" />            <param name="movie" value="http://images.beachbody.com/flash/products/programs/p90x/muscleconfuse_graph-clickTAG.swf?clickTag=/text/products/programs/p90x/popups_control/muscleconfusion.jsp?pn=18004611535" /><param name="quality" value="high" /><param name="bgcolor" value="#1b1b1b" />	<embed src="http://images.beachbody.com/flash/products/programs/p90x/muscleconfuse_graph-clickTAG.swf?clickTag=/text/products/programs/p90x/popups_control/muscleconfusion.jsp?pn=18004611535" quality="high" bgcolor="#ffffff" width="400" height="300" name="muscleconfuse_graph_control" align="middle" allowScriptAccess="always" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />            </object>        </noscript>	<!-- end graph --><!--<a href="javascript:NewWindow=window.open('/text/products/programs/p90x/popups_control/muscleconfusion.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="/images/en_US/products/programs/p90x/p90x_24.jpg" width="180" height="90" border="0" alt="P90X - Learn more about Muscle Confusion" title="P90X - Learn more about Muscle Confusion" /></a>--></div><!-- end .rightcolumn --><div class="clear"></div></div><!-- end .content --><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_32.png" alt="The complete P90X system includes:" title="The complete P90X system includes:" width="754" height="88" /><div class="content"><h2>3 Guides to get you started!</h2><div class="leftcolumn"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_42.jpg" alt="P90X Guides" title="P90X Guides" width="142" height="105" hspace="20" vspace="5" border="0" class="left" /><ul class="bullet"><li><strong>P90X 3-Phase Nutrition Plan</strong> designed to help you lose fat while maintaining high energy levels.</li>    <li><strong>P90X Fitness Guide</strong> packed with valuable fitness information to help you get the most out of your program.</li><li><strong>"How to Bring It"</strong> video for a quick overview of the complete P90X Extreme Home Fitness training system.</li></ul></div><!-- end .leftcolumn --><div class="rightcolumn"><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/philosophy.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_39.jpg" alt="Tony Horton on the P90X set! Learn more about P90X!" title="Tony Horton on the P90X set! Learn more about P90X!" width="180" height="90"  border="0" /></a><p align="center"><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/philosophy.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);" class="arrow2">Learn more about P90X</a></p></div><!-- end .rightcolumn --><div class="clear"></div><h2>12 highly diverse and intense workouts</h2><div id="workouts"><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_01.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus();"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_51.jpg" alt="P90X - 01 Chest &amp; Back" title="P90X - 01 Chest &amp; Back" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_01.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">01 Chest &amp; Back</a></strong><br />Targeted strength and definition workout emphasizes two classic upper-body exercises.</dd></dl><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_02.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_53.jpg" alt="P90X - 02 Plyometrics" title="P90X - 02 Plyometrics" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_02.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">02 Plyometrics</a></strong><br />Explosive jumping cardio routine proven to dramatically improve athletic performance.</dd></dl><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_03.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_55.jpg" alt="P90X - 03 Shoulders &amp; Arms" title="P90X - 03 Shoulders &amp; Arms" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_03.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">03 Shoulders &amp; Arms</a></strong><br />Potent combination of pressing, curling, and fly movements, that will leave you stronger.</dd></dl><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_04.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_57.jpg" alt="P90X - 04 Yoga X" title="P90X - 04 Yoga X" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_04.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">04 Yoga X</a></strong><br />Combines strength, balance, flexibility, and breath work to enhance your physique and calm your mind.</dd></dl><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_05.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_63.jpg" alt="P90X - 05 Legs &amp; Back" title="P90X - 05 Legs &amp; Back" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_05.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">05 Legs &amp; Back</a></strong><br />Get ready to squat, lunge, and pull for a total-body workout like no other.</dd></dl><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_06.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_64.jpg" alt="P90X - 06 Kenpo X" title="P90X - 06 Kenpo X" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_06.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">06 Kenpo X</a></strong><br />Intense cardiovascular workout with punching and kicking for endurance, balance, and coordination.</dd></dl><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_07.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_65.jpg" alt="P90X - 07 X Stretch" title="P90X - 07 X Stretch" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_07.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">07 X Stretch</a></strong><br />Achieve a higher level of athleticism over a longer period of time, plus prevent injuries and avoid plateaus.</dd></dl><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_08.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_66.jpg" alt="P90X - 08 Core Synergistics" title="P90X - 08 Core Synergistics" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_08.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">08 Core Synergistics</a></strong><br />Build and support multiple muscle groups to build and support the core while conditioning your body.</dd></dl><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_09.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_71.jpg" alt="P90X - 09 Chest, Shoulders &amp; Triceps" title="P90X - 09 Chest, Shoulders &amp; Triceps" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_09.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">09 Chest, Shoulders, &amp; Triceps</a></strong><br />Target both large and small upper body muscles to push you to the brink.</dd></dl><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_10.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_72.jpg" alt="P90X - 10 Back &amp; Biceps" title="P90X - 10 Back &amp; Biceps" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_10.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">10 Back &amp; Biceps</a></strong><br />Flex those powerful biceps and focus on toning and tightening these showcase arm muscles.</dd></dl><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_11.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_73.jpg" alt="P90X - 11 Cardio X" title="P90X - 11 Cardio X" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_11.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">11 Cardio X</a></strong><br />Low-impact cardio routine that is a fun fat-burning workout that will leave you feeling lean and mean.</dd></dl><dl><dt><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_12.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_74.jpg" alt="P90X - 12 Ab Ripper X" title="P90X - 12 Ab Ripper X" width="141" height="94" border="0"></a></dt><dd><strong><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/workouts_12.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);">12 Ab Ripper X</a></strong><br />Sculpt the six-pack abs of your dreams and benefit your health and physical performance.</dd></dl><div class="clear"></div><div class="rightcolumn" align="center"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_82.jpg" alt="P90X - FREE Online Support Tools" title="P90X - FREE Online Support Tools" width="118" height="94"  border="0" /></div><!-- end .rightcolumn --><div class="leftcolumn2"><h2>Tools to keep you motivated</h2><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_86.jpg" alt="P90X Calendar" title="P90X Calendar" width="141" height="65" hspace="20" vspace="10" border="0" class="left" /><ul class="bullet">	<li><strong>P90X Calendar</strong> to set your workout goals, track your progress, and stay motivated.</li>    	<li><strong>FREE Online Support Tools</strong> for access to fitness experts, peer support, and motivation!</li></ul></div><!-- end .leftcolumn --></div><!-- end #workouts --><div class="clear"></div></div><!-- end .content --><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_90.png" alt="P90X - Join the extreme fitness revolution today!" title="P90X - Join the extreme fitness revolution today!" width="754" height="59" /><div class="content">  <p><a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/products/programs/p90x/popups_control/mbg.jsp?pn=18004611535','myWindow','width=570,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_09.gif" alt="P90X - 90-Day Money-Back Guarantee!" title="P90X - 90-Day Money-Back Guarantee!" width="70" height="70" class="mbg_seal_right"/></a>All it takes is an hour a day to get in the best shape of your life. Other than everything you see on this page, all you really need is resistance bands and a place to do pull-ups. After clicking the YES button below and submitting your P90X order, you will then be offered incredible deals on resistance bands, a chin-up bar, and supplements. So just click YES below now and <strong>try P90X risk free for 90 days</strong>, and if you're not completely satisfied, simply call Customer Service for a Return Authorization number to return it within 90 days for a full refund of the purchase price, less s&amp;h. But keep the Ab Ripper X workout and 3-Phase Nutrition Plan as our gifts to you . . . <strong>Just click YES below now!</strong> </p>  <div class="btn" style="width: 681px"><div class="left"><a href="http://www.beachbody.com/product/code/P90XK36-K1.do?actionkey=ADDTOBASKET"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_red_97_DVD.jpg" alt="P90X! Our most complete extreme home fitness training system ever!" title="P90X! Our most complete extreme home fitness training system ever!" width="188" height="147" border="0" /></a></div>  <!-- end .left --><div style="float: left"> <h2>Just click YES now to get ripped with P90X!</h2>   <a href="http://www.beachbody.com/product/code/P90XK36-K1.do?actionkey=ADDTOBASKET"><img src="http://www.beachbody.com/images/en_US/products/programs/p90x/p90x_red_100.gif" alt="YES! I'd like to try P90X today!" title="YES! I'd like to try P90X today!" width="474" height="53" border="0" /></a>   <h4 align="center">A $600.00 value for only 3 monthly payments of $39.95 <em>(+$19.95 s&amp;h)</em><br />Or select a single payment option during checkout.</h4>  <div class="gift">  <div id="express">Order now and get a <strong>FREE Upgrade</strong> to Express Delivery*&#151;<br />a $15.00 value&#151;and get yours in just 5 to 7 business days!<br><cite>*Upgrade applies only to the United States, excluding Alaska, Hawaii, and U.S. territories. Normal delivery is 2 to 3 weeks.</cite></div><!-- end #express -->		</div>  </div><!-- end right float --></div>  <!-- end .btn --><br clear="all" /><p class="legal">Consult your physician and follow all safety instructions before beginning any exercise program.</p></div><!-- end .content --><br clear="all" /><div class="content"><div id="mlreviews"><ul><li><a href="javascript:NewWindow=window.open('/product/fitness_programs/best_sellers/p90x/ReviewView.do','myWindow','width=550,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=Yes,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);" class="arrow2">Read Customer Reviews</a></li>  <li><a href="http://www.beachbody.com/product/fitness_programs/best_sellers/p90x/ReviewSubmit.do" class="arrow2">Submit A Review</a></li><li><a href="http://www.beachbody.com/product/fitness_programs/best_sellers/p90x/TellAFriendSubmit.do" class="arrow2">Tell A Friend</a></li></ul><div class="clear"></div></div></div><br /><ul class="phone"><li>100% Satisfaction Guaranteed</li><li class="right">To order by phone, call toll free: 1 (800) 461-1535 <a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/pops/international.jsp?pn=18004611535','myWindow','width=550,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=No,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);" class="intl">We Ship Worldwide.</a></li></ul></div><!-- end #wrapper --><div class="hide"><!--webSTAT Custom name code--><script type="text/javascript" language="JavaScript"> WS_pn = "BUG_P90X_HOME"; </script><!-- BEGIN WebSTAT Activation Code --><script type="text/javascript" language="JavaScript" src="http://hits.nextstat.com/cgi-bin/wsv2.cgi?58055"></script><noscript><a href="http://www.webstat.com/"> <img src="http://hits.nextstat.com/scripts/wsb.php?ac=58055" border="0" alt="Website Analytics and Website Statistics by NextSTAT" title="Website Analytics and Website Statistics by NextSTAT" /></a></noscript><!-- END WebSTAT Activation Code --> <!-- ALL VENDOR TRACKING PIXELS --><!-- List Id = 20708 and List Name = CM_ProductPartners_P90X --> <!-- Begin ad tag --> <img src="http://ad.doubleclick.net/activity;src=1270268;dcnet=4155;boom=20708;sz=1x1;ord=1?"width=1 height=1 border=0><!-- End ad tag --><!-- List Id = 24551 and List Name = Product Partners - P90x --> <!-- Begin ad tag --> <script language= "JavaScript"  type="text/javascript">ord=Math.random()*10000000000000000;document.write('<img src="http://ad.doubleclick.net/activity;src=1857234;dcnet=4845;boom=24551;sz=1x1;ord='+ ord +'?"width="1" height="1" border="0" alt="">');</script><noscript><img src="http://ad.doubleclick.net/activity;src=1857234;dcnet=4845;boom=24551;sz=1x1;ord=1?"width="1" height="1" border="0" alt=""></noscript><!-- End ad tag --> <img src="http://ad.doubleclick.net/activity;src=1563802;dcnet=4856;boom=20458;sz=1x1;ord=%n?"width="1" height="1" border="0" alt=""><img width=1 height=1 border=0 src="http://ad.trafficmp.com/a/bpix?adv=1025&amp;id=1&amp;r=">  <img height="1" width="1" src="http://view.atdmt.com/action/p90x_hp" border="0" /> <!-- Specific Media Pixel --><img src="http://media.fastclick.net/w/tre?ad_id=19973;evt=12331;cat1=13232;cat2=13233" width="1" height="1" border="0"> <!-- ValueClick Pixel --><!-- Advertiser 'Product Partners',  Include user in segment 'slim6 Segment' - DO NOT MODIFY THIS PIXEL IN ANY WAY --> <img src="http://ad.yieldmanager.com/pixel?id=496184&amp;t=2" width="1" height="1" /><!-- End of segment tag --><!-- Begin ad tag --> <img src="http://ad.doubleclick.net/activity;src=1270268;dcnet=4155;boom=20708;sz=1x1;ord=1?"width=1 height=1 border=0><!-- End ad tag --><img src="http://ad.doubleclick.net/activity;src=1563802;dcnet=4856;boom=20458;sz=1x1;ord=%n?"width="1" height="1" border="0" alt=""><img width=1 height=1 border=0 src="http://ad.trafficmp.com/a/bpix?adv=1025&amp;id=1&amp;r="><!-- Advertiser 'Product Partners', Include user in segment 'P90X rmkt' - DO NOT MODIFY THIS PIXEL IN ANY WAY --> <img height="1" width="1" src="http://view.atdmt.com/action/p90x_offers"/> <script type="text/javascript" src="http://beacon.dedicatednetworks.com/js/t.aspx?aid=3DF1A39A02DDDC03"></script><noscript><iframe src="http://beacon.dedicatednetworks.com/tns.aspx?aid=3DF1A39A02DDDC03" height="1" width="1" scrolling="no" frameborder="0"></iframe></noscript><!-- List Id = 32484 and List Name = P90X LP --> <!-- Begin ad tag --> <script language= "JavaScript"  type="text/javascript">ord=Math.random()*10000000000000000;document.write('<img src="http://ad.doubleclick.net/activity;src=2293617;dcnet=5806;boom=32484;sz=1x1;ord='+ ord +'?"width="1" height="1" border="0" alt="">');</script><noscript><img src="http://ad.doubleclick.net/activity;src=2293617;dcnet=5806;boom=32484;sz=1x1;ord=1?"width="1" height="1" border="0" alt=""></noscript><!-- End ad tag --> </div>
+</div>
+<div class="clear"></div>
+
+
+<div id="footer">
+ 	<!--BottomNav Start-->
+
+
+
+
+
+
+
+
+
+
+<div id="footer_bar">
+<!--<script src="/text/js/csrDates.js"></script>
+<style>
+#csrOff {display:none;}
+</style>
+--><div id="mbg">
+<a href="javascript:NewWindow=window.open('http://www.beachbody.com/text/pops/mbg.html','myWindow','width=550,height=500,left=100,top=100,toolbar=No,location=No,scrollbars=Yes,status=No,resizable=Yes,fullscreen=No'); NewWindow.focus(); void(0);" title="100% Satisfaction 30-Day Money-Back Guaranteed"><img src="http://www.beachbody.com/images/en_US//global/globalgraphics/icon_mbg.png" alt="100% Satisfaction 30-Day Money-Back Guaranteed" width="70" height="70" border="0" /></a>
+<ul>
+<li>Secure online ordering</li>
+<li>Fast 'n' easy checkout</li>
+<li>No-hassle returns</li>
+<li>Friendly customer service</li>
+</ul>
+</div>
+<div id="badges">
+<div id="bbb"><a href="http://www.bbbonline.org/cks.asp?id=102032218151521802" target="_blank"><img src="http://www.beachbody.com/images/en_US//global/globalgraphics/ReliabilitySeal2.png" alt="BBB Online Reliability Program" width="88" height="30" border="0" /></a> </div>
+<div id="verisign"><script src=https://seal.verisign.com/getseal?host_name=www.beachbody.com&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES></script></div>
+</div>
+<div id="newsletter">
+<a href="http://www.beachbody.com/category/newsletters.do"><img src="http://www.beachbody.com/images/en_US//global/globalgraphics/icon_newsletter.png" alt="Beachbody Newsletter" width="50" height="65" border="0" /></a>
+<h2>Free Email Newsletter</h2>
+<p>Special offers, tips, and tools!</p>
+<iframe src="http://www.beachbody.com/text/kickers/footer/email_form.html" frameborder="0" height="25" width="170" marginheight="0" marginwidth="0" allowtransparency="true" name="newsletter_form" scrolling="no"></iframe>
+<!--<form name="subscription" action="http://mh.databack.com/scripts/dbsignup.php3" method="post">
+<input name="Email" type="text" class="txt"  onfocus="this.value='';return false;" value="Your Email Address" size="16" maxlength="60"/>
+<input type="hidden" value="join-beachbodyforyou" name="Action" />
+<input type="hidden" value="http://www.beachbody.com/product/email/subscribe.do" name="ThanksURL" />
+<input name="submit" type="image" src="/images/en_US//global/globalgraphics/btn_go.png" alt="Go" title="Go"  class="btn" border="0" />
+</form>-->
+</div>
+<div id="custservice">
+<div id="csrOn"><a href="http://beachbody.custhelp.com/cgi-bin/beachbody.cfg/php/enduser/chat.php" target="_blank"><h2>Questions?</h2></a>
+<p><a href="http://beachbody.custhelp.com/cgi-bin/beachbody.cfg/php/enduser/chat.php" target="_blank">Click here</a> to chat live with a customer service representative.</p></div>
+<!--<div id="csrOff"><a href="http://beachbody.custhelp.com/cgi-bin/beachbody.cfg/php/enduser/ask.php" target="_blank"><h2>Questions?</h2></a>
+<p><a href="http://beachbody.custhelp.com/cgi-bin/beachbody.cfg/php/enduser/ask.php" target="_blank">Click here</a> to email a customer service representative.</p></div>
+<script>
+serviceDates();
+</script>
+--></div>
+</div>
+<p class="links"><a href="http://www.beachbody.com/home.do">Home</a> | <a href="http://www.beachbody.com/product/about_us/company_overview.do">About Us</a> | <a href="http://www.beachbody.com/product/about_us/press.do">Press</a> | <a href="http://www.beachbody.com/category/newsletters.do">Newsletters</a> | <a href="http://forums.teambeachbody.com/">Message Boards</a> | <a href="http://beachbody.custhelp.com/">Customer Service</a> | <a href="http://beachbody.custhelp.com/cgi-bin/beachbody.cfg/php/enduser/chat.php">Live Chat</a> | <a href="http://www.beachbody.com/account.do?method=start">My Account</a> | <a href="http://www.beachbody.com/product/about_us/terms_of_use.do">Terms of Use</a> | <a href="http://www.beachbody.com/product/about_us/privacy_policy.do">Privacy Policy</a> | <a href="http://www.beachbody.com/product/about_us/site_map.do">Site Map</a> | <a href="http://beachbody.custhelp.com/">Contact Us</a> | <a href="http://www.beachbody.com/basket.do">Shopping Cart</a></p>
+<img src="http://www.beachbody.com/images/en_US/global/bbv6/footer_ada_banner.png" alt="Beachbody&reg; and the American Diabetes Association&reg; are working together to Stop Diabetes." id="footer-ada-banner" />
+<p class="legal">Results may vary. Exercise and proper diet are necessary to achieve and maintain weight loss and muscle definition.<br />
+&copy;2010 Product Partners, LLC. All rights reserved.</p>
+
+
+</div>
+
+</div>
+
+
+ 
+   
+      
+
+
+
+
+
+
+
+
+
+
+
+<!-- GOOGLE ANALYTICS -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-336852-1");
+pageTracker._trackPageview();
+</script>
+
+<!--  Google Web Optimizer Tracking. -->
+
+
+<!-- SiteCatalyst code version: H.19.4. -->
+<script language="JavaScript">
+s_account="mlbbodyprod"
+</script>
+<script language="JavaScript" src="http://www.beachbody.com/omniture/s_code.js"></script>
+<script language="JavaScript"><!--
+// Standard Reporting
+s.pageName='product fitness_programs p90x do';s.events='event3';
+s.eVar8='YAHOO_SEM_P90X';
+
+s.events=(s.events==null?"":s.events+",") + "prodView"
+s.products=(s.products==null?"":s.products+",") + ";P90XK36-K1;;;"
+s.prop1="Product Detail";
+s.channel="Fitness Programs";
+s.prop2="Fitness Programs P90X";
+
+s.pageName="P90X Sell";
+
+s.eVar29='98560571';
+if ((typeof gwoTest != 'undefined') && (typeof gwoGroup != 'undefined')) {
+  s.eVar28 = gwoTest + ' > ' + gwoGroup;
+}
+
+
+var s_code=s.t();if(s_code)document.write(s_code);//--></script>
+<!-- End SiteCatalyst code version: H.19.4 -->
+
+
+
+
+
+
+<!--  Mercent Referal Tracking -->
+
+
+<script src="http://cdn.mercent.com/js/tracker.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ mr_merchantID = "ProductPartners";
+ mr_Track();
+// -->
+</script>
+<noscript>
+ <img src="http://link.mercent.com/image.ashx?merchantID=ProductPartners" style="display: none;">
+</noscript>
+      
+
+
+
+
+
+
+
+</body>
+
+<!-- Mirrored from www.beachbody.com/product/fitness_programs/p90x.do?code=YAHOO_SEM_P90X by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:28:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

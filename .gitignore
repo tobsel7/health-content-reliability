@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# jetprains
+.idea/
+
+# project-specific files
+models/
+aux/
+python3-svmlight/
+results/

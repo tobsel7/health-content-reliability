@@ -1,0 +1,1368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from blogs.abcnews.com/scienceandsociety/2009/05/cap-and-trade.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:36:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+<script type="text/javascript" src="http://static.typepad.com/.shared:v25.4:typepad:en_us/js/yui/yahoo-dom-event.js,/js/sixatrack-loader.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="The House Energy Committee worked late last night. There was a lot of compromise, a lot of horse trading. But in the end they voted, 33-25, in favor of a bill that would create the first federally-mandated system to curb..., Science and Society Blog" />
+<meta name="keywords" content=", blog, science and society, ned potter, abc news, " />
+<meta name="generator" content="http://www.typepad.com/" />
+  <title>Cap and Trade - Science and Society</title> 
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="http://blogs.abcnews.com/scienceandsociety/atom2.xml" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://blogs.abcnews.com/scienceandsociety/index.rdf" />
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.typepad.com/t/rsd/183293" />
+  
+<script language="javascript">
+var hasChanged = 0;
+var hostName = '.typepad.com';
+
+function setCookie (name, value, expires) {
+    document.cookie = name + '=' + escape(value) + '; expires=' + expires.toGMTString() + '; domain=' + hostName + '; path=/';
+}
+
+function getCookie (name) {
+    var key = name + '=';
+    var c = document.cookie;
+    var i = c.indexOf(key);
+    if (i < 0) return '';
+    var j = c.indexOf(';', i + key.length);
+    if (j < 0) j = c.length;
+    return unescape(c.substring(i + key.length, j));
+}
+
+function deleteCookie (name) {
+    if (getCookie(name))
+        setCookie(name, '', new Date(70, 0, 1, 0, 0, 1));
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    if( f.author )
+        setCookie('typepadauthor', f.author.value, now);
+    if( f.email )
+        setCookie('typepademail', f.email.value, now);
+    if( f.url )
+        setCookie('typepadurl', f.url.value, now);
+}
+
+function forgetMe () {
+    deleteCookie('typepadauthor');
+    deleteCookie('typepademail');
+    deleteCookie('typepadurl');
+}
+
+function setFormValues (f) {
+    var val = getCookie("typepadauthor");
+    if( f.author && !f.author.value && val)
+        f.author.value = val;
+    val = getCookie("typepademail");
+    if( f.email && !f.email.value && val)
+        f.email.value = val;
+    val = getCookie("typepadurl");
+    if( f.url && !f.url.value && val)
+        f.url.value = val;
+}
+
+function unsetFormValues (f) {
+    f.author.value = '';
+    f.email.value = '';
+    f.url.value = '';
+}
+
+function handleSubmit (f) {
+    if (validateForm(f)) {
+        if (f.bakecookie && f.bakecookie.checked)
+            rememberMe(f);
+        else
+            forgetMe();
+    } else {
+        return false;
+    }
+}
+
+function handleSubmitEvent( evt ) {
+    evt = evt || event;
+    var f = document.getElementById( "comment-form" ) || document.comment_form || document.comments_form;
+    if (validateForm(f)) {
+        return handleSubmit( f );
+    } else {
+        return false;
+    }
+}
+
+function validateForm (f) {
+var x=0;
+for (var i=0; i<f.length; i++) {
+        if ((f.elements[i].value == "") && (f.elements[i].name != "url")) {
+            alert ("Please enter your" + f.elements[i].name);
+            //alert (f.elements[i].name + " is blank");
+            x=x+1;
+        } else {
+            if (f.elements[i].name == "email") {
+                if (!((f.elements[i].value.indexOf(".") > 2) && (f.elements[i].value.indexOf("@") > 0))) {
+                    alert ("Please enter a valid email address");
+                    x=x+1;
+                }
+            }
+            
+            if ((f.elements[i].name == "url") && (f.elements[i].value != ""))  {
+                if (!((f.elements[i].value.indexOf("http://") > -1))) {
+                    alert ("Please enter a valid url");
+                    x=x+1;
+                }
+            }
+        }
+    }
+
+    if (x != "0") {
+        return false;
+    } else {
+        return true;
+    }
+}
+function handleCheck (e) {
+    if (hasChanged) return;
+    if (e.checked)
+        setFormValues(e.form);
+    else
+        unsetFormValues(e.form);
+}
+
+function handleChange (e) {
+    hasChanged = 1;
+}
+
+function doLoaded () {
+    var f = document.getElementById( "comment-form" ) ||
+        document.comment_form || document.comments_form;
+    if( !f )
+        return;
+    f.onsubmit = handleSubmitEvent;
+    setFormValues( f );
+    if( f.author && f.author.value && f.bakecookie )
+        f.bakecookie.checked = 1;
+}
+onload = doLoaded;
+
+var theForm;
+var requestSubmitted = false;
+function disableButton (e) {
+    if (!requestSubmitted) {
+        e.disabled = true;
+        theForm = e.form;
+        requestSubmitted = true;
+        setTimeout('submitIt()', 250);
+    } else {
+        return false;
+    }
+}
+
+function submitIt () {
+    // make sure we're posting
+    if (theForm.bakecookie) handleSubmit(theForm);
+    theForm.submit();
+    return false;
+}
+
+
+/* comment registration */  
+var showHideElements =
+{
+    "comments-open-login" : "none",
+    "comments-open-logout" : "block",
+    "comments-open-data" : "none",
+    "comments-open-text" : "block",
+    "comments-open-footer" : "block"
+};
+
+function commentSignIn()
+{
+    if( typeof commenterName == "undefined" || !commenterName )
+        return;
+    
+    // insert name
+    var e = document.getElementById( "commenter-name" );
+    if( e )
+        e.innerHTML = commenterName;
+    
+    // hide/show various elements
+    for( var i in showHideElements )
+    {
+        e = document.getElementById( i );
+        if( e )
+            e.style.display = showHideElements[ i ];
+    }
+}
+
+</script>
+<script type="text/javascript">
+hostName = '.abcnews.com';
+</script>
+  
+  <link rel="meta" type="application/rdf+xml" title="FOAF" href="http://blogs.abcnews.com/foaf.rdf" />
+  
+ <script language="javascript" type="text/javascript" id="_hbc">
+//<![CDATA[
+var _acct="DM5103306BDW86EN3;DM5103083LCA38EN3"; //account number(s)
+var _pn="Blog"; //page name(s)
+var _mlc="http://blogs.abcnews.com/ScienceandSociety/"; //multi-level content category
+var _seg=""; // visitor segmentation
+var _cmp=""; // campaign id
+var _gp="";  // campaign goal
+var _cmpn="CMP";// campaign id in query
+var _gpn=""; // campaign goal in query
+var _fnl=""; // funnels
+var _pec=""; // error codes
+var _fv="";  // form validation function name
+var _dcmp="";// dynamic campaign
+var _dcmpn="";//dynamic campaign in query
+var _hra=""; // response attribute
+var _hcn=""; // conversion
+var _hcv=""; // conversion value
+var _hlt=""; // lead tracking
+var _hla=""; // lead attribute
+var _hqsr="";// response attribute in referrer query
+var _hqsp="";// response attribute in query
+var _hc1=""; // custom 1
+var _hc2=""; // custom 2
+var _hc3=""; // custom 3
+var _hc4=""; // custom 4
+var _lt="auto";  // link tracking
+var _ci="";  // customer id
+var _cp="null"; // campaign
+var _cpd=""; // campaign domain
+var _pndef="title"; //default page name
+var _ctdef="full"; //default content category
+var _dlf="n"; //download filter
+var _elf="n"; //exit link filter
+var _dft="n"; // download file tracker variable, set to y to use the name reference
+var _hrf=""; // custom referrer. use valid url or param name
+var _epg="n"; //event page identifier
+var _vpc="090101r";
+var _gn="ehg-dig.hitbox.com",_mn="we21"; //gateway & machine name
+//]]>
+</script>
+  <script language="javascript1.1" type="text/javascript" src="http://a.abcnews.com/js/hbx.js"></script>
+
+  
+
+<script language="javascript" type="text/javascript" src="http://a.abcnews.com/assets/static/wrapper/blogs/punch/blog_cssjs.js"></script>
+
+<!--share toolbox - begin-->
+<script type="text/javascript" src="http://a.abcnews.go.com/assets/js/toolbox.js"></script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=abcnews"></script>
+<script type="text/javascript">
+var addthis_options = 'favorites, buzz, delicious, fark, google, linkedin, live, mixx, myspace, newsvine, stumbleupon, technorati, yahoobkm, more';
+</script>
+<!--share toolbox - end-->
+
+<link type="text/css" rel="stylesheet" media="screen, print" href="http://a.abcnews.com/assets/static/wrapper/css/blogs.css"/>
+
+<link rel='stylesheet' href='http://a.abcnews.com/assets/static/wrapper/css/print.css' type='text/css' media='print'>
+
+</head>
+
+<body>
+<div id="bannerad"><div class="banneradcontainer"><script language="Javascript1.1" type="text/javascript" src="http://abcnews.go.com/Adserver?CallDown&amp;js=1&amp;AdTypes=Banner;"></script></div></div>
+<script type="text/javascript" src="http://a.abcnews.com/assets/static/wrapper/blogs/punch/blog_header.js"></script>
+<div class="bodycontainerwide">
+	<div class="story">
+		<div class="container">
+			<div class="main">
+				<div class="captop">
+					<img src="http://a.abcnews.com/assets/images/cap-top_left.gif" width="3" height="2" border="0" alt="" class="left" /> <img src="http://a.abcnews.com/assets/images/cap-top_right.gif" width="3" height="2" border="0" alt="" class="right" /> 
+				</div>
+
+				<div id="blogArea"> 
+                                <div class="breadcrumb">
+<a href="http://abcnews.go.com/">Home</a> &gt; <a href="http://abcnews.go.com/technology">Sci-Tech</a> &gt; <a href="http://blogs.abcnews.com/scienceandsociety/" class="active">Science and Society</a>
+</div>
+<div id="blogHeader">
+                                                        
+							<div class="headline">
+								Science and Society
+							</div>
+							<div class="dek">
+								The Latest Developments in Science and Technology
+							</div>
+</div>
+				<div id="blogLeft">
+      <div class="leftBox" id="aboutBlog">
+        						<a href="http://abcnews.go.com/WNT/story?id=127408"><img src="http://a.abcnews.com/images/site/blog/redesign07/blog_NedPotter_218x155.jpg" width="218" height="155" alt="" border="0" /></a> 	<p><a href="http://abcnews.go.com/WNT/story?id=127408"><strong>Ned Potter</strong></a> is the science correspondent for ABC's "World News with Diane Sawyer." He has reported on such topics as space exploration, the human genome and climate change.
+</p>
+      </div>
+<div class="leftBox" style="background-image:none;">
+<p style="padding:5px 0 5px 5px;"><a href="http://feeds.abcnews.com/abcnews/scienceandsocietyblog"><img src="http://a.abcnews.com/images/technology/rss_chicklet.jpg" alt="Subscribe to this blog's feed" style="vertical-align:middle;border:0"/></a> <a href="http://feeds.abcnews.com/abcnews/scienceandsocietyblog">Subscribe to this blog's feed</a></p>
+</div>
+
+<div class="leftBox">
+        <h3>RECENT POSTS</h3>
+        <ul>
+          
+				<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/07/climategate-emails-independent-panel-clears-global-warming-researchers.html">'Climategate' E-mails: Independent Panel Clears Global Warming Researchers</a></li>
+			
+				<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/07/-space-station-russian-cargo-ship-aborts-docking.html"> Space Station: Russian Cargo Ship Aborts Docking</a></li>
+			
+				<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/06/bps-next-problem-tropical-stormalex.html">BP's Next Problem: Tropical Storm...Alex?</a></li>
+			
+				<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/06/shaking-all-over-earthquake-in-northeast.html">Shaking All Over: Earthquake in Northeast</a></li>
+			
+				<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/06/gulf-oil-spill-where-the-slick-may-go.html">Gulf Oil Spill: Where the Slick May Go</a></li>
+			
+				<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/05/gulf-oil-spill-brace-for-hurricane-season.html">Gulf Oil Spill: Brace for Hurricane Season</a></li>
+			
+				<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/05/sunstruck-shuttle-and-space-station-seen-from-earth.html">Sunstruck: Shuttle and Space Station, Seen From Earth</a></li>
+			
+				<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/04/gulf-of-mexico-spill-worse-than-the-exxon-valdez.html">Gulf of Mexico Spill: Worse Than the Exxon Valdez?</a></li>
+			
+				<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/04/gulf-oil-slick-visible-from-space.html">Gulf Oil Slick: Visible From Space</a></li>
+			
+				<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/04/earth-day-celebration-and-sparring.html">Earth Day: Celebration and Sparring</a></li>
+			
+        </ul>
+      </div>
+     
+<div class="leftBox">
+<h3>MONTHLY ARCHIVES</h3>
+<ul>
+
+<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/07/index.html">July 2010</a></li>
+
+<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/06/index.html">June 2010</a></li>
+
+<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/05/index.html">May 2010</a></li>
+
+<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/04/index.html">April 2010</a></li>
+
+<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/03/index.html">March 2010</a></li>
+
+<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/02/index.html">February 2010</a></li>
+
+<li><a href="http://blogs.abcnews.com/scienceandsociety/2010/01/index.html">January 2010</a></li>
+
+<li><a href="http://blogs.abcnews.com/scienceandsociety/2009/12/index.html">December 2009</a></li>
+
+<li><a href="http://blogs.abcnews.com/scienceandsociety/2009/11/index.html">November 2009</a></li>
+
+<li><a href="http://blogs.abcnews.com/scienceandsociety/2009/10/index.html">October 2009</a></li>
+
+</ul>
+<!--<p class="syndicate"><a href="http://blogs.abcnews.com/scienceandsociety/index.rdf">Subscribe to this blog's feed</a></p>-->
+</div>
+<div class="leftBox">
+<div id="calendar">
+			<table summary="Monthly calendar with links to each day's posts">
+				<caption>July 2010</caption>
+				<tr>
+				
+				<th>Sun</th>
+				
+				<th>Mon</th>
+				
+				<th>Tue</th>
+				
+				<th>Wed</th>
+				
+				<th>Thu</th>
+				
+				<th>Fri</th>
+				
+				<th>Sat</th>
+				
+				</tr>
+				
+				
+				<tr>
+					<td>&nbsp;</td>
+				
+					<td>&nbsp;</td>
+				
+					<td>&nbsp;</td>
+				
+					<td>&nbsp;</td>
+				
+					<td>1</td>
+				
+					<td><a href="http://blogs.abcnews.com/scienceandsociety/2010/07/02/">2</a></td>
+				
+					<td>3</td>
+				</tr>
+				
+				<tr>
+					<td>4</td>
+				
+					<td>5</td>
+				
+					<td>6</td>
+				
+					<td><a href="http://blogs.abcnews.com/scienceandsociety/2010/07/07/">7</a></td>
+				
+					<td>8</td>
+				
+					<td>9</td>
+				
+					<td>10</td>
+				</tr>
+				
+				<tr>
+					<td>11</td>
+				
+					<td>12</td>
+				
+					<td>13</td>
+				
+					<td>14</td>
+				
+					<td>15</td>
+				
+					<td>16</td>
+				
+					<td>17</td>
+				</tr>
+				
+				<tr>
+					<td>18</td>
+				
+					<td>19</td>
+				
+					<td>20</td>
+				
+					<td>21</td>
+				
+					<td>22</td>
+				
+					<td>23</td>
+				
+					<td>24</td>
+				</tr>
+				
+				<tr>
+					<td>25</td>
+				
+					<td>26</td>
+				
+					<td>27</td>
+				
+					<td>28</td>
+				
+					<td>29</td>
+				
+					<td>30</td>
+				
+					<td>31</td>
+				</tr>
+			</table>
+			</div>	
+</div>
+
+    </div>
+				   <div id="blogMain">
+        <p>
+			
+			<a href="http://blogs.abcnews.com/scienceandsociety/2009/05/missing-link-fo.html">&laquo; Previous</a> |
+			
+			<a href="http://blogs.abcnews.com/scienceandsociety/">Main</a>
+			
+			| <a href="http://blogs.abcnews.com/scienceandsociety/2009/05/a-matter-of-cur.html">Next &raquo;</a>
+			
+
+	    </p>
+        <h1>Cap and Trade</h1>
+        <p class="date">May 22, 2009 10:42 AM</p>
+       <!-- <p class="author">Ned Potter</p>-->
+
+<!--share toolbox-->
+<script type="text/javascript">
+abcNewsShare.render(false,false,false,'http://feeds.abcnews.com/abcnews/scienceandsocietyblog',false,'addthis',false,'blog entry');
+</script>
+
+
+        <p><a onclick="window.open(this.href, '_blank', 'width=413,height=310,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false" href="http://blogs.abcnews.com/.shared/image.html?/photos/uncategorized/2009/05/22/oil_refinery_070709_main.jpg"><img height="163" width="218" border="0" src="http://blogs.abcnews.com/scienceandsociety/images/2009/05/22/oil_refinery_070709_main.jpg" title="Oil_refinery_070709_main" alt="Oil_refinery_070709_main" style="margin: 0px 5px 5px 0px; float: left;" /></a>
+The <a href="http://energycommerce.house.gov/">House Energy Committee</a> worked late last night.&nbsp; There was a lot of compromise, a lot of horse trading.&nbsp; But in the end they voted, 33-25, in favor of a bill that would create the first federally-mandated system to curb greenhouse gas emissions.<br /> </p>
+
+<p>There have been similar bills before, all of which died, and there is no saying this one will get through the full House and Senate. But its backers say this time, with Mr. Obama talking about <a href="http://www.whitehouse.gov/issues/energy_and_environment/">&quot;a culture change on climate change,&quot;</a> and with a Democratic majority on the Hill, the current bill could be for real. </p>
+
+<p>&quot;This bill, when enacted into law this year, will break our dependence on foreign oil, make our nation the world leader in clean energy jobs and technology, and cut global warming pollution,&quot; said Rep. Henry Waxman (D-Calif.), the committee chairman and a co-sponsor of the bill with Rep. Ed Markey (D-Mass.).&nbsp; Read Waxman's statement <a href="http://energycommerce.house.gov/index.php?option=com_content&amp;view=article&amp;id=1630:energy-and-commerce-committee-passes-comprehensive-clean-energy-legislation&amp;catid=122:media-advisories&amp;Itemid=55">HERE</a>.</p>
+
+<p>Detractors, meanwhile, are worried, talking about Waxman-Markey as a covert energy tax -- one that comes at a terrible time for a struggling economy. House Republicans, led by Rep. Joe Barton (R-Tex.) have offered an alternative plan, which you can find <a href="http://republicans.energycommerce.house.gov/Media/file/News/051409%20Barton%20Waxman-Markey%20Alternative.pdf">HERE</a>.</p>
+
+<p>The idea behind the bill, as has been long discussed, is &quot;cap and trade.&quot; In simple terms, large emitters of carbon dioxide -- power companies and the like -- are given &quot;permits&quot; to give off a certain amount of gases. The permits, when you add them all up, allow less CO2 than is currently released -- but the permits can be traded, bought and sold, etc. So if one company just started building a super-efficient power plant (or a wind farm, for that matter), and can easily come in under its limit, it can make some money by selling some permits to one that would have a tougher time. </p>
+
+<p>It doesn't matter, under the bill, who does the work, as long as the total amount of greenhouse emissions goes down. </p>
+
+<p>This could easily be dismissed as fun with numbers, except that it was used by the <a href="http://bushlibrary.tamu.edu/research/public_papers.php?id=525&amp;year=&amp;month=">administration of George H. W. Bush</a> to <a href="http://www.epa.gov/air/caa/">control acid rain</a>. Both the White House and the Environmental Defense Fund, which worked the idea through with them, said it was a low-cost solution to the problem.&nbsp; &nbsp;See a cap-and-trade summary from them <a href="http://www.edf.org/documents/4348_CapAndTradeBasics.pdf">HERE</a>.</p>
+
+<p>Would it work now?&nbsp; We'll see how it flies with Congress, and with the American people.&nbsp; That would be you. </p>
+        <a id="more"></a>
+		
+       <p class="entryFoot">
+					May 22, 2009 
+					
+					| <a href="cap-and-trade.html">Permalink</a> 
+					| <a href="http://www.addthis.com/bookmark.php" 
+    style="text-decoration:none;" 
+    onclick="return addthis_sendto();">Share</a>
+				  | <a href="cap-and-trade.html#comments">User Comments (21)</a>
+				  
+				</p>
+
+<!--Begin Ad Tags-->
+<div class="quadbot"><script type="text/javascript">adsonar_placementId=1412628;adsonar_pid=174757;adsonar_ps=-1;adsonar_zw=398;adsonar_zh=160;adsonar_jv='ads.adsonar.com';</script><script language="JavaScript" src="http://js.adsonar.com/js/adsonar.js"></script></div>
+<!--End Ad Tags-->
+
+		<!--
+			<p class="formhed"><a id="trackback"></a><strong>TrackBack</strong></p>
+			<p>TrackBack URL for this entry:<br />http://www.typepad.com/services/trackback/6a00d8341c4df253ef01156fa9893f970c</p>
+			
+			<p>Listed below are links to weblogs that reference <a href="http://blogs.abcnews.com/scienceandsociety/2009/05/cap-and-trade.html">Cap and Trade</a>:</p>
+			
+			
+		-->
+		
+			<p class="formhed"><a id="comments"></a><strong>User Comments</strong></p>
+	                
+	                        <div class="comments-info">
+	                                <p><a href="http://blogs.abcnews.com/scienceandsociety/2009/05/cap-and-trade/comments/atom.xml"><img src="http://static.typepad.com/.shared:v25.4:typepad:en_us/images/feed.png" alt="Feed" width="10" height="10" border="0"/></a> You can follow this conversation by subscribing to the <a href="http://blogs.abcnews.com/scienceandsociety/2009/05/cap-and-trade/comments/atom.xml">comment feed</a> for this post.</p>
+	                        </div>
+	                
+			
+				<a id="c6a00d8341c4df253ef01156fa9bf0a970c"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>What does that (Obama and kids crying) have to do with cap and trade?</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">sciencegirl2000</span> | May 22, 2009 12:25:54 PM</p>
+			
+				<a id="c6a00d8341c4df253ef0115709eff44970b"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>The cap and trade program also came into play with the reduction of sulfur in gasoline - somehow that managed to work - I&#39;m not too sure why some people are so critical of it.</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">sciencegirl2000</span> | May 22, 2009 12:27:31 PM</p>
+			
+				<a id="c6a00d8341c4df253ef01156fa9da77970c"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>I have doubts it&#39;ll work.  Taxing companies is just a stealth tax on the populace.  Companies won&#39;t pay it, they&#39;ll pass the cost onto consumers, via increased prices.  It is good however, that something is being done.  Albeit for political gain rather then ecological.</p>
+
+<p>Ned, as for feedback on the new site layout, it&#39;s too white.  I prefered the black better, but enjoy the new layout.  Perhaps a color choice for users?  Kind of like how web forums have different skins to choose from?  Other than that, it&#39;s simple, took me all of 30 seconds to figure it out.</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">Lawrence</span> | May 22, 2009 1:22:27 PM</p>
+			
+				<a id="c6a00d8341c4df253ef0115709f5271970b"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>This is a charade and a way of extorting money from business and individuals rather than a serious attempt at reducing greenhouse gases. And to boot, the entire scientific underpinning of this is hotly debated and not proven. Making policy on unproven and politically motivated &quot;cap and trade&quot; programs is only good for those positioned to make money off the programs they enact.</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">Jon</span> | May 22, 2009 3:11:01 PM</p>
+			
+				<a id="c6a00d8341c4df253ef0115709f6252970b"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>It looks like they are going to give away the initial permits for free, so I really don&#39;t see how that should stress anybody very much financially. The transition will inevitably have costs, of course, but it should make our economy more efficient and competitive in the long run.</p>
+
+<p>Welcome to the 21st century.</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">jock59801</span> | May 22, 2009 3:41:16 PM</p>
+			
+				<a id="c6a00d8341c4df253ef0115709fef57970b"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>The Heritage team writes:</p>
+
+<p>Waxman-Markey will cause higher energy costs to spread throughout the economy as producers everywhere try to cover their higher production costs by raising their product prices. Consumers will be most directly affected by rising energy bills. Even after adjusting for inflation, gasoline prices will rise 74 percent over the 2035 baseline price. Compared to the baseline, residential natural gas consumers will see their inflation-adjusted price rise by 55 percent. Because of its reliance on coal, the cost of electricity will rise by 90 percent — again after adjusting for inflation and in addition to what the price would have been anyway in 2035.<br />
+</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">deanbob</span> | May 22, 2009 9:01:30 PM</p>
+			
+				<a id="c6a00d8341c4df253ef01156faab15b970c"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>An article in the UK Guardian indicated &#39;Cap and Trade&#39; was not achieving its desired results; however, the energy costs had gone up.  Plus there was a lot scandal about backroom/shady deals. </p>
+
+<p>(Anthropogenic) global warming is not occurring and has not been for 4-10 years.  With the economy in the condition its in, cap and trade will increase everyone&#39;s energy csts. </p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">deanbob</span> | May 22, 2009 9:10:21 PM</p>
+			
+				<a id="c6a00d8341c4df253ef0115709ff43a970b"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>My congressman sent an email about <br />
+&quot;HR 2454 has not been officially scored by the Congressional Budget Office, but the unofficial committee estimate was more than $2.23 trillion.  That is over $7,000 per person, or almost $30,000 for a family of four.  </p>
+
+<p>There are still opportunities to stop this bad bill from becoming law, and you can rest assured I will do all I can to help ensure that.  Now is not the time to employ policies that will raise taxes on businesses, raise energy prices on American families, and cripple our economy.&quot;</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">deanbob</span> | May 22, 2009 9:17:38 PM</p>
+			
+				<a id="c6a00d8341c4df253ef011570a1f5b5970b"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>deanbob, so lets say those numbers are true.  Thats the cost of doing something.  But what is the cost of doing nothing?  The US spends well over a Trillion dollars on energy every year.  When gas prices went to $4.00+ last year, that number almost doubled overnight.  Companies and individuals were extorted for $100s of Billions because we have no alternative but to pay.  The total damage to the economy from this one event has been estimated in the Trillions.  And that event was based purely on speculation that there might be shortages, no actual shortages ever even occurred.  Our entire economy is based on a fuel that we can only make enough of to cover 25% of our consumption.  That is an extremely serious national security risk.  Imagine what would happen to our economy if there ever were actual shortages.  How soon we forget 1973.  OPEC cut production by 5%, and the world market oil price went up 4X.  Imagine if an international conflict cut our access to foreign oil.  How do you think our economy would react to a 75% shortfall of oil supply vs. demand?</p>
+
+<p>The alternative to cap and trade is to pick a technology and mandate it. The beauty of the cap and trade system is it provides the same incentives, without the Government mandating a solution.  It lets the free market decide how to solve the problem.  The &quot;carbon tax&quot; will make traditional energy sources more expensive.  That will create huge opportunities for innovation for anyone who can offer a cheaper/cleaner alternative.  The type of analysis you quote always assumes that American entrepreneurs can&#39;t find a better way and we keep doing things the same way forever and just pay more.  Its that kind of &quot;America can&#39;t do it&quot; attitude that I just can&#39;t understand coming from the party who fervently believes this is the greatest nation in the world.  </p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">Rob</span> | May 23, 2009 8:54:10 PM</p>
+			
+				<a id="c6a00d8341c4df253ef01156fadc0b6970c"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>There still isn&#39;t any evidence that man is causing anything in terms of climate change.</p>
+
+<p>I can&#39;t support an idea of taxing everyone into bankrupcy without sufficient evidence and proof.  A hypothesis is not good enough.  </p>
+
+<p>Sure &quot;saving the planet&quot; always hits home runs with the more liberal enviromental people and they are for this bill.  They believe in something without any proof, hence the religion of global warming.  I am more of a realist and need more.  I can&#39;t support any legislation of a whim.</p>
+
+<p>I don&#39;t care if they start their coupons off free.  That will change.  Rest assured.  When it does, we will take it in the shorts.  I&#39;m sorry, but I don&#39;t ever want to pay $1.00 and higher for my electrisity for what is now only $.08 a kWH.  </p>
+
+<p>If you don&#39;t think that companies will jack up your rates and their products and services on to us the consumer, you are a complete fool.</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">The Realist</span> | May 24, 2009 12:35:07 PM</p>
+			
+				<a id="c6a00d8341c4df253ef01156fadc8b7970c"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>First and foremost, I don&#39;t trust any politician, never have never will.  Anything they say is only in their best interest.  Never the bennefit of us.</p>
+
+<p>That said, the politicians (government) will become very wealthy off of cap and trade and everything to do with global warming.  That is not right, I don&#39;t care which side of the isle you are on.</p>
+
+<p>Now, that is exactly how I see this, as a money making scam for the government.  Where is their facts?  Oh that&#39;s right, they don&#39;t exist.  So let&#39;s tax the heck out of everyone based on nothing.</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">Tammie</span> | May 24, 2009 12:58:33 PM</p>
+			
+				<a id="c6a00d8341c4df253ef01156fadcc96970c"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>This planet seems to have given us an endless supply of oil to use.  Yes, endless.  We have been told for 50 years that we will run out.  Well???  Estimates are still as high as ever.  Oil is cheap and a tremendous amount of energy comes from a small amount.  </p>
+
+<p>Groups of scientists are changing their thinking on oil being a &quot;fossil fuel&quot; to one that is made within the earth.  The discovery of all that oil on Saturn&#39;s moon boosted their theory, and hurt fossil fuel theory.</p>
+
+<p>I think we are on the cusp of having to change science books.  And that reason is the move away from oil.  It seems that groups that have certain political leanings are against oil.  They hate it and wished it would never exist.  Why do they think that and hate it so?  </p>
+
+<p>Rather than work to ban it, why not work to make it burn cleaner.  Our cars already burn it much cleaner than they did in the 50&#39;s and 60&#39;s.  If they focused a little, we could make oil very clean and keep our energy affordable.</p>
+
+<p>Alternative energy sounds fun, but what is it really?  Electric?  Solar?  Wind?  All very expensive and can&#39;t even hold a candle to oil in terms of potential energy at anytime at any place in the world.</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">Angie</span> | May 24, 2009 1:08:08 PM</p>
+			
+				<a id="c6a00d8341c4df253ef01156faddbea970c"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>Rob | May 23, 2009 8:54:10 PM.....I am all for a better way.  As a whole, we have many - solar, wind, nuclear, oil, gas, and clean coal AVAILABLE NOW.  They&#39;d put people to work in good paying jobs and bring in badly revenue for the Federal govt.  Fossil fuels may need to be phased out; but, only after other viable sources are put online (and verified feasible).  For many years, environmentalists have blocked drilling in some very promising areas.  For example, ANWR is 72 miles from the Prudhoe pipeline, and there are no measureable negative effects from the pipeline.  </p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">deanbob</span> | May 24, 2009 2:03:39 PM</p>
+			
+				<a id="c6a00d8341c4df253ef011570a6ca87970b"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>There&#39;s no such thing as clean coal.  Period.  You burn it, you get carbon.  How is that clean?  Sequestration isn&#39;t clean coal either.  What happens when the rock you put it in collapses, or an earthquake?  Sure you may put it in a place that we think is geologically stable, but we all know that stable ground isn&#39;t stable forever.  We need to stop looking at the short term, and start looking long term.  Especially if we want to survive.</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">Lawrence</span> | May 26, 2009 8:35:22 AM</p>
+			
+				<a id="c153556719"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>I can&#39;t support an idea of taxing everyone into bankrupcy without sufficient evidence and proof. A hypothesis is not good enough.</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">Jeremy</span> | May 27, 2009 2:24:14 PM</p>
+			
+				<a id="c6a00d8341c4df253ef011570b9eac1970b"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>Im watching the most irresponsible piece of journalism crap ive ever experienced regarding this nonsense on how the US is consuming to much and is contributing to climate change. where are the dissenting points of scientific views. earth 2100 is thge biggest piece of crappola ever put on the tube. tell me why when anthropogenic activity contributes a mere 3% of co2, out use of fossil fuels is the obvious answer to all the world problems. the IPCC is a political arm on the UN and they are the last place i would go for objective answers to solve anything. sounds like they are looking for developed world $$$$$ not technology. hey! those 3rd world dictators need to keep partying and dining in NY after all.</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">bob young</span> | Jun 2, 2009 9:49:11 PM</p>
+			
+				<a id="c6a00d8341c4df253ef011570700266970c"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>Were do go to sign up for the party of NOOOOOOOOOOO</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">paul</span> | Jun 26, 2009 1:54:51 PM</p>
+			
+				<a id="c6a00d8341c4df253ef0115709eede7970c"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>Read the book Red Hot Lies - it will really open your eyes about global warming. It was a #1 best seller about 2 months ago. The author has 68 pages of documented references for everything he puts in the book. Yes the Earth has been cooling (average world temp)for the past 5 years with 2008 really dropping.  Out of the 3,000 Al Gore scientists that he frequently sites as &quot;all being in total agreement that man-made CO2 is causing the planet to warm&quot;.....every one of them was re-interviewed in 2006 by a team of scientitst from Holland and only 29% agreed with Al&#39;s premise. They believe the Earth has always been warming and cooling in cycles, always has, always will and nothing man can do will change that. It is solar radiation that drives the climate plus the Earth&#39;s magma and how much of that is released into the ocean.  NOT C02!!!  C02 is not a poisonous gas - it is the source of life for all plants - which in turn take it in and spit out oxygen for animal life to survive.  READ RED HOT LIES, you won&#39;t regret it.</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">whodatt_99</span> | Jun 30, 2009 5:57:26 PM</p>
+			
+				<a id="c6a00d8341c4df253ef011570a14531970c"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>Here&#39;s a comment I posted elsewhere in reply to other observers who were quoting the famous denier, Dr. Singer; it&#39;s applicable here:</p>
+
+<p>*****</p>
+
+<p>For the doubters, especially those who accuse us who worry about global warming (1.) of not doing any research, and, (2.) that we&#39;re at best uneducated (I hold a master&#39;s degree) and maybe plain stupid, let me help you get started, especially fans of Dr. Singer, who argues the earth has been cooling since 1998:</p>
+
+<p>from NASA. especially the first paragraph:</p>
+
+<p><a href="http://www.nasa.gov/worldbook/global_warming_worldbook.html" rel="nofollow">http://www.nasa.gov/worldbook/global_warming_worldbook.html</a></p>
+
+<p>from NCDC (National Climatic Data Center):</p>
+
+<p><a href="http://www.ncdc.noaa.gov/oa/climate/globalwarming.html" rel="nofollow">http://www.ncdc.noaa.gov/oa/climate/globalwarming.html</a></p>
+
+<p>On the chart, note in particular the blue line showing an upward trend.</p>
+
+<p>EPA uses NCDC&#39;s chart.  It also has a number of other links showing other effects here:</p>
+
+<p><a href="http://www.epa.gov/climatechange/science/recentcc.html" rel="nofollow">http://www.epa.gov/climatechange/science/recentcc.html</a></p>
+
+<p>But let&#39;s hop down to the antipodes to the Australian government&#39;s Bureau of Meteorology:</p>
+
+<p><a href="http://www.bom.gov.au/silo/products/cli_chg/index_global.shtml" rel="nofollow">http://www.bom.gov.au/silo/products/cli_chg/index_global.shtml</a></p>
+
+<p>Now continue on around to the UK, from which here are two links:</p>
+
+<p><a href="http://www.metoffice.gov.uk/climatechange/guide/bigpicture/" rel="nofollow">http://www.metoffice.gov.uk/climatechange/guide/bigpicture/</a></p>
+
+<p>-and-</p>
+
+<p><a href="http://www.metoffice.gov.uk/climatechange/guide/bigpicture/fact2.html" rel="nofollow">http://www.metoffice.gov.uk/climatechange/guide/bigpicture/fact2.html</a></p>
+
+<p>I trust I make my point that at least some of us *do* research.</p>
+
+<p>Of course, there are other contrarian groups besides Dr. Singer&#39;s, such as The Heartland Institute and The Oregon Project, at these URL&#39;s respectively:</p>
+
+<p><a href="http://www.heartland.org/" rel="nofollow">http://www.heartland.org/</a></p>
+
+<p><a href="http://www.oism.org/pproject/s33p37.htm" rel="nofollow">http://www.oism.org/pproject/s33p37.htm</a></p>
+
+<p>Note that the Oregon Project is under the nonprofit Oregon Institute of Science and Medicine, which boasts a grand total -- according to its website -- some half-dozen faculty members.</p>
+
+<p>These organizations are just as reliable as, say, scientists on the payroll of cigarette companies in the past and those employed today by companies in oil/coal/gas companies, pharmaceutical outfits, etc. -- who&#39;ll assure us cigarette smoke isn&#39;t harmful, nor are the emissions resulting from ther burning of oil/coal/gas, nor is this or that new medicine dangerous, potentially.  (At least sometimes this is true, since the latter are monitored from the outside).</p>
+
+<p>I choose to stick with the [vast] majority scientific opinion, though of course others can believe what they wish.</p>
+
+<p>*****</p>
+
+<p>Take a look at the website for the Heritage Foundation, cited by another contributor here:</p>
+
+<p>www.heritage.org</p>
+
+<p>Notice the first (as of today, July 1, 2009) paper it lists: &quot;Tea Party Talking Points: Obama&#39;s War on the American Dream.&quot; Yeah, right. Obama LIVED the American Dream -- broken family, mixed race/culture, certainly not mainstream. Vastly different from, say, George W. Bush, who lived a very, very different version of the American Dream on his march to the White House -- but a valid version of it, for all its privilege. But Obama&#39;s is just as valid, just different.  I suspect the good folks at the Hritage Foundation have a definition in mind for &quot;American Dream&quot; as &quot;MY Way or The HIGHway, Buddy.&quot;</p>
+
+<p>Another poster complains the cap-and-trade plan is just a scheme for the government to get rich. Really? How does giving away FREE permits make ANYone rich, do pray tell?</p>
+
+<p>Others complain its just a secret tax on consumers. No, it&#39;s not; it&#39;s a publicly acknowledged indirect tax. As companies incur expenses, of *course* they&#39;re going to pass them along. Don&#39;t all businesses? Take (to use something remote and noncontroversial) airport departure taxes. Where I live, you used to pay them yourself as you headed towards the gate. Now, you don&#39;t; the departure tax here is &quot;paid&quot; by the airline -- but the airline, of course and quite reasonably, builds that tax, embeds in, into the ticket price. Sort of like ABC embeds reporters with our troops. </p>
+
+<p>And what about, say, Big Pharma? They spend tens of millions of dollars on research, and way more often than they would like (or we would like, for that matter), they go up a blind alley and lose boatloads of money. So, they recover those bucks, in part, through higher prices for successful products. (Why do you think so many medicines are so expensive? Yes, there&#39;s a greed factor, a big one, but there also are legitimate expenses.)</p>
+
+<p>So, where&#39;s the conspiracy here?</p>
+
+<p>Not that I&#39;m happy with the bill as passed. People on both sides of the aisle (not &quot;isle,&quot; which is another word for &quot;island&quot;) with vested interests followed their instincts, including Democrats from coal states. A 17% reduction using 2005 as the base year by 2020, when all sorts of [mainstream, not wingnut] scientists say we need to be targeting a *20%* reduction -- using *1990* (or at least 1995) as the base year?</p>
+
+<p>But if the battle was lost on quantity, there was a victory on qualitative levels: for the *first* time, we have a cap-and-trade bill, emaciated and gutted as it is. Bloodied, but alive.</p>
+
+<p>Finally, the myth of &quot;clean coal.&quot; That&#39;s along the lines of &quot;clean nuclear.&quot; Sequestration of coal pollution is a nonradioactive version of sequestration of nuclear waste. Heck, if nuclear waste weren&#39;t so dangerous, I&#39;d prefer nuclear power to coal power. Ever here of black lung disease? Ask a coal miner about it. No coal miners around? Well, here are a couple of handy links:</p>
+
+<p><a href="http://respiratory-lung.health-cares.net/black-lung-disease.php" rel="nofollow">http://respiratory-lung.health-cares.net/black-lung-disease.php</a></p>
+
+<p><a href="http://www2.cdc.gov/drds/WorldReportData/SubsectionDetails.asp?ArchiveID=1&amp;SubsectionTitleID=4" rel="nofollow">http://www2.cdc.gov/drds/WorldReportData/SubsectionDetails.asp?ArchiveID=1&amp;SubsectionTitleID=4</a></p>
+
+<p>Worth noting that second link is for a page at the world-respected Centers for Disease Control on a National Institute for Occupational Safety and Health (NIOSH) sub-page. (NIOSH is under the CDC.) Hardly country bumpkins (which is not to say there aren&#39;t some respected scientists all over the spectrum, only that most of them cluster, by a large margin, on this end of it).</p>
+
+<p>Then we come to the citation of the book &quot;Red Hot Lies&quot; by , a Senior Fellow at the Competitive Enterprise Institute. Now, I haven&#39;t read the book, but a bit of research shows that   questions the entire notion of global warming. Perhaps a quote from the CEI&#39;s page on the subject is instructive: &quot;The scientific case for global warming alarmism is shaky and becoming shakier. Still, even ifalarmism turns out to be warranted, any possible benefits of the Kyoto global warming treaty or anysimilar energy-suppression policies would be dwarfed by the staggering costs.&quot; In the first place, I&#39;ve seen *zero* indication of the case for global warming weakening -- except in reports such as CEI&#39;s, Hearland, the Oregon Project, a study commissioned by the American Petroleum Institute, etc. And I already supplied links to recent temperature records. The only way to believe that so many people in so many places *all* falsified the date is to accept the black-helicopter theory.</p>
+
+<p>Now, all of us have to accept that carbon-based energy is going to be with us for decades, of necessity. Therefore, the alternative/green energy proponents (of whom I am one) are going to have to get a life, get a grip, and get over it. Probably nuclear, too. If we bury coal and nuclear pollution, we at least defer the problem of permanent disposal, and we *have* to give our fellows on the other side the benefit of that consideration -- that is, we have to be, or get, real. For the pro-carbon-and-nuclear folks, it would be helpful if you accept that carbon is dirty, at the very least, and nuclear is downright dangerous. You need to meet the greenies partway, too.</p>
+
+<p>Sigh . . . I probably just wasted an hour or so. . . .</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">Mekhong Kurt</span> | Jul 1, 2009 1:43:54 AM</p>
+			
+				<a id="c6a00d8341c4df253ef011570a15a17970c"></a>
+				<div id="commentMain">
+					
+	<div class="bubbleTop">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-top_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="innerWrapper">
+
+				<span class="comments"><p>Oops. Forgot to go back and insert the name of the author of &quot;Red Hot Lies&quot; in my earlier entry, who is Christopher C. Horner. Also, excuse the typos/misspellings. No excuse for not catching them when I proffed the entry. &quot;Guilty as charged, Your Honor!&quot; ;-)</p></span>
+</div>
+					
+	<div class="bubbleBot">
+		<img class="fLeft" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_left.gif"/>
+		<img class="fRight" width="3" height="3" border="0" alt="" src="http://a.abcnews.com/assets/images/corner-bot_right.gif"/>
+		<div style="clear:both;"><!--!--></div>
+	</div>
+
+	<div class="arrowEnd"><!--!--></div>
+				
+</div>
+				<p class="posted">Posted by: <span class="name">Mekhong Kurt</span> | Jul 1, 2009 1:50:37 AM</p>
+			
+        
+        <div class="pager-bottom pager-comments pager content-nav">
+            <div class="pager-inner">
+            
+            
+            
+                <span class="pager-right">
+                    <a href="http://blogs.abcnews.com/scienceandsociety/2009/05/cap-and-trade/comments/page/2/#comments"><span class="pager-label">Next Comments</span>
+                        <span class="chevron">&#187;</span></a>
+                </span>
+            
+            </div>
+        </div>
+        
+			
+				<p class="formhed"><strong>Post a comment</strong></p>
+				<form  method="post"  name="comments_form" onsubmit="handleSubmit(this);" action="http://www.typepad.com/t/comments">
+				<input type="hidden" name="static" value="1" /> 
+				<input type="hidden" name="entry_id" value="67150677" />
+				<div id="comment-data">
+					<p><label for="author">Name:</label><br />
+					<input type="text" name="author" id="author" tabindex="1" onChange="handleChange(this)"></p>
+					<p><label for="email">Email Address:</label><br />
+					<input onchange="handleChange(this)" tabindex="2" id="email" name="email" /></p>
+					<p><label for="url">URL:</label><br />
+					<input onchange="handleChange(this)" tabindex="3" id="url" name="url" /></p>
+				</div>
+				<p><label><input tabindex="5"  onclick="handleCheck(this)" type="checkbox" id="bakecookie" name="bakecookie" value="1" /> Remember personal info?</label></p>
+				<p><label for="comment-text">Comments:</label><br />
+				<textarea tabindex="4" id="comment-text" name="text" rows="10" cols="40"></textarea></p>
+				<p><input type="submit" alt="Post Comment" value="Post Comment" name="postcomment" id="postcomment" /></p>
+				</form>
+				
+			
+		
+
+<!--Begin Ad Tags-->
+<div class="quadbot"><script type="text/javascript">adsonar_placementId=1483339;adsonar_pid=174757;adsonar_ps=-1;adsonar_zw=398;adsonar_zh=160;adsonar_jv='ads.adsonar.com';</script><script language="JavaScript" src="http://js.adsonar.com/js/adsonar.js"></script></div>
+<!--End Ad Tags-->
+
+      </div>
+						 </div>
+				
+				</div>
+				<style>
+.rightBox{float:none;}
+#abcnewsvideos .abcnewspltitle {
+display:none;
+}
+</style>
+
+<div class="media">
+
+<!-- TOP NEWS -->
+<div class="container">
+<div class="rightBox" style="margin:10px 0; overflow:hidden; background-image:none; border: 0">
+<iframe src="http://abcnews.go.com/widgets/external/topstories?id=79&amp;type=iframe&amp;basetarget=_top" name="ts" id="ts" allowtransparency="true" height="260" width="314" frameborder="0" scrolling="no"></iframe>
+</div>
+</div>
+
+	<div id="homead">
+		<div class="captop">
+			<img src="http://a.abcnews.com/assets/images/cap-top_left.gif" width="3" height="2" border="0" alt="" class="left" /> <img src="http://a.abcnews.com/assets/images/cap-top_right.gif" width="3" height="2" border="0" alt="" class="right" /> 
+		</div>
+		<div class="container">
+			<div class="label">
+				&nbsp; 
+			</div>
+			<div class="ad">
+<!--		
+<InLineReplace name=ad type=Rectangles>                       
+-->
+<script language="Javascript1.1" type="text/javascript" src="http://abcnews.go.com/Adserver?CallDown&amp;js=1&amp;AdTypes=Rectangle;"></script> 
+			</div>
+		</div>
+		<div class="capbottom">
+			<img src="http://a.abcnews.com/assets/images/cap-bot_left.gif" width="3" height="2" border="0" alt="" class="left" /> <img src="http://a.abcnews.com/assets/images/cap-bot_right.gif" width="3" height="2" border="0" alt="" class="right" /> 
+		</div>
+	</div>
+
+		<div class="abcpromo">
+<!-- QUIGO -->
+<div class="quigo_ad">
+				<script type="text/javascript">adsonar_placementId=1281749;adsonar_pid=174757;adsonar_ps=-1;adsonar_zw=300;adsonar_zh=250;adsonar_jv='ads.adsonar.com';</script><script language="JavaScript" src="http://js.adsonar.com/js/adsonar.js"></script>
+						</div>
+	</div>
+
+<!-- TECHNOLOGY VIDEOS RSS -->
+<div class="container">
+<div class="rightBox" style="margin:10px 0;">
+<h3>TECHNOLOGY VIDEOS</h3>
+<script src="http://abcnews.go.com/javascript/export?path=/syndication/playlist&amp;id=1206840&amp;limit=5&amp;affil=blog&amp;abcnewscss=na" type="text/javascript" language="javascript"></script>
+</div>
+</div>
+
+</div>
+			
+			<div class="capbot">
+				&nbsp; 
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="http://a.abcnews.com/assets/static/wrapper/blogs/punch/blog_footer.js"></script>
+
+</div>
+
+<script language="JavaScript">
+	var mt = new Object();
+	mt.MTBlogDirname = "scienceandsociety";
+	mt.MTEntryID = "0067150677";
+	mt.MTEntryPermalink = "cap-and-trade.html";
+	mt.MTEntryAuthor = "Ned Potter";
+	mt.MTEntryTitle = "Cap and Trade";
+</script>
+
+<script language="JavaScript" src="http://a.abcnews.com/assets/js/s_code.js"></script>
+<script language="JavaScript" src="http://a.abcnews.com/includes/insert/omnitureTypePadJS"></script>
+
+<!-- Start Google Analytics tag -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript" language="javascript"></script>
+
+<script type="text/javascript" language="javascript">
+_uacct = "UA-225447-1";
+urchinTracker();
+</script>
+<!-- End Google Analytics tag -->
+
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={ qacct:"p-9e_QHc34iBt22" };
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-9e_QHc34iBt22.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+
+<!-- Start Quantcast tag -->
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<script type="text/javascript">_qoptions = { tags:"typepad.extended" }; _qacct="p-fcYWUmj5YbYKM"; quantserve();</script>
+<noscript>
+<a href="http://www.quantcast.com/p-fcYWUmj5YbYKM" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-fcYWUmj5YbYKM.gif?tags=typepad.extended" style="display: none" border="0" height="1" width="1" alt="Quantcast"/></a>
+</noscript>
+<!-- End Quantcast tag -->
+
+<script type="text/javascript">
+var captchaImgAttempts = 0;
+var allowAnonComments = '0';
+var registrationRequired = 0;
+var registrationOptional = 0;
+var emailRequired = 1;
+var useAvatars = 0;
+
+var showSignInMessaging = 0;
+var jsonURL = "/.services/json-rpc";
+
+var captchaSrc = "/.services/captcha?code_encrypted=";
+var alertCommentCannotBeBlank = "You can not leave an empty comment. Please enter some text in the Comment field.";
+var alertEditingExpired = "Sorry, you're no longer allowed to edit this comment. You may have taken too much time before submitting your edit or someone may have already replied to it.";
+
+var alertAuthorCannotBeBlank = "Name must not be blank.";
+var alertEmailCannotBeBlank = "Email Address must not be blank.";
+var alertAuthorAndEmailCannotBeBlank = "Name and email address are both required!";
+var alertEmailIsInvalid = "The Email Address you entered is invalid. Please enter a valid email address.";
+var alertUnauthorizedAction = "The comments on this post are closed.";
+var msgPostReplyTo = "Reply to ";  
+var msgInReplyTo = "In reply to ";
+var msgPostAComment = "Post a comment ";
+var atpCommentsPath = "http://blogs.abcnews.com/.shared/js/atpcomments_yui.js?v=5";
+var hasChanged = 0;
+var hostName = ".abcnews.com";
+var tp_comment_token = "1279240016-8f602a23403145eeb237a448e50fc184097d7926:n85WwrgkqK2y51z2";
+
+var isPage = 0;
+var blog_xid = "6a00d8341c4df253ef00d8341c4e7253ef";
+var xid = "";
+var injectCode = '<div id=\"comment-preview\" class=\"hiddenBox\">\n\t<h3 id=\"header-verify-comment\" class=\"comments-header hiddenBox\">Verify your Comment<\/h3>\n    <h3 id=\"header-preview-comment\" class=\"comments-header hiddenBox\">Previewing your Comment<\/h3>\n\t<div class=\"comments-content\">\n\t\t<div class=\"comment\">\n\t\t\t<div id=\"comment-preview-content\" class=\"comment-content\">\n\t\t\t<\/div>\n\t\t\t<p class=\"comment-footer\">\n\t\t\t\tPosted by: \n\t\t\t\t<span id=\"comment-preview-author\"><\/span>&nbsp;|&nbsp;<span id=\"comment-preview-datetime\"><\/span>\n\t\t\t<\/p>\n\t\t<\/div>\n\t<\/div>\n<\/div>\n<div id=\"comment-preview-confirmation\" class=\"hiddenBox yellowBox\">\n    <p>This is only a preview. Your comment has not yet been posted.<\/p>\n   \t<form id=\"comment-preview-form\"\n   \t\tmethod=\"post\"\n   \t\tonsubmit=\"atpComments.interceptPost(); return false;\">\n\t\t<input type=\"submit\" name=\"post\" id=\"comment-confirm-post\" value=\"&nbsp;Post&nbsp;\" onclick=\"atpComments.interceptPost(); return false;\"/>\t\t    \n\t\t<input type=\"submit\" name=\"edit\" id=\"comment-edit\" value=\"&nbsp;&nbsp;Edit&nbsp;&nbsp;\" onclick=\"atpComments.previewOnly(2); return false;\"/>\n        <span id=\"previewFormSpinner\" class=\"hiddenBox\"><img src=\"/.shared/images/spinner.gif\" alt=\"Working...\" /><\/span>\n\t<\/form>\n<\/div>\n<div id=\"comment-error\" class=\"hiddenBox redBox\">\t    \n   Your comment could not be posted. Error type: <span id=\"comment-error-msg\"><\/span> \n<\/div>\t\n<div id=\"comment-complete\" class=\"hiddenBox yellowGreenBox\">\n    Your comment has been posted. <a href=\"javascript:void 0;\" onclick=\"window.location.hash=\'#comment-form\';window.location.reload(false)\">Post another comment<\/a>\n<\/div>\t\n<div id=\"comment-captcha\" class=\"hiddenBox yellowBox\">\t\n    <div id=\"captchaText\">\n\t    <p id=\"captchaFailMsg\" class=\"captchaErrorText hiddenBox\">The letters and numbers you entered did not match the image. Please try again.<\/p>\t    \t        \n\t    <p>As a final step before posting your comment, enter the letters and numbers you see in the image below. This prevents automated programs from posting comments.<\/p>\n\t    <p><span id=\"comment-captcha-viewalt\">Having trouble reading this image? <a href=\"#comment-captcha\" onClick=\"atpComments.generateCaptcha();\">View an alternate.<\/a><\/span><\/p>\n    <\/div>\n    <p class=\"\"><img id=\"captchaImg\" /><\/p>\t\t\n    <form id=\"comment-captcha-form\" \n\t\t  method=\"post\"\n\t\t  onsubmit=\"atpComments.submitWithCaptcha(); return false;\">\n\t\t<input type=\"hidden\" name=\"captcha_chal\" id=\"comment-captcha-chal\" value=\"\" />\n        <p>\n\t        <input id=\"comment-captcha-text\" name=\"captcha_text\" size=\"10\" />\n        <\/p>\n        <p>\n            <input type=\"submit\" name=\"continue\" id=\"captcha-continue\" value=\"&nbsp;Continue&nbsp;\" />\n            <span id=\"captchaFormSpinner\" class=\"commentSpinner hiddenBox\"><img src=\"/.shared/images/spinner.gif\" alt=\"Working...\" /><\/span>\n        <\/p>\n    <\/form>\n<\/div>\n'; 
+var entryPermalink = "cap-and-trade.html";
+var inlineReply = document.createElement("div");
+var commentFooterLinks;
+var commentHeader;
+var commentReplyXID;
+var commentReplyAuthor;
+var commentReplyComplete;
+var inlineReplyLoaded = 0;
+var commentFormNum = undefined; /* Deprecated but still exists in advanced template sets, so must be defined */
+
+function xidToCommentPermalink (entryUrl, xid) {
+    return entryUrl + "?cid=" + xid + "#comment-" + xid;
+}
+
+
+/* Deprecated advanced template functions */
+function handleSubmit() { return true; };
+function handleChange() { return true; };
+</script>
+<script type="text/javascript" src="http://blogs.abcnews.com/.shared/js/yui/yuiloader-beta-min.js"></script>
+<script type="text/javascript" src="http://blogs.abcnews.com/.shared/js/atpcomments.js?v=5"></script>
+
+
+
+ 
+
+<!-- Blogside Toolbar -->
+<script type="text/javascript">
+    var TPToolbar = {
+        src:   "http://www.typepad.com/services/toolbar?blog_id=6a00d8341c4df253ef00d8341c4e7253ef&asset_id=6a00d8341c4df253ef01156fa9893f970c&atype=Individual&to=http%3A%2F%2Fblogs.abcnews.com%2Fscienceandsociety%2F2009%2F05%2Fcap-and-trade.html&autofollowed=0",
+        asset_xid: "6a00d8341c4df253ef01156fa9893f970c",
+    
+        bookmarklet_uri: "http://static.typepad.com/.shared/js/qp/loader-combined-min.js"
+    };
+    var TYPEPAD___bookmarklet_domain = "http://www.typepad.com/";
+</script>
+<script type="text/javascript" src="http://blogs.abcnews.com/.shared/js/toolbar/blogside-toolbar-combined-min.js"></script>
+<!-- End Blogside Toolbar -->
+</body>
+
+<!-- Mirrored from blogs.abcnews.com/scienceandsociety/2009/05/cap-and-trade.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:36:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>
+<!-- ph=1 -->
+<!-- nhm:from_kauri -->

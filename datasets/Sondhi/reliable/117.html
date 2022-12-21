@@ -1,0 +1,630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><!-- InstanceBegin template="/Templates/newsletter_phpfull.dwt" codeOutsideHTMLIsLocked="false" -->
+<HEAD>
+
+<!-- style type="text/css">
+
+#popitmenu{
+position: absolute;
+background-color: #FFFFFF;
+border:1px solid black;
+line-height: 18px;
+z-index: 100;
+visibility: hidden;
+}
+
+#popitmenu a{
+text-decoration: none;
+padding-left: 6px;
+color: #083463;
+display: block;
+}
+
+#popitmenu a:hover{ /*hover background color*/
+background-color: #083463;
+color: #FFFFFF;
+}
+
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+* Pop-it menu- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var defaultMenuWidth="200px" //set default menu width.
+
+var linkset=new Array()
+//SPECIFY MENU SETS AND THEIR LINKS. FOLLOW SYNTAX LAID OUT
+
+linkset[1]='<a href="http://www.vhl.org/aboutvhl">Basic Facts About VHL</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/whatis.php">Introduction to VHL</a>'
+linkset[1]+='<a href="http://www.vhl.org/handbook">VHLFA Handbook</a>'
+linkset[1]+='<a href="http://www.vhl.org/profinfo">Information for Professionals</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/famindex.php">Information for Families</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/famindex.php#mystory">Personal Stories</a>'
+linkset[1]+='<a href="http://www.vhl.org/newsletter">Newsletter</a>'
+linkset[1]+='<a href="http://www.vhl.org/press/presskit">Press Kit</a>'
+linkset[1]+='<a href="http://www.vhl.org/press">In the News</a>'
+linkset[1]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[2]='<a href="http://www.vhl.org/healthcare">Caring for Your Health</a>'
+linkset[2]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[2]+='<a href="http://www.vhl.org/aboutvhlfa/clinics.php">Clinical Care Centers</a>'
+linkset[2]+='<a href="http://www.vhl.org/healthcare/index.php#services">Services</a>'
+linkset[2]+='<a href="http://www.vhl.org/support">Support Groups</a>'
+linkset[2]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[2]+='<a href="http://www.vhl.org/support/egroups.php">Online Discussion</a>'
+linkset[2]+='<a href="http://www.vhl.org/nutrition">Nutrition</a>'
+linkset[2]+='<a href="http://www.vhl.org/handbook">VHL Handbook</a>'
+linkset[2]+='<a href="http://www.vhl.org/dna">DNA Testing</a>'
+linkset[2]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[2]+='<a href="http://www.vhl.org/bookstore">Books</a>'
+linkset[2]+='<a href="http://www.vhl.org/newsletter">Online Newsletter</a>'
+linkset[2]+='<a href="http://www.powerfulpatient.org/">Be a Powerful Patient</a>'
+linkset[2]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[3]='<a href="http://www.vhl.org/research">Research</a>'
+linkset[3]+='<a href="http://www.vhl.org/bank">Tissue Bank</a>'
+linkset[3]+='<a href="http://www.vhl.org/handbook">VHL Handbook</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/resdb.php">Research Database</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/beroud.php">VHL Mutations Database</a>'
+linkset[3]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[3]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/index.php#grants">Grants Available</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/index.php#awarded">Grants Awarded</a>'
+linkset[3]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[3]+='<a href="http://www.vhl.org/profinfo/medindex.php">Medical Topics</a>'
+linkset[3]+='<a href="http://www.vhl.org/aboutvhl/famindex.php">Family Topics</a>'
+linkset[3]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[4]='<a href="http://www.vhl.org/profinfo">Professional Information</a>'
+linkset[4]+='<a href="http://www.vhl.org/handbook" class="top_nav">What you need to know about VHL</a>'
+linkset[4]+='<a href="http://www.vhl.org/healthcare" class="top_nav">Information for Patients</a>'
+linkset[4]+='<a href="http://www.vhl.org/aboutvhlfa/clinics.php">Clinical Care Centers</a>'
+linkset[4]+='<a href="http://www.vhl.org/bank" class="top_nav">Tissue Bank</a>'
+linkset[4]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[4]+='<a href="http://www.vhl.org/meetings" class="top_nav">VHL Conferences</a>'
+linkset[4]+='<a href="http://www.vhl.org/profinfo/index.php#infopacket" class="top_nav">Information Packet</a>'
+linkset[4]+='<a href="http://www.vhl.org/support/intlsprt.php" class="top_nav">Support Groups</a>'
+linkset[4]+='<a href="http://www.vhl.org/support/egroups.php" class="top_nav">Online Discussion</a>'
+linkset[4]+='<a href="http://www.vhl.org/links.php" class="top_nav">VHL Links</a>'
+linkset[4]+='<a href="http://www.vhl.org/newsletter" class="top_nav">Newsletter</a>'
+linkset[4]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[5]='<a href="http://www.vhl.org/aboutvhlfa">About VHL Family Alliance</a>'
+linkset[5]+='<a href="http://www.vhl.org/press/presskit">Press Kit</a>'
+linkset[5]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[5]+='<a href="http://www.vhl.org/support/intlsprt.php">Support Groups</a>'
+linkset[5]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[5]+='<a href="http://www.vhl.org/support/egroups.php">Online Discussion</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[5]+='<a href="http://www.vhl.org/newsletter">Newsletter</a>'
+linkset[5]+='<a href="http://www.vhl.org/bank">Tissue Bank</a>'
+linkset[5]+='<a href="http://www.vhl.org/press">In the News</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/board.php">Board Members</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.php">Privacy Policy</a>'
+linkset[5]+='<a href="http://www.vhl.org/vhlsales">Online Shopping</a>'
+linkset[5]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/contactus.php">Contact Us</a>'
+
+////No need to edit beyond here
+
+var ie5=document.all && !window.opera
+var ns6=document.getElementById
+
+if (ie5||ns6)
+document.write('<div id="popitmenu" onMouseover="clearhidemenu();" onMouseout="dynamichide(event)"></div>')
+
+function iecompattest(){
+return (document.compatMode && document.compatMode.indexOf("CSS")!=-1)? document.documentElement : document.body
+}
+
+function showmenu(e, which, optWidth){
+if (!document.all&&!document.getElementById)
+return
+clearhidemenu()
+menuobj=ie5? document.all.popitmenu : document.getElementById("popitmenu")
+menuobj.innerHTML=which
+menuobj.style.width=(typeof optWidth!="undefined")? optWidth : defaultMenuWidth
+menuobj.contentwidth=menuobj.offsetWidth
+menuobj.contentheight=menuobj.offsetHeight
+eventX=ie5? event.clientX : e.clientX
+eventY=ie5? event.clientY : e.clientY
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie5? iecompattest().clientWidth-eventX : window.innerWidth-eventX
+var bottomedge=ie5? iecompattest().clientHeight-eventY : window.innerHeight-eventY
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<menuobj.contentwidth)
+//move the horizontal position of the menu to the left by it's width
+menuobj.style.left=ie5? iecompattest().scrollLeft+eventX-menuobj.contentwidth+"px" : window.pageXOffset+eventX-menuobj.contentwidth+"px"
+else
+//position the horizontal position of the menu where the mouse was clicked
+menuobj.style.left=ie5? iecompattest().scrollLeft+eventX+"px" : window.pageXOffset+eventX+"px"
+//same concept with the vertical position
+if (bottomedge<menuobj.contentheight)
+menuobj.style.top=ie5? iecompattest().scrollTop+eventY-menuobj.contentheight+"px" : window.pageYOffset+eventY-menuobj.contentheight+"px"
+else
+menuobj.style.top=ie5? iecompattest().scrollTop+event.clientY+"px" : window.pageYOffset+eventY+"px"
+menuobj.style.visibility="visible"
+return false
+}
+
+function contains_ns6(a, b) {
+//Determines if 1 element in contained in another- by Brainjar.com
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function hidemenu(){
+if (window.menuobj)
+menuobj.style.visibility="hidden"
+}
+
+function dynamichide(e){
+if (ie5&&!menuobj.contains(e.toElement))
+hidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+hidemenu()
+}
+
+function delayhidemenu(){
+delayhide=setTimeout("hidemenu()",500)
+}
+
+function clearhidemenu(){
+if (window.delayhide)
+clearTimeout(delayhide)
+}
+
+function preloadImages(){
+}
+
+if (ie5||ns6)
+document.onclick=hidemenu
+
+</script --><!-- meta tags file here -->
+      <!-- InstanceBeginEditable name="doctitle" -->
+	  <TITLE>VHLFA: Osteoporosis: A side effect of steroid use</TITLE>
+<meta name="keywords" content="vhl von hippel lindau osteoporosis steroid aged">
+<!-- InstanceEndEditable -->
+ <!-- InstanceBeginEditable name="MetaTags" -->
+<meta name="description" content="Osteoporosis: A side effect of steroid use.">
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="http://www.vhl.org/global.css">
+<!-- end meta tag include -->
+</HEAD>
+<body align="center">
+<table border="0" cellspacing="0" cellpadding="0" width="790" align="center">
+<!-- header -->
+<tr><td bgcolor="#FFFFFF" style="z-index: 3000; position:relative;">
+<link rel="stylesheet" href="/menu.css" type="text/css">
+<a href="#skiptop"></a>
+<map name="top_nav_w_imagemaps_Map">
+	<area shape="rect" alt="" coords="0,0,74,150" href="http://www.vhl.org">
+	<area shape="circle" alt="" coords="708,65,49" href="http://www.vhl.org/aboutvhlfa">
+	<area shape="circle" alt="" coords="572,65,49" href="http://www.vhl.org/profinfo">
+	<area shape="circle" alt="" coords="430,64,49" href="http://www.vhl.org/research">
+	<area shape="circle" alt="" coords="292,63,49" href="http://www.vhl.org/healthcare">
+	<area shape="circle" alt="" coords="147,64,50" href="http://www.vhl.org/aboutvhl">
+	</map>
+
+	<img src="/images/top_nav.gif" width="800" height="128" hspace="0" vspace="0" border="0" usemap="#top_nav_w_imagemaps_Map" />
+<div id="menu">
+	<ul>
+		<li style="width: 100px;">&nbsp;</li>
+	</ul>
+	<ul style="margin-left: 30px;">
+		<li><a href="http://www.vhl.org/aboutvhl">Basic Facts<br />about VHL</a>
+			<ul>
+				<li><a href="http://www.vhl.org/aboutvhl">Basic Facts about VHL</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/whatis.htm">Introduction to VHL</a></li>
+				<li><a href="http://www.vhl.org/handbook">VHLFA Handbook</a></li>
+				<li><a href="http://www.vhl.org/profinfo">Information for Professionals</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Information for Families</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Personal Stories</a></li>
+				<li><a href="http://www.vhl.org/newsletter">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/press/presskit">Press Kit</a></li>
+				<li><a href="http://www.vhl.org/press">In the News</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 60px;" >
+		<li><a href="http://www.vhl.org/healthcare">Caring for<br />Your Health</a>
+			<ul>
+				<li><a href="http://www.vhl.org/healthcare">Caring for Your Health</a></li>
+				<li><a href="http://www.vhl.org/healthcare/index.php#membership">Membership</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/clinics2.htm">Clinical Care Centers</a></li>
+				<li><a href="http://www.vhl.org/healthcare/index.php#services">Services</a></li>
+				<li><a href="http://www.vhl.org/support">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/guest/guest.htm">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/nutrition">Nutrition</a></li>
+				<li><a href="http://www.vhl.org/handbook">VHL Handbook</a></li>
+				<li><a href="http://www.vhl.org/dna">DNA Testing</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/bookstore">Books</a></li>
+				<li><a href="http://www.vhl.org/newsletter">Online Newsletter</a></li>
+				<li><a href="http://www.powerfulpatient.org">Be a powerful patient</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 45px;" >
+		<li><a href="http://www.vhl.org/research">Research</a>
+			<ul>
+				<li><a href="http://www.vhl.org/research">Research</a></li>
+				<li><a href="http://www.vhl.org/bank">Tissue Bank</a></li>
+				<li><a href="http://www.vhl.org/research/resdb.htm">Research Database</a></li>
+				<li><a href="http://www.vhl.org/research/beroud.htm">VHL Mutations Database</a></li>
+				<li><a href="http://www.vhl.org/meetings">Meetings</a></li>
+				<li><a href="http://www.vhl.org/research/06dodgrants.htm">Grants Available</a></li>
+				<li><a href="http://www.vhl.org/research/index.php#awarded">Grants Awarded</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/profinfo/medindex.htm">Medical Topics</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Family Topics</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 70px;" >
+		<li><a href="http://www.vhl.org/profinfo">Professional <br />Information</a>
+			<ul>
+				<li><a href="http://www.vhl.org/profinfo">Professional Information</a></li>
+				<li><a href="http://www.vhl.org/healthcare" class="top_nav">Information for Patients</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/clinics2.htm">Clinical Care Centers</a></li>
+				<li><a href="http://www.vhl.org/bank" class="top_nav">Tissue Bank</a></li>
+				<li><a href="http://www.vhl.org/meetings" class="top_nav">VHL Conferences</a></li>
+				<li><a href="http://www.vhl.org/profinfo/index.php#infopacket" class="top_nav">Information Packet</a></li>
+				<li><a href="http://www.vhl.org/support/intlsprt.htm" class="top_nav">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/support/egroups.htm" class="top_nav">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/links.htm" class="top_nav">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/newsletter" class="top_nav">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+	<ul style="margin-left: 35px;" >
+		<li><a href="http://www.vhl.org/aboutvhlfa">About VHL<br /> Family Alliance</a>
+			<ul>
+				<li><a href="http://www.vhl.org/aboutvhlfa">About VHL Family Alliance</a></li>
+				<li><a href="http://www.vhl.org/press/presskit">Press Kit</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/support/intlsprt.htm">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/support/egroups.htm">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/orderfrm.htm">Membership</a></li>
+			    <li><a href="http://www.vhl.org/newsletter">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/bank">Tissue Bank</a></li>
+			    <li><a href="http://www.vhl.org/press">In the News</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/board.htm">Board Members</a></li>
+			    <li><a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.htm">Privacy Policy</a></li>
+			   <li> <a href="http://www.vhl.org/vhlsales">Online Shopping</a></li>
+			   <li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			   <li><a href="http://www.vhl.org/aboutvhlfa/contactus.php">Contact Us</a></li>
+			</ul>	
+		</li>	
+	</ul>	
+</div>
+</td></tr>
+<tr><td><img src="http://www.vhl.org/images/powerful_patient.gif" width="1" height="5" alt="" border="0"></td></tr>
+
+<!-- end header -->
+
+
+<!-- body -->
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+<!-- left column -->
+
+<td bgcolor="#083463" width="130" valign="top">
+<table border="0" cellspacing="0" cellpadding="0"><tr>
+<td><a name="#skiptop"></a><a href="#skipleft"><img src="http://www.vhl.org/images/skipleftnav.gif" width="8" height="1" alt="Skip The Left Navigation" border="0"></a></td>
+<td>
+<p><a href="http://www.vhl.org/" class="lftnav">Home</a></p>
+<p>&nbsp;</p>
+<p><a href="../../search.php" class="lftnav">Site Search</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/index.php" class="lftnav">Current Issue</a></p>
+<p>&nbsp;</p>
+<p><a href="/newspdf/vhlfcopy.php" class="lftnav">Printable Copies</a></p>
+<p>&nbsp;</p>
+<p><a href="/aboutvhlfa/contactus.php" class="lftnav">Contact Us</a></p>
+<p>&nbsp;</p>
+<p><a href="http://www.vhl.org/helpnow/index.php" class="lftnav">Click to Donate</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2009/index.php" class="lftnav">2009 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2008/index.php" class="lftnav">2008 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2007" class="lftnav">2007 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2006" class="lftnav">2006 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2005" class="lftnav">2005 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2004" class="lftnav">2004 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2003" class="lftnav">2003 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2002" class="lftnav">2002 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2001" class="lftnav">2001 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2000" class="lftnav">2000 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1999" class="lftnav">1999 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1998" class="lftnav">1998 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1997" class="lftnav">1997 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1996" class="lftnav">1996 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1995" class="lftnav">1995 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1994" class="lftnav">1994 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1993" class="lftnav">1993 Issues</a></p>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<!-- div class="search">Subscribe to<br>
+this free newsletter<br>
+<input type=text name="ea" size=13 value="email address"><br>
+<input type=hidden name="m" value="1100530198619">
+<input type=hidden name="p" value="oi">
+<input type=submit name="go" value="Sign Me Up">
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p -->
+</td></tr></table>
+</td>
+<!-- p align="center" valign="bottom"><img src="images/seal_small.gif" width="82" height="136" alt="" border="0"></p -->
+<!-- end left column -->
+<!-- spacer -->
+<td><img src="../../images/powerful_patient.gif" width="10" height="1" alt="" border="0"></td>
+<!-- end spacer -->
+
+<!-- right column -->
+<td valign="top">
+
+<a name="#skipleft"></a>
+
+    <!-- InstanceBeginEditable name="Title and TofC" -->
+	  	  <h1>Osteoporosis: A side effect of steroid use</h1>
+	<!-- InstanceEndEditable -->
+<table border="0" cellspacing="1" cellpadding="0" bgcolor="#083463" align="right"><tr><td><table width="250" border="0" cellspacing="3" cellpadding="0" bgcolor="#FFFFFF">
+<tr><td>
+<!-- InstanceBeginEditable name="index_content" -->
+
+<link href="../../global.css" rel="stylesheet" type="text/css" />
+<p class="enewsletter_box_header">                  March&nbsp; 1999 &nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;Download a <a href="../../newspdf/vhlfcopy.php#vhl9903">printable copy</a> of this issue</p>
+<ul>
+                    <li class="enewsletter_box"><a href="99aaknow.php">To Know, or Not to Know . . . That is <em>the</em> Question</a></li>
+                    <li class="enewsletter_box"><a href="99ablink.php">Linkage Test Unreliable</a> - retesting may be advisable, <br>
+                      <em>by Dr. Virginia Michels, Mayo Clinic</em></li>
+                    <li class="enewsletter_box"><a href="99acdnat.php">DNA Testing finds 100%</a></li>
+                    <li class="enewsletter_box"><a href="99adairm.php">Air Miles</a> - Give Delta Miles to VHLFA</li>
+                    <li class="enewsletter_box"><a href="99afshow.php">Show Us Your Stuff!</a> - Art Needed for Calendar</li>
+                    <li class="enewsletter_box"><a href="99aeimpt.php">The Most Important Person</a>,<em> by Craig Lundsted, M.S.W.</em></li>
+                    <li class="enewsletter_box"><a href="99agvita.php">Vitamins for Stamina</a></li>
+                    <li class="enewsletter_box"><a href="99ahstren.php">Strength from Adversity</a></li>
+                    <li class="enewsletter_box"><a href="99aioste.php">Osteoporosis, a Side Effect of Steroid Use</a>, <em>by Altheada L. Johnson, MS, Registered Dietitian</em></li>
+                    
+                  <li class="enewsletter_box"><a href="99ajpreg.php">Ask the Experts: Pregnancy and VHL</a>,<em> by Dr. St&eacute;phane Richard</em></li>
+                    <li class="enewsletter_box"><a href="99akbirt.php">&quot;Birth&quot; Announcement</a></li>
+                    <li class="enewsletter_box"><a href="99alpara.php">Paralyzed?&nbsp; Don't Give Up Too Soon!</a>, <em>by Gale L., Florida</em></li>
+                  </ul>
+                  <ul>
+                    <li class="enewsletter_box"><a href="../../announce/99atlanc.php">Atlanta Meeting June 4-6, 1999</a></li>
+                    <li class="enewsletter_box"><a href="99amexpn.php">Too Expensive</a>, and other reasons for not going to the meeting</li>
+                    <li><span class="enewsletter_box">Introducing New Board Members:
+                        </span>
+                      <ul>
+                          <li class="enewsletter_box">Kathy Braden, Indiana</li>
+                          <li class="enewsletter_box"><a href="../../aboutvhlfa/mcguires.php">Susan McGuire</a>, North Carolina</li>
+                        </ul>
+                    </li>
+                    <li class="enewsletter_box"><a href="99annewz.php">New Zealand,</a> by Jon Johnson</li>
+                    <li class="enewsletter_box"><a href="99aoscan.php">News from Scandinavia,</a> by Richard Harbud, Denmark</li>
+                    <li><span class="enewsletter_box"><a href="99aptria.php">Clinical Studies -- Can You Help?</a>
+                        </span>
+                      <ul>
+                          <li class="enewsletter_box"><a href="99aptria.php#elst">Hearing Issues? Vertigo? Tinnitus?&nbsp; </a>NIH looking for participants for ELST Study</li>
+                          <li class="enewsletter_box"><a href="99aptria.php#smoking">Smoking and Tumor Growth</a></li>
+                          <li class="enewsletter_box"><a href="99aptria.php#vegf">Angiogenesis Inhibitor</a></li>
+                        </ul>
+                    </li>
+                    <li class="enewsletter_box"><a href="99aqjayp.php">4,000,000 Steps for VHL!</a></li>
+                  </ul>
+                  
+
+<!-- InstanceEndEditable -->
+</td>
+</tr>
+</table></td></tr></table>
+
+
+<!-- InstanceBeginEditable name="SubTitle" -->
+
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Description" --> 
+ 
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Image" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Story" -->
+
+<p class="byline">-- Altheada L. Johnson, MS, Registered Dietitian</p>
+<p>&nbsp;</p>
+<p>You might wonder what an article on osteoporosis is doing in the <em>VHL Family Forum</em>. Isn&#146;t that the disease of old women? Yes, it affects 28 million Americans, 80% of whom are women. However, young people, men, and especially people with VHL need to be concerned too.</p>
+<p>&nbsp;</p>
+<p>Osteoporosis is the loss of calcium from the bones causing them to become thin or porous, weak and easily broken. Calcium is laid down in our bones only during our growing periods when we are young. It is very important for pregnant or nursing women and youngsters to get the recommended amount of calcium in their diets each day. As we age, there is a normal, unavoidable loss of calcium from our bones. If, while we were young, we obtained the recommended amounts and have stayed active, this normal loss of calcium should have a minimal effect on our <a href="#note1">bones.<sup>1</sup></a> It is important that everyone maintain a good calcium intake throughout life. (See Table 1).</p>
+<p>&nbsp;</p>
+<table border="2" width="60%" cellspacing="4" cellpadding="3">
+  <tr>
+    <td colspan="2"><p align="center"><strong>The U.S. National Institutes of Health Recommend:</strong></td>
+  </tr>
+  <tr>
+    <td width="57%"><strong>Age Group</strong></td>
+    <td width="43%"><strong>Milligrams Calcium per Day</strong></td>
+  </tr>
+  <tr>
+    <td width="57%"><strong>Infants</strong>:<br>
+      &nbsp; Birth to 6 months<br>
+      &nbsp; 6 months to 1 year</td>
+    <td width="43%"><br>
+      400<br>
+      600</td>
+  </tr>
+  <tr>
+    <td width="57%"><strong>Children</strong>:<br>
+      &nbsp; 1 to 5 years<br>
+      &nbsp; 6 to 10 years<br>
+      &nbsp; 11 to 24 years</td>
+    <td width="43%"><br>
+      800<br>
+      800-1,200<br>
+      1,200-1,500</td>
+  </tr>
+  <tr>
+    <td width="57%"><strong>Men</strong>:<br>
+      &nbsp; 25 to 65 years<br>
+      &nbsp; Over 65 years</td>
+    <td width="43%"><br>
+      1,000<br>
+      1,500</td>
+  </tr>
+  <tr>
+    <td width="57%"><strong>Women</strong>:<br>
+      &nbsp; 25 to 50 years<br>
+      &nbsp; Postmenopausal<br>
+      &nbsp;&nbsp;&nbsp; Taking Hormone Replacement Therapy (HRT)<br>
+      &nbsp;&nbsp;&nbsp; Not taking HRT<br>
+      &nbsp; Over 65 years<br>
+      &nbsp; Pregnant/nursing</td>
+    <td width="43%"><br>
+      1,000<br>
+      <br>
+      1,000<br>
+      1,500<br>
+      1,500<br>
+      1,200-1,500</td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center"><font size="2">Table 1: Source: NIH Consensus Development Panel on Optimal Calcium Intake</font></div></td>
+    </tr>
+</table>
+<p align="center">&nbsp;</p>
+<p>&nbsp;</p>
+<p>Along with the normal loss that occurs as a result of aging, a number of other things can contribute to the development of osteoporosis: inactivity, poor diet and prolonged steroid use. Exercise not only keeps the muscles strong, but also helps the bones maintain their strength. Weight bearing is the <a href="#note2">key.<sup>2</sup></a> </p>
+<p>&nbsp;</p>
+<p>Prolonged use of steroid drugs has been shown to <a href="#note3">destroy bone.<sup>3</sup></a> It is very likely that if you have VHL you will, at some time in your life, have a procedure which will involve the use of some steroids. Steroids may be used before, during or after brain or spinal surgery and some eye procedures to control swelling around the brain, spinal cord, and optic nerve. While these drugs are important tools in successfully recovering from these procedures, care must be taken to ensure against unwanted side effects later in life. Steroids are still the basis of anti-rejection treatment after kidney transplantation, and there is an enormous problem with osteoporosis worldwide among transplant recipients.</p>
+<p>&nbsp;</p>
+<h2>What constitutes &quot;prolonged use&quot;?</h2>
+<p>Five milligrams or more, per day, of a glucocorticoid steroid (Prednisone) for six months or more presents a big risk factor for steroid induced osteoporosis. Decadron, usually used during brain surgery, is 5 times stronger than prednisone (deltasone). Therefore, 1 mg of Decadron for one month or 5mg of prednisone for six months requires preventive therapy to avoid bone loss. </p>
+<p>&nbsp;</p>
+<p>The symptoms of osteoporosis are often silent in the early stages but may include back pain, compression of the spinal column (loss of height) and easy fracture of bone, especially the wrist, shoulder or hip. Prevention and treatment would include a baseline bone density test, general risk factor reduction: no smoking or alcohol, increased calcium and vitamin D intakes and increased activity. In addition, if you are a postmenopausal woman then you will want to speak to your doctor about starting hormone replacement therapy (HRT). </p>
+<p>&nbsp;</p>
+<p>Studies have proven that the use of 5-10 mg per day of a bisphosphonate called Fosamax, along with increased calcium intake, can prevent further <a href="#note4">bone loss.<sup>4</sup></a> Actinol will soon be approved by the FDA. </p>
+<p>&nbsp;</p>
+<p>Other treatments include new designer female hormones and a nasal spray. Ipriflavone, a non hormonal nutrient, has also been shown to inhibit the bone destroying actions of osteoclast and stimulate the activity of bone building cells, the <a href="#note5">osteoblast.<sup>5</sup></a> Bone loss cannot be regained to previous, non osteoporosis levels but some bone can be<a href="#note4"> regained.<sup>4</sup></a> Treatment means to stop further loss. Short term steroid use is generally not a concern. </p>
+<p>&nbsp;</p>
+<p>Aseptic necrosis is, however, a rare result of short term steroid use where blood vessels feeding bone are destroyed and as a result, the bone dies. This usually occurs in the hip resulting in the need for hip replacement. Unfortunately, there is no way to know who is susceptible to aseptic necrosis and preventive measures are not useful here.</p>
+<p>&nbsp;</p>
+<h2>So, what does all this mean? </h2>
+<p>It means that osteoporosis is preventable and treatable. It means that we all must get the recommended allowances of calcium in our diets each and every day. Doing this is easier than you think. There are many supplements on the market that contain calcium with other minerals and vitamins. I think foods high in calcium are a better way to go. All milk products are an excellent source of bone-building calcium&#150;stick with the low fat or fat-free versions (see <a href="#note6">Table 2)<sup>.6</sup></a> Canned salmon (with the bones), dark green leafy vegetables like collard greens, kale and broccoli are good non-dairy sources of calcium. We can all do with more vegetables of every kind in our diets, as they can provide not only calcium but other minerals, fiber, vitamins, and phytochemicals. Finally, our bones, teeth and waistlines would thank us for replacing the soda in our diets with skim milk or juice fortified with calcium.</p>
+<blockquote>
+  <table border="2" width="80%" cellspacing="4" cellpadding="3">
+    <tr>
+      <td width="100%"><p align="center"><strong>One Calcium-rich Serving of each of these foods provides about 250-400 mg Calcium:</strong></td>
+    </tr>
+    <tr>
+      <td width="100%">1 c. skim or low-fat milk, or low-fat or nonfat yogurt</td>
+    </tr>
+    <tr>
+      <td width="100%">1-1/2 ounces cheese</td>
+    </tr>
+    <tr>
+      <td width="100%">1 cup calcium fortified juice</td>
+    </tr>
+    <tr>
+      <td width="100%">3 ounces canned sardines with bones</td>
+    </tr>
+  </table>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <p align="center"><font size="2">Table 2. From a fact sheet supported by a grant from the National Osteoporosis Foundation, 1150 17th St., N.W., Washington, D.C. 20036-4603, 800-223-9994.</font></p>
+  </blockquote>
+</blockquote>
+<p class="references">Special thanks to Dr. Stanley Wallach, Endocrinologist at The Hospital for Joint Diseases, New York, and Dr. Hartmut P.H. Neumann, Nephrologist, Albert-Ludwigs University, Freiburg, Germany, for their assistance in writing this article.</p>
+<p class="references">&nbsp;</p>
+<p class="references"><a name="note1">1. Jane</a> E. Brody, <i>The NY Times</i>, &quot;Guidelines Offer an Earlier Blueprint for the Battle Against Bone Loss,&quot; 10/20/98</p>
+<p class="references"><a name="note2">2. Susan</a> Gilbert, <i>The NY Times</i>, &quot;Weak Bones Among Men Are Linked to Estrogen,&quot; 12/08/98 </p>
+<p class="references"><a name="note3">3. Jane</a> E. Brody, <i>The NY Times</i>, &quot;Calcium Takes Its Place as a Superstar of Nutrients,&quot; 10/13/98</p>
+<p class="references"><a name="note4">4. K.G. </a>Saag et al (1998) <i>N Engl J Med</i> 339:292-9 </p>
+<p class="references"><a name="note5">5. Steve</a> Love, <i>Healthy Talk</i> (a publication of The Vitamin Shoppe) Jan/Feb. 1999 &quot;Ipriflavone: A New Non Hormonal Nutrient for Osteoporosis&quot;</p>
+<p class="references"><a name="note6">6. National</a> Center for Nutrition and Dietetics Nutrition Fact Sheet-&quot;Choose Calcium-Rich Foods for Strong Bones&quot;</p>
+<p>&nbsp;</p>
+<p class="references">As printed in the <em>VHL Family Forum</em> 7:1, March 1999.&nbsp; For permission to reprint, please contact VHL Family Alliance, <a href="mailto:info@vhl.org">info@vhl.org</a>. Further information is available from the VHL Family Alliance, <a href="mailto:info@vhl.org">info@vhl.org</a>.</p>
+<p>&nbsp;</p>
+<!-- InstanceEndEditable -->
+
+</td>
+<!-- end right column -->
+
+</tr>
+</table>
+</td></tr>
+<!-- end body -->
+
+
+
+<!-- footer -->
+<!-- InstanceBegin template="/Templates/zadmin_footer_html.dwt" codeOutsideHTMLIsLocked="false" --><tr><td bgcolor="#FFFFFF"><img src="http://www.vhl.org/images/cancer_treatment_t.gif" width="600" height="10" alt="" border="0"></td></tr>
+<tr><td bgcolor="#083463"><img src="http://www.vhl.org/images/cancer_treatment_t.gif" width="600" height="1" alt="" border="0"></td></tr>
+<tr><td class="footer">
+<p>&nbsp;</p>
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+<td width="110" class="footer"><a href="HTTP://WWW.VHL.ORG/aboutvhlfa/contactus.php">Contact Us</a></td>
+<td width="110" class="footer"><div align="center"><a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.php">Privacy</a></div></td>
+<td width="160" class="footer"><div align="center">Copyright 1993-2009</div></td>
+<td width="110" class="footer"><div align="center"><a href="http://www.vhl.org/awards.php">Awards</a></div></td>
+<td width="110" class="footer"><div align="center"><a href="http://vhl.org/helpnow/index.php">Donate Now</a></div></td>
+</tr></table>
+<p>&nbsp;</p>
+<!-- InstanceEndEditable -->
+<!-- The following script is essential to the working of Google Analytics  leave intact -->
+<p>&nbsp;</p>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6229758-1");
+pageTracker._trackPageview();
+</script>
+<!-- End Google Analytics script -->
+</td></tr>
+<!-- End table and end body are in the php file --><!-- InstanceEnd --><!-- end footer -->
+
+</table>
+</body>
+<!-- InstanceEnd --></HTML>

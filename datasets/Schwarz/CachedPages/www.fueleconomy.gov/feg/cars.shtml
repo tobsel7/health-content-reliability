@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+
+
+<!-- Mirrored from www.fueleconomy.gov/feg/cars.shtml by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:31:53 GMT -->
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<TITLE>Car Allowance Rebate System</TITLE>
+<meta name="keywords" content="car allowable rebate system, cash for clunkers, cash for cars, clunkers">
+<meta name="description" content="Information on the U.S. government's Car Allowable Rebate System (CARS), also called 'Cash for Clunkers'">
+<script TYPE="text/javascript">
+
+function initDisplay() {
+  toggleData('first')	
+}
+
+function toggleData(name) {
+  var cnt
+  var manuf = new Array()
+  manuf[0] = "first"
+  manuf[1] = "second"
+  manuf[2] = "third"
+<!--  manuf[3] = "fourth" -->
+
+  for (cnt in manuf) {
+    var currentRow = manuf[cnt] + "Data"
+    var rowID = document.getElementById(currentRow)
+	var selectedTab = manuf[cnt] + "Tab"
+	var tabID = document.getElementById(selectedTab)
+	tabID.className=""
+    if (manuf[cnt] == name || name == "all"){
+      rowID.style.display = ""
+    } else {
+      rowID.style.display = "none"
+    }
+	if (manuf[cnt] == name) {
+	  var selectedTab = name + "Tab"
+	  var tabID = document.getElementById(selectedTab)
+	  tabID.className = "current"
+    }
+  }
+}
+function popup(mylink,windowname)
+{
+window.open(mylink,windowname,'width=500,height=600,scrollbars=yes');
+}
+
+</script>
+<link href="http://www.fueleconomy.gov/2004styles.css" rel="stylesheet" type="text/css">
+<link href="http://www.fueleconomy.gov/feg/includes/slidingDoor.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY BGCOLOR="white" LINK="#0033CC" VLINK="#0033CC" marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" onload=initDisplay()>
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td><a href="#Content"><img src="http://www.fueleconomy.gov/feg/2002homeimages/white.gif" width="1" height="1" border="0" alt="Skip Navigational links"></a></td>
+    <td width="50%"> <div align="right"><a href="http://www.fueleconomy.gov/feg/sitemap.shtml" class="vsmallnavy" >Site 
+        Map</a> <span class="smallnavyboldfont">&nbsp;</span><span class="vsmallnavy">|</span>&nbsp;<a href="http://www.fueleconomy.gov/feg/motorweek.jsp" class="vsmallnavy">Videos</a><span class="smallwhiteboldfont">&nbsp;</span><span class="vsmallnavy">|</span>&nbsp;<a href="http://www.fueleconomy.gov/feg/links.shtml" class="vsmallnavy">Links</a><span class="smallwhiteboldfont">&nbsp;</span><span class="vsmallnavy">|</span>&nbsp;<a href="http://www.fueleconomy.gov/feg/info.shtml" class="vsmallnavy">More 
+        Info</a>&nbsp;<span class="vsmallnavy">|</span>&nbsp;<a href="http://www.fueleconomy.gov/feg/search.shtml" class="vsmallnavy" >Search</a>&nbsp;<span class="vsmallnavy">|</span><a href="http://www.fueleconomy.gov/feg/contacts.shtml" class="smallnavyboldfont"> 
+        <span class="vsmallnavy">Contacts</span></a><span class="smallnavyboldfont">&nbsp;</span><span class="vsmallnavy">|&nbsp;<a href="http://www.fueleconomy.gov/" class="vsmallnavy">HOME</a></span></div></td>
+  </tr>
+  <tr > 
+    <td colspan="2" ><img src="http://www.fueleconomy.gov/feg/2004indeximages/navy_dot.gif" width="100%" height="1" Alt=""></td>
+  </tr>
+  <tr > 
+    <td bgcolor="#EBEBF3"><a href="http://www.fueleconomy.gov/"><img src="http://www.fueleconomy.gov/feg/2004indeximages/www_fueleconomy_gov_ltblue_bgrd.gif" alt="www.fueleconomy.gov" width="305" height="40" border="0"></a></td>
+    <td bgcolor="#EBEBF3" > <div align="right" ><img src="http://www.fueleconomy.gov/feg/2004indeximages/smphoto.jpg" alt="Photograph of Cars" width="389" height="43"></div></td>
+  </tr>
+  <tr> 
+    <td height="1" colspan="2" bgcolor="#336699"><img src="http://www.fueleconomy.gov/feg/2004indeximages/navy_dot.gif" width="100%" height="1" Alt=""></td>
+  </tr>
+  <tr bgcolor="#7795BE"> 
+    <td colspan="2"> 
+      <table border="0" cellspacing="0" cellpadding="3" width="650" align="left">
+        <tr> 
+          <td nowrap> <div align="center"><a href="http://www.fueleconomy.gov/feg/findacar.htm" class="smallwhiteboldfont">Find 
+              and<br>
+              Compare Cars</a> </div></td>
+          <td> <div align="center" class="smallwhitefont">|</div></td>
+          <td valign="middle"> <div align="center"> 
+              <table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#003366">
+                <tr> 
+                  <td nowrap bgcolor="#F0F0F0"> 
+                    <div align="center" class="smallmedblueboldfont"><a href="http://www.fueleconomy.gov/feg/drive.shtml" class="smallmedblueboldfont">Gas<br>
+                      Mileage<br>
+                      Tips</a></div></td>
+                </tr>
+              </table>
+            </div></td>
+          <td> <div align="center" class="smallwhitefont">|</div></td>
+          <td nowrap> 
+            <div align="center"> <a href="http://www.fueleconomy.gov/feg/gasprices/" class="smallwhiteboldfont">Gasoline<br>
+              Prices</a></div></td>
+          <td><div align="center" class="smallwhitefont">|</div></td>
+          <td nowrap> 
+            <div align="center"> <a href="http://www.fueleconomy.gov/feg/why_differ.shtml" class="smallwhiteboldfont">Your 
+              MPG<br>
+              Will Vary</a></div></td>
+          <td> <div align="center" class="smallwhitefont">|</div></td>
+          <td align="center" valign="middle" nowrap> <a href="http://www.fueleconomy.gov/feg/why.shtml" class="smallwhiteboldfont">Why 
+            is Fuel<br>
+            Economy<br>
+            Important?</a></td>
+          <td> <div align="center" class="smallwhitefont">|</div></td>
+          <td nowrap> 
+            <div align="center"> <a href="https://www.fueleconomy.gov/mpg/MPG.do?action=garage" class="smallwhiteboldfont">Your<br>
+              MPG</a></div></td>
+          <td> <div align="center" class="smallwhitefont">|</div></td>
+          <td nowrap>
+<div align="center"><a href="http://www.fueleconomy.gov/feg/hybrid_sbs.shtml" class="smallwhiteboldfont">Hybrids,<br>
+              Diesels,<br>
+              Alt Fuels, Etc.</a> </div></td>
+          <td><div align="center" class="smallwhitefont">|</div></td>
+          <td nowrap>
+<div align="center"><a href="http://www.fueleconomy.gov/feg/taxcenter.shtml" target="_parent" class="smallwhiteboldfont">Tax <br>
+              Incentives</a></div></td>
+              <td> <div align="center" class="smallwhitefont">|</div></td>
+          <td nowrap> 
+            <div align="center"> <a href="http://www.fueleconomy.gov/feg/extremeMPG.jsp" class="smallwhiteboldfont">Extreme<br>
+              MPG</a></div></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" ><img src="http://www.fueleconomy.gov/feg/2004indeximages/navy_dot.gif" width="100%" height="1" Alt=""></td>
+  </tr>
+  
+  <tr> 
+    <td colspan="2"> <table border="0" cellspacing="0" cellpadding="2" align="left" width="650">
+        <tr> 
+          <td nowrap> <div align="left"><a href="http://www.energy.gov/" class="vsmallnavy">U.S. 
+              Department of Energy</a></div></td>
+          <td class="smallnavyfont">|</td>
+          <td nowrap> <div align="center"><a href="http://www.fueleconomy.gov/feg/FEG2000.htm" class="smallnavyfont">Print 
+              the Fuel Economy Guide</a></div></td>
+          <td nowrap class="smallnavyfont">|</td>
+          <td nowrap> <div align="right"><a href="http://www.epa.gov/" class="vsmallnavy">U.S. 
+              Environmental Protection Agency</a></div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td colspan="2"><img src="http://www.fueleconomy.gov/feg/2004indeximages/navy_dot.gif" width="100%" height="1" Alt=""></td>
+  </tr>
+</table>
+
+
+<table width="636" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="149" valign="top" bgcolor="#7795be"> 
+      <p>&nbsp;</p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="2">
+        <tr> 
+          <td >&nbsp;</td>
+        </tr>
+        <tr> 
+          <td >&nbsp;</td>
+        </tr>
+        <tr > 
+          <td >&nbsp;</td>
+        </tr>
+        <tr > 
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td >
+                </table>
+    <td bgcolor="#003366" width="1" align="center" valign="top"><img src="http://www.fueleconomy.gov/feg/2004indeximages/navy_dot.gif" width="1" height="1" alt=""></td>
+     
+    <td width="100%" valign="top">
+      <table width="100%" border="0" cellpadding="10">
+        <tr>
+          <td valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td>&nbsp;&nbsp;</td>
+                <td valign="top"><p align="center"><a name="content"></a><img src="http://www.fueleconomy.gov/feg/images/CARS.gif" alt="Car Allowance Rebate System, also known as &quot;Cash for Clunkers&quot;" width="307" height="21" vspace="5"></p>
+                  <div class="image"><a href="http://www.cars.gov/"><img src="http://www.fueleconomy.gov/feg/images/carsgov/carslogo.gif" alt="Car Allowance Rebate System, also known as &quot;Cash for Clunkers&quot;" width="250" height="137" hspace="30" border="1">
+                    <div>Visit the Official CARS Site</div>
+                  </a></div>
+                  <p>You could get $3,500 or $4,500 from the federal government for trading in an old, inefficient vehicle for a new, more efficient one.</p>
+                  <p>The  Car Allowance Rebate System (CARS), also called &quot;Cash for Clunkers&quot; by the media, begins in late July 2009.</p>
+                  <p>Click <a href="http://www.cars.gov/">here</a> to find out more about the program.</p>
+                  <p class="smallredfont">WARNING: The official site for information about the CARS program is <a href="http://www.cars.gov/">CARS.gov</a>.  We urge great caution in providing information to any non-government Web site  that claims to be related to this program.</p>
+                  <p class="smallredfont">&nbsp;</p>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</BODY>
+
+
+<!-- Mirrored from www.fueleconomy.gov/feg/cars.shtml by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:31:53 GMT -->
+</HTML>

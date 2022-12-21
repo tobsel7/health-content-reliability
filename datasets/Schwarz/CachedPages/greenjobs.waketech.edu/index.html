@@ -1,0 +1,593 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="English">
+
+<!-- Mirrored from greenjobs.waketech.edu/ by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:35:27 GMT -->
+<head>
+
+
+<title>Green Jobs - Wake Technical Community College</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="http://www2.waketech.edu/sitewide/sw-menu.css" rel="stylesheet" type="text/css">
+<link href="http://css.waketech.edu/greenmenu.css" rel="stylesheet" type="text/css">
+
+<link href="http://css.waketech.edu/print.css" rel="stylesheet" type="text/css" media="print">
+
+<link href="http://greenjobs.waketech.edu/includes/Green.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+/***********************************************
+* Ultimate Fade-In Slideshow (v1.51): © Dynamic Drive (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+// url of image, url for link, target for browser
+fadeimages[0]=["images/girlwithflowers.jpg", "", ""] 
+fadeimages[1]=["images/lotsofnailpolish.jpg", "", ""] 
+fadeimages[2]=["images/nailpolish.jpg", "", ""] 
+fadeimages[3]=["images/hairstuff.jpg", "", ""]  
+fadeimages[4]=["images/eyeshadow.jpg", "", ""]  
+
+var fadebgcolor="white"
+
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+else if (obj.tempobj.style.opacity&&!obj.tempobj.filters)
+obj.tempobj.style.opacity=obj.degree/101
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=this.degree/100
+else if (crossobj.style.opacity&&!crossobj.filters)
+crossobj.style.opacity=this.degree/101
+}
+ 
+ 
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+function MM_jumpMenuGo(objId,targ,restore){ //v9.0
+  var selObj = null;  with (document) { 
+  if (getElementById) selObj = getElementById(objId);
+  if (selObj) eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0; }
+}
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script><style type="text/css">
+
+a.Green:link {color: green;  }
+
+</style>
+</head>
+<body>
+
+
+<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0" class="twrapper">
+<tr> <td><table class="header" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td><a href="http://www.waketech.edu/"><img src="http://greenjobs.waketech.edu/images/title/title1_01.jpg" alt="Wake Technical Community College" width="750" border="0"></a><br>
+<a href="http://www.waketech.edu/"><img src="http://greenjobs.waketech.edu/images/title/title1_02.jpg" alt="Wake Technical Community College" border="0"></a><a href="http://www.waketech.edu/"><img src="http://greenjobs.waketech.edu/images/title/title1_03.gif" alt="Wake Technical Community College" border="0"></a></td></tr>
+<tr><td class="menutd"><div style="position:relative; width:100%; z-index:1">
+  <div align="left">
+    <div class="menu1">
+      <ul>
+        <li><a class="menu1home" href="http://www.waketech.edu/">Home</a></li>
+        <li><a class="menu1students" href="http://students.waketech.edu/">For Students
+          <!--[if IE 7]><!-->
+          </a>
+          <!--<![endif]-->
+          <table>
+            <tr>
+              <td><ul>
+                  <li><a href="http://studentservices.waketech.edu/">Student Services &nbsp;&nbsp;<img src="http://www2.waketech.edu/sitewide/images/arrow.gif" alt="Arrow" border="0"/>
+                    <!--[if IE 7]><!-->
+                    </a>
+                    <!--<![endif]-->
+                    <table>
+                      <tr>
+                        <td><ul>
+                            <li><a href="http://admissions.waketech.edu/">Admissions & Advising</a></li>
+                            <li><a href="http://hsadmissions.waketech.edu/">Health Sciences Admissions</a></li>
+                            <li><a href="http://athletics.waketech.edu/" target="_blank">Athletics</a></li>
+                            <li><a href="http://financialaid.waketech.edu/">Financial Aid</a></li>
+                            <li><a href="http://registration.curred.waketech.edu/">Enrollment & Records</a></li>
+                            <li><a href="http://counseling.waketech.edu/">Counseling Services</a></li>
+                            <li><a href="http://testingcenter.waketech.edu/">Testing Center</a></li>
+                            <li><a href="http://veterans.waketech.edu/">Veteran Services</a></li>
+                            <li><a href="http://studentactivities.waketech.edu/">Student Activities</a></li>
+                            <li><a href="http://disabilityservices.waketech.edu/">Disability Support Services</a></li>
+                            
+                          </ul></td>
+                      </tr>
+                    </table>
+                    <!--[if lte IE 6]></a><![endif]-->
+                    <!--</li>-->
+                  <li><a href="http://dist-ed.waketech.edu/" target="_blank">Blackboard</a></li>
+                  <li><a href="http://bookstore.waketech.edu/" target="_blank">Bookstore</a></li>
+                  <li><a href="http://calendars.waketech.edu/">Calendars</a></li>
+                  <li><a href="http://catalog.waketech.edu/">Catalog</a></li>
+                  <li><a href="http://disabilityservices.waketech.edu/">Disability Support Services</a></li>
+                  <li><a href="http://handbook.waketech.edu/">Handbook</a></li>
+                  <li><a href="http://ilc.waketech.edu/">ILC</a></li>
+                  <li><a href="http://international.waketech.edu/">International Student Office</a> </li>
+                  <li><a href="http://library.waketech.edu/">Libraries</a></li>
+                  <li><a href="http://my.waketech.edu/" target="_blank">My Wake Tech</a></li>
+                  <li><a href="http://students.waketech.edu/index.php?page=new">New Student Info</a></li>
+                  <li><a href="http://students.waketech.edu/index.php?page=computerlabs">Open Computer Labs</a> </li>
+                  <li><a href="http://www.waketech.edu/index.php?sitesection=prospective">Prospective Students</a></li>
+				  <li><a href="http://specialprograms.waketech.edu/">Special Programs&nbsp;&nbsp;<img src="http://www2.waketech.edu/sitewide/images/arrow.gif" alt="Arrow" border="0"/>
+                    <!--[if IE 7]><!-->
+                    </a>
+                    <!--<![endif]-->
+                    <table>
+                      <tr>
+                        <td><ul>
+                        	<li><a href="http://choices.waketech.edu/">Choices</a></li>
+                            <li><a href="http://futures.waketech.edu/">Futures</a></li>
+                            <li><a href="index.html">Green Jobs</a></li>
+                            <li><a href="http://honorsprogram.waketech.edu/">Honors Program</a></li>
+							<li><a href="http://huskins.waketech.edu/">Huskin's Cooperative Program</a></li>
+                            <li><a href="http://lateralentry.waketech.edu/">Lateral Entry Program</a></li>
+                            <li><a href="http://pacprogram.waketech.edu/">PAC Program</a></li>
+                            <li><a href="http://pathways.waketech.edu/">Pathways Leadership Initiative</a></li>
+                        </ul></td>
+                      </tr>
+                    </table>
+                    <!--[if lte IE 6]></a><![endif]-->
+                    <!--</li>-->
+                  <li><a href="https://webadvisor.waketech.edu/" target="_blank">WebAdvisor</a></li>
+              </ul></td>
+            </tr>
+          </table>
+          <!--[if lte IE 6]></a><![endif]-->
+        </li>
+        <li><a class="menu1academics" href="http://academics.waketech.edu/">Academics
+          <!--[if IE 7]><!-->
+          </a>
+          <!--<![endif]-->
+          <table>
+            <tr>
+              <td><ul>
+                  <li> <a href="http://conted.waketech.edu/" title="Information about non-credit courses">Continuing Education&nbsp;&nbsp;<img src="http://www2.waketech.edu/sitewide/images/arrow.gif" alt="Arrow" border="0"/>
+                    <!--[if IE 7]><!-->
+                    </a>
+                    <!--<![endif]-->
+                    <table>
+                      <tr>
+                        <td><ul>
+							<li><a href="http://conted.waketech.edu/schedules/index.php">Course Schedules</a></li>
+                            <li><a href="http://conted.waketech.edu/registration/abbreviations.php">Registration Information</a></li>
+							<li><a href="http://basicskills.waketech.edu/">Basic Skills</a></li>
+							<li><a href="http://www.ncbionetwork.org/" target="_blank">Bionetwork Capstone</a></li>
+							<li><a href="http://bic.waketech.edu/">Business & Industry</a></li>
+							<li><a href="http://edservtech.waketech.edu/">Education Services &amp; Technology</a> </li>
+							<li><a href="http://evening.waketech.edu/">Evening Division</a></li>
+							<li><a href="http://publicsafety.waketech.edu/">Public Safety & Service Occupations</a></li>
+                            </ul></td>
+                      </tr>
+                    </table>
+                    <!--[if lte IE 6]></a><![endif]-->
+                  </li>
+                  <li> <a href="http://curred.waketech.edu/" title="Information about college credit courses">Curriculum Education &nbsp;&nbsp;<img src="http://www2.waketech.edu/sitewide/images/arrow.gif" alt="Arrow" border="0"/>
+                    <!--[if IE 7]><!-->
+                    </a>
+                    <!--<![endif]-->
+                    <table>
+                      <tr>
+                        <td><ul>
+							<li><a href="http://webadvisor.waketech.edu/" target="_blank">Course Schedules</a></li>
+							<li><a href="http://registration.curred.waketech.edu/reginfo.php">Registration Information</a></li>
+                            <li><a href="http://academicsupport.waketech.edu/">Academic Support</a></li>
+                            <li><a href="http://appliedtechnologies.waketech.edu/">Applied Technologies</a></li>
+                            <li><a href="http://ahss.waketech.edu/">Arts, Humanities, & Social Sciences</a></li>
+                            <li><a href="http://business.waketech.edu/">Business Technologies </a></li>
+                            <li><a href="http://cet.waketech.edu/">Computer & Engineering</a></li>
+                            <li><a href="http://health.waketech.edu/">Health Sciences</a></li>
+                            <li><a href="http://mathandscience.waketech.edu/">Math & Sciences</a></li>
+                          </ul></td>
+                      </tr>
+                    </table>
+                    <!--[if lte IE 6]></a><![endif]-->
+                  </li>
+                  <li> <a href="http://healthscienceec.wcpss.net/index.php" target="_blank">Early College of Health and Sciences</a></li>
+                  <li> <a href="http://evening.waketech.edu/">Evening Division</a></li>
+                  <li style="border-bottom: 1px solid #555555;"> <a href="http://distanceed.waketech.edu/">Online Courses &nbsp;&nbsp;<img src="http://www2.waketech.edu/sitewide/images/arrow.gif" alt="Arrow" border="0"/>
+                    <!--[if IE 7]><!-->
+                    </a>
+                    <!--<![endif]-->
+                    <table>
+                      <tr>
+                        <td><ul>
+                            <li> <a href="http://dist-ed.waketech.edu/">Blackboard</a></li>
+                          </ul></td>
+                      </tr>
+                    </table>
+                    <!--[if lte IE 6]></a><![endif]-->
+                  </li>
+                </ul></td>
+            </tr>
+          </table>
+          <!--[if lte IE 6]></a><![endif]-->
+        </li>
+        <li><a class="menu1about" href="http://about.waketech.edu/">About
+          <!--[if IE 7]><!-->
+          </a>
+          <!--<![endif]-->
+          <table>
+            <tr>
+              <td><ul>
+              	  <li> <a href="http://alumni.waketech.edu/">Alumni</a></li>
+                  <li> <a href="http://about.waketech.edu/index.php?page=board">Board of Trustees</a> </li>
+                  <li> <a href="http://events.waketech.edu/">Events</a> </li>
+                  <li> <a  href="http://facilities.waketech.edu/">Facilities &nbsp;&nbsp;<img src="http://www2.waketech.edu/sitewide/images/arrow.gif" alt="Arrow" border="0"/>
+                    <!--[if IE 7]><!-->
+                    </a>
+                    <!--<![endif]-->
+                    <table>
+                      <tr>
+                        <td><ul>
+                        	<li> <a href="http://locations.waketech.edu/">Campuses & Sites</a></li>
+                            <li> <a href="http://facilities.waketech.edu/facilityservices.php">Facility Services</a></li>
+                            <li> <a href="http://facilities.waketech.edu/energy/">Energy Management</a></li>
+                            
+                            <li> <a href="http://recycling.waketech.edu/">Recycling</a></li>
+                            <li> <a href="http://facilities.waketech.edu/housekeeping.php">Housekeeping Services</a></li>
+                          </ul></td>
+                      </tr>
+                    </table>
+                    <!--[if lte IE 6]></a><![endif]-->
+                  </li>
+                  <li><a href="http://foundation.waketech.edu/">Foundation</a></li>
+                  <li><a href="http://grants.waketech.edu/">Grants</a></li>
+                  <li> <a href="http://news.waketech.edu/">Newsroom</a> </li>
+                  <li><a href="http://its.waketech.edu/">ITS</a></li>
+                  <li><a href="http://planningandresearch.waketech.edu/">Planning & Research</a></li>
+                  <li> <a href="http://president.waketech.edu/">The President</a> </li>
+                  <!-- <li> <a href="http://qep.waketech.edu/">Quality Enhancement Plan</a></li> -->
+                  <li> <a href="http://securityservices.waketech.edu/">Security Services</a></li>
+                  <li> <a href="#">Special Projects &amp; Programs &nbsp;&nbsp;<img src="http://www2.waketech.edu/sitewide/images/arrow.gif" alt="Arrow" border="0"/>
+                    <!--[if IE 7]><!-->
+                    </a>
+                    <!--<![endif]-->
+                    <table>
+                      <tr>
+                        <td><ul>
+                            <li> <a href="http://atec.waketech.edu/">ATEC</a></li>
+                          </ul></td>
+                      </tr>
+                    </table>
+                    <!--[if lte IE 6]></a><![endif]-->
+                  </li>
+				  <li style="border-bottom: 1px solid #555555;"><a href="http://visitors.waketech.edu/">Visitor Info &nbsp;&nbsp;<img src="http://www2.waketech.edu/sitewide/images/arrow.gif" alt="Arrow" border="0"/>
+                    <!--[if IE 7]><!-->
+                    </a>
+                    <!--<![endif]-->
+                    <table>
+                      <tr>
+                        <td><ul>
+                            <li><a href="http://campustours.waketech.edu/">Take a Campus Tour</a></li>
+                          </ul></td>
+                      </tr>
+                    </table>
+                    <!--[if lte IE 6]></a><![endif]-->
+                    </li>
+                </ul></td>
+            </tr>
+          </table>
+          <!--[if lte IE 6]></a><![endif]-->
+        </li>
+        <li><a class="menu1employment" href="http://employment.waketech.edu/">Employment
+          <!--[if IE 7]><!-->
+          </a>
+          <!--<![endif]-->
+          <table>
+            <tr>
+              <td><ul>
+                  <li> <a href="http://hr.waketech.edu/">Human Resources</a></li>
+                  <li> <a href="http://jobplacement.waketech.edu/">Job Placement</a> </li>
+                  <li> <a href="http://coopeducation.waketech.edu/">Cooperative Education</a></li>
+              </ul></td>
+            </tr>
+          </table>
+          <!--[if lte IE 6]></a><![endif]-->
+        </li>
+        <li><a href="http://www.waketech.edu/index.php?sitesection=staffandfaculty" class="menu1employees">For Faculty &amp; Staff<!--[if IE 7]><!-->
+          </a>
+          <!--<![endif]-->
+          <table>
+            <tr>
+              <td><ul>
+                  <li> <a href="http://eaglesnest.waketech.edu/" target="_blank">Eagles' Nest</a> </li>
+                  <li> <a href="http://benefits.waketech.edu/">Employee Benefits</a> </li>
+                  <li> <a href="http://helpdesk.waketech.edu/" target="_blank">Help Desk</a> </li>
+                  <li><a href="https://webadvisor.waketech.edu/" target="_blank">WebAdvisor</a></li>
+                  <li> <a href="http://webmail.waketech.edu/" target="_blank">Webmail</a></li>
+                </ul></td>
+            </tr>
+          </table>
+          <!--[if lte IE 6]></a><![endif]-->
+        </li>
+        <li> <a class="menu1contact" href="http://contact.waketech.edu/">Contact
+          <!--[if IE 7]><!-->
+          </a>
+          <!--<![endif]-->
+          <table>
+            <tr>
+              <td><ul>
+			  	  <li> <a href="http://locations.waketech.edu/">Locations <img src="http://www2.waketech.edu/sitewide/images/arrow.gif" alt="Arrow" border="0"/>
+                    <!--[if IE 7]><!-->
+                    </a>
+                    <!--<![endif]-->
+                    <table>
+                      <tr>
+                        <td><ul>
+                            <li> <a href="http://maincampus.waketech.edu/">Main Campus</a></li>
+							<li> <a href="http://healthsciencescampus.waketech.edu/">Health Sciences Campus</a></li>
+							<li> <a href="http://northerncampus.waketech.edu/">Northern Wake Campus</a></li>
+							<li> <a href="http://westerncampus.waketech.edu/">Western Wake Campus</a></li>
+							<li> <a href="http://locations.waketech.edu/index.php?page=aec">The News & Observer Adult Education Center</a></li>
+                            <li> <a href="http://locations.waketech.edu/index.php?page=pstc">Public Safety Education Campus</a></li>
+							<li> <a href="http://locations.waketech.edu/index.php?page=spdc">State Personnel Development Center</a></li>
+                          </ul></td>
+                      </tr>
+                    </table>
+                    <!--[if lte IE 6]></a><![endif]-->
+                  </li>
+                  
+                  <!--<li> <a href="http://contact.waketech.edu/studentinforeq.php">Information Request</a></li>-->
+                  <li> <a href="http://directory.waketech.edu/" target="_blank">Online Directory</a></li>
+                  <li> <a href="http://alerts.waketech.edu/">Emergency Alerts System</a></li>
+                </ul></td>
+            </tr>
+          </table>
+          <!--[if lte IE 6]></a><![endif]-->
+        </li>
+        <li> <a class="menu1search" href="http://search.waketech.edu/">Search<!--[if IE 7]><!-->
+          </a>
+          <!--<![endif]-->
+          <table>
+            <tr>
+              <td><ul>
+                  <li> <a href="http://sitemap.waketech.edu/">Site Index</a> </li>
+                </ul></td>
+            </tr>
+          </table>
+          <!--[if lte IE 6]></a><![endif]-->
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--[if !IE]>-->
+<br />
+<br />
+<!--<![endif]-->
+</td></tr></table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+<tr><td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td width="1%" valign="top" class="menutd"><table class="leftmenu" width="178" border="0" cellpadding="0" cellspacing="0">
+<tr>
+  <td><a href="http://greenjobs.waketech.edu/index.php" title="Green Jobs Home" class="nav">Green Jobs Home</a>
+<span class="navsectiontitle2">Certificate, Diploma,<br>& Degree Programs:</span> 
+<a href="http://greenjobs.waketech.edu/index.php?page=AppTech" title="Applied Technologies" class="navlist"> Applied Technologies</a>
+<a href="http://greenjobs.waketech.edu/index.php?page=CompEngTech" title="Computer and Engineering Technologies" class="navlist2"> Computer & Engineering Technologies</a>
+<a href="http://greenjobs.waketech.edu/index.php?page=TransferProg" title="College-University Transfer programs" class="nav2"> College-University Transfer programs</a>
+<a href="http://greenjobs.waketech.edu/index.php?page=Short-termtraining" title="Short-term training" class="nav"> Short-term training</a>
+
+
+<!--<span class="navsectiontitle">Looking For a Green Job</span>
+<a href="http://www.capitalareawdb.com/" target="_blank" title="Looking For a Green Job" class="navlist">Capital Area</a>
+<a href="http://www.ncesc.com/splash.asp" target="_blank" title="Looking For a Green Job" class="navlist2">Employment Security commission</a>-->
+<!--<span class="navsectiontitle">Section of links</span>
+<a href="index.php?page=degreeProg" title="degreeProg" class="nav">
+<a href="#" class="navlist">Text to link</a>-->
+</td>
+</tr></table></td>
+    <td width="100%" rowspan="2" valign="top"><table class="mainbody" width="100%" height="100%" border="0" cellpadding="5" cellspacing="0">
+<tr>
+  <td><span class="breadcrumbs"><a href="http://www.waketech.edu/">Home</a> &gt; &gt; <a href="http://students.waketech.edu/">For Students</a> &gt; &gt; <a href="http://specialprograms.waketech.edu/">Special Programs</a> &gt; &gt; Green Jobs</span>
+
+<!-- Content goes below -->
+
+<a title="Wake Tech Evening Division - Green Jobs Training - opens in new browser window" alt="Wake Tech Evening Division - Green Jobs Training - opens in new browser window" target="_blank" href="http://evening.waketech.edu/index.php?page=greenjobstraining"><img src="http://evening.waketech.edu/images/GreenJobsLogo.jpg" style="float:right; border:1px solid black;"/></a>
+<h3>What are green jobs?</h3>
+<p>The answer to this question depends on <B>two important criteria</B>.<p>
+<ol><li>	<b>The number of industries being considered. </b></li>
+<ul><li>The term could apply to a single industry — such as solar energy — or all industries that have a net positive impact on the environment. </li>
+
+<li>	The broader definition could encompass numerous industries ranging from renewable energy to waste management to biological science professions. </li>
+</ul>
+<p><li><b>The employee’s degree of involvement in the defined industry. </b><br />
+ Each industry will consist of direct and indirect jobs, which will vary depending on how the industry defines a Green Job.</li>  
+<ul>
+<li> For example, one analysis of the solar energy industry may consider manufacturing jobs as a direct job because they occur within the industry’s supply chain.  </li>
+<li>	The solar industry may consider accounting as an indirect job because it is necessary to support the business of the industry. </li>
+</ul></p>
+</ol>
+
+<p><b>Definition of a Green Job</b><br>
+Wake Tech’s definition of a Green Job aligns with that of the NC Sustainable Energy Association (<a class="Green" href="http://www.energync.org/" target="_blank" title="www.energync.org">www.energync.org</a>), meaning a Green Job is defined as:</p>
+<ul>
+    <li>	A job that pays a livable wage, and </li> 
+    <li>	A job that has a net positive impact (direct or indirect) on the environment.</li>
+</ul>
+<p><b>Green Job Opportunities</b><br>
+Wake Tech believes there are many opportunities for Green Jobs that do not yet exist, as the Green Movement is still in the forming stages.  In the short-term, Green Jobs will be clustered within Wake Tech’s current training in traditional technology programs of plumbing, heating and cooling, construction, civil engineering, architecture, landscaping, environmental sciences, automotive, and heavy equipment technologies.  <br>
+
+There are two main educational paths at Wake Tech:</p>
+<ol>
+    <li>You can gain the <b> skills for employment</b> in a Green Job with a two year <b>Associate of Applied Science
+    </b> degree, a one year technical diploma, or a technical certificate, <b>or </b><br /><br /></li>
+    <li>You can earn a two year <b>Associate of Science</b> or <b>Associate of Science in Pre-Engineering</b> degree which will equip you to <b>transfer to a four year college</b> or university which--upon completion--will allow you to earn a bachelor’s degree in a Green Job related degree program<br /><br /></li>
+    <li>If you are wanting short-term, Green Job Continuing Education (non-credit) courses, please click (Short-term training) on the menu bar to the left.</li>
+</ol>
+<p>&nbsp;</p>
+
+
+
+<!-- Content goes above --></td></tr></table></td></tr>
+<tr><td valign="bottom" class="menutd"><table border="0" cellpadding="0" cellspacing="0" class="leftmenu">
+<tr><td><img src="http://greenjobs.waketech.edu/images/sidebarphotos.jpg" alt="Wake Technical Community College" width="178" height="267"></td></tr></table></td>
+</tr></table></td></tr></table></td></tr></table>
+<span class="noprint"><link rel="SHORTCUT ICON" href="http://www2.waketech.edu/favicon.ico">
+<link rel="SHORTCUT ICON" href="http://www2.waketech.edu/favicon.png" type="image/x-icon">
+
+<span class="wtfooter"><BR>
+</span>
+<center>
+<table width="455">
+  <tr>
+    <td align="center" valign="middle"><a href="http://forms.waketech.edu/ss/online_application.html" target="_blank" class="apply" title="Apply Now!">Apply Now!</a></td>
+    <td align="center" valign="middle"><a href="http://dist-ed.waketech.edu/" target="_blank" class="blackboard" title="Blackboard">Blackboard</a></td>
+    
+    <td align="center" valign="middle"><a href="http://eaglesnest.waketech.edu/" target="_blank" class="staff" title="Eagles' Nest">Eagles' Nest</a></td>
+    <td align="center" valign="middle"><a href="http://my.waketech.edu/" target="_blank" class="students" title="My Wake Tech">My Wake Tech</a></td>
+    <td align="center" valign="middle"><a href="http://webadvisor.waketech.edu/" target="_blank" class="webadvisor" title="WebAdvisor">WebAdvisor</a></td>
+  </tr>
+</table>
+</center>
+<span class="wtfooter"><BR>
+  <p align="center"><A HREF="http://contact.waketech.edu/" title="Feedback">Contact Us</A> | <a href="http://sitemap.waketech.edu/">Site Index</a></p>
+<p align="center"><a href="http://www.waketech.edu/">home</a> | <a href="http://admissions.waketech.edu/">admissions</a> | <a href="http://calendars.waketech.edu/">calendar</a> | <a href="http://catalog.waketech.edu/">catalog</a> | <a href="http://counseling.waketech.edu/">counseling</a> | <a href="http://financialaid.waketech.edu/">financial aid</a> | <a href="http://registration.curred.waketech.edu/">registration &amp; records</a> | <a href="http://handbook.waketech.edu/">student handbook<br />
+</a><a href="http://conted.waketech.edu/">continuing education</a> | <a href="http://curred.waketech.edu/">curriculum education</a> | <a href="http://distanceed.waketech.edu/">online courses</a> | <a href="http://healthscienceec.wcpss.net/index.php" target="_blank">early college of health and sciences</a></p>
+  <p align="center"><a href="http://directory.waketech.edu/">directory</a> | <a href="http://employment.waketech.edu/">employment</a> <!-- | <a href="http://qep.waketech.edu/">qep</a>--> </p>
+</span>
+<span class="wtfooter">
+<p align="center">&nbsp;</p>
+</span>
+</span>  <span class="noprint">
+<p align="center">Copyright &copy; 2010<br />
+ <a href="http://www.waketech.edu/" target="_blank">Wake Technical Community College</a><br />
+9101 Fayetteville Road
+  <br />
+  Raleigh, North Carolina 27603
+  <br />
+  <br />
+  919-866-5000</p>
+<p align="center"><strong>Directions to:</strong> [ <a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;q=9101+Fayetteville+Road,+Raleigh,+NC+27603&amp;ie=UTF8&amp;ll=35.652066,-78.706999&amp;spn=0.033756,0.076904&amp;om=1" target="_blank">main campus</a> ]  [ <a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;q=2901+Holston+Lane,+Raleigh,+NC+27610&amp;sll=37.0625,-95.677068&amp;sspn=30.130288,58.535156&amp;layer=&amp;num=10&amp;ie=UTF8&amp;z=16&amp;om=1&amp;iwloc=addr" target="_blank">health sciences</a> ]   [ <a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;q=6600+Louisburg+Road,+Raleigh,+NC+27616&amp;sll=35.705506,-78.794417&amp;sspn=0.012319,0.020084&amp;ie=UTF8&amp;z=16&amp;om=1&amp;iwloc=addr&amp;layer=t" target="_blank">northern wake</a> ] [ <a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3434+Kildaire+Farm+Rd.,+Cary,+North+Carolina+27518&amp;sll=35.705872,-78.794525&amp;sspn=0.006159,0.010042&amp;ie=UTF8&amp;z=16&amp;om=1&amp;iwloc=addr&amp;layer=t&amp;msid=112930227444625594135.00000111fb185e8f10d0a&amp;msa=0" target="_blank">western wake</a> ]</p>
+<BR><BR><BR><BR><BR>
+</span></body>
+
+<!-- Mirrored from greenjobs.waketech.edu/ by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:35:27 GMT -->
+</html>

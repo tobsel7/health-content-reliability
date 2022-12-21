@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from www.cars.gov/ by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:31:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+	<title>CARS.gov - Car Allowance Rebate System - Home - Formerly Referred to as &ldquo;Cash for Clunkers&rdquo;</title>
+	
+	<meta name="language" content="en" />
+	<meta name="description" content="The official website for the CARS Car Allowance Rebate System.">
+	<meta name="keywords" content="CARS.gov, Cars for Clunkers Legislation, Cars for Clunkers Bill, Cars for Clunkers Rules, Cars for Clunkers Qualifications, Cars for Clunkers President Obama, Cars for Clunkers Congress, Cars for Clunkers Senate, Vouchers for New Car Purchases, H.R.2346 Supplemental Appropriations Act 2009  Title XIII Consumer Assistance To Recycle and Save Program">
+	
+	
+	<link rel="shortcut icon" href="http://www.cars.gov/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="http://www.cars.gov/favicon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" media="all" href="http://www.cars.gov/css/styles.css">
+	<link rel="stylesheet" type="text/css" media="print" href="http://www.cars.gov/css/print.css">
+	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="http://www.cars.gov/css/stylesIE.css">
+	<![endif]-->
+	
+	<script language="javascript" type="text/javascript">
+		//<![CDATA[
+		var site_url = "http://www.cars.gov/";
+		//]]>
+	</script>
+	
+	<script language="javascript" type="text/javascript" src="http://www.cars.gov/js/favicon.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.cars.gov/js/jquery/jquery-1.3.2.min.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.cars.gov/js/jquery/jquery.corners.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.cars.gov/js/custom/jquery.initStyles.js"></script>
+	
+	<!-- BEGIN UI -->
+	<script language="javascript" type="text/javascript" src="http://www.cars.gov/js/jquery/jquery-ui-1.7.2.custom.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.cars.gov/css/smoothness/jquery-ui-1.7.2.custom.css">
+	<!-- END UI -->
+	
+		<script language="javascript" type="text/javascript" src="http://www.cars.gov/js/jquery/jquery.timers.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.cars.gov/js/custom/jquery.feature.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.cars.gov/js/custom/jquery.extraFunctions.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.cars.gov/js/jquery/jquery.form.js"></script>
+	
+		
+	<script language="javascript" type="text/javascript">
+		//<![CDATA[
+		$.initStyles.init();
+		
+		function showStep2Content(){
+			$("#step-content").dialog({
+				title:'<h1>Step 2: What You Need to Bring to the Dealer</h1>', 
+				bgiframe: false,
+				resizable: false,
+				closeOnEscape: true,
+				height:500,
+				width:800,
+				modal: true,
+				overlay: {
+					backgroundColor: '#000000',
+					opacity: 1
+				},
+				buttons: {
+					'CLOSE': function() {
+						$(this).dialog('destroy');
+					},
+					'DOWNLOADABLE PDF': function() {
+						var url=site_url+'/files/how-to-qualify.pdf';
+						window.open(url,'Download');
+					}
+				},
+				close: function(event, ui) {
+					$(this).dialog('destroy');
+				}
+
+			});
+		}
+		
+		
+		function showNotes(){
+				$("#dialog-notes").dialog({
+					title:'<h1>Note to Analysts Using the CARS Data File</h1>', 
+					bgiframe: false,
+					resizable: false,
+					closeOnEscape: true,
+					height:500,
+					width:800,
+					modal: true,
+					overlay: {
+						backgroundColor: '#000000',
+						opacity: 1
+					},
+					buttons: {
+						'CLOSE': function() {
+							$(this).dialog('destroy');
+						}
+					},
+					close: function(event, ui) {
+						$(this).dialog('destroy');
+					}
+	
+				});
+			}
+		
+		$(document).ready( function(){
+			// SET ROUNDED CORNERS
+			$('.content-block-wrapper').corners("transparent");
+			
+			$('.show-notes').click(function(){
+				showNotes();
+				return false;
+			});
+
+						
+						
+			
+						
+						
+						
+						$('.my-step-2').click(function(){
+				showStep2Content();
+				return false;
+			});
+			
+			
+			
+			$('#feature').corners("transparent");
+			
+			$("#submitquestion").submit(function() {
+		     	var question = $("#question").val();
+				$("#output").html('<center><img src="http://www.cars.gov/images/ajax-loader.gif" /></center>');
+				$.post("http://www.cars.gov/submitquestion", { question: question , ajax: true},
+				function(data){
+					$("#output").fadeOut();
+					$("#output").html(data);
+					$("#output").fadeIn("slow");
+				});
+
+		      return false;
+		    });
+		    
+		    
+		    
+
+			$("#accordian-home").accordion({collapsible:true});
+			/*
+			animate();
+			
+			$("#feature-num-01").click(function () {
+				getIndex(1) 
+		    });
+		    
+		    $("#feature-num-02").click(function () {
+		    	getIndex(2);
+		    });
+		    
+		    $("#feature-num-03").click(function () {
+		    	getIndex(3);
+		    });
+		    
+		    $("#feature-num-04").click(function () {
+		    	getIndex(4);
+		    });
+
+		    $("#feature-num-05").click(function () {
+		    	getIndex(5);
+		    });
+		    
+		    $("#feature-num-06").click(function () {
+		    	getIndex(6);
+		    });
+		    
+		    $("#feature-num-07").click(function () {
+		    	getIndex(7);
+		    });
+				$("#feature-num-08").click(function () {
+		    	getIndex(8);
+		    });
+		    */
+		    	    
+		});
+		//]]>  
+	</script>
+		 
+	
+</head><body>
+	<!-- // BEGIN BODY-WRAPPER // -->
+	<div id="body-wrapper">
+		<div id="language"><a href="http://www.cars.gov/spanish/">Espa&ntilde;ol</a></div>
+		<h1 id="logo"><a href="http://www.cars.gov/" title="C.A.R.S - car allowance rebate system">C.A.R.S - car allowance rebate system</a></h1>
+				<!-- // BEGIN NAVIGATION // -->
+		<div id="navigation">
+			<ul>
+				<li id="nav-how"  ><a href="http://www.cars.gov/dealer-locator">Dealer Locator</a></li>
+				<li id="nav-faq"  ><a href="http://www.cars.gov/faq">CARS FAQ</a></li>
+				<li id="nav-info"  ><a href="http://www.cars.gov/official-information">Official Information</a></li>
+				<li id="nav-fuel" ><a href="http://www.fueleconomy.gov/cars" target="_blank">MPG Ratings</a></li>
+			</ul>
+		</div>
+		<!-- // END NAVIGATION // -->
+				<!-- // Navigation // -->
+		<!-- // BEGIN CONTENT-WRAPPER // -->
+		<div id="content-wrapper">
+			<!-- // BEGIN INNER-CONTENT-WRAPPER // -->
+			<div id="inner-content-wrapper">
+				<div id="content">
+					<!-- // BEGIN LEFT-COL // -->
+					<div id="left-col">
+						<!-- // BEGIN CONTENT // -->
+						<div class="content-block-wrapper">
+							<div class="content-block">
+							<h1>Notice</h1>
+							<hr/>
+							<p>The agency issued a final rule extending the time by which a disposal facility must crush or shred a CARS trade-in vehicle by 90 days, for a total of 270 days.  To read more about that extension, click <a href="http://www.cars.gov/files/official-information/final-rule.pdf">here</a>.</p>
+							
+							</div>
+						</div>
+						<!-- // END CONTENT // -->
+						
+						<div class="spacer-20"></div>
+					
+						<!-- // BEGIN FEATURE // -->
+						<div id="feature">
+							<!-- // BEGIN FEATURE-SCROLL // -->
+							<div id="feature-scroll">
+								<div id="feature-items">
+										<!-- // BEGIN FEATURE-01 //  -->
+										<div id="feature-01">
+											<h1>CARS Report to Congress</h1>
+											<hr/>
+                      						<div style="overflow:auto; height:290px;">
+											<p>The CARS program achieved the objectives set out by Congress to increase automotive sales and aid the environment. In just a few short weeks of sales, nearly 680,000 older vehicles were replaced by new, more fuel-efficient vehicles. The nation's economy benefited immediately from this stimulus program, which caused a distinct upward movement in GDP and created or saved tens of thousands of jobs at a very critical time in the recovery process. To read the full report <a href="http://www.cars.gov/files/official-information/CARS-Report-to-Congress.pdf">click here<a/>.</p>
+											</div>
+										</div>
+										<!-- // END FEATURE-01 //  -->
+
+                   				 		<!-- // BEGIN FEATURE-02 //  -->
+                   				 		<!--
+										<div id="feature-02" style="display:none">
+											<h1>Exception Process</h1>
+											<hr/>
+											<div style="overflow:auto; height:290px;">
+											<p>On September 23, NHTSA issued an amendment to the CARS rule to add an &ldquo;exception process.&rdquo; A dealer may apply for an exception if it was prevented from submitting an application for reimbursement prior to the announced deadline (August 25, 8 pm EST) because of problems caused by NHTSA. The agency has identified two such problems:  password rejection, where a dealer incorrectly entered its user account password multiple times, was locked out of the system, and was unable to get its password reset; and transaction rejection, where a dealer&rsquo;s application was rejected for a duplicate VIN or customer ID despite the fact that the VIN or ID was never used in a completed CARS transaction.  A dealer may also seek an exception for other hardships caused by NHTSA, subject to a determination that they should be redressed consistent with the purposes of the CARS Act.</p>
+											<p>The exception process is available only to dealers, and only to those dealers that have completed valid CARS deals and extended credits to consumers.  It is not available for reasons other than action or inaction by NHTSA, such as technological difficulties in the dealer&rsquo;s own systems or processes.  For details about this process, please view the link posted below.</p>											
+											<ul>
+												<li><a href="http://www.cars.gov/files/official-information/C4Cexceptionsprocess092309.pdf">Exception Process</a></li>
+											</ul>
+											</div>
+										</div>
+										-->
+										<!-- // END FEATURE-02 //  -->
+                    
+                    					<!-- // BEGIN FEATURE-03 //  -->
+                    					<!--
+										<div id="feature-03" style="display:none">
+											<h1>Transaction Data and Reports Available for Download</h1>
+											<hr/>
+											<div style="overflow:auto; height:290px;">
+												<p>During the wildly successful CARS program, consumers turned in gas guzzlers and bought nearly 700,000 more fuel efficient vehicles in fewer than 30 days. For each of these CARS transactions, the dealer who sold the new vehicle was required to register as a participant and to enter the transaction information through a secure web site. Dealers were also required to submit certain documents to support their request for reimbursement. The review process involved checking both the transaction information and the required supporting documents.</p>
+
+												<p>These <a href="http://www.cars.gov/carsreport">reports</a> contain the transaction level information entered by participating dealers for the 677,081 CARS transactions that were paid or approved for payment as of Friday, October 16, 2009 at 3:00PM EDT for a total of $2,850,162,500. Please note that confidential financial or commercial information and consumer information protected under the <a href="http://www.dot.gov/privacy.html" target="_blank">DOT Privacy Policy</a> has been redacted.</p>
+												
+												<p>Analyst making use of this data are encouraged to read our <a href="#" class="show-notes">Note to Analysts</a>.</p>
+												
+												<p><a href="http://www.cars.gov/carsreport">Available Reports</a></p>
+											</div>
+										</div>
+										-->
+										<!-- // END FEATURE-03 //  -->
+										
+										<!-- // BEGIN FEATURE-04 //  -->
+										<!--
+										<div id="feature-04" style="display:none">
+											<h1>CARS CLOSED</h1>
+											<hr/>
+						                      <p>
+						                      	The CARS program ended sales August 24 with nearly 700,000 clunkers taken off the roads, replaced by far more fuel efficient vehicles. Rebate applications worth $2.877 billion were submitted by the 8 p.m. deadline, under the $3 billion provided by Congress to run the program.
+						                      </p>
+						                      <p>
+						                      	To read the full press release <a href="http://www.cars.gov/files/official-information/August26PR.pdf">click here</a>.
+						                      </p>
+						                      <p>
+												To see the latest CARS Program Statistics <a href="http://www.cars.gov/official-information">click here</a>.
+											  </p>
+											
+											<p>What is NHTSA doing to guard against fraud? <a href="http://www.cars.gov/fraud">Click here</a> for more information. Allegations of fraud may be reported by calling our toll-free hotline at 1-405-954-3700.</p>
+										</div>
+										-->
+										<!-- // END FEATURE-04 //  -->
+										
+                    					<!-- // BEGIN FEATURE-05 //  -->
+                    					<!--
+										<div id="feature-05" style="display:none">
+											<h1>Secretary LaHood announced wind down to hugely popular CARS program</h1>
+											<hr/>
+											<p>U.S. Transportation Secretary Ray LaHood announced on Aug 20 that after a wildly successful run, the cash for clunkers program would close on Monday, August 24th at 8 p.m. EST.</p>
+						                      <p>
+							                     <a href="http://www.cars.gov/files/official-information/August26PR.pdf">Click here for Press Release</a><br>
+						  	                   <a href="http://www.cars.gov/files/official-information/wind-down-strategy.pdf">Click here for Wind Down Strategy</a>
+						                      </p>
+										</div>
+										-->
+										<!-- // END FEATURE-05 //  -->
+										
+										<!-- // BEGIN FEATURE-06 //  -->
+										<!--
+										<div id="feature-06" style="display:none">
+											<h1>Important Information on new MPG Ratings:</h1>
+											<hr />
+											<div style="overflow:auto; height:290px;">
+												<p>In conjunction with the CARS final rule, EPA updated fuel economy data on fueleconomy.gov on July 24th. The changes affected the eligibility of certain vehicles under the CARS program.</p>
+												<p>Of the 30,000 vehicle model types spanning 25 years, 78 cars no longer qualify, but 86 new vehicles are now eligible. </p>
+												
+												<p>NHTSA will process transactions in accordance with the data on fueleconomy.gov. The 78 vehicle model types that were eligible under EPA's mileage criteria until EPA's revisions were issued on July 24th will continue to be considered as eligible for transactions that occurred on or before July 24th.</p>
+												
+												<p>The 86 model types that became eligible on July 24th will be treated as eligible if they are part of sale or lease that occurred on or after July 24th.</p>
+												
+												<p><a href="http://www.cars.gov/files/mpg-ratings/eligible.pdf">Click here</a> to view the list of eligible cars<br />
+												<a href="http://www.cars.gov/files/mpg-ratings/noteligible.pdf">Click here</a> to view the list of ineligible cars<br/>
+												To search all vehicles, click the MPG Ratings tab at the top of the page</p>
+											</div>
+										</div>
+										-->
+										<!-- // END FEATURE-06 //  -->
+										
+										
+										<!-- // BEGIN FEATURE-07 //  -->
+										<!--
+										<div id="feature-07" style="display:none;">
+											<h1>YOU ASKED. WE LISTENED.</h1>
+											<hr />
+											<p>We&rsquo;ve heard that dealers are asking consumers to sign agreements with contingencies when they participate in the CARS program.</p>
+											
+											<p><strong>CONSUMERS ARE NOT REQUIRED TO SIGN CONTINGENCY AGREEMENTS TO PAY BACK THE DEALER SHOULD THE CARS CREDIT BE REJECTED.</strong></p>
+											
+											<p>We&rsquo;ve also heard that dealers are asking consumers to keep their &ldquo;clunker&rdquo; until the deal is approved by NHTSA.</p>
+											
+											<p><strong>IF THE DEALER HAS THE NEW CAR IN STOCK, THE DEALER MUST ALLOW YOU TO TAKE POSSESSION OF THE NEW CAR BEFORE THE DEALER MAY SUBMIT THE CREDIT APPLICATION TO THE GOVERNMENT. PLEASE REPORT ANY DEALER TO NHTSA THAT DOES NOT ALLOW YOU TO TAKE POSSESSION OF A NEW CAR PURCHASED UNDER THE CARS PROGRAM. PLEASE CALL THE CARS HOTLINE AT (405)-954-3700.</strong></p>
+											 <p>To find out more about dealer contingencies <a href="http://www.cars.gov/faq#category-03-5">click here</a>.</p> 
+										</div>
+										-->
+										<!-- // END FEATURE-07 //  -->
+										
+										<!-- // BEGIN FEATURE-08 //  -->
+										<!--
+										<div id="feature-08" style="display:none;">
+											<h1>Consumer Bill of Rights</h1>
+											<hr>
+					                      <div style="overflow:auto; height:290px;">
+											<p id="safariLH">
+												<ul>
+													<li>Qualified consumers may participate in the CARS Program between July 1, 2009 and November 1, 2009 or when authorized funds are no longer available.</li>
+													<li>Qualified consumers will receive a credit of $3,500 or $4,500 for an eligible trade-in toward the purchase of lease of an approved vehicle under CARS Program.</li>
+													<li>Qualified consumers will receive the $3,500 or $4,500 credit at the time the purchase their new vehicle.</li> 
+													<li>Dealers must provide consumers with any other advertised rebates or discounts in addition to the credit they receive through the CARS Program.</li>
+													<li>Consumers should expect to conduct their deals at their dealership of choice, not on the Internet.</li>
+													<li>Consumers should expect the dealers to provide their best estimate of the scrap value for their eligible trade-in vehicle. Dealers are allowed to deduct $50 from this value for their administrative costs.</li>
+													<li>Consumers should expect that all information collected through the CARS Program will be kept confidential. Social Security numbers are <strong>not</strong> required for a CARS transaction.</li>
+												</ul>
+											</p>
+                     	 					</div>
+										</div>
+										-->
+										<!-- // END FEATURE-08 //  -->
+									
+								</div>								
+							</div>
+							<!-- // END FEATURE-SCROLL // -->
+							
+							<!-- // BEGIN FEATURE-COUNTER-WRAPPER // -->
+							<div id="feature-counter-wrapper">
+								<div id="feature-counter" >
+									<div style="float:left; position:relative; top:3px;"><a href="http://www.cars.gov/headlines">Previous Headlines</a>&nbsp;&nbsp;&nbsp;</div>
+									<!--
+									<div id="feature-num-01" class="feature-num active">1</div>
+									<div id="feature-num-02" class="feature-num">2</div>
+									<div id="feature-num-03" class="feature-num">3</div>
+									<div id="feature-num-04" class="feature-num">4</div>
+									<div id="feature-num-05" class="feature-num">5</div>
+									<div id="feature-num-06" class="feature-num">6</div>
+									<div id="feature-num-07" class="feature-num">7</div>
+									<div id="feature-num-08" class="feature-num">8</div>
+									-->
+								</div>
+							</div>
+							<!-- // END FEATURE-COUNTER-WRAPPER // -->
+						</div>
+						<!-- // END FEATURE // -->
+						
+						
+						
+						
+						<!-- // BEGIN CONTENT // -->
+						<div class="content-block-wrapper">
+							<div class="content-block">
+								<h1>Important Things to Know</h1>
+								<hr />
+								<ul>
+									<li>What is NHTSA doing to guard against fraud? <a href="http://www.cars.gov/fraud">Click here</a> for more information. Allegations of fraud may be reported by calling our toll-free hotline at 1-405-954-3700.</li>
+									<li>To participate in the CARS program, you do not have to sign an agreement to pay back the dealer the CARS credit amount if the deal is rejected.</li>
+									<li>You are required to leave your trade-in vehicle at the dealership and sign over the title to the trade-in vehicle at the time of the deal.</li>
+									<li>The dealer must give you the new vehicle at the time of the deal.</li>
+									<li>Your vehicle must be less than 25 years old on the trade-in date</li>
+									<li>Only purchase or lease of new vehicles qualify.</li>
+									<li>Generally, trade-in vehicles must get 18 or less MPG (some very large pick-up trucks and cargo vans have different requirements).</li>
+									<li>Trade-in vehicles must be registered and insured continuously for the full year preceding the trade-in.</li>
+									<li>You don't need a voucher, dealers will apply a credit at purchase.</li>
+									<li>Program runs through Nov 1, 2009 or when the funds are exhausted, whichever comes first.</li>
+									<li>The program requires the scrapping of your eligible trade-in vehicle and that the dealer disclose to you an estimate of the scrap value of your trade-in. The scrap value, minus $50 the dealer keeps for administrative fees, will be in addition to the rebate, and not in place of the rebate.</li>
+								</ul>
+								<p><strong>Check this site frequently for the most recent updates from the government.</strong></p>
+							</div>
+						</div>
+						<!-- // END CONTENT // -->
+						
+											
+					</div>
+					<!-- // END LEFT-COL // -->
+					<div class="clear"></div>
+					
+							<!-- // BEGIN RIGHT-COL // -->
+		<div id="right-col">
+		<div class="callout-item">
+			<img src="http://www.cars.gov/images/sponsors.gif" alt="Ad: This site is Sponsored by NHTSA and DOT (DOT Logo) - The Hotline is 1-405-954-3700 - TTY: (800) - 424 - 9153 - Hours of Operation: Mon-Fri: 8A - 10P - Sat-Sun: 10A - 8P - For Media Inquiries Only: (202) - 366 - 9550 (Text at bottom)" />
+		</div>
+		<!-- // BEGIN NEWSLETTER // -->
+		<div class="callout-item">
+			<div class="newsletter-callout">
+				<h2>Sign Up for Email Updates</h2>
+				<form action="https://service.govdelivery.com/service/multi_subscribe.html" method="POST">
+					<input type="hidden" name="code" value="USDOTNHTSACARS" />
+					<input type="hidden" name="origin" value="http://www.cars.gov/carsreport"/>
+					<input type="textfield" name="login" value="Enter email address" onfocus="this.value=''" class="txt-email" />
+					<input type="submit" value="Go" class="btn-go" />
+				</form>
+			</div>
+		</div>
+		<!-- // END NEWSLETTER // -->
+		
+		<div class="callout-item">
+			<a href="http://www.cars.gov/carsreport"><img src="http://www.cars.gov/images/callout-reports.jpg" alt="Reports" /></a>
+		</div>
+		<div class="callout-item">
+			<a href="http://www.cars.gov/official-information"><img src="http://www.cars.gov/images/callout-official-information.jpg" alt="Official Information" /></a>
+		</div>
+		<div class="callout-item">
+			<a href="http://www.cars.gov/faq"><img src="http://www.cars.gov/images/callout-faq.jpg" alt="CARS Frequently Asked Questions" /></a>
+		</div>
+		<div class="callout-item">
+			<a href="http://www.safercar.gov/portal/site/safercar/menuitem.13dd5c887c7e1358fefe0a2f35a67789/?vgnextoid=c276c95372935110VgnVCM1000002fd17898RCRD" target="_blank"><img src="http://www.cars.gov/images/callout-safe.jpg" alt="How to buy a safer car" /></a>
+		</div>
+		
+		<div class="callout-item">
+			<a href="http://www.cars.gov/dealersupport/disposal-and-salvage"><img src="http://www.cars.gov/images/callout-disposal-and-salvage.jpg" alt="Disposal and Salvage" /></a>
+		</div>
+		
+		</div>
+		<!-- // END RIGHT-COL // -->					
+				</div>				
+			</div>
+			<!-- // END INNER-CONTENT-WRAPPER // -->
+		</div>
+		<!-- // END CONTENT-WRAPPER // -->
+		<div class="clear"></div>
+		
+		
+		<!-- // BEGIN POP-UP SECTION -->
+		
+		<!-- // BEGIN CONTENT // -->
+			<div id="dialog-notes" class="content-block-wrapper hide">
+				<div class="content-block">
+					<p>The information contained in the file was entered by dealers and could be changed only by dealers (or by NHTSA under very narrow circumstances; see CARS <a href="http://www.cars.gov/files/reports/data-dictionary.pdf">Data Dictionary</a> for details) to maintain accountability. As a result, there are some inconsistencies. For some fields dealers entered the information in a variety of formats (such as some phone numbers with a dash and others without a dash) and in other cases the data were mistyped (such as switching two digits of the phone number). Two additional fields (trade-in insurance start date and trade in NMVTIS flag date) were optional and frequently have missing values.</p>
+					
+					<p>Three caveats are worth noting. The first involves the dates entered by the dealers. The CARS invoice date was a default date provided by the system when the invoice (transaction) was created, but the dealer could override with a different date. Generally, a valid CARS invoice date ranges from July 27, 2009, through August 25th, 2009. However, there are some valid dates outside of this range because of pilot testing before July 27th and transactions processed through the regulatory exception process after August 25th. The CARS sale date, the trade-in registration start and expiration dates, and the optional trade-in insurance start date also were provided by the dealer in the transaction form.  These transactions may have information that was mistyped by the dealer. In cases where the required documents submitted with the invoice indicated an eligible transaction but conflicted with the sale, registration or insurance dates in the transaction form, the invoice was accepted by the reviewer based upon the supporting documentation.</p>
+					
+					<p>The second caveat involves the vehicle identification number (VIN) for both the new and the trade-in vehicle. The VIN is a 17 character long serial number that uniquely identifies the vehicle and that typically follows a standard format. Both the new and trade-in VIN may contain mistyped information by the dealer, resulting in a VIN that appears to be nonstandard. For example, the dealer may have switched two characters or entered one wrong character such as a &ldquo;5&rdquo; in place of an &ldquo;S&rdquo;. In addition to mistyped information, some VINs may contain place holder characters entered by the dealer at NHTSA's direction to override a duplication error resulting from another dealer entering the same VIN by mistake or as part of an incomplete transaction. (Without this step, complying transactions would continue to be rejected.) It is also the case that some vehicles are titled with nonstandard VINs, and the trade-in VIN was compared against the VIN on the title. Finally, in some transactions it appears that the dealer may have reversed the new vehicle and trade-in VINs.</p>
+					
+					<p>The third caveat involves the vehicle categories and fuel economy (miles per gallon) for the new and trade-in vehicles. In some instances the vehicle categories of the new and trade-in vehicle or the fuel economy of the two vehicles does not appear to conform to the requirements of the regulation for a valid CARS deal. NHTSA is aware of these issues and continues to research and investigate. One reason is that the EPA updated the fuel economy data on the website at fueleconomy.gov in conjunction with the CARS final rule, which affected the eligibility of certain vehicles under the CARS program. Deals that had been completed based upon the old information were accepted as valid transactions even though the new information makes it appear that the transaction is not valid. NHTSA also has identified cases where the vehicle category was incorrectly entered by the dealer, which made the deal appear to be invalid, but the deal is valid under the correct category.</p>
+					
+					<p>NHTSA continues to review and research CARS cases for compliance. We are finalizing a data quality plan to identify and correct data integrity issues. In the instances described above where data issues involve the possibility of improper payment, NHTSA is investigating the underlying transactions and will take corrective action when necessary as part of our ongoing CARS enforcement effort.</p>
+					
+				</div>
+			</div>
+			<!-- // END CONTENT // -->
+			
+			<!-- // END POP-UP SECTION -->
+
+
+
+
+			<!-- // BEGIN FOOTER // -->
+			<div id="footer">
+				<div id="footer-wrapper">
+				
+					<div id="footer-links">
+
+						U.S. Department of Transportation<br>
+						1200 New Jersey Ave SE, Washington, DC 20590 Phone: 405-954-3700 <br>
+						<span style="color:#333;">Last Updated 02/22/2010</span><br/>
+						<a href="http://www.dot.gov/webpolicies.htm" title="View Policies &amp; Notices" target="_blank">Policies &amp; Notices</a>  | <a href="http://www.dot.gov/citizen_services/disability/disability.html" title="Accessibility" target="_blank">Accessibility</a> | <a href="http://www.dot.gov/privacy.html" title="View Privacy Policy" target="_blank">Privacy</a> | <a href="http://www.dotcr.ost.dot.gov/asp/nofear.asp" title="View No Fear Act" target="_blank">No Fear Act</a> | <a href="http://www.osdbu.dot.gov/" title="View Small Business" target="_blank">Small Business</a> | <a href="http://www.dot.gov/ethics/" title="View Ethics" target="_blank">Ethics</a> | <a href="http://www.oig.dot.gov/" title="View OIG" target="_blank">OIG</a> | <a href="http://www.dot.gov/regulations.html" title="View Regulations" target="_blank">Regulations</a> | <a href="http://www.usa.gov/" title="View USA.gov" target="_blank">USA.gov</a> | <a href="http://www.whitehouse.gov/" title="View WhiteHouse.gov" target="_blank">WhiteHouse.gov</a><br>
+							
+					</div>
+					
+					<div id="footer-logos">
+						<a href="http://www.nhtsa.gov/" target="_blank" title="Visit National Highway Traffic Safety Administration(NHTSA) | U.S. Department of Transportation"><img src="http://www.cars.gov/images/nhtsa-logo.gif" alt="National Highway Traffic Safety Administration(NHTSA) | U.S. Department of Transportation" border="0" /></a>
+						<img src="http://www.cars.gov/images/dot-logo.gif" alt="U.S. Department of Transportation" border="0" />
+					</div>
+						
+				</div>
+			</div>
+			<!-- // END FOOTER // -->
+	</div>
+	<!-- // END BODY-WRAPPER // -->
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-9442948-1");
+	pageTracker._trackPageview();
+	} catch(err) {}
+	</script>
+</body>
+
+<!-- Mirrored from www.cars.gov/ by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:31:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,361 @@
+CTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+ 
+ 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" > 
+<head> 
+ 
+<script type="text/javascript"  > 
+  function ProductSearch()
+  {
+       var url=document.getElementById("SearchURL").value+"?desc="+document.getElementById("txtSearch").value;
+       window.location=url;
+  }
+</script> 
+    
+    <!-- <link href="default.css" rel="stylesheet" type="text/css" /> --> 
+    
+<link href="App_Themes/ThemeCust/default.css" type="text/css" rel="stylesheet" /><title> 
+	Allergy products by Bluespring
+</title></head> 
+ 
+<body> 
+<!-- Start of Google Analytics --> 
+<script src="https://ssl.google-analytics.com/urchin.js" type="text/javascript"> 
+</script> 
+<script type="text/javascript"> 
+  _uacct = "UA-634322-1";
+  _udn="bluespringwellness.com";
+  urchinTracker();
+</script> 
+<!--  End of Google Analytics --> 
+<form name="aspnetForm" method="post" action="Category.aspx?CatID=161&amp;StoreID=1" id="aspnetForm"> 
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTQ4Nzc3MDMzNw9kFgJmD2QWAgIFD2QWAgIHD2QWAmYPPCsACQEADxYEHghEYXRhS2V5cxYAHgtfIUl0ZW1Db3VudAIEZBYIZg9kFghmDxUGFHByb2R1Y3QuYXNweD9waWQ9Mzc4Q2h0dHA6Ly93d3cuYmx1ZXNwcmluZ3dlbGxuZXNzLmNvbS9pbWFnZXMvYWxsZXJnZWV6ZV93ZWxsbmVzc19zbS5qcGe1AURvIHlvdSBzdWZmZXIgZnJvbSBhbGxlcmdpZXM/IEFsbGVyZ0VlemUgZnJvbSBCbHVlc3ByaW5nIGlzIGFuIHNhZmUgbmF0dXJhbCBtYXkgdG8gZ2l2ZSB5b3UgcmVsaWVmIGZyb20gU25lZXppbmcsIEhheSBGZXZlciwgQWxsZXJnaWVzLCBSdW5ueSBOb3NlLCBTaW51cyBDb25nZXN0aW9uLCBDb2xkcyBhbmQgbW9yZSEKQWxsZXJnRWV6Zd8EPHAgYWxpZ249ImxlZnQiPkFsbGVyZ0VlemUgaXMgYW4gYWxsLW5hdHVyYWwgcG93ZGVyIHNwcmF5IHRoYXQgaGVscHMgeW91ciBub3NlIHdvcmsgYmV0dGVyLiBSZWxpZXZlcyBTbmVlemluZywgSGF5IEZldmVyLCBBbGxlcmdpZXMsIFJ1bm55IE5vc2UsIFNpbnVzIENvbmdlc3Rpb24sIENvbGRzIGFuZCBtb3JlLjxicj4NCjx0YWJsZSBhbGlnbj0ibGVmdCI+DQo8dHI+DQo8dGQ+PGEgaHJlZj0icHJvZHVjdC5hc3B4P3BpZD0zNzgiPjxpbWcgc3JjPSIvaW1hZ2VzL3NhdmluZ3NidXR0b25fMDgxMTMwLmpwZyIgaGVpZ2h0PSI1NSIgd2lkdGg9IjExMCIgYm9yZGVyPSIwIiBhbHQ9IkNsaWNrIEhlcmUgZm9yIFNwZWNpYWwgU2F2aW5ncyEiPjwvYT48L3RkPg0KPHRkPjxBIEhSRUY9Imluc3RhbnRfcmV3YXJkc19ocDEwMSIgVEFSR0VUPSJfYmxhbmsiPjxpbWcgc3JjPSIvaW1hZ2VzL2luc3RhbnRfcmV3YXJkc19idXR0b25fMDkwNzAyLmpwZyIgaGVpZ2h0PSI1NSIgd2lkdGg9IjExMCIgYm9yZGVyPSIwIiBhbHQ9IkNsaWNrIEhlcmUgdG8gTGVhcm4gTW9yZSBBYm91dCBJbnN0YW50IFJld2FyZHMgZm9yIHRoaXMgSXRlbSEiPjwvYT48L3RkPg0KPC90cj48L3RhYmxlPhRwcm9kdWN0LmFzcHg/cGlkPTM3OGQCAQ9kFgJmDxUBBDguOTlkAgIPFgIeB1Zpc2libGVoFgJmDxUCBDguOTkHKCQxLjAwKWQCAw8VAQMzNzhkAgEPZBYIZg8VBhhob21lb3BhdGhpY3Nfc2ludXNyZWxpZWZIaHR0cDovL3d3dy5ibHVlc3ByaW5nd2VsbG5lc3MuY29tL2ltYWdlcy9ob21lb3BhdGhpY3Nfc2ludXNyZWxpZWZfc20uanBnJFNhZmUgbm8gd29ycmllcyBTaW51cyByZWxpZWYgdGFibGV0cwxTaW51cyBSZWxpZWaqBDxwIGFsaWduPSJsZWZ0Ij5SZWxpZXZlcyBzaW51cyBoZWFkYWNoZSwgbmFzYWwgY29uZ2VzdGlvbiwgYW5kIHNpbnVzIHByZXNzdXJlIHdpdGhvdXQgY2F1c2luZyBkcm93c2luZXNzIG9yIGppdHRlcnMuIDxicj4NCjx0YWJsZSBhbGlnbj0ibGVmdCI+DQo8dHI+DQo8dGQ+PGEgaHJlZj0iaG9tZW9wYXRoaWNzX3NpbnVzcmVsaWVmIj48aW1nIHNyYz0iL2ltYWdlcy9zYXZpbmdzYnV0dG9uXzA4MTEzMC5qcGciIGhlaWdodD0iNTUiIHdpZHRoPSIxMTAiIGJvcmRlcj0iMCIgYWx0PSJDbGljayBIZXJlIGZvciBTcGVjaWFsIFNhdmluZ3MhIj48L2E+PC90ZD4NCjx0ZD48QSBIUkVGPSJpbnN0YW50X3Jld2FyZHNfaHA1MTUwNTYwIiBUQVJHRVQ9Il9ibGFuayI+PGltZyBzcmM9Ii9pbWFnZXMvaW5zdGFudF9yZXdhcmRzX2J1dHRvbl8wOTA3MDIuanBnIiBoZWlnaHQ9IjU1IiB3aWR0aD0iMTEwIiBib3JkZXI9IjAiIGFsdD0iQ2xpY2sgSGVyZSB0byBMZWFybiBNb3JlIEFib3V0IEluc3RhbnQgUmV3YXJkcyBmb3IgdGhpcyBJdGVtISI+PC9hPjwvdGQ+DQo8L3RyPjwvdGFibGU+GGhvbWVvcGF0aGljc19zaW51c3JlbGllZmQCAQ9kFgJmDxUBBDguOTVkAgIPFgIfAmgWAmYPFQIEOC45NQcoJDEuMDApZAIDDxUBAzI5MmQCAg9kFghmDxUGGmhvbWVvcGF0aGljc19hbGxlcmd5cmVsaWVmQGh0dHA6Ly93d3cuYmx1ZXNwcmluZ3dlbGxuZXNzLmNvbS9pbWFnZXMvYWxsZXJneV93ZWxsbmVzc19zbS5qcGc0QWxsZXJneSBSZWxpZWYgU2FmZSBubyBXb3JyaWVzIEhvbWVvcGF0aGljIE1lZGljaW5lcw5BbGxlcmd5IFJlbGllZqkEPHAgYWxpZ249ImxlZnQiPlJlbGlldmVzIHNuZWV6aW5nLCB3YXRlcnkgZXllcywgcnVubnkgbm9zZSBhbmQgaXRjaHkgdGhyb2F0LS13aXRob3V0IGRyb3dzaW5lc3Mgb3Igc2lkZSBlZmZlY3RzLiAgPGJyPg0KPHRhYmxlIGFsaWduPSJsZWZ0Ij4NCjx0cj4NCjx0ZD48YSBocmVmPSJob21lb3BhdGhpY3NfYWxsZXJneXJlbGllZiI+PGltZyBzcmM9Ii9pbWFnZXMvc2F2aW5nc2J1dHRvbl8wODExMzAuanBnIiBoZWlnaHQ9IjU1IiB3aWR0aD0iMTEwIiBib3JkZXI9IjAiIGFsdD0iQ2xpY2sgSGVyZSBmb3IgU3BlY2lhbCBTYXZpbmdzISI+PC9hPjwvdGQ+DQo8dGQ+PEEgSFJFRj0iaW5zdGFudF9yZXdhcmRzX2hwNTE1MTI2MCIgVEFSR0VUPSJfYmxhbmsiPjxpbWcgc3JjPSIvaW1hZ2VzL2luc3RhbnRfcmV3YXJkc19idXR0b25fMDkwNzAyLmpwZyIgaGVpZ2h0PSI1NSIgd2lkdGg9IjExMCIgYm9yZGVyPSIwIiBhbHQ9IkNsaWNrIEhlcmUgdG8gTGVhcm4gTW9yZSBBYm91dCBJbnN0YW50IFJld2FyZHMgZm9yIHRoaXMgSXRlbSEiPjwvYT48L3RkPg0KPC90cj48L3RhYmxlPhpob21lb3BhdGhpY3NfYWxsZXJneXJlbGllZmQCAQ9kFgJmDxUBBDguOTVkAgIPFgIfAmgWAmYPFQIEOC45NQcoJDEuMDApZAIDDxUBAzI4M2QCAw9kFghmDxUGHWhvbWVvcGF0aGljc19zb3JldGhyb2F0cmVsaWVmQ2h0dHA6Ly93d3cuYmx1ZXNwcmluZ3dlbGxuZXNzLmNvbS9pbWFnZXMvc29yZXRocm9hdF93ZWxsbmVzc19zbS5qcGcic2FmZSBubyB3b3JyaWVzIHNvcmUgdGhyb2F0IHJlbGllZhJTb3JlIFRocm9hdCBSZWxpZWaZBDxwIGFsaWduPSJsZWZ0Ij5SZWxpZXZlcyBtaW5vciB0aHJvYXQgaXJyaXRhdGlvbiBkdWUgdG8gYWxsZXJnaWVzLCBjb2xkcywgb3IgaW5oYWxlZCBpcnJpdGFudHMuPGJyPg0KPHRhYmxlIGFsaWduPSJsZWZ0Ij4NCjx0cj4NCjx0ZD48YSBocmVmPSJob21lb3BhdGhpY3Nfc29yZXRocm9hdHJlbGllZiI+PGltZyBzcmM9Ii9pbWFnZXMvc2F2aW5nc2J1dHRvbl8wODExMzAuanBnIiBoZWlnaHQ9IjU1IiB3aWR0aD0iMTEwIiBib3JkZXI9IjAiIGFsdD0iQ2xpY2sgSGVyZSBmb3IgU3BlY2lhbCBTYXZpbmdzISI+PC9hPjwvdGQ+DQo8dGQ+PEEgSFJFRj0iaW5zdGFudF9yZXdhcmRzX2hwNTE1MDM2MCIgVEFSR0VUPSJfYmxhbmsiPjxpbWcgc3JjPSIvaW1hZ2VzL2luc3RhbnRfcmV3YXJkc19idXR0b25fMDkwNzAyLmpwZyIgaGVpZ2h0PSI1NSIgd2lkdGg9IjExMCIgYm9yZGVyPSIwIiBhbHQ9IkNsaWNrIEhlcmUgdG8gTGVhcm4gTW9yZSBBYm91dCBJbnN0YW50IFJld2FyZHMgZm9yIHRoaXMgSXRlbSEiPjwvYT48L3RkPg0KPC90cj48L3RhYmxlPh1ob21lb3BhdGhpY3Nfc29yZXRocm9hdHJlbGllZmQCAQ9kFgJmDxUBBDguOTVkAgIPFgIfAmgWAmYPFQIEOC45NQcoJDEuMDApZAIDDxUBAzI5NGRko8NV9rWbScYfCEX76nW3BaNHz04=" /> 
+ 
+   <div align="center"> 
+<div id="shell"> 
+ 
+	<div id="mast_logo"> 
+		<a href="http://www.bluespringwellness.com"> 
+		<img src="images/masthead_logo.gif" style="margin-left:1px; padding-left:0px;" alt="Welcome to Bluespringwellness.com! Bluespring is the maker.s of the Original Super Blue Stuff OTC pain relief product. Bluespring specializes in natural pain relief, emu oil, healthy skin and homeopathic products. Bluespring seeks to provide pure and natural products to help our customers achieve balanced health and wellness. We focus on Mind, Body, Emotion and Spirit" /></a> 
+	</div> 
+	
+	<div id="mast_links"> 
+		<a href="https://secure.bluespringwellness.com/cart.aspx" class="top_nav_link"  >VIEW CART</a> :		
+		<a href="https://secure.bluespringwellness.com/Secure/Checkout/Myaccount.aspx" class="top_nav_link" >MY ACCOUNT</a> : 
+		<a href="http://www.bluespringwellness.com/OrderTracking.aspx" class="top_nav_link" >ORDER TRACKING</a> : 
+		<a href="http://www.bluespringwellness.com/ContactForm.aspx?TypeID=15" class="top_nav_link"  >REQUEST A CATALOG</a> : 
+		<a href="http://www.bluespringwellness.com/InfoPage.aspx?pid=20" class="top_nav_link" >HELP</a>&nbsp;
+		<br /> 
+		<a href="http://www.bluespringwellness.com/SiteLocator.aspx" class="top_nav_link" >STORE LOCATOR</a>:
+		<a href="http://www.bluespringwellness.com/infopage.aspx?pid=39" class="top_nav_link" ><span style=" color:Red;">SHIPPING &amp; HANDLING</span></a>:
+		<a href="https://secure.bluespringwellness.com/Secure/Checkout/Freight.aspx" class="top_nav_link" >CHECKOUT</a> : 
+		<a id="_ctl1_hlLogOut" href="https://secure.bluespringwellness.com/Secure/Checkout/Myaccount.aspx?StoreID=1">SIGNIN</a>&nbsp;
+		 <br /> 
+		 <a href="http://www.bluespringwellness.com/contactus"> 
+		   <span style="font-size:11px; color:Blue;">Got Questions? Need Help? Call 800-289-0589 Mon.- Sat. 7:30am - 7pm CST&nbsp;</span>   
+	     </a> 
+	</div> 
+	
+	<div id="prod_search"> 
+	<div id="_ctl1_pnlSearch"> 
+	
+		<table style="width:300px; border:0;" cellpadding="0" cellspacing="0"> 
+			<tr> 
+				<td valign="middle"> 
+					<img src="images/prod_search.gif" alt=" Product Search" /> 
+				</td> 
+				<td valign="middle">					
+                    <input id="txtSearch" name="txtSearch" type="text"  style="width:145px;" /> 
+				</td> 
+				<td valign="middle"> 
+                    <input id="SearchURL" type="hidden"  value="http://www.bluespringwellness.com/ProductSearch.aspx" />					
+                    <a href="javascript:ProductSearch();"> 
+                    <img src="images/search_go.gif" alt="Submit" /> 
+                    </a>                    
+				</td> 
+			</tr> 
+			<tr> 
+				<td colspan="3" align="right"> 
+					<a href="http://www.bluespringwellness.com/ProductSearch.aspx" class="top_nav_link" >Advanced Search</a>&nbsp;
+				</td> 
+			</tr> 
+			<tr>					
+		</table> 
+		
+</div> 
+	</div> 
+	
+	<div id="top_nav">		
+		<img src="images/top_nav_01.gif" style="width:100%;float:left; height:3px;" alt="Top Nav" />			
+		<script type='text/javascript' src='http://www.bluespringwellness.com/controls/server/menus.js'></script><div id="topnav-leftcap"> 
+		      <img src="http://www.bluespringwellness.com/images/top-nav-left-cap.gif" alt="" /> 
+	              </div><div id="topnav" ><table id="tbTopMenuBar" style="border:0px;width:100%;" cellpadding="0" cellspacing="0" ><tr><td><img src="http://www.bluespringwellness.com/images/top-nav-rule.gif" alt="" /></td><td class="clsTopMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)"id="tdTopMenuBarItemHome"><a href="http://www.bluespringwellness.com/home">Home</a></td><td><img src="http://www.bluespringwellness.com/images/top-nav-rule.gif" alt="" /></td><td class="clsTopMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)"id="tdTopMenuBarItemMyAccount"><a href="https://secure.bluespringwellness.com/Secure/Checkout/Myaccount.aspx">My Account</a></td><td><img src="http://www.bluespringwellness.com/images/top-nav-rule.gif" alt="" /></td><td class="clsTopMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)"id="tdTopMenuBarItemWeb&nbsp;Specials"><a href="http://www.bluespringwellness.com/webspecials">Web&nbsp;Specials</a></td><td><img src="http://www.bluespringwellness.com/images/top-nav-rule.gif" alt="" /></td><td class="clsTopMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)"id="tdTopMenuBarItemOurProducts"><a href="http://www.bluespringwellness.com/ourproducts">Our Products</a></td><td><img src="http://www.bluespringwellness.com/images/top-nav-rule.gif" alt="" /></td><td class="clsTopMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)"id="tdTopMenuBarItemStayInformed"><a href="http://www.bluespringwellness.com/stayinformed">Stay Informed</a></td><td><img src="http://www.bluespringwellness.com/images/top-nav-rule.gif" alt="" /></td><td class="clsTopMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)"id="tdTopMenuBarItemCustomerCare"><a href="http://www.bluespringwellness.com/customercare">Customer Care</a></td><td><img src="http://www.bluespringwellness.com/images/top-nav-rule.gif" alt="" /></td></tr></table></div><div id="topnav-rightcap"> 
+		<img src="http://www.bluespringwellness.com/images/top-nav-right-cap.gif" alt="" /><div class="clsTopSubMenu" onmouseover="clrTimeout();" onmouseout="delay=window.setTimeout('CloseMenu(eOpenMenu)',500);"id="divTopSubMenuMyAccount"><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="https://secure.bluespringwellness.com/secure/changeemail.aspx">Change&nbspE-mailAddress</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="https://secure.bluespringwellness.com/secure/Changepassword1.aspx">Change&nbsp;Password</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/ordertracking">Order&nbsp;Tracking</a></div></div><div class="clsTopSubMenu" onmouseover="clrTimeout();" onmouseout="delay=window.setTimeout('CloseMenu(eOpenMenu)',500);"id="divTopSubMenuWeb&nbsp;Specials"></div><div class="clsTopSubMenu" onmouseover="clrTimeout();" onmouseout="delay=window.setTimeout('CloseMenu(eOpenMenu)',500);"id="divTopSubMenuOurProducts"><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/painreliefproducts">PainReliefProducts</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/emuoilproducts">EmuOil&nbsp;Products</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/healthyskinproducts">HealthySkinProducts</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/wellnessproducts">Wellness&nbsp;Products</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/homeopathics">Homeopathics</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a style="color:Red"  href="http://www.bluespringwellness.com/sale">Sale</a></div></div><div class="clsTopSubMenu" onmouseover="clrTimeout();" onmouseout="delay=window.setTimeout('CloseMenu(eOpenMenu)',500);"id="divTopSubMenuStayInformed"><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/catalog">Catalog&nbsp;Request</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/newsletters">ReceiveOurNewsletters</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/twitter">Bluespring&nbsp;Twitter</a></div></div><div class="clsTopSubMenu" onmouseover="clrTimeout();" onmouseout="delay=window.setTimeout('CloseMenu(eOpenMenu)',500);"id="divTopSubMenuCustomerCare"><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/contactus">Contact&nbsp;Us</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/guarantee">Guarantee</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/testimonials">Testimonials</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/storelocator">Store&nbsp;Locator</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/internationalcustomers">InternationalCustomers</a></div><div class="clsSubMenu" onmouseover="javascript:this.style.backgroundColor='#C0C0C0';"onmouseout="javascript:this.style.backgroundColor='';"><a  href="http://www.bluespringwellness.com/ingredients">Product&nbsp;Ingredients</a></div></div></div>				
+		<img src="images/top_nav_09.gif" style="width:100%; height:4px;" alt="Top Nav" />		
+	</div> 
+	<div id="_ctl1_pnlLeftNav" class="left_nav"> 
+	
+	<div id="left_nav_shell"> 
+	
+		<div class="ln_banner"> 
+			<a href="http://www.bluespringwellness.com/freesample" > 
+			<img src="images/sample_request_081027.jpg" alt="Click here to request free natural pain relief samples!" /></a> 
+		</div> 
+		
+		<div class="ln_banner"> 
+			<a href="http://www.bluespringwellness.com/NewsSubscribe.aspx?flag=1&amp;CustType=1" > 
+			<img src="images/newsletter_request_081028.jpg" alt="Click here to receive Bluespring.s Refresh e-newsletter. Refresh contains the latest information on health and wellness. Plus you also receive weekly specials on Bluespring products." /></a> 
+		</div> 
+		
+		<div class="ln_banner"> 
+		<a href="http://www.bluespringwellness.com/InfoPage.aspx?pid=173" > 
+		  <img src="images/bsiseller_081211.jpg" id="_ctl1_Img1" alt="Click here for Blue Spring's Reseller Program " />	 
+		</a> 
+		  
+		</div> 
+		
+		<div class="ln_navigation"><ul class="left_nav_ul"><li class="left_nav_parent">  <a href="http://www.bluespringwellness.com/painreliefproducts" >Pain Relief Products</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/painrelief_superbluestuffotc" >Super Blue Stuff OTC</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/painrelief_superwhitestuffotc" >Super White Stuff OTC</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/painrelief_healthyjoints" >Healthy Joints</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/painrelief_activeandsport" >Active & Sport</a></li></ul></div><div class="ln_navigation"><ul class="left_nav_ul"><li class="left_nav_parent">  <a href="http://www.bluespringwellness.com/emuoilproducts" >Emu Oil&nbsp;Products</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/emuoil" >Pure Emu Oil</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/emuoilproducts_facialcare" >Emu Oil Facial Care</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/emuoilproducts_haircare" >Emu Oil Hair Care</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/emuoilproducts_bodycare" >Emu Oil Body Care</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/emuoilproducts_painrelief" >Emu Oil Pain Relief</a></li></ul></div><div class="ln_navigation"><ul class="left_nav_ul"><li class="left_nav_parent">  <a href="http://www.bluespringwellness.com/healthyskinproducts" >Healthy Skin Products</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/healthyskinproducts_bodycare" >Body Care</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/healthyskinproducts_facialcare" >Facial Care</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/healthyskinproducts_haircare" >Hair Care</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/footcare" >Foot Care</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/healthyskinproducts_tanning" >Healthy Tanning</a></li></ul></div><div class="ln_navigation"><ul class="left_nav_ul"><li class="left_nav_parent">  <a href="http://www.bluespringwellness.com/wellnessproducts" >Wellness&nbsp;Products</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/wellnessproducts_allergy" >Allergy</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/wellnessproducts_energy" >Energy</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/wellnessproducts_womenshealth" >Women's Health</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/wellnessproducts_digestion" >Digestion</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/wellnessproducts_stopsmoking" >Stop Smoking</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/wellnessproducts_healthyjoints" >Healthy Joints</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/wellnessproducts_stressrelief" >Stress Relief</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/wellnessproducts_weightloss" >Weight Loss</a></li></ul></div><div class="ln_navigation"><ul class="left_nav_ul"><li class="left_nav_parent">  <a href="http://www.bluespringwellness.com/homeopathics" >Homeopathics</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/homeopathics_snw" >Safe No Worries</a></li></ul></div><div class="ln_navigation"><ul class="left_nav_ul"><li class="left_nav_parent">  <a style="color:Red" href="http://www.bluespringwellness.com/sale" >Sale</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/mix_n_match" >Mix-N-Match Specials</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/freestuff" >Free Stuff</a></li><li class="left_nav_child">  <a href="http://www.bluespringwellness.com/giftsets" >Gift Sets</a></li></ul></div>	
+		<div> 
+		
+		<!-- --> 
+		<a href="http://www.bluespringwellness.com/twitter" > 
+<img src="images/followus_button_090507.jpg" alt="We would love to hear from us. Follow us on Bluespring, Super Blue Stuff, and Emu oil on  Twitter. Click here to learn more about Twitter" border="0" /> </a> 
+<br/>		
+ 
+        <!--  security metrics -->	
+  <!--	
+		<a href="https://www.securitymetrics.com/site_certificate.adp?s=24%2e249%2e239%2e211&amp;i=105234" target="_blank" >
+<img src="https://www.securitymetrics.com/images/identity_theft_protected.gif" alt="SecurityMetrics Identity Theft Protected" border="0" /> </a>
+--> 
+ 
+ 
+<br/>		
+ <!--DiversityBusiness.com Awards Link 2008--> 
+   <a href="http://www.DiversityBusiness.com/Resources/DivLists/2008"> 
+      <img src="images/DivEmblemS1.jpg" alt="Top Diversity Business Reward" /> 
+   </a> 
+ <!--End DiversityBusiness.com Awards Link--> 
+ 
+		<br /> 
+		<!-- <img src="images/AEA_080521.jpg" id="_ctl1_Img2" alt="AEA" /> --> 
+		</div> 
+	
+	</div> 
+	
+</div> 
+	
+	<div id="body_shell"> 
+	
+	 <div> 
+                    	
+ 
+	 <!--BEGIN ROI TRACKING Code--> 
+<script type='text/javascript' src='http://track.roiservice.com/track/track.aspx?ROIID=932918107000021'></script> 
+<script type='text/javascript'> 
+<!-- 
+if (typeof(ROIID) + '' != 'undefined') { 
+TrackEvent('LandingPage', 0); 
+} 
+//--> 
+</script> 
+<!--END ROI TRACKING Code--> 
+ 
+<!--BEGIN OF MSN SEM--> 
+<script type='text/javascript'> 
+  msn_adcenterconversion_domainid = 27083;
+  msn_adcenterconversion_cp = 5050;
+  </script> 
+<script type='text/javascript' src='https://adcenter.microsoft.com/scripts/msn_adcenterconversion.js'></script> 
+  <noscript> 
+    <img style="width:1px;height:1px;" src='https://27083.r.msn.com/?type=1&amp;cp=1' alt=''/> 
+  </noscript> 
+  <a href='http://advertising.msn.com/MSNadCenter/LearningCenter/adtracker.asp' target='_blank'></a> 
+  <!--END OF MSN SEM-->	
+	 <table width="520px" cellpadding=0 cellspacing=0> 
+	   <tr> 
+	    <td> 
+	     <div id="splash"> 
+	       <img src='images/wellnessproducts_allergy_header.jpg' alt="Do you have Allergeeze? Allergeeze by Bluespring is a safe natural alternative to precription allergy medications. All Bluespring allergy relief products give your body the help it needs instead of treating just the symptoms. " border="0"> 
+	     </div> 
+	    </td> 
+	   </tr> 
+	   <tr> 
+	    <td> 
+	    <div id="prod_array"> 
+	      <table id="_ctl1_ContentPlaceHolder1_dlProducts" cellspacing="0" border="0" style="border-collapse:collapse;"> 
+	<tr> 
+		<td valign="top"> 
+                    <div>   
+                       <div style="float:left; width:150px; "> 
+                           <a href='product.aspx?pid=378' > 
+                            <img src='http://www.bluespringwellness.com/images/allergeeze_wellness_sm.jpg' alt='Do you suffer from allergies? AllergEeze from Bluespring is an safe natural may to give you relief from Sneezing, Hay Fever, Allergies, Runny Nose, Sinus Congestion, Colds and more!' style="vertical-align:middle;" /></a> 
+                       </div>    
+                       <div  style="float:left; margin-left:5px; width:350px;" > 
+                             <div class="prod_name">AllergEeze</div><p /> 
+                             <div class="prod_copy" ><p align="left">AllergEeze is an all-natural powder spray that helps your nose work better. Relieves Sneezing, Hay Fever, Allergies, Runny Nose, Sinus Congestion, Colds and more.<br> 
+<table align="left"> 
+<tr> 
+<td><a href="product.aspx?pid=378"><img src="/images/savingsbutton_081130.jpg" height="55" width="110" border="0" alt="Click Here for Special Savings!"></a></td> 
+<td><A HREF="instant_rewards_hp101" TARGET="_blank"><img src="/images/instant_rewards_button_090702.jpg" height="55" width="110" border="0" alt="Click Here to Learn More About Instant Rewards for this Item!"></a></td> 
+</tr></table> 
+                             <a href='product.aspx?pid=378'><img src='Images/learn_more_button_090702.jpg' alt='Learn More'/> </a> </div>  <p />   
+                           
+                           <span class="prod_price">Your Price:  $8.99 </span> 
+                            <p />                                                         
+                             
+                             <a href='https://secure.bluespringwellness.com/Cart.aspx?pid=378'> 
+                              <img src='Images/orderbutton.gif' alt='Add To Cart'/> 
+                             </a>                                                      
+                       </div> 
+                       <div style="width:100%; float:left;"><hr /></div> 
+                   </div>                                         
+               </td> 
+	</tr><tr> 
+		<td valign="top"> 
+               <div>   
+                       <div style="float:right; "> 
+                           <a href='homeopathics_sinusrelief' > 
+                            <img src='http://www.bluespringwellness.com/images/homeopathics_sinusrelief_sm.jpg' alt='Safe no worries Sinus relief tablets' style="vertical-align:middle;" /></a> 
+                       </div>    
+                       <div  style="float:left; margin-left:5px; width:350px;" > 
+                             <div class="prod_name">Sinus Relief</div><p /> 
+                             <div class="prod_copy" ><p align="left">Relieves sinus headache, nasal congestion, and sinus pressure without causing drowsiness or jitters. <br> 
+<table align="left"> 
+<tr> 
+<td><a href="homeopathics_sinusrelief"><img src="/images/savingsbutton_081130.jpg" height="55" width="110" border="0" alt="Click Here for Special Savings!"></a></td> 
+<td><A HREF="instant_rewards_hp5150560" TARGET="_blank"><img src="/images/instant_rewards_button_090702.jpg" height="55" width="110" border="0" alt="Click Here to Learn More About Instant Rewards for this Item!"></a></td> 
+</tr></table> 
+                             <a href='homeopathics_sinusrelief'> 
+                              <img src='Images/learn_more_button_090702.jpg' alt='Learn More'/> </a> </div>  <p />   
+                           
+                           <span id="_ctl1_ContentPlaceHolder1_dlProducts__ctl1_Span1" class="prod_price">Your Price:  $8.95 </span> 
+                            <p />                                                         
+                             
+                             <a href='https://secure.bluespringwellness.com/Cart.aspx?pid=292'> 
+                              <img src='Images/orderbutton.gif' alt='Add To Cart'/> 
+                             </a>                                                                                  
+                       </div> 
+                       <div style="width:100%; float:left;"><hr /></div> 
+                   </div>         
+               
+               </td> 
+	</tr><tr> 
+		<td valign="top"> 
+                    <div>   
+                       <div style="float:left; width:150px; "> 
+                           <a href='homeopathics_allergyrelief' > 
+                            <img src='http://www.bluespringwellness.com/images/allergy_wellness_sm.jpg' alt='Allergy Relief Safe no Worries Homeopathic Medicines' style="vertical-align:middle;" /></a> 
+                       </div>    
+                       <div  style="float:left; margin-left:5px; width:350px;" > 
+                             <div class="prod_name">Allergy Relief</div><p /> 
+                             <div class="prod_copy" ><p align="left">Relieves sneezing, watery eyes, runny nose and itchy throat--without drowsiness or side effects.  <br> 
+<table align="left"> 
+<tr> 
+<td><a href="homeopathics_allergyrelief"><img src="/images/savingsbutton_081130.jpg" height="55" width="110" border="0" alt="Click Here for Special Savings!"></a></td> 
+<td><A HREF="instant_rewards_hp5151260" TARGET="_blank"><img src="/images/instant_rewards_button_090702.jpg" height="55" width="110" border="0" alt="Click Here to Learn More About Instant Rewards for this Item!"></a></td> 
+</tr></table> 
+                             <a href='homeopathics_allergyrelief'><img src='Images/learn_more_button_090702.jpg' alt='Learn More'/> </a> </div>  <p />   
+                           
+                           <span class="prod_price">Your Price:  $8.95 </span> 
+                            <p />                                                         
+                             
+                             <a href='https://secure.bluespringwellness.com/Cart.aspx?pid=283'> 
+                              <img src='Images/orderbutton.gif' alt='Add To Cart'/> 
+                             </a>                                                      
+                       </div> 
+                       <div style="width:100%; float:left;"><hr /></div> 
+                   </div>                                         
+               </td> 
+	</tr><tr> 
+		<td valign="top"> 
+               <div>   
+                       <div style="float:right; "> 
+                           <a href='homeopathics_sorethroatrelief' > 
+                            <img src='http://www.bluespringwellness.com/images/sorethroat_wellness_sm.jpg' alt='safe no worries sore throat relief' style="vertical-align:middle;" /></a> 
+                       </div>    
+                       <div  style="float:left; margin-left:5px; width:350px;" > 
+                             <div class="prod_name">Sore Throat Relief</div><p /> 
+                             <div class="prod_copy" ><p align="left">Relieves minor throat irritation due to allergies, colds, or inhaled irritants.<br> 
+<table align="left"> 
+<tr> 
+<td><a href="homeopathics_sorethroatrelief"><img src="/images/savingsbutton_081130.jpg" height="55" width="110" border="0" alt="Click Here for Special Savings!"></a></td> 
+<td><A HREF="instant_rewards_hp5150360" TARGET="_blank"><img src="/images/instant_rewards_button_090702.jpg" height="55" width="110" border="0" alt="Click Here to Learn More About Instant Rewards for this Item!"></a></td> 
+</tr></table> 
+                             <a href='homeopathics_sorethroatrelief'> 
+                              <img src='Images/learn_more_button_090702.jpg' alt='Learn More'/> </a> </div>  <p />   
+                           
+                           <span id="_ctl1_ContentPlaceHolder1_dlProducts__ctl3_Span1" class="prod_price">Your Price:  $8.95 </span> 
+                            <p />                                                         
+                             
+                             <a href='https://secure.bluespringwellness.com/Cart.aspx?pid=294'> 
+                              <img src='Images/orderbutton.gif' alt='Add To Cart'/> 
+                             </a>                                                                                  
+                       </div> 
+                       <div style="width:100%; float:left;"><hr /></div> 
+                   </div>         
+               
+               </td> 
+	</tr> 
+</table> 
+                 
+          
+        </div> 
+	    </td> 
+	   </tr> 
+	   <tr> 
+	    <td> 
+	     <div id="CloseSegment"> 
+	       
+	     </div> 
+	    </td> 
+	   </tr> 
+	 </table>			
+ 
+    </div> 
+		
+	</div> 
+	
+	<div id="footer"> 
+	<table  style="width:750px;border:0;" cellpadding="0" cellspacing="0"> 
+			<tr> 
+				<td colspan ="2" align="left"> 
+				 <script type='text/javascript' src='http://www.bluespringwellness.com/controls/server/menus.js'></script><div style="position:relative;"><div id="footer-leftcap"> 
+		      <img src="http://www.bluespringwellness.com/images/footer-left-cap.gif" alt="" /> 
+	              </div><div id="footerNav"><table id="tbBottMenuBar" style="border:0px;width:100%;" cellpadding="0" cellspacing="0"><tr><td><img src="http://www.bluespringwellness.com/images/footer-rule.gif" alt=" " /></td><td class="clsBottMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)" id="tdBottMenuBarItemPressReleases"><a href="http://www.bluespringwellness.com/pressreleases">Press Releases</a></td><td><img src="http://www.bluespringwellness.com/images/footer-rule.gif" alt="" /></td><td class="clsBottMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)" id="tdBottMenuBarItemPrivacyPolicy"><a href="http://www.bluespringwellness.com/privacypolicy">Privacy Policy</a></td><td><img src="http://www.bluespringwellness.com/images/footer-rule.gif" alt="" /></td><td class="clsBottMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)" id="tdBottMenuBarItemSiteMap"><a href="http://www.bluespringwellness.com/sitemap">Site Map</a></td><td><img src="http://www.bluespringwellness.com/images/footer-rule.gif" alt="" /></td><td class="clsBottMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)" id="tdBottMenuBarItemOurCompany"><a href="http://www.bluespringwellness.com/ourcompany">Our Company</a></td><td><img src="http://www.bluespringwellness.com/images/footer-rule.gif" alt="" /></td><td class="clsBottMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)" id="tdBottMenuBarItemGuarantee"><a href="http://www.bluespringwellness.com/guarantee">Guarantee</a></td><td><img src="http://www.bluespringwellness.com/images/footer-rule.gif" alt="" /></td><td class="clsBottMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)" id="tdBottMenuBarItemAffiliate"><a href="http://www.bluespringwellness.com/affliliate">Affiliate</a></td><td><img src="http://www.bluespringwellness.com/images/footer-rule.gif" alt="" /></td><td class="clsBottMenuBarItem" onmouseover="mouseover(this)" onmouseout="mouseout(this)" id="tdBottMenuBarItemHelp"><a href="http://www.bluespringwellness.com/help">Help</a></td><td><img src="http://www.bluespringwellness.com/images/footer-rule.gif" alt="" /></td></tr></table></div><div id="footer-rightcap"> 
+		<img src="http://www.bluespringwellness.com/images/footer-right-cap.gif" alt="" /> 
+	        </div></div> 
+				</td> 
+			</tr> 
+			<tr> 
+			 <td colspan="2">&nbsp;</td> 
+			</tr> 
+			<tr> 
+			  <td align="center" style="width:20%" >			   
+<a href="javascript:;" onclick="javascript:window.open('https://seal.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=secure.bluespringwellness.com&amp;lang=en','','location=yes,scrollbars=yes,width=600,height=500')" onmouseover="window.status='VeriSign Secure Site';return true;" onmouseout="window.status='';return true;"> 
+<img src="images/footer_verisignlogo.gif" alt="Verisign Logo" /></a> 
+			  </td> 
+			  <td align="left" > 
+			    <!-- START CONTROLSCAN CODE --> 
+			    <!--
+<a href='https://www.controlscan.com/seal/verify2.php?subid=2798&amp;id=8' target='verify'><img border='0' src='https://www.controlscan.com/seal/sealx2.php?subid=2798&amp;id=8' oncontextmenu="alert('Copying Prohibited by Law - Trademark of ControlScan.com'); return false;" alt='Internet Security By ControlScan' /></a>
+ --> 
+<!-- STOP CONTROLSCAN CODE --> 
+        <a href="http://www.bluespringwellness.com/infopage.aspx?pid=170"  >   
+           <img src="images/paymentmethod_081126.jpg" alt="Click here for more payment information:Credit Card,Check-By-Phone,PayPal,Google..." /> 
+		</a>	
+			  </td> 
+			</tr> 
+		</table> 	
+		
+ 
+	</div> 
+	
+</div> 
+</div>    
+    </form> 
+    
+</body> 
+</html> 
+

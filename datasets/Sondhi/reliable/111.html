@@ -1,0 +1,558 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><!-- InstanceBegin template="/Templates/newsletter_phpfull.dwt" codeOutsideHTMLIsLocked="false" -->
+<HEAD>
+
+<!-- style type="text/css">
+
+#popitmenu{
+position: absolute;
+background-color: #FFFFFF;
+border:1px solid black;
+line-height: 18px;
+z-index: 100;
+visibility: hidden;
+}
+
+#popitmenu a{
+text-decoration: none;
+padding-left: 6px;
+color: #083463;
+display: block;
+}
+
+#popitmenu a:hover{ /*hover background color*/
+background-color: #083463;
+color: #FFFFFF;
+}
+
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+* Pop-it menu- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var defaultMenuWidth="200px" //set default menu width.
+
+var linkset=new Array()
+//SPECIFY MENU SETS AND THEIR LINKS. FOLLOW SYNTAX LAID OUT
+
+linkset[1]='<a href="http://www.vhl.org/aboutvhl">Basic Facts About VHL</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/whatis.php">Introduction to VHL</a>'
+linkset[1]+='<a href="http://www.vhl.org/handbook">VHLFA Handbook</a>'
+linkset[1]+='<a href="http://www.vhl.org/profinfo">Information for Professionals</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/famindex.php">Information for Families</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/famindex.php#mystory">Personal Stories</a>'
+linkset[1]+='<a href="http://www.vhl.org/newsletter">Newsletter</a>'
+linkset[1]+='<a href="http://www.vhl.org/press/presskit">Press Kit</a>'
+linkset[1]+='<a href="http://www.vhl.org/press">In the News</a>'
+linkset[1]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[2]='<a href="http://www.vhl.org/healthcare">Caring for Your Health</a>'
+linkset[2]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[2]+='<a href="http://www.vhl.org/aboutvhlfa/clinics.php">Clinical Care Centers</a>'
+linkset[2]+='<a href="http://www.vhl.org/healthcare/index.php#services">Services</a>'
+linkset[2]+='<a href="http://www.vhl.org/support">Support Groups</a>'
+linkset[2]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[2]+='<a href="http://www.vhl.org/support/egroups.php">Online Discussion</a>'
+linkset[2]+='<a href="http://www.vhl.org/nutrition">Nutrition</a>'
+linkset[2]+='<a href="http://www.vhl.org/handbook">VHL Handbook</a>'
+linkset[2]+='<a href="http://www.vhl.org/dna">DNA Testing</a>'
+linkset[2]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[2]+='<a href="http://www.vhl.org/bookstore">Books</a>'
+linkset[2]+='<a href="http://www.vhl.org/newsletter">Online Newsletter</a>'
+linkset[2]+='<a href="http://www.powerfulpatient.org/">Be a Powerful Patient</a>'
+linkset[2]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[3]='<a href="http://www.vhl.org/research">Research</a>'
+linkset[3]+='<a href="http://www.vhl.org/bank">Tissue Bank</a>'
+linkset[3]+='<a href="http://www.vhl.org/handbook">VHL Handbook</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/resdb.php">Research Database</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/beroud.php">VHL Mutations Database</a>'
+linkset[3]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[3]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/index.php#grants">Grants Available</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/index.php#awarded">Grants Awarded</a>'
+linkset[3]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[3]+='<a href="http://www.vhl.org/profinfo/medindex.php">Medical Topics</a>'
+linkset[3]+='<a href="http://www.vhl.org/aboutvhl/famindex.php">Family Topics</a>'
+linkset[3]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[4]='<a href="http://www.vhl.org/profinfo">Professional Information</a>'
+linkset[4]+='<a href="http://www.vhl.org/handbook" class="top_nav">What you need to know about VHL</a>'
+linkset[4]+='<a href="http://www.vhl.org/healthcare" class="top_nav">Information for Patients</a>'
+linkset[4]+='<a href="http://www.vhl.org/aboutvhlfa/clinics.php">Clinical Care Centers</a>'
+linkset[4]+='<a href="http://www.vhl.org/bank" class="top_nav">Tissue Bank</a>'
+linkset[4]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[4]+='<a href="http://www.vhl.org/meetings" class="top_nav">VHL Conferences</a>'
+linkset[4]+='<a href="http://www.vhl.org/profinfo/index.php#infopacket" class="top_nav">Information Packet</a>'
+linkset[4]+='<a href="http://www.vhl.org/support/intlsprt.php" class="top_nav">Support Groups</a>'
+linkset[4]+='<a href="http://www.vhl.org/support/egroups.php" class="top_nav">Online Discussion</a>'
+linkset[4]+='<a href="http://www.vhl.org/links.php" class="top_nav">VHL Links</a>'
+linkset[4]+='<a href="http://www.vhl.org/newsletter" class="top_nav">Newsletter</a>'
+linkset[4]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[5]='<a href="http://www.vhl.org/aboutvhlfa">About VHL Family Alliance</a>'
+linkset[5]+='<a href="http://www.vhl.org/press/presskit">Press Kit</a>'
+linkset[5]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[5]+='<a href="http://www.vhl.org/support/intlsprt.php">Support Groups</a>'
+linkset[5]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[5]+='<a href="http://www.vhl.org/support/egroups.php">Online Discussion</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[5]+='<a href="http://www.vhl.org/newsletter">Newsletter</a>'
+linkset[5]+='<a href="http://www.vhl.org/bank">Tissue Bank</a>'
+linkset[5]+='<a href="http://www.vhl.org/press">In the News</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/board.php">Board Members</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.php">Privacy Policy</a>'
+linkset[5]+='<a href="http://www.vhl.org/vhlsales">Online Shopping</a>'
+linkset[5]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/contactus.php">Contact Us</a>'
+
+////No need to edit beyond here
+
+var ie5=document.all && !window.opera
+var ns6=document.getElementById
+
+if (ie5||ns6)
+document.write('<div id="popitmenu" onMouseover="clearhidemenu();" onMouseout="dynamichide(event)"></div>')
+
+function iecompattest(){
+return (document.compatMode && document.compatMode.indexOf("CSS")!=-1)? document.documentElement : document.body
+}
+
+function showmenu(e, which, optWidth){
+if (!document.all&&!document.getElementById)
+return
+clearhidemenu()
+menuobj=ie5? document.all.popitmenu : document.getElementById("popitmenu")
+menuobj.innerHTML=which
+menuobj.style.width=(typeof optWidth!="undefined")? optWidth : defaultMenuWidth
+menuobj.contentwidth=menuobj.offsetWidth
+menuobj.contentheight=menuobj.offsetHeight
+eventX=ie5? event.clientX : e.clientX
+eventY=ie5? event.clientY : e.clientY
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie5? iecompattest().clientWidth-eventX : window.innerWidth-eventX
+var bottomedge=ie5? iecompattest().clientHeight-eventY : window.innerHeight-eventY
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<menuobj.contentwidth)
+//move the horizontal position of the menu to the left by it's width
+menuobj.style.left=ie5? iecompattest().scrollLeft+eventX-menuobj.contentwidth+"px" : window.pageXOffset+eventX-menuobj.contentwidth+"px"
+else
+//position the horizontal position of the menu where the mouse was clicked
+menuobj.style.left=ie5? iecompattest().scrollLeft+eventX+"px" : window.pageXOffset+eventX+"px"
+//same concept with the vertical position
+if (bottomedge<menuobj.contentheight)
+menuobj.style.top=ie5? iecompattest().scrollTop+eventY-menuobj.contentheight+"px" : window.pageYOffset+eventY-menuobj.contentheight+"px"
+else
+menuobj.style.top=ie5? iecompattest().scrollTop+event.clientY+"px" : window.pageYOffset+eventY+"px"
+menuobj.style.visibility="visible"
+return false
+}
+
+function contains_ns6(a, b) {
+//Determines if 1 element in contained in another- by Brainjar.com
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function hidemenu(){
+if (window.menuobj)
+menuobj.style.visibility="hidden"
+}
+
+function dynamichide(e){
+if (ie5&&!menuobj.contains(e.toElement))
+hidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+hidemenu()
+}
+
+function delayhidemenu(){
+delayhide=setTimeout("hidemenu()",500)
+}
+
+function clearhidemenu(){
+if (window.delayhide)
+clearTimeout(delayhide)
+}
+
+function preloadImages(){
+}
+
+if (ie5||ns6)
+document.onclick=hidemenu
+
+</script --><!-- meta tags file here -->
+      <!-- InstanceBeginEditable name="doctitle" -->
+	  <TITLE>VHLFA: To know or not to know... that is the question</TITLE>
+<meta name="keywords" content="vhl von hippel lindau mystory coping test screen child youth children">
+<!-- InstanceEndEditable -->
+ <!-- InstanceBeginEditable name="MetaTags" -->
+<meta name="description" content="One woman's story about testing her children with a family history of VHL.">
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="http://www.vhl.org/global.css">
+<!-- end meta tag include -->
+</HEAD>
+<body align="center">
+<table border="0" cellspacing="0" cellpadding="0" width="790" align="center">
+<!-- header -->
+<tr><td bgcolor="#FFFFFF" style="z-index: 3000; position:relative;">
+<link rel="stylesheet" href="/menu.css" type="text/css">
+<a href="#skiptop"></a>
+<map name="top_nav_w_imagemaps_Map">
+	<area shape="rect" alt="" coords="0,0,74,150" href="http://www.vhl.org">
+	<area shape="circle" alt="" coords="708,65,49" href="http://www.vhl.org/aboutvhlfa">
+	<area shape="circle" alt="" coords="572,65,49" href="http://www.vhl.org/profinfo">
+	<area shape="circle" alt="" coords="430,64,49" href="http://www.vhl.org/research">
+	<area shape="circle" alt="" coords="292,63,49" href="http://www.vhl.org/healthcare">
+	<area shape="circle" alt="" coords="147,64,50" href="http://www.vhl.org/aboutvhl">
+	</map>
+
+	<img src="/images/top_nav.gif" width="800" height="128" hspace="0" vspace="0" border="0" usemap="#top_nav_w_imagemaps_Map" />
+<div id="menu">
+	<ul>
+		<li style="width: 100px;">&nbsp;</li>
+	</ul>
+	<ul style="margin-left: 30px;">
+		<li><a href="http://www.vhl.org/aboutvhl">Basic Facts<br />about VHL</a>
+			<ul>
+				<li><a href="http://www.vhl.org/aboutvhl">Basic Facts about VHL</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/whatis.htm">Introduction to VHL</a></li>
+				<li><a href="http://www.vhl.org/handbook">VHLFA Handbook</a></li>
+				<li><a href="http://www.vhl.org/profinfo">Information for Professionals</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Information for Families</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Personal Stories</a></li>
+				<li><a href="http://www.vhl.org/newsletter">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/press/presskit">Press Kit</a></li>
+				<li><a href="http://www.vhl.org/press">In the News</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 60px;" >
+		<li><a href="http://www.vhl.org/healthcare">Caring for<br />Your Health</a>
+			<ul>
+				<li><a href="http://www.vhl.org/healthcare">Caring for Your Health</a></li>
+				<li><a href="http://www.vhl.org/healthcare/index.php#membership">Membership</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/clinics2.htm">Clinical Care Centers</a></li>
+				<li><a href="http://www.vhl.org/healthcare/index.php#services">Services</a></li>
+				<li><a href="http://www.vhl.org/support">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/guest/guest.htm">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/nutrition">Nutrition</a></li>
+				<li><a href="http://www.vhl.org/handbook">VHL Handbook</a></li>
+				<li><a href="http://www.vhl.org/dna">DNA Testing</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/bookstore">Books</a></li>
+				<li><a href="http://www.vhl.org/newsletter">Online Newsletter</a></li>
+				<li><a href="http://www.powerfulpatient.org">Be a powerful patient</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 45px;" >
+		<li><a href="http://www.vhl.org/research">Research</a>
+			<ul>
+				<li><a href="http://www.vhl.org/research">Research</a></li>
+				<li><a href="http://www.vhl.org/bank">Tissue Bank</a></li>
+				<li><a href="http://www.vhl.org/research/resdb.htm">Research Database</a></li>
+				<li><a href="http://www.vhl.org/research/beroud.htm">VHL Mutations Database</a></li>
+				<li><a href="http://www.vhl.org/meetings">Meetings</a></li>
+				<li><a href="http://www.vhl.org/research/06dodgrants.htm">Grants Available</a></li>
+				<li><a href="http://www.vhl.org/research/index.php#awarded">Grants Awarded</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/profinfo/medindex.htm">Medical Topics</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Family Topics</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 70px;" >
+		<li><a href="http://www.vhl.org/profinfo">Professional <br />Information</a>
+			<ul>
+				<li><a href="http://www.vhl.org/profinfo">Professional Information</a></li>
+				<li><a href="http://www.vhl.org/healthcare" class="top_nav">Information for Patients</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/clinics2.htm">Clinical Care Centers</a></li>
+				<li><a href="http://www.vhl.org/bank" class="top_nav">Tissue Bank</a></li>
+				<li><a href="http://www.vhl.org/meetings" class="top_nav">VHL Conferences</a></li>
+				<li><a href="http://www.vhl.org/profinfo/index.php#infopacket" class="top_nav">Information Packet</a></li>
+				<li><a href="http://www.vhl.org/support/intlsprt.htm" class="top_nav">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/support/egroups.htm" class="top_nav">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/links.htm" class="top_nav">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/newsletter" class="top_nav">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+	<ul style="margin-left: 35px;" >
+		<li><a href="http://www.vhl.org/aboutvhlfa">About VHL<br /> Family Alliance</a>
+			<ul>
+				<li><a href="http://www.vhl.org/aboutvhlfa">About VHL Family Alliance</a></li>
+				<li><a href="http://www.vhl.org/press/presskit">Press Kit</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/support/intlsprt.htm">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/support/egroups.htm">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/orderfrm.htm">Membership</a></li>
+			    <li><a href="http://www.vhl.org/newsletter">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/bank">Tissue Bank</a></li>
+			    <li><a href="http://www.vhl.org/press">In the News</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/board.htm">Board Members</a></li>
+			    <li><a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.htm">Privacy Policy</a></li>
+			   <li> <a href="http://www.vhl.org/vhlsales">Online Shopping</a></li>
+			   <li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			   <li><a href="http://www.vhl.org/aboutvhlfa/contactus.php">Contact Us</a></li>
+			</ul>	
+		</li>	
+	</ul>	
+</div>
+</td></tr>
+<tr><td><img src="http://www.vhl.org/images/powerful_patient.gif" width="1" height="5" alt="" border="0"></td></tr>
+
+<!-- end header -->
+
+
+<!-- body -->
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+<!-- left column -->
+
+<td bgcolor="#083463" width="130" valign="top">
+<table border="0" cellspacing="0" cellpadding="0"><tr>
+<td><a name="#skiptop"></a><a href="#skipleft"><img src="http://www.vhl.org/images/skipleftnav.gif" width="8" height="1" alt="Skip The Left Navigation" border="0"></a></td>
+<td>
+<p><a href="http://www.vhl.org/" class="lftnav">Home</a></p>
+<p>&nbsp;</p>
+<p><a href="../../search.php" class="lftnav">Site Search</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/index.php" class="lftnav">Current Issue</a></p>
+<p>&nbsp;</p>
+<p><a href="/newspdf/vhlfcopy.php" class="lftnav">Printable Copies</a></p>
+<p>&nbsp;</p>
+<p><a href="/aboutvhlfa/contactus.php" class="lftnav">Contact Us</a></p>
+<p>&nbsp;</p>
+<p><a href="http://www.vhl.org/helpnow/index.php" class="lftnav">Click to Donate</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2009/index.php" class="lftnav">2009 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2008/index.php" class="lftnav">2008 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2007" class="lftnav">2007 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2006" class="lftnav">2006 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2005" class="lftnav">2005 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2004" class="lftnav">2004 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2003" class="lftnav">2003 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2002" class="lftnav">2002 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2001" class="lftnav">2001 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2000" class="lftnav">2000 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1999" class="lftnav">1999 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1998" class="lftnav">1998 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1997" class="lftnav">1997 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1996" class="lftnav">1996 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1995" class="lftnav">1995 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1994" class="lftnav">1994 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1993" class="lftnav">1993 Issues</a></p>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<!-- div class="search">Subscribe to<br>
+this free newsletter<br>
+<input type=text name="ea" size=13 value="email address"><br>
+<input type=hidden name="m" value="1100530198619">
+<input type=hidden name="p" value="oi">
+<input type=submit name="go" value="Sign Me Up">
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p -->
+</td></tr></table>
+</td>
+<!-- p align="center" valign="bottom"><img src="images/seal_small.gif" width="82" height="136" alt="" border="0"></p -->
+<!-- end left column -->
+<!-- spacer -->
+<td><img src="../../images/powerful_patient.gif" width="10" height="1" alt="" border="0"></td>
+<!-- end spacer -->
+
+<!-- right column -->
+<td valign="top">
+
+<a name="#skipleft"></a>
+
+    <!-- InstanceBeginEditable name="Title and TofC" -->
+	  	  <h1> To Know, or Not to Know . . . <br>
+	  	    That is <em>the</em> Question</h1>
+	  	
+    <!-- InstanceEndEditable -->
+<table border="0" cellspacing="1" cellpadding="0" bgcolor="#083463" align="right"><tr><td><table width="250" border="0" cellspacing="3" cellpadding="0" bgcolor="#FFFFFF">
+<tr><td>
+<!-- InstanceBeginEditable name="index_content" -->
+
+<link href="../../global.css" rel="stylesheet" type="text/css" />
+<p class="enewsletter_box_header">                  March&nbsp; 1999 &nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;Download a <a href="../../newspdf/vhlfcopy.php#vhl9903">printable copy</a> of this issue</p>
+<ul>
+                    <li class="enewsletter_box"><a href="99aaknow.php">To Know, or Not to Know . . . That is <em>the</em> Question</a></li>
+                    <li class="enewsletter_box"><a href="99ablink.php">Linkage Test Unreliable</a> - retesting may be advisable, <br>
+                      <em>by Dr. Virginia Michels, Mayo Clinic</em></li>
+                    <li class="enewsletter_box"><a href="99acdnat.php">DNA Testing finds 100%</a></li>
+                    <li class="enewsletter_box"><a href="99adairm.php">Air Miles</a> - Give Delta Miles to VHLFA</li>
+                    <li class="enewsletter_box"><a href="99afshow.php">Show Us Your Stuff!</a> - Art Needed for Calendar</li>
+                    <li class="enewsletter_box"><a href="99aeimpt.php">The Most Important Person</a>,<em> by Craig Lundsted, M.S.W.</em></li>
+                    <li class="enewsletter_box"><a href="99agvita.php">Vitamins for Stamina</a></li>
+                    <li class="enewsletter_box"><a href="99ahstren.php">Strength from Adversity</a></li>
+                    <li class="enewsletter_box"><a href="99aioste.php">Osteoporosis, a Side Effect of Steroid Use</a>, <em>by Altheada L. Johnson, MS, Registered Dietitian</em></li>
+                    
+                  <li class="enewsletter_box"><a href="99ajpreg.php">Ask the Experts: Pregnancy and VHL</a>,<em> by Dr. St&eacute;phane Richard</em></li>
+                    <li class="enewsletter_box"><a href="99akbirt.php">&quot;Birth&quot; Announcement</a></li>
+                    <li class="enewsletter_box"><a href="99alpara.php">Paralyzed?&nbsp; Don't Give Up Too Soon!</a>, <em>by Gale L., Florida</em></li>
+                  </ul>
+                  <ul>
+                    <li class="enewsletter_box"><a href="../../announce/99atlanc.php">Atlanta Meeting June 4-6, 1999</a></li>
+                    <li class="enewsletter_box"><a href="99amexpn.php">Too Expensive</a>, and other reasons for not going to the meeting</li>
+                    <li><span class="enewsletter_box">Introducing New Board Members:
+                        </span>
+                      <ul>
+                          <li class="enewsletter_box">Kathy Braden, Indiana</li>
+                          <li class="enewsletter_box"><a href="../../aboutvhlfa/mcguires.php">Susan McGuire</a>, North Carolina</li>
+                        </ul>
+                    </li>
+                    <li class="enewsletter_box"><a href="99annewz.php">New Zealand,</a> by Jon Johnson</li>
+                    <li class="enewsletter_box"><a href="99aoscan.php">News from Scandinavia,</a> by Richard Harbud, Denmark</li>
+                    <li><span class="enewsletter_box"><a href="99aptria.php">Clinical Studies -- Can You Help?</a>
+                        </span>
+                      <ul>
+                          <li class="enewsletter_box"><a href="99aptria.php#elst">Hearing Issues? Vertigo? Tinnitus?&nbsp; </a>NIH looking for participants for ELST Study</li>
+                          <li class="enewsletter_box"><a href="99aptria.php#smoking">Smoking and Tumor Growth</a></li>
+                          <li class="enewsletter_box"><a href="99aptria.php#vegf">Angiogenesis Inhibitor</a></li>
+                        </ul>
+                    </li>
+                    <li class="enewsletter_box"><a href="99aqjayp.php">4,000,000 Steps for VHL!</a></li>
+                  </ul>
+                  
+
+<!-- InstanceEndEditable -->
+</td>
+</tr>
+</table></td></tr></table>
+
+
+<!-- InstanceBeginEditable name="SubTitle" -->
+
+<p>&nbsp;</p>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Description" --> 
+
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Image" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Story" -->
+<p>It&#146;s one thing to choose for yourself whether you want to know if you carry the VHL gene. When Lisa Carcieri Tuttle surveyed 200 people with VHL in 1997, 45% had already been tested, another 33% said they would <a href="#note1">get tested.<sup>1</sup></a> For an adult, it represents fact rather than conjecture, facts on which you can build the rest of your life. If you don&#146;t carry the altered VHL gene, then you can stop worrying about VHL in yourself and your children. If you do carry the altered gene, you can use this early warning information to protect yourself.</p>
+<p>&nbsp;</p>
+<p>Making the choice to do DNA testing for a child, however, is somewhat different. The professional associations of geneticists and genetic counselors, are firm in stating that DNA testing of a child should be for the benefit of the child, not the parent. Unless there is material benefit for the child, they prefer not to offer testing for young children. When the condition rarely affects very young children, as in VHL, the feeling is that the child should participate in the decision whether to test. However VHL can indeed occur in young children, and knowledge of which child is at risk allows you to focus watchfulness and attention on the children in the family who do have the altered gene.</p>
+<p>&nbsp;</p>
+<p>At the VHL/MEN Symposium in the Netherlands in 1997, the attendees, predominantly internists, endocrinologists, and biomedical researchers, were asked at what age they would recommend DNA testing for VHL. 6% said prenatally, 15% between 1 and 5 years, 34% between 5 and 10 years, 16% when regular testing activities begin (about age 12-14), 17% said not until the child was old enough to choose, and 3% said only if symptoms are <a href="#note2">present.<sup>2</sup></a></p>
+<p>&nbsp;</p>
+<p>The opinion of the doctor is not necessarily the opinion of the parent, nor the child. There are clear issues of emotion and responsibility that emerge. Do you really want to know? Is it better not to know, and to let the child have a normal childhood? If you know you have one child with VHL and one who does not, how will you react? Will you give one child more love than the other because of this information? or more attention?&quot;For me, I simply had to know. I knew that whatever the test results were, I was going to have this baby. My husband and I had talked about it, and decided that whatever God gave us, we would love and cherish our child. But I just had to know. I arranged for prenatal DNA testing. Putting it on my own health record didn&#146;t tell the insurance company anything they didn&#146;t already know about me. We learned that our daughter did carry the altered gene. It was difficult news, but in a way it gave us a chance to make peace with it before she was born, and strengthen our commitment to love and protect her.&quot; <i>-- Shelley, Maryland</i>Not knowing is also difficult to live with. &quot;The most terrifying thing my son could say to me was, &quot;Mom, is there any aspirin? I have a headache.&quot; My heart would seize, and I would mentally go through my checklist: - Take several deep breaths. don&#146;t panic. Easier said than done. - Take it one step at a time, moving in an orderly manner through ordinary causes- Check for fever. It could be a cold.- Have others in the family, or in the child&#146;s close circle had similar symptoms recently? It could be the same cold. - Give the child a standard headache remedy, like tylenol. Does the headache go away during the next hour? - Watch for signs of heavy sweating, flushed face, panic or hyperactivity - Over the next few days, is the headache still there? in the same place? - Do some &quot;casual&quot; neuro testing &#151; play ball, touch nose, walk straight. Do you see changes from the child&#146;s normal responses, balance, accuracy? - &quot;Where is the headache?&quot; &quot;If it were a fruit, what fruit would it be? What color? How big?&quot; It helps to quantify the headache. Simply acknowledging an ordinary headache, and doing some relaxation breathing, can help it to go away. If it goes on longer, this game gives you a subjective measure to tell whether it&#146;s getting better or worse.Any persistent headache, especially one that stays in one place for more than a day, should be checked with the doctor. Be sure to tell the pediatrician that there is VHL in the family. There are screening guidelines in the back of the Handbook. Ask that they do the screening routine appropriate to the child&#146;s age. Note that these are only guidelines &#151; there are always exceptions.Just because it says to begin testing at a particular age doesn&#146;t mean that an issue does not appear earlier, but it is rare at those earlier ages. If you suspect involvement, even before the age range begins, ask your doctor to check it out and hopefully rule it out. Headaches might be caused by brain tumors or pheos.</p>
+<p>&nbsp;</p>
+<p>In addition, there are many other perfectly ordinary and very treatable causes of headaches in children. Just take it one step at a time with a caring and cooperative physician who will take you seriously and walk you through the &quot;trouble-shooting&quot; to determine the most likely cause. It usually is a garden-variety headache. With clear information on VHL status at younger ages, screening is finding small tumors at younger ages -- not so much because they are occurring at younger ages, but because we are looking. This raises new challenges for treatment -- what, if anything, should be done? Just because we can see a small tumor does not necessarily mean we need to act. New strategies must be developed for preventive maintenance to optimize quality of life.</p>
+<p>&nbsp;</p>
+<h3>DNA Testing for young children</h3>
+<p>We heard from a number of members on this topic, but very few whose children turned out to have the VHL gene. We would appreciate hearing from others who have tested young children. How do you feel now about that decision? If you had it to do over again, would you make the same choice? Please provide feedback and information for others approaching that decision today.Similarly, we would love to hear from young people whose parents made the decision for them. Are you content with your parents&#146; decision?</p>
+<p>&nbsp;</p>
+<h3>Not at this time</h3>
+<p>My genetic mutation has been genetically identified. I have an eight year old and a four year old. They have no symptoms. My daughter, the eight year old, has had one opthalmological exam with a negative result. I don't wish to have them tested at this time because of the possible dangers of knowledge of a pre-existing condition as it pertains to insurability.</p>
+<p>&nbsp;</p>
+<p>VHL is said to present most commonly in <a href="#note3">late teens and twenties.<sup>3</sup></a> This diminishes my sense of urgency about having my children tested. I intend to be watchful with the children, as does my wife, and when they get older, I will discuss with them the nature of a genetic disorder and the risk that it poses to them. They can then have input about whether or not to be tested. Should any seemingly related symptom arise before they are tested, we would move to test the child to help determine the cause of the symptom. <i>-- C.P., California</i></p>
+<p>&nbsp;</p>
+<h3>Gentle Bequest</h3>
+<p>One of the last things my late husband Eddie did before he died was to submit a sample of his blood and his mother&#146;s blood for DNA testing. Delayed diagnosis led to his death from metastatic kidney cancer. We found out on Tuesday that they found the mutation, and he passed away that Friday. I know it set his mind at ease to know that his children and the rest of his family could be tested to find out if they had VHL. He firmly believed it was better to know if you had VHL so you could be treated and followed properly. We didn&#146;t know all the ramifications of being diagnosed with VHL. Since then four other people in our family have been diagnosed with the gene. Two had to have immediate surgery and two are being watched. I feel Eddie&#146;s insistence that everyone be tested once there was a match was a true gift to the four people who found out they have VHL. Now all four will have the best possible chance to be followed, and live as normal a life as possible. <i>-- Linda G., Georgia</i></p>
+<p>&nbsp;</p>
+<h3>Not to be Missed</h3>
+<p>I am 42 years old and have been dealing with VHL since I was 15 years old. I have had bilateral pheochromocytomas, retinal hemangiomas, thyroid cancer and kidney cancer. These of course have to be dealt with by surgery. If that was not enough, I have also had open heart surgery, appendectomy, C-section, and a complete hysterectomy, unrelated to VHL. The reason for my letter is to report that we have finally gotten the genetic test back for my 6 year old daughter, and I am happy to report that she does not have the VHL mutation. YIPPEE!! I kept telling my husband that as long as she got my good looks and his good DNA I would be a happy woman. Well God has blessed us and we are so very thankful.Having a child is a difficult and serious choice. I was born with a heart defect as well as VHL. So when I had my doubts and fears over the last 5 years if she had VHL and how I would handle it if she did, I would just remember what my mother would tell me growing up. She would say, &quot; I wouldn't have missed this time with you, no matter how difficult and painful at times it seemed. I'm just glad that God gave you to me&quot;. Oh, I forgot to mention that my daughter has a heart defect also, and I'm just glad God gave her to me because our time together is wonderful. <i>-- Stephanie B., California</i></p>
+<p>&nbsp;</p>
+<h3>Three for three</h3>
+<p>My husband comes from a family of four and two out of the four have VHL. We have three children, 4 yrs. 11, and 14. With the odds working in VHL&#146;s favor, we were sure at least one of the three would inherit the illness. Determined to stay ahead of the disease, we decided to go ahead with the DNA testing. We received our phone call from the doctors office yesterday....all three children are negative! What are the odds of that? Thanks for letting me share my good news with you.... <i>-- Chris M. </i></p>
+<p>&nbsp;</p>
+<h3>Best Decision</h3>
+<p>My mom was first diagnosed with VHL in 1996. She had her first VHL related surgery on her spine in 1979. She also had a brain tumor removed in 1985. It wasn't until another tumor was removed in 1995 that VHL was first mentioned. Our family had no idea. At the time of my mom's 1995 surgery, my grandpa was found to have a brain tumor. He had his removed in 1996, at the same time my mom had another brain tumor removed. It was at this time that her siblings were tested. It took much encouragement on the behalf of my father, myself and a couple of my mom's siblings to persuade the others to get tested so they could know for their children as well. My brother and I were tested and found to be negative, but we then learned our family had a <a href="#note4">deletion<sup>4</sup></a> of the VHL gene, so we are awaiting insurance approval of another test to know for sure. At this time there is only a 20% chance we have VHL. I want to be tested to know for sure, so I don't worry if I have a headache or am clumsy one day that I have a tumor. I also want to be tested to I know that if I do have VHL, that I can get regular monitoring and appropriate treatment. My mom went thirteen years before being adequately treated and I do not want this to happen to me, to any other family member nor to anyone else.</p>
+<p>&nbsp;</p>
+<p>My mom had some serious side effects from her surgeries because her tumors grew so large and damaged so much of her brain before they were caught and surgically removed. My family sees what my mom went through and they don't want to end up as bad as she is. What I try to tell my family and want others to know, is that if you know you have VHL, you can get adequate testing, monitoring, and treatment for VHL related occurrences. You don't have to wait three months of being ill, with every other imaginable ailment being investigated before a tumor is found and VHL diagnosed. In my eyes, I see no option to the DNA testing. A negative test can ease a lot of worrying and heartache and at the same time discovering you have VHL is not a death sentence, it's the beginning of taking charge of your health. The wait for the results is an emotional roller coaster, but it is well worth it.</p>
+<p>&nbsp;</p>
+<p>I'm 22, and it was one of the best decisions I ever made. <i>-- Jennifer O., Michigan</i></p>
+<p>&nbsp;</p>
+<p class="references"><font face="Arial"><a name="note1">1. </a><a href="../vhl1997/97bbsurv.php">VHLFF:5 (June 1997) 2:4-5.</a></font></p>
+<p class="references"><font face="Arial"><a name="note2">2. Summary</a> of the &quot;Consensus Meeting June 28, 1997,&quot; from Dr. C.J.M. Lips, October 1997. His figures combine the electronic voting results with questionnaires turned in by attendees who left prior to the final session and are therefore slightly different from numbers reported <a href="../vhl1997/97cedutc.php">previously in VHLFF </a>which were based entirely on the electronic voting.</font></p>
+<p><font face="Arial"><a name="note3">3. This is a myth</a>. We have seen pheos in young children (age 8) as well as eye tumors (age 2), and even brain and spinal tumors (age 13). Eye tumors do not have obvious symptoms. If you are not going to do DNA testing, you should begin the gentle screening for children recommended in the handbook no later than age 6. <em>-- Peggy M..</em></font></p>
+<p class="references"><font face="Arial"><a name="note4">4. Early tests </a>using linkage analysis, especially in families with deletions, have been found to be unreliable. Please see the <a href="99ablink.php">article on page 3</a> to determine whether you need to re-test to confirm the results.</font></p>
+<p>&nbsp;</p>
+<p class="references">As printed in the <em>VHL Family Forum</em> 7:1, March 1999.&nbsp; For permission to reprint, please contact VHL Family Alliance, <a href="mailto:info@vhl.org">info@vhl.org</a>. Further information is available from the VHL Family Alliance, <a href="mailto:info@vhl.org">info@vhl.org</a>.</p>
+<p><font size="1">mystory</font></p><!-- InstanceEndEditable -->
+
+</td>
+<!-- end right column -->
+
+</tr>
+</table>
+</td></tr>
+<!-- end body -->
+
+
+
+<!-- footer -->
+<!-- InstanceBegin template="/Templates/zadmin_footer_html.dwt" codeOutsideHTMLIsLocked="false" --><tr><td bgcolor="#FFFFFF"><img src="http://www.vhl.org/images/cancer_treatment_t.gif" width="600" height="10" alt="" border="0"></td></tr>
+<tr><td bgcolor="#083463"><img src="http://www.vhl.org/images/cancer_treatment_t.gif" width="600" height="1" alt="" border="0"></td></tr>
+<tr><td class="footer">
+<p>&nbsp;</p>
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+<td width="110" class="footer"><a href="HTTP://WWW.VHL.ORG/aboutvhlfa/contactus.php">Contact Us</a></td>
+<td width="110" class="footer"><div align="center"><a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.php">Privacy</a></div></td>
+<td width="160" class="footer"><div align="center">Copyright 1993-2009</div></td>
+<td width="110" class="footer"><div align="center"><a href="http://www.vhl.org/awards.php">Awards</a></div></td>
+<td width="110" class="footer"><div align="center"><a href="http://vhl.org/helpnow/index.php">Donate Now</a></div></td>
+</tr></table>
+<p>&nbsp;</p>
+<!-- InstanceEndEditable -->
+<!-- The following script is essential to the working of Google Analytics  leave intact -->
+<p>&nbsp;</p>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6229758-1");
+pageTracker._trackPageview();
+</script>
+<!-- End Google Analytics script -->
+</td></tr>
+<!-- End table and end body are in the php file --><!-- InstanceEnd --><!-- end footer -->
+
+</table>
+</body>
+<!-- InstanceEnd --></HTML>

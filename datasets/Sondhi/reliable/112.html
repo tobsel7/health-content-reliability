@@ -1,0 +1,636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><!-- InstanceBegin template="/Templates/newsletter_phpfull.dwt" codeOutsideHTMLIsLocked="false" -->
+<HEAD>
+
+<!-- style type="text/css">
+
+#popitmenu{
+position: absolute;
+background-color: #FFFFFF;
+border:1px solid black;
+line-height: 18px;
+z-index: 100;
+visibility: hidden;
+}
+
+#popitmenu a{
+text-decoration: none;
+padding-left: 6px;
+color: #083463;
+display: block;
+}
+
+#popitmenu a:hover{ /*hover background color*/
+background-color: #083463;
+color: #FFFFFF;
+}
+
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+* Pop-it menu- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var defaultMenuWidth="200px" //set default menu width.
+
+var linkset=new Array()
+//SPECIFY MENU SETS AND THEIR LINKS. FOLLOW SYNTAX LAID OUT
+
+linkset[1]='<a href="http://www.vhl.org/aboutvhl">Basic Facts About VHL</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/whatis.php">Introduction to VHL</a>'
+linkset[1]+='<a href="http://www.vhl.org/handbook">VHLFA Handbook</a>'
+linkset[1]+='<a href="http://www.vhl.org/profinfo">Information for Professionals</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/famindex.php">Information for Families</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/famindex.php#mystory">Personal Stories</a>'
+linkset[1]+='<a href="http://www.vhl.org/newsletter">Newsletter</a>'
+linkset[1]+='<a href="http://www.vhl.org/press/presskit">Press Kit</a>'
+linkset[1]+='<a href="http://www.vhl.org/press">In the News</a>'
+linkset[1]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[2]='<a href="http://www.vhl.org/healthcare">Caring for Your Health</a>'
+linkset[2]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[2]+='<a href="http://www.vhl.org/aboutvhlfa/clinics.php">Clinical Care Centers</a>'
+linkset[2]+='<a href="http://www.vhl.org/healthcare/index.php#services">Services</a>'
+linkset[2]+='<a href="http://www.vhl.org/support">Support Groups</a>'
+linkset[2]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[2]+='<a href="http://www.vhl.org/support/egroups.php">Online Discussion</a>'
+linkset[2]+='<a href="http://www.vhl.org/nutrition">Nutrition</a>'
+linkset[2]+='<a href="http://www.vhl.org/handbook">VHL Handbook</a>'
+linkset[2]+='<a href="http://www.vhl.org/dna">DNA Testing</a>'
+linkset[2]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[2]+='<a href="http://www.vhl.org/bookstore">Books</a>'
+linkset[2]+='<a href="http://www.vhl.org/newsletter">Online Newsletter</a>'
+linkset[2]+='<a href="http://www.powerfulpatient.org/">Be a Powerful Patient</a>'
+linkset[2]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[3]='<a href="http://www.vhl.org/research">Research</a>'
+linkset[3]+='<a href="http://www.vhl.org/bank">Tissue Bank</a>'
+linkset[3]+='<a href="http://www.vhl.org/handbook">VHL Handbook</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/resdb.php">Research Database</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/beroud.php">VHL Mutations Database</a>'
+linkset[3]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[3]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/index.php#grants">Grants Available</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/index.php#awarded">Grants Awarded</a>'
+linkset[3]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[3]+='<a href="http://www.vhl.org/profinfo/medindex.php">Medical Topics</a>'
+linkset[3]+='<a href="http://www.vhl.org/aboutvhl/famindex.php">Family Topics</a>'
+linkset[3]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[4]='<a href="http://www.vhl.org/profinfo">Professional Information</a>'
+linkset[4]+='<a href="http://www.vhl.org/handbook" class="top_nav">What you need to know about VHL</a>'
+linkset[4]+='<a href="http://www.vhl.org/healthcare" class="top_nav">Information for Patients</a>'
+linkset[4]+='<a href="http://www.vhl.org/aboutvhlfa/clinics.php">Clinical Care Centers</a>'
+linkset[4]+='<a href="http://www.vhl.org/bank" class="top_nav">Tissue Bank</a>'
+linkset[4]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[4]+='<a href="http://www.vhl.org/meetings" class="top_nav">VHL Conferences</a>'
+linkset[4]+='<a href="http://www.vhl.org/profinfo/index.php#infopacket" class="top_nav">Information Packet</a>'
+linkset[4]+='<a href="http://www.vhl.org/support/intlsprt.php" class="top_nav">Support Groups</a>'
+linkset[4]+='<a href="http://www.vhl.org/support/egroups.php" class="top_nav">Online Discussion</a>'
+linkset[4]+='<a href="http://www.vhl.org/links.php" class="top_nav">VHL Links</a>'
+linkset[4]+='<a href="http://www.vhl.org/newsletter" class="top_nav">Newsletter</a>'
+linkset[4]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[5]='<a href="http://www.vhl.org/aboutvhlfa">About VHL Family Alliance</a>'
+linkset[5]+='<a href="http://www.vhl.org/press/presskit">Press Kit</a>'
+linkset[5]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[5]+='<a href="http://www.vhl.org/support/intlsprt.php">Support Groups</a>'
+linkset[5]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[5]+='<a href="http://www.vhl.org/support/egroups.php">Online Discussion</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[5]+='<a href="http://www.vhl.org/newsletter">Newsletter</a>'
+linkset[5]+='<a href="http://www.vhl.org/bank">Tissue Bank</a>'
+linkset[5]+='<a href="http://www.vhl.org/press">In the News</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/board.php">Board Members</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.php">Privacy Policy</a>'
+linkset[5]+='<a href="http://www.vhl.org/vhlsales">Online Shopping</a>'
+linkset[5]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/contactus.php">Contact Us</a>'
+
+////No need to edit beyond here
+
+var ie5=document.all && !window.opera
+var ns6=document.getElementById
+
+if (ie5||ns6)
+document.write('<div id="popitmenu" onMouseover="clearhidemenu();" onMouseout="dynamichide(event)"></div>')
+
+function iecompattest(){
+return (document.compatMode && document.compatMode.indexOf("CSS")!=-1)? document.documentElement : document.body
+}
+
+function showmenu(e, which, optWidth){
+if (!document.all&&!document.getElementById)
+return
+clearhidemenu()
+menuobj=ie5? document.all.popitmenu : document.getElementById("popitmenu")
+menuobj.innerHTML=which
+menuobj.style.width=(typeof optWidth!="undefined")? optWidth : defaultMenuWidth
+menuobj.contentwidth=menuobj.offsetWidth
+menuobj.contentheight=menuobj.offsetHeight
+eventX=ie5? event.clientX : e.clientX
+eventY=ie5? event.clientY : e.clientY
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie5? iecompattest().clientWidth-eventX : window.innerWidth-eventX
+var bottomedge=ie5? iecompattest().clientHeight-eventY : window.innerHeight-eventY
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<menuobj.contentwidth)
+//move the horizontal position of the menu to the left by it's width
+menuobj.style.left=ie5? iecompattest().scrollLeft+eventX-menuobj.contentwidth+"px" : window.pageXOffset+eventX-menuobj.contentwidth+"px"
+else
+//position the horizontal position of the menu where the mouse was clicked
+menuobj.style.left=ie5? iecompattest().scrollLeft+eventX+"px" : window.pageXOffset+eventX+"px"
+//same concept with the vertical position
+if (bottomedge<menuobj.contentheight)
+menuobj.style.top=ie5? iecompattest().scrollTop+eventY-menuobj.contentheight+"px" : window.pageYOffset+eventY-menuobj.contentheight+"px"
+else
+menuobj.style.top=ie5? iecompattest().scrollTop+event.clientY+"px" : window.pageYOffset+eventY+"px"
+menuobj.style.visibility="visible"
+return false
+}
+
+function contains_ns6(a, b) {
+//Determines if 1 element in contained in another- by Brainjar.com
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function hidemenu(){
+if (window.menuobj)
+menuobj.style.visibility="hidden"
+}
+
+function dynamichide(e){
+if (ie5&&!menuobj.contains(e.toElement))
+hidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+hidemenu()
+}
+
+function delayhidemenu(){
+delayhide=setTimeout("hidemenu()",500)
+}
+
+function clearhidemenu(){
+if (window.delayhide)
+clearTimeout(delayhide)
+}
+
+function preloadImages(){
+}
+
+if (ie5||ns6)
+document.onclick=hidemenu
+
+</script --><!-- meta tags file here -->
+      <!-- InstanceBeginEditable name="doctitle" -->
+	  <TITLE>VHLFA: Know Your Mutation</TITLE>
+<meta name="keywords" content="von hippel lindau mutation gene dna diagram">
+<!-- InstanceEndEditable -->
+ <!-- InstanceBeginEditable name="MetaTags" -->
+<meta name="description" content="Know Your Mutation - description of the VHL mutation with diagrams.">
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="http://www.vhl.org/global.css">
+<!-- end meta tag include -->
+</HEAD>
+<body align="center">
+<table border="0" cellspacing="0" cellpadding="0" width="790" align="center">
+<!-- header -->
+<tr><td bgcolor="#FFFFFF" style="z-index: 3000; position:relative;">
+<link rel="stylesheet" href="/menu.css" type="text/css">
+<a href="#skiptop"></a>
+<map name="top_nav_w_imagemaps_Map">
+	<area shape="rect" alt="" coords="0,0,74,150" href="http://www.vhl.org">
+	<area shape="circle" alt="" coords="708,65,49" href="http://www.vhl.org/aboutvhlfa">
+	<area shape="circle" alt="" coords="572,65,49" href="http://www.vhl.org/profinfo">
+	<area shape="circle" alt="" coords="430,64,49" href="http://www.vhl.org/research">
+	<area shape="circle" alt="" coords="292,63,49" href="http://www.vhl.org/healthcare">
+	<area shape="circle" alt="" coords="147,64,50" href="http://www.vhl.org/aboutvhl">
+	</map>
+
+	<img src="/images/top_nav.gif" width="800" height="128" hspace="0" vspace="0" border="0" usemap="#top_nav_w_imagemaps_Map" />
+<div id="menu">
+	<ul>
+		<li style="width: 100px;">&nbsp;</li>
+	</ul>
+	<ul style="margin-left: 30px;">
+		<li><a href="http://www.vhl.org/aboutvhl">Basic Facts<br />about VHL</a>
+			<ul>
+				<li><a href="http://www.vhl.org/aboutvhl">Basic Facts about VHL</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/whatis.htm">Introduction to VHL</a></li>
+				<li><a href="http://www.vhl.org/handbook">VHLFA Handbook</a></li>
+				<li><a href="http://www.vhl.org/profinfo">Information for Professionals</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Information for Families</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Personal Stories</a></li>
+				<li><a href="http://www.vhl.org/newsletter">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/press/presskit">Press Kit</a></li>
+				<li><a href="http://www.vhl.org/press">In the News</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 60px;" >
+		<li><a href="http://www.vhl.org/healthcare">Caring for<br />Your Health</a>
+			<ul>
+				<li><a href="http://www.vhl.org/healthcare">Caring for Your Health</a></li>
+				<li><a href="http://www.vhl.org/healthcare/index.php#membership">Membership</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/clinics2.htm">Clinical Care Centers</a></li>
+				<li><a href="http://www.vhl.org/healthcare/index.php#services">Services</a></li>
+				<li><a href="http://www.vhl.org/support">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/guest/guest.htm">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/nutrition">Nutrition</a></li>
+				<li><a href="http://www.vhl.org/handbook">VHL Handbook</a></li>
+				<li><a href="http://www.vhl.org/dna">DNA Testing</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/bookstore">Books</a></li>
+				<li><a href="http://www.vhl.org/newsletter">Online Newsletter</a></li>
+				<li><a href="http://www.powerfulpatient.org">Be a powerful patient</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 45px;" >
+		<li><a href="http://www.vhl.org/research">Research</a>
+			<ul>
+				<li><a href="http://www.vhl.org/research">Research</a></li>
+				<li><a href="http://www.vhl.org/bank">Tissue Bank</a></li>
+				<li><a href="http://www.vhl.org/research/resdb.htm">Research Database</a></li>
+				<li><a href="http://www.vhl.org/research/beroud.htm">VHL Mutations Database</a></li>
+				<li><a href="http://www.vhl.org/meetings">Meetings</a></li>
+				<li><a href="http://www.vhl.org/research/06dodgrants.htm">Grants Available</a></li>
+				<li><a href="http://www.vhl.org/research/index.php#awarded">Grants Awarded</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/profinfo/medindex.htm">Medical Topics</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Family Topics</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 70px;" >
+		<li><a href="http://www.vhl.org/profinfo">Professional <br />Information</a>
+			<ul>
+				<li><a href="http://www.vhl.org/profinfo">Professional Information</a></li>
+				<li><a href="http://www.vhl.org/healthcare" class="top_nav">Information for Patients</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/clinics2.htm">Clinical Care Centers</a></li>
+				<li><a href="http://www.vhl.org/bank" class="top_nav">Tissue Bank</a></li>
+				<li><a href="http://www.vhl.org/meetings" class="top_nav">VHL Conferences</a></li>
+				<li><a href="http://www.vhl.org/profinfo/index.php#infopacket" class="top_nav">Information Packet</a></li>
+				<li><a href="http://www.vhl.org/support/intlsprt.htm" class="top_nav">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/support/egroups.htm" class="top_nav">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/links.htm" class="top_nav">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/newsletter" class="top_nav">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+	<ul style="margin-left: 35px;" >
+		<li><a href="http://www.vhl.org/aboutvhlfa">About VHL<br /> Family Alliance</a>
+			<ul>
+				<li><a href="http://www.vhl.org/aboutvhlfa">About VHL Family Alliance</a></li>
+				<li><a href="http://www.vhl.org/press/presskit">Press Kit</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/support/intlsprt.htm">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/support/egroups.htm">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/orderfrm.htm">Membership</a></li>
+			    <li><a href="http://www.vhl.org/newsletter">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/bank">Tissue Bank</a></li>
+			    <li><a href="http://www.vhl.org/press">In the News</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/board.htm">Board Members</a></li>
+			    <li><a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.htm">Privacy Policy</a></li>
+			   <li> <a href="http://www.vhl.org/vhlsales">Online Shopping</a></li>
+			   <li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			   <li><a href="http://www.vhl.org/aboutvhlfa/contactus.php">Contact Us</a></li>
+			</ul>	
+		</li>	
+	</ul>	
+</div>
+</td></tr>
+<tr><td><img src="http://www.vhl.org/images/powerful_patient.gif" width="1" height="5" alt="" border="0"></td></tr>
+
+<!-- end header -->
+
+
+<!-- body -->
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+<!-- left column -->
+
+<td bgcolor="#083463" width="130" valign="top">
+<table border="0" cellspacing="0" cellpadding="0"><tr>
+<td><a name="#skiptop"></a><a href="#skipleft"><img src="http://www.vhl.org/images/skipleftnav.gif" width="8" height="1" alt="Skip The Left Navigation" border="0"></a></td>
+<td>
+<p><a href="http://www.vhl.org/" class="lftnav">Home</a></p>
+<p>&nbsp;</p>
+<p><a href="../../search.php" class="lftnav">Site Search</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/index.php" class="lftnav">Current Issue</a></p>
+<p>&nbsp;</p>
+<p><a href="/newspdf/vhlfcopy.php" class="lftnav">Printable Copies</a></p>
+<p>&nbsp;</p>
+<p><a href="/aboutvhlfa/contactus.php" class="lftnav">Contact Us</a></p>
+<p>&nbsp;</p>
+<p><a href="http://www.vhl.org/helpnow/index.php" class="lftnav">Click to Donate</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2009/index.php" class="lftnav">2009 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2008/index.php" class="lftnav">2008 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2007" class="lftnav">2007 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2006" class="lftnav">2006 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2005" class="lftnav">2005 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2004" class="lftnav">2004 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2003" class="lftnav">2003 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2002" class="lftnav">2002 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2001" class="lftnav">2001 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl2000" class="lftnav">2000 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1999" class="lftnav">1999 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1998" class="lftnav">1998 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1997" class="lftnav">1997 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1996" class="lftnav">1996 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1995" class="lftnav">1995 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1994" class="lftnav">1994 Issues</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter/vhl1993" class="lftnav">1993 Issues</a></p>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<!-- div class="search">Subscribe to<br>
+this free newsletter<br>
+<input type=text name="ea" size=13 value="email address"><br>
+<input type=hidden name="m" value="1100530198619">
+<input type=hidden name="p" value="oi">
+<input type=submit name="go" value="Sign Me Up">
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p -->
+</td></tr></table>
+</td>
+<!-- p align="center" valign="bottom"><img src="images/seal_small.gif" width="82" height="136" alt="" border="0"></p -->
+<!-- end left column -->
+<!-- spacer -->
+<td><img src="../../images/powerful_patient.gif" width="10" height="1" alt="" border="0"></td>
+<!-- end spacer -->
+
+<!-- right column -->
+<td valign="top">
+
+<a name="#skipleft"></a>
+
+    <!-- InstanceBeginEditable name="Title and TofC" -->
+	  	  <h1>Know Your Mutation</h1>
+	<!-- InstanceEndEditable -->
+<table border="0" cellspacing="1" cellpadding="0" bgcolor="#083463" align="right"><tr><td><table width="250" border="0" cellspacing="3" cellpadding="0" bgcolor="#FFFFFF">
+<tr><td>
+<!-- InstanceBeginEditable name="index_content" -->
+
+<link href="../../global.css" rel="stylesheet" type="text/css" />
+<p class="enewsletter_box_header">December 1996<br>
+  Download a <a href="../../newspdf/vhlfcopy.php#vhl9612">printable copy</a> of this issue
+<ul>
+                <li class="enewsletter_box"><a href="96damuta.php">Know Your Mutation!</a> by Berton Zbar, M.D., National Institutes of Health</li>
+                <li class="enewsletter_box"><a href="96dbrese.php">Research Progress <em>- with your help!</em></a> <em> - </em>with your help! - report on progress on crystallizing pVHL, by Dr. Diana Griffith, Massachusetts General Hospital</li>
+  <li class="enewsletter_box"><a href="96dcelst.php">Hearing Aid for VHL Patients with Bilateral Endolymphatic Sac Tumors</a> by Marangos, Kempermann, Neumann et al.</li>
+      
+                <li class="enewsletter_box"><a href="96ddkael.php">Recent Insights into the Functions of the von Hippel-Lindau Protein</a> by William G. Kaelin, Jr</li>
+                <li class="enewsletter_box"><a href="96dekaty.php">Second VHLFA Research Grant</a> awarded to Dr. Othon Iliopoulos, Dana Farber Cancer Institute.</li>
+            
+                <li class="enewsletter_box"><a href="../../support/96dfchap.php">Chapter Events</a> - Michigan, Delaware, Britain, Ireland, New York, North Carolina, Mid-South, and Arizona</li>
+                <li class="enewsletter_box"><a href="96dgsucc.php">Success and Recognition</a>, by Paul B., Quebec, Canada</li>
+                <li class="enewsletter_box"><a href="96dhmira.php">Miracles</a>, by Audrey C., North Carolina</li>
+                <li class="enewsletter_box"><a href="../../meetings/meet1997/96diconf.php">Plans for Conference 1997</a> - Bethesda, Maryland, May 2-4, 1997</li>
+              
+                <li class="enewsletter_box"><a href="96dkathl.php">The VHL Athlete</a>, by Jennifer K, Australia</li>
+                <li class="enewsletter_box"><a href="96dleddi.php">Eddie's Story</a>, by Linda G., Georgia</li>
+                <li class="enewsletter_box"><a href="96dmgift.php">Gifts that Endure</a> - bequests and charitable remainder trusts</li>
+                <li class="enewsletter_box"><a href="96dnanrp.php">Reaching More People, Funding Research</a> - VHLFA Annual report, Fiscal Year 1996</li>
+              </ul>
+              
+
+<!-- InstanceEndEditable -->
+</td>
+</tr>
+</table></td></tr></table>
+
+
+<!-- InstanceBeginEditable name="SubTitle" -->
+<span class="byline">by Berton Zbar, M.D., National Cancer Institute, Frederick, Maryland</span><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Description" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Image" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Story" -->
+
+<p>&nbsp;</p>
+<p>In 1993, along with a large number of investigators, our team at the U.S. National Cancer Institute reported the finding of the gene that causes von Hippel-Lindau disease (VHL). The isolation of that gene was the beginning of a new era in which we can talk in much more specific ways about cancer1 in families. </p>
+<p>&nbsp;</p>
+<p>Until recently, the study of cancer in families was a matter of description by physicians interested in treating families with cancer. Like Drs. von Hippel and Lindau, there were many physicians who described the unusual occurrence of cancer affecting many members of the same family. With the revolution in genetic techniques, these families have become eagerly sought after in the same way I sought families with von Hippel-Lindau disease. Investigators all over the world look for families with cancer because they know that a remarkable amount of progress can be made once these families are found. </p>
+<p>&nbsp;</p>
+<p>Cancer can occur as an inherited disease. There are at least fifty different varieties of cancer occurring as distinct inherited illnesses. Cancer susceptibility is not something that is general, it is extraordinarily specific. A family might inherit only kidney cancer, or it might inherit colon or breast or ovarian cancer. There is an eye cancer that runs in families&#151;not VHL&#151;which is known as <i>retinoblastoma</i>. These are examples of cancers occurring as a disease in families. </p>
+<p>&nbsp;</p>
+<p>Sometimes the tumors occur as a single tumor type being inherited in a family, and other times there are very unusual situations where there is a predisposition to develop multiple types of tumors. </p>
+<p>People who get kidney cancer on a sporadic2 basis develop kidney cancer between the ages of 50 and 70, and develop a single tumor. People in kidney cancer families, on the other hand, develop multiple tumors. The tumors occur independently, and they occur in young people. This is one of the features of von Hippel-Lindau disease. </p>
+<p>&nbsp;</p>
+<p>Any family group dealing with an inherited cancer needs to understand the basic characteristics of how their disease is inherited, what genes are, and what mutations are. </p>
+<p>&nbsp;</p>
+<p>I'd like to start with an imaginary family, a family with thirteen children. </p>
+<p>&nbsp;</p>
+<p><img src="../../gifs/Zbarfig1.gif" alt="Zbarfig1.gif (926 bytes)" width="200" height="88"><br>
+    <em>Fig. 1: an imaginary family with a dominant genetic characteristic.</em></p>
+<p>&nbsp;</p>
+<p>Pedigrees are the primary tool of people who study cancer in families. The traditional way of showing a pedigree is that at the top of the figure you have the grandparents, then the parents, and then the children. The squares indicate males, the circles females, and the black indicates that you are affected. And when you look at this illness you see that it started in the grandfather, it was transmitted to his son, and in this generation among the thirteen children half of the children develop the disease. This is the cardinal characteristic of von Hippel-Lindau disease, and it is the cardinal characteristic of virtually all of these fifty types of inherited cancer. You also can see by looking at the squares and circles that it affects men and women equally. There is no preference for men over women. This is an imaginary family. In a real family there would be some imbalance due to chance, just as there are not always an equal number of sons and daughters in a family even though the chance of having a boy or a girl is a 50-50 chance. </p>
+<p>&nbsp;</p>
+<p><img src="../../gifs/Zbarfig2.gif" alt="Zbarfig2.gif (3940 bytes)" width="400" height="202"><i><br>
+  Fig. 2: A VHL family from Louisiana.</i> </p>
+<p>&nbsp;</p>
+<p>Figure 2 shows the pedigree of the first VHL family studied at NIH. It is a family from Louisiana. A urologist friend of Dr. Linehan was making rounds with Dr. Linehan at NIH, and mentioned his VHL family from Louisiana. Like I did with many of the families, I went to Louisiana, collected the samples, and eventually brought a number of the members of this family to NIH for study. What is striking about this family is that we have two sisters, one of whom is affected and one of whom is not. Each sister had many descendants. One sister is free of the disease gene. She cannot transmit it, and it will never run in this part of the pedigree. The affected sister, however, has four affected daughters, and one affected granddaughter. This was a particularly striking example of the transmission of this trait through the different branches of the family. So far we have studied more than 500 family members at NIH. </p>
+<p>&nbsp;</p>
+<p><img src="../../gifs/Zbarfig3.gif" alt="Zbarfig3.gif (2621 bytes)" width="250" height="232"><br>
+    <em>Fig. 3: VHL occurs </em>de novo,<em> and can now be inherited.</em></p>
+<p>&nbsp;</p>
+<p>Figure 3 illustrates a very unusual situation &#151; or maybe not as unusual as we think. In the beginning when we looked for families with VHL we encountered situations in which just one family member had the illness. In the beginning of our work we did not study these families because for the kind of analysis we were doing, these families were not helpful. But later on we began to take samples from any individual with the illness. What is unusual about Figure 3 is that here we have a woman with six sisters. She is affected, she has an affected daughter, but her parents are not affected. Whenever you have this situation you wonder if maybe one of the parents has VHL and doesn't know it. In this situation, we were fortunate, both parents were alive. We brought them to NIH and examined them. They did not have the illness; none of the six sisters had the illness. When we found the gene we were able to demonstrate that this woman, whom we call &quot;3,&quot; had a new mutation. This is an example of an inherited cancer appearing anew, afresh, <i>de novo,</i> for the first time in this line, in this genealogical tree. It first occurred in this woman, and can be passed to her descendants. The frequency of new mutations in VHL is calculated by Dr. Eamonn Maher to be 1 in 4.4 million live births. </p>
+<p>We still do not understand clearly how new mutations occur. We can divide causes roughly into two categories: environmental factors over which we may have some control, and non-environmental factors over which we have no control. Cigarette smoking is an example of a <i>mutagen</i>, an agent which we know can cause genes to change, over which we may have some control. </p>
+<p>&nbsp;</p>
+<p>I like to think of our genes as flowers on a Hawaiian lei or pearls on a string. They are like little isolated beads strung along a wire. Our chromosomes occur in different lengths, different lengths of pearls on a string. And all of these fifty different types of cancer start because one of these genes has become inactive. The structure of that gene is different from normal. There are two copies of each gene, one inherited from the mother and one from the father. One of these copies is inactive, as shown by the shaded bead in Figure 4. </p>
+<p>&nbsp;</p>
+<p><img src="../../gifs/Zbarfig4.gif" alt="Zbarfig4.gif (1717 bytes)" width="55" height="200"><em>Fig. 4: One copy of the pair of chromosome 3's has an inactive copy of the VHL gene.</em></p>
+<p>&nbsp;</p>
+<p>When an individual in one of these families is born, every cell in their body has that little gray bead or that altered gene, and the evidence is strong that tumors occur only when other genes in that neighborhood do not function properly. In order for tumors to form in patients who have inherited cancers, you need to &quot;inactivate&quot; or &quot;destroy&quot; the function of both of the copies of that gene. </p>
+<p>&nbsp;</p>
+<p>Finding the VHL gene was like looking for one piece in a jigsaw puzzle, or looking for a single fish in the Pacific Ocean. We hunted it, from 1988 to 1993, by progressively shrinking the size of the ocean, the size of the container in which our fish lived, until it was so small it was obvious which fish we were looking for and we could pull it out. </p>
+<p>&nbsp;</p>
+<p>The gene is a formula, like a recipe, with a variety of ingredients. If some ingredient is changed, or left out, or some other ingredient is added, we get a different result. Another way to think of the gene is as a simple sentence, such as <i>The cow jumped over the moon</i>. The genetic information, like a sentence, or like our string of beads, is made up of phrases. When we hear this complete sentence we have a picture of what happened in this children's story. </p>
+<p>&nbsp;</p>
+<p align="center"><img src="../../gifs/Cow.jpg" alt="Cow.jpg (12653 bytes)" width="275" height="200"><i><br>
+  THE COW . . . JUMPED . . . OVER THE MOON.<br>
+  Fig. 5: The three exons of the VHL gene are assembled into one message</i> </p>
+<p>&nbsp;</p>
+<p>Sometimes genes are affected by what we call <i>Deletions</i>. One word or one part of the gene is missing, and then the message is not the way it should be. In this case (Figure 6) the moon is missing. Some 15-20% of mutations in VHL families are of this type. A piece of the genetic information has been physically removed. It's as if someone took a scissors and sliced it out, and it's no longer there. </p>
+<p><i>THE COW . . . JUMPED . . . OVER THE _</i></p>
+<p align="center"><i><br>
+  <img src="../../gifs/deletion.jpg" alt="Cow jumped over the &lt;deletion&gt;." width="312" height="200">
+  <br>
+    Fig. 6: A Deletion mutation</i> </p>
+<p>Then we have something that we call an <i>Insertion</i>. In this situation, there is some additional information that doesn't belong. Again, this creates a message which is not the proper message, and there's trouble. This kind of mutation, an insertion, also causes a substantial percentage of VHL. </p>
+<p><i>THE COW &amp; CAT . . . JUMPED . . . OVER THE MOON</i></p>
+<p align="center"><i><br>
+  </i><img src="../../gifs/cow_and_cat.jpg" alt="Cow and cat jumped over the moon." width="311" height="200"></p>
+<p align="center"><i>Fig. 7: An Insertion mutation</i> </p>
+<p>Now let's make a very simple change, just one letter. By changing only one letter, we can change the entire meaning of the sentence. </p>
+<p>&nbsp;</p>
+<p>Figure 8 shows what is called a <i>Missense</i> mutation. This is the kind of mutation which affects the Hawaii family. They have a missense mutation in a particular place, a single change that changes the message and leads to this illness. It's an incorrect amino acid. It's not something taken away or something inserted, it's something switched.</p>
+<p>&nbsp; </p>
+<p align="center"><img src="../../gifs/Goon.jpg" alt="Goon.jpg (14841 bytes)" width="271" height="199"><em><br>
+  THE COW . . . JUMPED . . . OVER THE GOON.<br>
+  Fig. 8: A Missense Mutation</em></p>
+<p>&nbsp;</p>
+<p>VHL does not simply provide a susceptibility to kidney cancer, there may be other tumors as well. We are only beginning to understand the relationship between the change in the gene and the tumors that result, but already there are a few clear distinctions. We are working toward being able to use the information we see in the genetic code itself to calculate an individual's risks of having particular kinds of tumors, so that we know better which areas to watch, and which areas do not need monitoring. </p>
+<p>&nbsp;</p>
+<p>Perhaps the greatest advantage of the advances to date associated with the isolation of the VHL gene or any of the other genes that have been isolated and that are responsible for inherited cancers, is that you can do early diagnosis. </p>
+<p>&nbsp;</p>
+<p>You can now do correct diagnosis in more families. Occasionally people are given the wrong diagnosis, because the symptoms might look very much like either of two conditions. In examining the DNA, however, the diagnosis becomes quite clear. In two cases, families were told they had VHL, but it proved not to be the case. In other cases, a family was told they had another inherited cancer, but through DNA diagnosis it was shown that in fact they had VHL. This kind of incorrect information, with all its consequences, is correctable now with DNA diagnosis. With the correct diagnosis, the family has better early warning information, and can more carefully manage their health. </p>
+<p>&nbsp;</p>
+<p>The U.S. used to have an army recruiting poster showing Uncle Sam dressed in a tall hat with a flag with his finger pointing, saying &quot;Uncle Sam Wants You!&quot; That image comes to mind as I say to the families that you should<i> Know Your Mutation</i>, because your mutation has consequences. The more we know about decoding this information, the more specific information we can give you for managing your health. </p>
+<p>&nbsp;</p>
+<p>Where there are <i>Insertion</i> and <i>Deletion</i> mutations, we find kidney tumors, no adrenal tumors, and tumors in the back of the brain and in the eyes. </p>
+<p>&nbsp;</p>
+<p>In the families under Dr. Neumann's care, whose origins are in the Black Forest region of Germany, with a mutation at codon3 &quot;505,&quot; we find few if any kidney cancers. They have adrenal tumors, few brain tumors, and eye tumors. </p>
+<p>&nbsp;</p>
+<p>In families with a mutation at codon 712 we find kidney, brain, eye, and adrenal gland tumors. </p>
+<p>The point is that the VHL that is produced by the 505 mutation, and the VHL that's produced by the 712 mutation, and the VHL that's produced by the insertion and deletion mutations, are not the same. When you know the particular mutation &#151; where and what kind of mutation &#151; you can begin to calculate risks. It's a little like handicapping horses. Based on a set of circumstances, you calculate the probability that a particular horse will win a race on this race track, with these weather conditions, and this jockey. Based on the look of the genetic code we are beginning to be able to calculate the possibility that someone with this particular gene may develop a particular kind of tumor. It's not a sure thing, there is still wide variability in VHL and probably some other environmental or genetic influences that we don't yet understand, but it's a start. </p>
+<p>&nbsp;</p>
+<p>One of the things that the VHL Family Alliance can do is to help collect this information. We need more of it. In many cases, the numbers are too small to make good predictions. We have fairly good numbers of people with 505 and 712 mutations, but we need larger numbers of people with the other mutations. For example, it would be good if we could say with confidence that in a certain family we don't need to watch the kidneys because in families with this particular mutation they are not at any higher risk for kidney cancer than people in the general population. However we do not have sufficient data yet to trust ourselves to say that with certainty. It may be that we haven't seen it because the sample is too small, or because the people we have been watching are still too young. I invite centers with large families, or with large populations of people with one kind of mutation, to study the people under their care and help add to our understanding of that particular mutation. </p>
+<p>&nbsp;</p>
+<p>It is also important to screen not only people with symptoms, but all members of VHL families. Dr. Hartmut Neumann in Germany found that when he screened whole families in Germany, as many as 60% of the people with the modified VHL gene did not have symptoms. Some of these were young and had not yet developed symptoms, but others were older and still had no symptoms. Learning more about people with very light cases of VHL will help us to better understand how to manage VHL for everyone. </p>
+<p>&nbsp;</p>
+<p>It will not be enough in the future to say &quot;I have VHL&quot;. It will be &quot;I have VHL and I have a 505 mutation.&quot; Of course the physician is not going to know what you are talking about, but the physician is going to have to be educated also. </p>
+<p>&nbsp;</p>
+<table border="3" cellpadding="3" cellspacing="3" width="100%">
+  <tr>
+    <td width="100%"><h2 align="center"><b>Know Your Mutation</b> </h2>
+        <table width="78%">
+          <tr>
+            <td width="50%"><strong>Kind of Mutation</strong></td>
+            <td width="50%"><strong>Organs most commonly affected </strong></td>
+          </tr>
+          <tr>
+            <td>Inserton/deletion</td>
+            <td>Eye, CNS, kidneys</td>
+          </tr>
+          <tr>
+            <td>712</td>
+            <td>Eye, CNS, kidneys, adrenals</td>
+          </tr>
+          <tr>
+            <td>505</td>
+            <td>Eye, adrenals</td>
+          </tr>
+        </table>
+      <p><i>CNS = Central nervous system = brain &amp; spinal cord</i> </p>
+      <p>Note that screening of other organs should not be excluded, as the exact level of risk to other organs is not yet known. Other affects may occur later in life. </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>I should also mention that the mutations in the families are different than the ones which occur in sporadic kidney cancer &#151; same gene, but different mutations. It is not really well understood why this is the case. This is one of the frontiers in VHL research. One thing we did was to collate all the mutations, the family mutations, and that information is going to be on the internet,4 a list of 140-150 mutations and the kind of tumors that were associated with them. But that is one particular point in time. Since then more mutations have been discovered, more information about those families has accumulated, it is information which needs to be continually updated. </p>
+<p>&nbsp;</p>
+<p>When Dr. Neumann was studying families with pheochromocytoma, Dr. Neumann noticed that most of his families in Germany with VHL had only eye and adrenal tumors and no brain tumors. Even before the finding of the gene, his team was predicting a strong grouping of symptoms by genetic characteristic. In 1994 Dr. Hiltrud Brauch, who is now in Hamburg, Germany, discovered that 14 of the families who had sent blood for testing had mutations at codon 505. Further study has shown a total of 18 German families, two Pennsylvania families, and one family in Switzerland, all with exactly the same mutation at codon 505. You can use genetic tools to show that these families, who think they are distinct, all come from one Founder, one individual more than 250 years ago, before the emigration to the United States. </p>
+<p>&nbsp;</p>
+<p>That person lived in a small village in the Black Forest region of Germany, about 80 km. north of Freiburg. Some of that individual's descendants emigrated to the United States in about 1720, and moved to Pennsylvania. The descendants of this individual for over 250 years have been having VHL. One of these families is the ideal for someone interested in genealogy, because when I visited them they handed me a book the size of a telephone book, which was their family history. This was one of the families studied by Dr. Robert Welch of Baltimore in his initial treatment of retinal angiomas by laser. That's another thread in this research, that the same families have been brought to medical attention repeatedly, and in different eras they have served to advance knowledge in different way.</p>
+<p>&nbsp;</p>
+<p> So this 505 mutation family in the 1970's was helpful in developing laser treatment for retinal angiomas. Later this family was used by another investigator to collect 50 individuals affected with VHL.5 Then it was used by us in linkage analysis. And then it turns into the Founder Effect.6 So the same family, the same mutation, is viewed over time with new techniques, and with new techniques comes more and more information. </p>
+<p>&nbsp;</p>
+<p>The 712 mutation, by contrast, does not come from a single mutation. The 712 mutation is the commonest mutation in the gene. It appears again and again in different populations throughout the world. It's as if the gene has a weak spot in its structure and it gets injured at different times in different ways. </p>
+<p>&nbsp;</p>
+<p>It is still true that there are 20% of VHL families whose mutations have not been identified. But given time and new techniques we will hope that that will gradually decrease. With other inherited cancers like inherited colon cancer they have had a similar situation. They reached a plateau of about 75% of the families where they could find the mutations, and then they had to resort to a variety of sophisticated techniques to find other mutations. Some of the techniques they used have not yet been used in VHL disease &#151; they are time consuming &#151; but they will be in time. </p>
+<p>&nbsp;</p>
+<p>Since the VHL gene was isolated in 1993, study of VHL has become a &quot;hot topic.&quot; From the point of view of the VHL families this situation is desirable. VHL is no longer just a subject of interest to physicians or geneticists; now the entire medical community is interested in this gene for their own reasons. There are people who are very interested in the blood vessels that come in the tumors, and it looks like the VHL gene may be important in how blood vessels come into tumors. These people are in many countries; VHL research is now very much an international endeavor. One of my investigators has just written a paper about VHL in Chinese. </p>
+<p>&nbsp;</p>
+<p>In research there are many bottlenecks. And when you get on the other side of the bottleneck you have a great expansion of a research area. The real significance of the gene isolation, is that it permits the diffusion and the expansion of research in a particular area. </p>
+<p>&nbsp;</p>
+<p>Now I can talk with investigators and we can distribute reagents7 of all sorts that are useful in VHL research that never could be distributed before because we didn't have them. And all the investigators throughout the world can work with these reagents and it's totally different now from a research perspective than it was in 1987 or 1988. It's a new kettle of fish, it's a new scene. I feel that this is in many ways a new journey. </p>
+<p>&nbsp;</p>
+<p>It's a journey that started in 1987 and 1988. For me it was a wonderful journey because I got to travel throughout the United States and meet with so many of the wonderful people among the VHL families. </p>
+<p>&nbsp;</p>
+<p>We have come a long way from those early pioneering days in VHL gene research. There are many more people involved, which is advancing progress at ever greater speeds and will bring ever increasing benefits to VHL families. But what has not changed is that we still need the VHL families themselves to participate in helping to amass enough information about their own and their families' experiences so that we can begin to make reliable risk calculations for future generations. </p>
+<p>&nbsp;</p>
+<p>Based on an address delivered by Dr. Zbar in Honolulu, June 1996. </p>
+<p>&nbsp;</p>
+<p><font size="2"><b>Notes: </b>1. While most tumors in VHL are not technically cancer, in that they are distinct tumors which do not metastasize or invade other tissues, VHL tumors in the kidney and some islet cell tumors of the pancreas can progress to cancer and can metastasize. VHL is therefore considered to be a hereditary cancer syndrome. </font></p>
+<p><font size="2">2. <i>Sporadic,</i> occasionally, at random. </font></p>
+<p><font size="2">3. <i>Codons</i> number sites along the length of a gene, providing a handy way to speak about the location of the change. </font></p>
+<p><font size="2">4. See </font><a href="http://www.ncifcrf.gov/kidney/"><font size="2">http://www.ncifcrf.gov/kidney/ </font></a></p>
+<p><font size="2">5. Horton, W.A. et al., Von Hippel-Lindau disease: Clinical and Pathological manifestations in nine families with 50 affected members. <i>Arch Intern Med</i> (1976) 136: 769-777. </font></p>
+<p><font size="2">6. Brauch, H, et al., Von Hippel-Lindau disease with pheochromo-cytoma in the Black Forest region in Germany: evidence for a founder effect. <i>Hum Genet</i> (1995) 95:551-556. </font></p>
+<p><font size="2">7. A <i>reagent</i> is a chemical which produces a specific reaction, and can therefore be used as a test. For example, a reagent which turns orange when it combines with the normal VHL gene or protein. </font></p>
+<p>&nbsp;</p>
+<p class="references">As published in the<i> VHL Family Forum</i>, 4:4, December 1996. For permission to reprint, please contact the VHL Family Alliance, <a href="mailto:editor@vhl.org">editor@vhl.org</a>. Further information is available from the VHL Family Alliance, <a href="mailto:info@vhl.org">info@vhl.org</a>. 
+<!-- InstanceEndEditable -->
+
+</td>
+<!-- end right column -->
+
+</tr>
+</table>
+</td></tr>
+<!-- end body -->
+
+
+
+<!-- footer -->
+<!-- InstanceBegin template="/Templates/zadmin_footer_html.dwt" codeOutsideHTMLIsLocked="false" --><tr><td bgcolor="#FFFFFF"><img src="http://www.vhl.org/images/cancer_treatment_t.gif" width="600" height="10" alt="" border="0"></td></tr>
+<tr><td bgcolor="#083463"><img src="http://www.vhl.org/images/cancer_treatment_t.gif" width="600" height="1" alt="" border="0"></td></tr>
+<tr><td class="footer">
+<p>&nbsp;</p>
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+<td width="110" class="footer"><a href="HTTP://WWW.VHL.ORG/aboutvhlfa/contactus.php">Contact Us</a></td>
+<td width="110" class="footer"><div align="center"><a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.php">Privacy</a></div></td>
+<td width="160" class="footer"><div align="center">Copyright 1993-2009</div></td>
+<td width="110" class="footer"><div align="center"><a href="http://www.vhl.org/awards.php">Awards</a></div></td>
+<td width="110" class="footer"><div align="center"><a href="http://vhl.org/helpnow/index.php">Donate Now</a></div></td>
+</tr></table>
+<p>&nbsp;</p>
+<!-- InstanceEndEditable -->
+<!-- The following script is essential to the working of Google Analytics  leave intact -->
+<p>&nbsp;</p>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6229758-1");
+pageTracker._trackPageview();
+</script>
+<!-- End Google Analytics script -->
+</td></tr>
+<!-- End table and end body are in the php file --><!-- InstanceEnd --><!-- end footer -->
+
+</table>
+</body>
+<!-- InstanceEnd --></HTML>

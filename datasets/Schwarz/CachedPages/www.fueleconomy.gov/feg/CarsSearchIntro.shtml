@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from www.fueleconomy.gov/feg/CarsSearchIntro.shtml by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:31:38 GMT -->
+<head>
+		<!-- fuel2 -->
+	<meta name="language" content="en" />
+	<meta name="description" content="The official website for the CARS Car Allowance Rebate System.">
+	<meta name="keywords" content="CARS.gov, Cars for Clunkers Legislation, Cars for Clunkers Bill, Cars for Clunkers Rules, Cars for Clunkers Qualifications, Cars for Clunkers President Obama, Cars for Clunkers Congress, Cars for Clunkers Senate, Vouchers for New Car Purchases, H.R.2346 Supplemental Appropriations Act 2009  Title XIII Consumer Assistance To Recycle and Save Program">
+	
+	
+	<link rel="shortcut icon" href="http://www.fueleconomy.gov/feg/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="http://www.fueleconomy.gov/feg/favicon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" media="all" href="http://www.fueleconomy.gov/feg/carsgov/css/styles.css">
+
+	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="carsgov/css/stylesIE.css">
+	<![endif]-->
+	
+	<script language="javascript" type="text/javascript">
+		//<![CDATA[
+		var site_url = "http://www.fueleconomy.gov/feg/carsgov/";
+		//]]>
+	</script>
+	
+	<script language="javascript" type="text/javascript" src="http://www.fueleconomy.gov/feg/carsgov/js/favicon.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.fueleconomy.gov/feg/carsgov/js/jquery/jquery-1.3.2.min.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.fueleconomy.gov/feg/carsgov/js/jquery/jquery.corners.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.fueleconomy.gov/feg/carsgov/js/custom/jquery.initStyles.js"></script>
+	
+	<script language="javascript" type="text/javascript" src="http://www.fueleconomy.gov/feg/js/cars.js"></script>
+	
+	<!-- BEGIN UI -->
+	<script language="javascript" type="text/javascript" src="http://www.fueleconomy.gov/feg/carsgov/js/jquery/jquery-ui-1.7.2.custom.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.fueleconomy.gov/feg/carsgov/css/smoothness/jquery-ui-1.7.2.custom.css">
+	<!-- END UI -->
+	
+		<script language="javascript" type="text/javascript" src="http://www.fueleconomy.gov/feg/carsgov/js/jquery/jquery.timers.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.fueleconomy.gov/feg/carsgov/js/custom/jquery.feature.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.fueleconomy.gov/feg/carsgov/js/custom/jquery.extraFunctions.js"></script>
+
+	<script language="javascript" type="text/javascript" src="http://www.fueleconomy.gov/feg/carsgov/js/jquery/jquery.form.js"></script>
+	
+		
+	<script language="javascript" type="text/javascript">
+		//<![CDATA[
+		$.initStyles.init();
+		
+				
+		$(document).ready( function(){
+			// SET ROUNDED CORNERS
+			$('.content-block-wrapper').corners("transparent");
+			$('#feature').corners("transparent");			
+		});
+		//]]>  
+	</script>
+	
+	<link rel="stylesheet" type="text/css" media="all" href="http://www.fueleconomy.gov/feg/carsgov/css/stylesORNL.css">
+	
+
+	
+	<title>CARS - Car Allowance Rebate System</title>
+</head>
+<body>
+		<!-- // BEGIN BODY-WRAPPER // -->
+	<div id="body-wrapper">
+		<div id="language"><a href="http://www.cars.gov/index.php/spanish/">Espa&ntilde;ol</a></div>
+		<h1 id="logo"><a href="http://www.cars.gov/" title="C.A.R.S - car allowance rebate system">C.A.R.S - car allowance rebate system</a></h1>
+
+		<!-- // BEGIN CONTENT-WRAPPER // -->
+		<div id="content-wrapper">
+			<!-- // BEGIN INNER-CONTENT-WRAPPER // -->
+			<div id="inner-content-wrapper">
+				<div id="content">
+
+					<!-- // BEGIN LEFT-COL // -->
+					<div id="left-col">
+
+				
+				<!-- // BEGIN QUESTIONS // -->
+				<div id="questions">
+					<!-- // BEGIN ITEM // -->
+					<div class="item">
+					  <div class="item-inner">
+						<div class="header">
+                        	<h1>Welcome to the CARS vehicle eligibility guide!</h1>
+					    </div>
+
+							<p>This guide will help you determine if your trade-in and new vehicle qualify for the CARS program and, if so, how much your trade-in is worth.</p>
+							<p class="green-txt">Step 1. Determine if your trade-in qualifies. </p>
+							<p>You will start by providing information about your trade-in vehicle. To properly select your trade-in, you will typically need to know the model year, number of cylinders in the engine, the engine size (in liters), and the transmission type. You may also need to know your fuel type (gasoline or diesel), drive type (2-wheel or 4-wheel drive), <a href="http://www.fueleconomy.gov/feg/CarsGlossary.htm#GVWR" target="_blank">Gross Vehicle Weight Rating (GVWR)</a>, or even whether or not your vehicle has a supercharger or turbocharger.</p>
+						<p class="green-txt">Step 2. Determine if your new vehicle qualifies.</p>
+							<p>If your trade-in qualifies for the program, you will then provide information about the vehicle you want to trade it in for. You will identify the new vehicle using a process similar to Step 1. If you're not sure exactly which vehicle you are interested in, this guide allows you to view the results for two new vehicles at a time.</p>
+
+							
+							<FORM METHOD="LINK" ACTION="http://www.fueleconomy.gov/feg/CarsCat3OrOther.shtml">
+								<p align="center">
+							  	<label>
+							  	<input type="submit" name="Continue" id="Continue" value="I'm ready to begin!" />
+							  	</label>
+								</p>
+							</FORM>
+
+<div class="med-spacer"></div>
+
+					  </div>  
+					<!-- // End of "item-inner" // -->
+
+			      </div>  
+  				  <!-- // End of "item" // -->
+
+				</div>
+				<!-- // END QUESTIONS // -->
+
+						<!-- // END LEFT-COL // -->
+					<div class="clear"></div>
+
+					
+										<!-- // BEGIN RIGHT-COL // -->
+					<div id="right-col">
+						<div class="callout-item">
+							<img src="http://www.fueleconomy.gov/feg/carsgov/images/sponsors.jpg" alt="Sponsored by NHTSA and DOT" />
+						</div>
+						
+						<div class="callout-item">
+							<a href="http://www.cars.gov/official-information"><img src="http://www.fueleconomy.gov/feg/carsgov/images/callout-official-information.jpg" alt="Official Information" /></a>
+						</div>						
+						
+						<div class="callout-item">
+							<a href="http://www.cars.gov/index.php/faq"><img src="http://www.fueleconomy.gov/feg/carsgov/images/callout-faq.jpg" alt="CARS Frequently Asked Questions" /></a>
+						</div>
+						
+						<div class="callout-item">
+							<a href="http://www.safercar.gov/portal/site/safercar/menuitem.13dd5c887c7e1358fefe0a2f35a67789/?vgnextoid=c276c95372935110VgnVCM1000002fd17898RCRD" target="_blank"><img src="http://www.fueleconomy.gov/feg/carsgov/images/callout-safe.jpg" alt="How to buy a safer car" /></a>
+						</div>
+						
+					</div>
+					<!-- // END RIGHT-COL // -->					
+				</div>				
+			</div>
+			<!-- // END INNER-CONTENT-WRAPPER // -->
+		</div>
+		<!-- // END CONTENT-WRAPPER // -->
+		<div class="clear"></div>
+
+			<!-- // BEGIN FOOTER // -->
+			<div id="footer">
+				<div id="footer-wrapper"><div id="footer-links">
+						U.S. Department of Transportation<br>
+						1200 New Jersey Ave SE, Washington, DC 20590 Phone: (866) CAR-7891 <br>
+						<span style="color:#333;">Last Updated 07/17/2009</span><br/>
+						<a href="http://www.dot.gov/webpolicies.htm" title="View Policies &amp; Notices" target="_blank">Policies &amp; Notices</a>  | <a href="http://www.dot.gov/citizen_services/disability/disability.html" title="Accessibility" target="_blank">Accessibility</a> | <a href="http://www.dot.gov/privacy.html" title="View Privacy Policy" target="_blank">Privacy</a> | <a href="http://www.dotcr.ost.dot.gov/asp/nofear.asp" title="View No Fear Act" target="_blank">No Fear Act</a> | <a href="http://www.osdbu.dot.gov/" title="View Small Business" target="_blank">Small Business</a> | <a href="http://www.dot.gov/ethics/" title="View Ethics" target="_blank">Ethics</a> | <a href="http://www.oig.dot.gov/" title="View OIG" target="_blank">OIG</a> | <a href="http://www.dot.gov/regulations.html" title="View Regulations" target="_blank">Regulations</a> | <a href="http://www.usa.gov/" title="View USA.gov" target="_blank">USA.gov</a> | <a href="http://www.whitehouse.gov/" title="View WhiteHouse.gov" target="_blank">WhiteHouse.gov</a><br>
+					</div>
+					<div id="footer-logos">
+						<a href="http://www.nhtsa.gov/" target="_blank" title="Visit National Highway Traffic Safety Administration(NHTSA) | U.S. Department of Transportation"><img src="http://www.fueleconomy.gov/feg/carsgov/images/nhtsa-logo.gif" alt="National Highway Traffic Safety Administration(NHTSA) | U.S. Department of Transportation" border="0" /></a>
+						<img src="http://www.fueleconomy.gov/feg/carsgov/images/dot-logo.gif" alt="U.S. Department of Transportation" border="0" />
+					</div>
+				</div>
+			</div>
+			<!-- // END FOOTER // -->
+	</div>
+
+	<!-- // END BODY-WRAPPER // -->
+
+</body>
+
+<!-- Mirrored from www.fueleconomy.gov/feg/CarsSearchIntro.shtml by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:31:38 GMT -->
+</html>

@@ -1,0 +1,2602 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<!-- Mirrored from www.netrition.com/cgi/healthnotes.cgi?ContentID=1059007 by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:28:15 GMT -->
+<HEAD>
+<TITLE>Atkins Diet - Netrition.com</TITLE>
+<META http-equiv="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="keywords" CONTENT="Atkins, Atkins Diet, Diet, Weight Management Diet Finder, Food Guide, Diets, Sports, Fitness, Weight Management, Diabetes A-Z">
+<META NAME="description" CONTENT="The Atkins Diet is a high-protein, low-carbohydrate weight loss diet developed by Robert Atkins, M.D., during the 1960s. In the early 1990s, Dr. Atkins brought his diet back into the nutrition spotlight with the publication of his best-selling book Dr. Atkins' New Diet Revolution.">
+<link rel="stylesheet" type="text/css" href="http://images.netrition.com/Styles/hniArticle.css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<!-- CSS definitions -->
+<link rel="stylesheet" href="http://www.netrition.com/Styles/layout.css" type="text/css">
+<!-- Lightbox -->
+<script type="text/javascript" src="http://www.netrition.com/js/prototype.js"></script>
+<script type="text/javascript" src="http://www.netrition.com/js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="http://www.netrition.com/js/lightbox.js"></script>
+<link rel="stylesheet" href="http://www.netrition.com/Styles/lightbox.css" type="text/css" media="screen" />
+<SCRIPT language="JavaScript">
+<!-- begin script
+document.cookie = "affilnetr=2072_111111_0; domain=.netrition.com; path=/; expires=Sat, 17-Jul-2010 23:55:28 GMT";
+// end script -->
+</SCRIPT>
+
+
+<SCRIPT language="JavaScript">
+
+<!-- begin script
+
+function doClear(theText) {
+     if (theText.value == theText.defaultValue) {
+         theText.value = "";
+     }
+ }
+
+// "Internal" function to return the decoded value of a cookie
+function getCookieVal (offset) {
+  var endstr = document.cookie.indexOf (";", offset);
+  if (endstr == -1)
+    endstr = document.cookie.length;
+  return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg)
+      return getCookieVal (j);
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+  }
+  return null;
+}
+
+function SetCookie (name,value,expires,path,domain,secure) {
+  document.cookie = name + "=" + escape (value) +
+    ((expires) ? "; expires=" + expires : "") +
+    ((path) ? "; path=" + path : "") +
+    ((domain) ? "; domain=" + domain : "") +
+    ((secure) ? "; secure" : "");
+}
+
+function addProductToCart(product_id, desc)
+{
+   cart_cookie = GetCookie('cart');
+   if (cart_cookie == null)
+   {
+      cart_cookie = "";
+   }
+   else
+   {
+      if (cart_cookie == 'clear')
+      {
+         cart_cookie = "";
+      }
+   }
+   cartString = cart_cookie;
+
+   // Find the product id in the cart cookie
+   found = -1;
+   continue_looking = 1;
+   start_at = 0;
+   while (continue_looking == 1)
+   {
+      temp_found = cartString.indexOf(product_id, start_at);
+      // product id not found
+      if (((temp_found == -1) || (temp_found == "")) && (temp_found != "0"))
+      {
+         continue_looking = 0;
+      }
+      // product id found
+      else
+      {
+         if (temp_found == 0)
+         {
+            found = 0;
+            continue_looking = 0;
+         }
+         else
+         {
+            // Make sure the found product id is not just a subset of a larger product id
+            previous_char = cartString.charAt(temp_found - 1);
+            if (previous_char == 'http://www.netrition.com/')
+            {
+               found = temp_found;
+               continue_looking = 0;
+            }
+            else
+            {
+               start_at = cartString.indexOf("http://www.netrition.com/", temp_found);
+               if ((start_at == -1) || (start_at == ""))
+               {
+                  continue_looking = 0;
+               }
+            }
+         }
+      }
+   }
+
+   if (found == -1)
+   {
+      init_qty = 1;
+   }
+   else
+   {
+      underscore_at = cartString.indexOf("_", found);
+      slash_at = cartString.indexOf("http://www.netrition.com/", found);
+      if ((slash_at == -1) || (slash_at == ""))
+      {
+         init_qty = cartString.substring(underscore_at+1, cartString.length);
+      }
+      else
+      {
+         init_qty = cartString.substring(underscore_at+1, slash_at);
+      }
+   }
+
+   // Prompt for quantity
+   num_ordered = prompt("Enter the quantity of " + desc + " that you want to order.", init_qty);
+
+   // Cancel was not pressed
+   if (num_ordered != null)
+   {
+      if (num_ordered == "")
+      {
+         num_ordered = 0;
+      }
+
+      // Error checking on quantity - only numbers allowed
+      ok = 1;
+      for (i=0; (i<num_ordered.length) && (ok==1); i++)
+      {
+         char1 = num_ordered.charAt(i);
+         if ((char1 < '0') || (char1 > '9'))
+         {
+            ok = 0;
+            alert("Invalid quantity: " + num_ordered);
+         }
+      }
+
+      // No error
+      if (ok == 1)
+      {
+         // Quantity NOT set to 0
+         if (num_ordered != 0)
+         {
+            // Empty cart
+            if (cart_cookie == "")
+            {
+               cart_cookie = product_id + '_' + num_ordered;
+            }
+            else
+            {
+               // New item in cart
+               if (found == -1)
+               {
+                  cart_cookie = cart_cookie + '/' + product_id + '_' + num_ordered;
+               }
+               else
+               {
+                  // Updating last item in cart cookie
+                  if ((slash_at == -1) || (slash_at == ""))
+                  {
+                     first_part = cartString.substring(0, underscore_at+1);
+                     cart_cookie = first_part + num_ordered; 
+                  }
+                  else
+                  {
+                     first_part = cartString.substring(0, underscore_at+1);
+                     second_part = cartString.substring(slash_at, cartString.length);
+                     cart_cookie = first_part + num_ordered + second_part;
+                  }
+               }
+            }
+         }
+         // Quantity set to zero
+         else
+         {
+            // Not an empty cart
+            if (cart_cookie != "")
+            {
+               // Removing an item in the cart
+               if (found != -1)
+               {
+                  // Updating last item in cart cookie
+                  if ((slash_at == -1) || (slash_at == ""))
+                  {
+                     if (found == 0)
+                     {
+                        cart_cookie = "";
+                     }
+                     else
+                     {
+                        cart_cookie = cartString.substring(0, found-1);
+                     }
+                  }
+                  else
+                  {
+                     if (found > 0)
+                     {
+                        first_part = cartString.substring(0, found-1);
+                        second_part = cartString.substring(slash_at, cartString.length);
+                     }
+                     else
+                     {
+                        first_part = "";
+                        second_part = cartString.substring(slash_at+1, cartString.length);
+                     }
+                     cart_cookie = first_part + second_part;
+                  }
+               }
+            }
+         }
+         if (cart_cookie == "")
+         {
+            cart_cookie = 'clear';
+         }
+         SetCookie('cart', cart_cookie, 'Fri, 25-Dec-2020 00:00:00 GMT', 'http://www.netrition.com/', '.netrition.com');
+      }
+   }
+}
+
+function openWindow(url, target_name, width, height, return_value)
+{
+   var attr;
+   var popup;
+   attr = "scrollbars,resizable,height=" + height + ",width=" + width;
+   popup = window.open(url, target_name, attr);
+   return return_value;
+}
+
+function openWindowWithToolbar(url, target_name, width, height, return_value)
+{
+   var attr;
+   var popup;
+   attr = "scrollbars,resizable,menubar,toolbar,height=" + height + ",width=" + width;
+   popup = window.open(url, target_name, attr);
+   return return_value;
+}
+
+function MM_findObj(n, d)
+{
+   var p,i,x;
+   if(!d)
+   {
+      d=document;
+   }
+   if((p=n.indexOf("?"))>0&&parent.frames.length)
+   {
+      d=parent.frames[n.substring(p+1)].document;
+      n=n.substring(0,p);
+   }
+   if(!(x=d[n])&&d.all)
+   {
+      x=d.all[n];
+   }
+   for (i=0;!x&&i<d.forms.length;i++)
+   {
+      x=d.forms[i][n];
+   }
+   for(i=0;!x&&d.layers&&i<d.layers.length;i++)
+   {
+      x=MM_findObj(n,d.layers[i].document);
+   }
+   return x;
+}
+
+// Functions that swaps images.
+function MM_swapImage()
+{
+   var i,j=0,x,a=MM_swapImage.arguments;
+   document.MM_sr=new Array;
+   for(i=0;i<(a.length-2);i+=3)
+   {
+      if ((x=MM_findObj(a[i]))!=null)
+      {
+         document.MM_sr[j++]=x;
+         if(!x.oSrc)
+         {
+            x.oSrc=x.src;
+         }
+         x.src=a[i+2];
+      }
+   }
+}
+
+function MM_swapImgRestore()
+{
+   var i,x,a=document.MM_sr;
+   for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++)
+   {
+      x.src=x.oSrc;
+   }
+}
+
+// Functions that handle preload. 
+function MM_preloadImages()
+{
+   var d=document;
+   if(d.images)
+   {
+      if(!d.MM_p)
+      {
+         d.MM_p=new Array();
+      }
+      var i,j=d.MM_p.length,a=MM_preloadImages.arguments;
+      for(i=0; i<a.length; i++)
+      {
+         if (a[i].indexOf("#")!=0)
+         {
+            d.MM_p[j]=new Image;
+            d.MM_p[j++].src=a[i];
+         }
+      }
+   }
+}
+
+function showJSID(elemId)
+{
+   var rsl_elem = document.getElementById(elemId);
+   rsl_elem.style.display = "inline";
+}
+
+function hideJSID(elemId)
+{
+   var rsl_elem = document.getElementById(elemId);
+   rsl_elem.style.display = "none";
+}
+function setNetrOptionsCookie(option_name, option_value)
+{
+   var netr_options_cookie;
+   var netr_options_cookie_string;
+   var option_names = new Array();
+   var option_values = new Array();
+   var num_options = 0;
+   var i;
+   var more_options;
+   var found_sep;
+   var start_search;
+   var end_search;
+   var option_pair_string;
+   var found_pair_sep;
+   var found_option_in_string;
+
+   netr_options_cookie = GetCookie('netr_options');
+   if (netr_options_cookie == null)
+   {
+      netr_options_cookie = "";
+   }
+   else
+   {
+      if (netr_options_cookie == 'clear')
+      {
+         netr_options_cookie = "";
+      }
+   }
+   netr_options_cookie_string = netr_options_cookie;
+
+   if (netr_options_cookie_string == '')
+   {
+      option_names[num_options] = option_name;
+      option_values[num_options] = option_value;
+      num_options++;
+   }
+   else
+   {
+      more_options = 1;
+      start_search = 0;
+      found_option_in_string = 0;
+      while (more_options == 1)
+      {
+         found_sep = netr_options_cookie_string.indexOf(":", start_search);
+         if ((found_sep > start_search) || (found_sep == -1) || (found_sep == ""))
+         {
+            if ((found_sep == -1) || (found_sep == ""))
+            {
+               more_options = 0;
+               end_search = netr_options_cookie_string.length;
+            }
+            else
+            {
+               end_search = found_sep;
+            }
+
+            option_pair_string = netr_options_cookie_string.substring(start_search, end_search);
+            found_pair_sep = option_pair_string.indexOf(",");
+            if ((found_pair_sep > 0) && (found_pair_sep < (option_pair_string.length - 1)))
+            {
+               option_names[num_options] = option_pair_string.substring(0, found_pair_sep);
+               if (option_names[num_options] == option_name)
+               {
+                  option_values[num_options] = option_value;
+                  found_option_in_string = 1;
+               }
+               else
+               {
+                  option_values[num_options] = option_pair_string.substring(found_pair_sep + 1, option_pair_string.length);
+               }
+               num_options++;
+            }
+         }
+         if ((found_sep != -1) && (found_sep != ""))
+         {
+            start_search = found_sep + 1;
+            if (start_search >= netr_options_cookie_string.length - 1)
+            {
+               more_options = 0;
+            }
+         }
+      }
+      if (found_option_in_string == 0)
+      {
+         option_names[num_options] = option_name;
+         option_values[num_options] = option_value;
+         num_options++;
+      }
+   }
+
+   if (num_options > 0)
+   {
+      netr_options_cookie_string = "";
+      for (i=0; i<num_options; i++)
+      {
+         if (i>0)
+         {
+            netr_options_cookie_string += ':'
+         }
+         netr_options_cookie_string += option_names[i] + ',' + option_values[i];
+      }
+
+      SetCookie('netr_options', netr_options_cookie_string, 'Fri, 25-Dec-2020 00:00:00 GMT', 'http://www.netrition.com/', '.netrition.com');
+   }
+}
+
+function getNetrOptionsCookie(option_name)
+{
+   var option_value = null;
+   var netr_options_cookie;
+   var netr_options_cookie_string;
+   var option_name_read;
+   var more_options;
+   var start_search;
+   var found_sep;
+   var more_options;
+   var option_pair_string;
+   var found_pair_sep;
+
+   netr_options_cookie = GetCookie('netr_options');
+   if (netr_options_cookie == null)
+   {
+      netr_options_cookie = "";
+   }
+   else
+   {
+      if (netr_options_cookie == 'clear')
+      {
+         netr_options_cookie = "";
+      }
+   }
+   netr_options_cookie_string = netr_options_cookie;
+
+   if (netr_options_cookie_string != "")
+   {
+      more_options = 1;
+      start_search = 0;
+      while (more_options == 1)
+      {
+         found_sep = netr_options_cookie_string.indexOf(":", start_search);
+         if ((found_sep > start_search) || (found_sep == -1) || (found_sep == ""))
+         {
+            if ((found_sep == -1) || (found_sep == ""))
+            {
+               more_options = 0;
+               end_search = netr_options_cookie_string.length;
+            }
+            else
+            {
+               end_search = found_sep;
+            }
+
+            option_pair_string = netr_options_cookie_string.substring(start_search, end_search);
+            found_pair_sep = option_pair_string.indexOf(",");
+            if ((found_pair_sep > 0) && (found_pair_sep < (option_pair_string.length - 1)))
+            {
+               option_name_read = option_pair_string.substring(0, found_pair_sep);
+               if (option_name_read == option_name)
+               {
+                  option_value = option_pair_string.substring(found_pair_sep + 1, option_pair_string.length);
+                  break;
+               }
+            }
+         }
+         if ((found_sep != -1) && (found_sep != ""))
+         {
+            start_search = found_sep + 1;
+            if (start_search >= netr_options_cookie_string.length - 1)
+            {
+               more_options = 0;
+            }
+         }
+      }
+   }
+
+   return option_value;
+}
+
+function buyPDProduct(product_id)
+{
+   var pd_buy_form_text_qty_elem_id = "pd_buy_form_text_qty_id-" + product_id;
+   var pd_buy_cart_qty_elem_id = "pd_buy_cart_qty_id_prefix-" + product_id;
+   var pd_buy_form_button_elem_id = "pd_buy_form_button_id-" + product_id;
+   var qty_location;
+   var qty_text_node;
+   var qty_text;
+   var num_ordered;
+   var qty_to_buy_string;
+   var ok;
+   var buy_table_data;
+   var return_qty;
+   var new_text_node;
+   var form_button;
+
+   qty_text = document.getElementById(pd_buy_form_text_qty_elem_id);
+   num_ordered = qty_text.value;
+
+   return_qty = addProductAndQtyToCartCookie(product_id, num_ordered);
+
+   if (return_qty >= 0)
+   {
+      if (return_qty == 0)
+      {
+         qty_to_buy_string = "";
+      }
+      else
+      {
+         qty_to_buy_string = return_qty + " in cart";
+      }
+
+      qty_location=document.getElementById(pd_buy_cart_qty_elem_id);
+      if (qty_location.childNodes.length == 0)
+      {
+         new_text_node = document.createTextNode(qty_to_buy_string); 
+         qty_location.appendChild(new_text_node);
+      }
+      else
+      {
+         qty_text_node=qty_location.childNodes[0];
+         qty_text_node.data = qty_to_buy_string;
+      }
+
+      form_button = document.getElementById(pd_buy_form_button_elem_id);
+      if (return_qty > 0)
+      {
+         form_button.value = "Change";
+      }
+      else
+      {
+         form_button.value = "Add";
+      }
+
+      qty_text.value = "";
+   }
+}
+
+// Returns qty (>0) if added to cart
+// Returns 0 if removed from cart
+// Returns -1 if qty is in error
+function addProductAndQtyToCartCookie(product_id, qty)
+{
+   var cart_cookie;
+   var cartString;
+   var found;
+   var continue_looking;
+   var start_at;
+   var temp_found;
+   var previous_char;
+   var underscore_at;
+   var slash_at;
+   var ok;
+   var i;
+   var char1;
+   var first_part;
+   var second_part;
+   var all_blank_qty;
+   var return_qty;
+   var qty_from_cookie;
+
+   cart_cookie = GetCookie('cart');
+   if (cart_cookie == null)
+   {
+      cart_cookie = "";
+   }
+   else
+   {
+      if (cart_cookie == 'clear')
+      {
+         cart_cookie = "";
+      }
+   }
+   cartString = cart_cookie;
+
+   // Find the product id in the cart cookie
+   found = -1;
+   continue_looking = 1;
+   start_at = 0;
+   while (continue_looking == 1)
+   {
+      temp_found = cartString.indexOf(product_id, start_at);
+      // product id not found
+      if (((temp_found == -1) || (temp_found == "")) && (temp_found != "0"))
+      {
+         continue_looking = 0;
+      }
+      // product id found
+      else
+      {
+         if (temp_found == 0)
+         {
+            found = 0;
+            continue_looking = 0;
+         }
+         else
+         {
+            // Make sure the found product id is not just a subset of a larger product id
+            previous_char = cartString.charAt(temp_found - 1);
+            if (previous_char == 'http://www.netrition.com/')
+            {
+               found = temp_found;
+               continue_looking = 0;
+            }
+            else
+            {
+               start_at = cartString.indexOf("http://www.netrition.com/", temp_found);
+               if ((start_at == -1) || (start_at == ""))
+               {
+                  continue_looking = 0;
+               }
+            }
+         }
+      }
+   }
+
+   if (found != -1)
+   {
+      underscore_at = cartString.indexOf("_", found);
+      slash_at = cartString.indexOf("http://www.netrition.com/", found);
+      if ((slash_at == -1) || (slash_at == ""))
+      {
+         qty_from_cookie = cartString.substring(underscore_at+1, cartString.length);
+      }
+      else
+      {
+         qty_from_cookie = cartString.substring(underscore_at+1, slash_at);
+      }
+   }
+
+   // If all spaces provided, assume blank
+   all_blank_qty = 1;
+   for (i=0; i<qty.length; i++)
+   {
+      char1 = qty.charAt(i);
+      if (char1 != ' ')
+      {
+         all_blank_qty = 0;
+      }
+   }
+
+   if (all_blank_qty == 1)
+   {
+      qty = "";
+   }
+
+   ok = 1;
+
+   // Error checking on quantity - error if blank and already in cart
+   if ((found != -1) && (qty == ""))
+   {
+      ok = 0;
+      alert(qty_from_cookie + " already in cart.\nEnter a new quantity to change the quantity.\nEnter 0 to remove product from cart.\nPress Change button after entering quantity.");
+   }
+
+   // Error checking on quantity - compare to see if same as what is in cart
+   if (qty == qty_from_cookie)
+   {
+      ok = 0;
+      alert(qty + " already in cart.\nEnter a new quantity to change the quantity.\nEnter 0 to remove product from cart.\nPress Change button after entering quantity.");
+   }
+
+   // Error checking on quantity - only numbers allowed
+   for (i=0; (i<qty.length) && (ok==1); i++)
+   {
+      char1 = qty.charAt(i);
+      if ((char1 < '0') || (char1 > '9'))
+      {
+         ok = 0;
+         alert("Invalid quantity: " + qty);
+      }
+   }
+
+   // Error checking on quantity - must be < 100000
+   if (qty > 99999)
+   {
+      ok = 0;
+      alert("Quantity must be < 100000");
+   }
+
+   // If blank qty, assume add one product to cart
+   if (qty == "")
+   {
+      qty = 1;
+   }
+
+   // No error
+   if (ok == 1)
+   {
+      // Quantity NOT set to 0
+      if (qty != 0)
+      {
+         // Empty cart
+         if (cart_cookie == "")
+         {
+            cart_cookie = product_id + '_' + qty;
+         }
+         else
+         {
+            // New item in cart
+            if (found == -1)
+            {
+               cart_cookie = cart_cookie + '/' + product_id + '_' + qty;
+            }
+            else
+            {
+               // Updating last item in cart cookie
+               if ((slash_at == -1) || (slash_at == ""))
+               {
+                  first_part = cartString.substring(0, underscore_at+1);
+                  cart_cookie = first_part + qty; 
+               }
+               else
+               {
+                  first_part = cartString.substring(0, underscore_at+1);
+                  second_part = cartString.substring(slash_at, cartString.length);
+                  cart_cookie = first_part + qty + second_part;
+               }
+            }
+         }
+      }
+      // Quantity set to zero
+      else
+      {
+         // Not an empty cart
+         if (cart_cookie != "")
+         {
+            // Removing an item in the cart
+            if (found != -1)
+            {
+               // Updating last item in cart cookie
+               if ((slash_at == -1) || (slash_at == ""))
+               {
+                  if (found == 0)
+                  {
+                     cart_cookie = "";
+                  }
+                  else
+                  {
+                     cart_cookie = cartString.substring(0, found-1);
+                  }
+               }
+               else
+               {
+                  if (found > 0)
+                  {
+                     first_part = cartString.substring(0, found-1);
+                     second_part = cartString.substring(slash_at, cartString.length);
+                  }
+                  else
+                  {
+                     first_part = "";
+                     second_part = cartString.substring(slash_at+1, cartString.length);
+                  }
+                  cart_cookie = first_part + second_part;
+               }
+            }
+         }
+      }
+      if (cart_cookie == "")
+      {
+         cart_cookie = 'clear';
+      }
+      SetCookie('cart', cart_cookie, 'Fri, 25-Dec-2020 00:00:00 GMT', 'http://www.netrition.com/', '.netrition.com');
+      return_qty = qty;
+   }
+   else
+   {
+      return_qty = -1;
+   }
+
+   return(return_qty);
+}
+
+function GoToURL(s)
+ { 
+      var d = s.options[s.selectedIndex].value;
+      window.top.location.href = "http://www6.netrition.com/" + d;
+//      s.selectedIndex=0;
+ }
+
+function GoToProduct(s)
+ { 
+      var d = s.options[s.selectedIndex].value;
+      window.top.location.href = "http://www6.netrition.com/cgi/redirect_pid.cgi?pid=" + d;
+//      s.selectedIndex=0;
+ }
+// end script -->
+
+</SCRIPT>
+
+</HEAD>
+<BODY 
+onLoad="MM_preloadImages('http://www.netrition.com/header/header_map_newlo_r1_c3_f2.gif','http://www.netrition.com/header/header_map_newlo_r1_c4_f2.gif','http://www.netrition.com/header/header_map_newlo_r1_c5_f2.gif','http://www.netrition.com/header/header_map_newlo_r1_c6_f2.gif','http://www.netrition.com/header/header_map_newlo_r1_c7_f2.gif');" 
+marginwidth="10" marginheight="0" topmargin="0" leftmargin="10" TEXT="#000000" 
+BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#800080" ALINK="#FF00FF"> 
+<!--ignore_perlfect_search-->
+<A NAME="Top">
+<FONT FACE="Verdana, Arial, Helvetica"  SIZE="-1">
+
+
+<map name="nav_map">
+   <area shape="rect" coords="0,0,175,32" href="http://www26.netrition.com/index.html">
+  <area shape="rect" coords="217,0,337,19" href="http://www26.netrition.com/index.html">
+  <area shape="rect" coords="375,0,408,17" href="http://www26.netrition.com/cgi/add_to_cart.cgi?cart_display=true">
+  <area shape="rect" coords="409,1,471,17" href="http://www26.netrition.com/checkout.html">
+  <area shape="rect" coords="472,1,554,17" href="http://www26.netrition.com/myaccount.html">
+  <area shape="rect" coords="555,1,588,17" href="http://www26.netrition.com/policies.html">
+</map>
+
+<map name="nav_map_new">
+  <area shape="rect" coords="0,0,255,57" href="http://www26.netrition.com/index.html">
+  <area shape="rect" coords="424,26,548,41" href="http://www26.netrition.com/index.html">
+  <area shape="rect" coords="375,0,408,17" href="http://www26.netrition.com/cgi/add_to_cart.cgi?cart_display=true">
+  <area shape="rect" coords="409,1,471,17" href="http://www26.netrition.com/checkout.html">
+  <area shape="rect" coords="472,1,554,17" href="http://www26.netrition.com/myaccount.html">
+  <area shape="rect" coords="555,1,588,17" href="http://www26.netrition.com/policies.html">
+</map>
+
+<TABLE ALIGN="CENTER" BORDER=0 CELLSPACING=0 CELLPADDING=0>
+  <tr>
+    <td rowspan="2" valign="top"><a href="http://www26.netrition.com/"><img src="http://www.netrition.com/header/netrition_logo_header_250.gif" name="header_map_newlo_r1_c1" width="250" height="57" vspace="1" border="0"></a></td>
+    <td rowspan="2" valign="top"><img src="http://www.netrition.com/header/header_map_newlo_r1_c2.gif" name="header_map_newlo_r1_c2"  width="36" height="58" border="0"></td>
+    <td valign="top"><a href="http://www26.netrition.com/" onMouseOut="MM_swapImgRestore();"  onMouseOver="MM_swapImage('header_map_newlo_r1_c3','','http://www.netrition.com/header/header_map_newlo_r1_c3_f2.gif',1);" ><img src="http://www.netrition.com/header/header_map_newlo_r1_c3.gif" name="header_map_newlo_r1_c3" alt="Home Page" width="44" height="31" border="0"></a></td>
+    <td valign="top"><a href="http://www26.netrition.com/cgi/add_to_cart.cgi?cart_display=true" onMouseOut="MM_swapImgRestore();"  onMouseOver="MM_swapImage('header_map_newlo_r1_c4','','http://www.netrition.com/header/header_map_newlo_r1_c4_f2.gif',1);" ><img name="header_map_newlo_r1_c4" src="http://www.netrition.com/header/header_map_newlo_r1_c4.gif" alt="Shopping Cart" width="34" height="31" border="0"></a></td>
+    <td valign="top"><a href="http://www26.netrition.com/checkout.html" onMouseOut="MM_swapImgRestore();"  onMouseOver="MM_swapImage('header_map_newlo_r1_c5','','http://www.netrition.com/header/header_map_newlo_r1_c5_f2.gif',1);" ><img  src="http://www.netrition.com/header/header_map_newlo_r1_c5.gif" name="header_map_newlo_r1_c5" alt="Checkout" width="75" height="31" border="0"></a></td>
+    <td valign="top"><a href="http://www26.netrition.com/myaccount.html" onMouseOut="MM_swapImgRestore();"  onMouseOver="MM_swapImage('header_map_newlo_r1_c6','','http://www.netrition.com/header/header_map_newlo_r1_c6_f2.gif',1);" ><img src="http://www.netrition.com/header/header_map_newlo_r1_c6.gif" name="header_map_newlo_r1_c6" alt="Account Settings" width="95" height="31" border="0"></a></td>
+    <td valign="top"><a href="http://www26.netrition.com/policies.html" onMouseOut="MM_swapImgRestore();"  onMouseOver="MM_swapImage('header_map_newlo_r1_c7','','http://www.netrition.com/header/header_map_newlo_r1_c7_f2.gif',1);" ><img src="http://www.netrition.com/header/header_map_newlo_r1_c7.gif" name="header_map_newlo_r1_c7" alt="Ordering Policies" width="51" height="31" border="0"></a></td>
+    <td valign="top"><img src="http://www.netrition.com/header/shim.gif" width="1" height="31" border="0"></td>
+  </tr>
+
+
+  <tr>
+    <td colspan="5" align="center"><a href="http://www.netrition.com/policies.html#Shipping">
+<img src="http://www.netrition.com/images/FlatShipping48.gif" style="float: inherit; border-width: 0px; margin: 1px; height: 27px; width: 246px;"></A>
+    </td>
+  </tr> 
+</TABLE>
+<!-- start selection lists table -->
+<TABLE ALIGN="CENTER" width="100%" bgcolor="#0099FF" CELLPADDING=0 CELLSPACING=0 BORDER=0 HSPACE=0 VSPACE=0>
+<TR>
+<TD>
+
+<TABLE CLASS="navbar" ALIGN="CENTER" bgcolor="#0099FF" CELLSPACING=0 BORDER=0 HSPACE=0 VSPACE=0>
+
+<TR VALIGN="MIDDLE">
+
+<TD class="navbar"></TD>
+
+
+<TD class="navbar" NOWRAP ALIGN="RIGHT"><FONT SIZE="-1">
+<FORM NAME="Company" ACTION="http://www6.netrition.com/cgi/redirect_pid.cgi" METHOD="POST" STYLE="margin: 0px; padding: 0px;">
+<SELECT NAME="pid" onChange="GoToProduct(this);">
+<OPTION VALUE="http://www.netrition.com/cgi/prices.html">Select a Brand
+<OPTION VALUE="463">4C
+<OPTION VALUE="532">4Ever Fit
+<OPTION VALUE="27">ABB
+<OPTION VALUE="20">Absolute Nutrition
+<OPTION VALUE="123">AccuFitness
+<OPTION VALUE="529">achievONE
+<OPTION VALUE="538">Adrenal Fatigue Institute
+<OPTION VALUE="467">Advanced Muscle Science
+<OPTION VALUE="276">Ageless Foundation Labs
+<OPTION VALUE="402">Al Dente
+<OPTION VALUE="606">ALBA
+<OPTION VALUE="524">All American EFX
+<OPTION VALUE="274">Aloha Nu
+<OPTION VALUE="619">alpha betic
+<OPTION VALUE="601">Alpine Cider
+<OPTION VALUE="273">ALRI
+<OPTION VALUE="389">American Biosciences
+<OPTION VALUE="286">American Health
+<OPTION VALUE="243">Amino Vital
+<OPTION VALUE="474">Anabolic Xtreme
+<OPTION VALUE="194">Andre's Carbo-Save
+<OPTION VALUE="groupset:5726,1010,3502,4483,4252,4693,1009,1008,1007,1006,4158,1005,5705,3501,1004,1001,1000,999,998,3500,997,4806">Animal
+<OPTION VALUE="486">Applied Nutriceuticals
+<OPTION VALUE="542">APS
+<OPTION VALUE="625">Asher's Chocolates
+<OPTION VALUE="73">ASN
+<OPTION VALUE="63">AST
+<OPTION VALUE="498">Athletic Body Care
+<OPTION VALUE="89">Atkins Nutritionals
+<OPTION VALUE="412">Axis Labs
+<OPTION VALUE="177">Baja Bob's
+<OPTION VALUE="586">Bakery on Main
+<OPTION VALUE="54">Balance
+<OPTION VALUE="500">Barlean's
+<OPTION VALUE="528">Baskin Robbins
+<OPTION VALUE="450">Beast Sports Nutrition
+<OPTION VALUE="507">Bell Plantation
+<OPTION VALUE="192">Bella Vita
+<OPTION VALUE="597">Benefit Nutrition
+<OPTION VALUE="477">Beverly International
+<OPTION VALUE="241">Big Train
+<OPTION VALUE="5">Biochem
+<OPTION VALUE="32">Biotest
+<OPTION VALUE="534">Blender Bottle
+<OPTION VALUE="424">Blue Diamond
+<OPTION VALUE="272">BNRG
+<OPTION VALUE="230">Bob's Red Mill
+<OPTION VALUE="626">Body Fx
+<OPTION VALUE="468">Body Well Nutrition
+<OPTION VALUE="607">Boericke & Tafel
+<OPTION VALUE="80">Books
+<OPTION VALUE="566">Bora Bora
+<OPTION VALUE="497">Boundless Nutrition
+<OPTION VALUE="640">BPI Sports
+<OPTION VALUE="544">BPT
+<OPTION VALUE="200">BSN
+<OPTION VALUE="602">Caffe D'Vita
+<OPTION VALUE="147">Carb-BOOM
+<OPTION VALUE="516">CarLO CARBiano
+<OPTION VALUE="514">Carlson
+<OPTION VALUE="565">Celsius
+<OPTION VALUE="50">Champion Nutrition
+<OPTION VALUE="182">Chef Jay's
+<OPTION VALUE="555">CherryPharm
+<OPTION VALUE="570">Cinnergen
+<OPTION VALUE="530">Click
+<OPTION VALUE="56">Clif Bar
+<OPTION VALUE="632">Cloma Pharma
+<OPTION VALUE="633">Colossal Labs
+<OPTION VALUE="470">Comstock
+<OPTION VALUE="598">Con-Cret
+<OPTION VALUE="386">Controlled Labs
+<OPTION VALUE="115">Coromega
+<OPTION VALUE="411">Costas Foods/Muscle Foods
+<OPTION VALUE="553">Country Life
+<OPTION VALUE="251">Cumberland Packing
+<OPTION VALUE="492">Cytogenix
+<OPTION VALUE="8">CytoSport
+<OPTION VALUE="121">Da Vinci
+<OPTION VALUE="599">Deb El
+<OPTION VALUE="305">Desert Essence
+<OPTION VALUE="537">Detour
+<OPTION VALUE="239">Diabetisweet
+<OPTION VALUE="275">Dixie Diner
+<OPTION VALUE="575">Doctor in the Kitchen
+<OPTION VALUE="404">Doctor Kracker
+<OPTION VALUE="624">Dorian Yates Nutrition
+<OPTION VALUE="589">Dr. Bronner
+<OPTION VALUE="181">Dream Tan
+<OPTION VALUE="212">Dreamfields
+<OPTION VALUE="511">DS (Driven Sports)
+<OPTION VALUE="220">Dymatize
+<OPTION VALUE="576">E-Pharm
+<OPTION VALUE="74">EAS
+<OPTION VALUE="564">Eda's
+<OPTION VALUE="240">Eden Foods
+<OPTION VALUE="309">Emerita
+<OPTION VALUE="580">Enzymatic Therapy
+<OPTION VALUE="585">ErgoGenix
+<OPTION VALUE="110">Ergopharm
+<OPTION VALUE="545">Essential pH
+<OPTION VALUE="392">Essiac International
+<OPTION VALUE="105">Expert Foods
+<OPTION VALUE="478">Extend Snacks
+<OPTION VALUE="520">EZ-Sweetz
+<OPTION VALUE="636">Farmers Market Foods
+<OPTION VALUE="494">Fiber Gourmet
+<OPTION VALUE="508">FiberRich
+<OPTION VALUE="521">Fit Foods
+<OPTION VALUE="613">FitNutz
+<OPTION VALUE="185">Fizogen
+<OPTION VALUE="142">Flax-Z-Snax / Naturally Supreme
+<OPTION VALUE="100">Flexsports
+<OPTION VALUE="567">Flexx Appeal
+<OPTION VALUE="82">Flora
+<OPTION VALUE="561">Food For Life
+<OPTION VALUE="581">Forge Nutrition
+<OPTION VALUE="44">FSI Nutrition/Eight Ball Nutrition
+<OPTION VALUE="590">Fullbar
+<OPTION VALUE="611">Galeo's
+<OPTION VALUE="249">Garden of Life
+<OPTION VALUE="270">Gaspari Nutrition
+<OPTION VALUE="612">GE Pharma
+<OPTION VALUE="24">GeniSoy
+<OPTION VALUE="23">German American Technologies
+<OPTION VALUE="246">GG Scandinavian
+<OPTION VALUE="620">Ghirardelli
+<OPTION VALUE="421">Global Sweet
+<OPTION VALUE="533">Glutino
+<OPTION VALUE="444">Go Lightly
+<OPTION VALUE="634">Goliath Labs
+<OPTION VALUE="540">Grace Island Foods
+<OPTION VALUE="600">Grand Brands
+<OPTION VALUE="483">Greens Plus
+<OPTION VALUE="628">Hansen's
+<OPTION VALUE="639">HCG Platinum
+<OPTION VALUE="77">HDT/Wellements
+<OPTION VALUE="58">Health From The Sun
+<OPTION VALUE="317">Health Plus
+<OPTION VALUE="266">Healthsmart
+<OPTION VALUE="318">Healthy N' Fit
+<OPTION VALUE="428">Heinz
+<OPTION VALUE="523">Hero Nutritionals
+<OPTION VALUE="501">Hershey's
+<OPTION VALUE="169">Hi-Tech
+<OPTION VALUE="198">Homestyle Fresh / LC Homestyles
+<OPTION VALUE="621">Hooter's
+<OPTION VALUE="242">Horizon
+<OPTION VALUE="603">I.M. Healthy
+<OPTION VALUE="128">IDS
+<OPTION VALUE="277">iForce Nutrition
+<OPTION VALUE="547">Infinite Labs
+<OPTION VALUE="556">Inner Armour
+<OPTION VALUE="557">Inner Armour - Parisi Approved
+<OPTION VALUE="493">Iovate
+<OPTION VALUE="170">Iron Tek
+<OPTION VALUE="180">iSatori
+<OPTION VALUE="113">ISS Research
+<OPTION VALUE="469">J & M Foods, Inc.
+<OPTION VALUE="623">J&D's
+<OPTION VALUE="415">Jelly Belly
+<OPTION VALUE="430">Jennies
+<OPTION VALUE="11">Jok n Al
+<OPTION VALUE="395">Joseph's Lite Cookies
+<OPTION VALUE="464">Joseph's Middle East Bakery
+<OPTION VALUE="562">Joyva
+<OPTION VALUE="162">Judy's Candy
+<OPTION VALUE="30">Kaizen
+<OPTION VALUE="263">Kay's Naturals
+<OPTION VALUE="503">KC Masterpiece
+<OPTION VALUE="579">KIND Healthy Snacks
+<OPTION VALUE="397">Kitchen Table Bakers
+<OPTION VALUE="281">La Nouba
+<OPTION VALUE="25">La Tortilla
+<OPTION VALUE="86">Labrada
+<OPTION VALUE="399">Larabar
+<OPTION VALUE="490">Lenny & Larry's
+<OPTION VALUE="252">LG Sciences
+<OPTION VALUE="244">LifeSource Foods
+<OPTION VALUE="427">Lite Harvest
+<OPTION VALUE="454">LorAnn Oils
+<OPTION VALUE="401">Low Carb Specialties
+<OPTION VALUE="109">LowCarbolicious
+<OPTION VALUE="426">Lowrey's
+<OPTION VALUE="143">LW Scientific
+<OPTION VALUE="247">MacNut Oil
+<OPTION VALUE="435">MacroLife Naturals
+<OPTION VALUE="563">Mad Hectic Foods
+<OPTION VALUE="595">Madhava Agave
+<OPTION VALUE="171">Mama Lupe's
+<OPTION VALUE="225">MAN
+<OPTION VALUE="256">Maple Grove Farms
+<OPTION VALUE="472">MaraNatha
+<OPTION VALUE="131">McCann's
+<OPTION VALUE="38">MD Labs/Wellements
+<OPTION VALUE="51">MET-Rx
+<OPTION VALUE="29">MHP
+<OPTION VALUE="495">MimicCreme
+<OPTION VALUE="475">Miss Meringue
+<OPTION VALUE="160">Molecular Nutrition
+<OPTION VALUE="447">Monin
+<OPTION VALUE="158">MRI
+<OPTION VALUE="235">MRM
+<OPTION VALUE="605">Mt. Olive
+<OPTION VALUE="465">Muscle Asylum Project
+<OPTION VALUE="629">Muscle Meds
+<OPTION VALUE="577">Muscle Pharm
+<OPTION VALUE="615">Muscle Warfare
+<OPTION VALUE="31">Muscle-Link
+<OPTION VALUE="71">MuscleTech
+<OPTION VALUE="536">Myogenix
+<OPTION VALUE="616">Native Forest
+<OPTION VALUE="69">Natrol
+<OPTION VALUE="68">Naturade
+<OPTION VALUE="6">Naturally
+<OPTION VALUE="48">Nature's Best
+<OPTION VALUE="518">Nature's Hollow
+<OPTION VALUE="64">Nature's Way
+<OPTION VALUE="40">Netrition
+<OPTION VALUE="440">New Hope Mills
+<OPTION VALUE="42">Next Proteins
+<OPTION VALUE="445">Nordic Naturals
+<OPTION VALUE="153">NOW
+<OPTION VALUE="551">NuNaturals
+<OPTION VALUE="250">Nutiva
+<OPTION VALUE="422">Nutrabolics
+<OPTION VALUE="41">Nutraceutics
+<OPTION VALUE="631">NutraFusion Nutritionals
+<OPTION VALUE="202">Nutragenics
+<OPTION VALUE="163">Nutrex
+<OPTION VALUE="535">NutriBreads
+<OPTION VALUE="391">Nutrition Now
+<OPTION VALUE="416">Nutritious Living
+<OPTION VALUE="259">NxCare/NxLabs
+<OPTION VALUE="groupset:2198,3542,3541,5727,4290">Oh Yeah!
+<OPTION VALUE="502">Omega Sports
+<OPTION VALUE="471">OptiMale
+<OPTION VALUE="84">Optimum Nutrition
+<OPTION VALUE="531">Oregon Chai
+<OPTION VALUE="408">Organic Food Bar, Inc
+<OPTION VALUE="76">Ostrim
+<OPTION VALUE="66">Pacific Health
+<OPTION VALUE="442">Palo Alto Labs
+<OPTION VALUE="604">Pappy's
+<OPTION VALUE="21">PBL
+<OPTION VALUE="591">Peak Wellness BioPharma
+<OPTION VALUE="388">Peter Gillham's
+<OPTION VALUE="539">PGN
+<OPTION VALUE="568">PhytoCeutical Formulations
+<OPTION VALUE="61">Power Bar
+<OPTION VALUE="209">PowerButter
+<OPTION VALUE="83">Premier Nutrition
+<OPTION VALUE="234">Primaforce
+<OPTION VALUE="59">Pro Tan
+<OPTION VALUE="140">ProFibe
+<OPTION VALUE="87">Prolab
+<OPTION VALUE="187">Promax
+<OPTION VALUE="583">Protein Plus
+<OPTION VALUE="2">Pumpkorn
+<OPTION VALUE="608">Pure Bar
+<OPTION VALUE="546">Pure Fit
+<OPTION VALUE="622">Purus Labs
+<OPTION VALUE="458">PVL
+<OPTION VALUE="268">R.W. Garcia
+<OPTION VALUE="132">Rault Foods
+<OPTION VALUE="543">ReserveAge Organics
+<OPTION VALUE="549">Rigid-Rx
+<OPTION VALUE="403">Ross Chocolates
+<OPTION VALUE="407">Russell Stover
+<OPTION VALUE="167">SAN
+<OPTION VALUE="441">Sans Sucre
+<OPTION VALUE="368">Sci-Fit
+<OPTION VALUE="210">Scivation
+<OPTION VALUE="627">SDC Nutrition
+<OPTION VALUE="512">Seal Sama
+<OPTION VALUE="550">Seapoint Farms
+<OPTION VALUE="505">Sensato
+<OPTION VALUE="526">Sequoia Fitness
+<OPTION VALUE="473">Sera-Pharma
+<OPTION VALUE="280">SGN Nutrition
+<OPTION VALUE="592">Smokin' Joe Jones
+<OPTION VALUE="245">SnacLite
+<OPTION VALUE="168">SNI
+<OPTION VALUE="37">Sopharma
+<OPTION VALUE="231">Source Naturals
+<OPTION VALUE="19">Specialty Cheese
+<OPTION VALUE="449">Spectrum
+<OPTION VALUE="136">Splenda
+<OPTION VALUE="45">SportPharma
+<OPTION VALUE="79">Sports One
+<OPTION VALUE="134">Steel's Gourmet
+<OPTION VALUE="446">Stevita
+<OPTION VALUE="584">Sun Crystals
+<OPTION VALUE="560">Sun Warrior
+<OPTION VALUE="573">SunButter
+<OPTION VALUE="479">Supreme Protein
+<OPTION VALUE="248">SweetLeaf
+<OPTION VALUE="13">Symbiotics
+<OPTION VALUE="39">Syntrax
+<OPTION VALUE="578">Tang
+<OPTION VALUE="466">Tastykake
+<OPTION VALUE="510">TeaTech
+<OPTION VALUE="558">Teeccino
+<OPTION VALUE="574">The Super Juice Bottling Company
+<OPTION VALUE="371">Think!
+<OPTION VALUE="582">Tinkyada
+<OPTION VALUE="525">To Go Brands
+<OPTION VALUE="443">Toufayan Bakeries
+<OPTION VALUE="219">Tova
+<OPTION VALUE="489">Trionix
+<OPTION VALUE="519">Truvia
+<OPTION VALUE="groupset:452">Turbo Shaker
+<OPTION VALUE="46">Twinlab
+<OPTION VALUE="47">Ultimate Nutrition
+<OPTION VALUE="418">UltraLab
+<OPTION VALUE="587">Uncle Sam
+<OPTION VALUE="52">Universal Nutrition
+<OPTION VALUE="504">USP Labs
+<OPTION VALUE="455">Valeo
+<OPTION VALUE="572">Vermont Peanut Butter
+<OPTION VALUE="101">Videos
+<OPTION VALUE="460">Viridis Laboratories
+<OPTION VALUE="571">Vitalicious
+<OPTION VALUE="419">Vitol
+<OPTION VALUE="14">VPX
+<OPTION VALUE="394">Walden Farms
+<OPTION VALUE="554">Weil Nutritionals
+<OPTION VALUE="453">WestSoy
+<OPTION VALUE="67">Worldwide Sport
+<OPTION VALUE="559">Xero Limits
+<OPTION VALUE="271">Xyience
+<OPTION VALUE="541">Youth Addict
+<OPTION VALUE="596">Zevia
+<OPTION VALUE="499">Zilch
+<OPTION VALUE="55">ZonePerfect
+<OPTION VALUE="593">ZSweet
+</SELECT>
+<INPUT TYPE=SUBMIT VALUE="Go"></FORM></FONT></TD>
+
+<TD class="navbar" WIDTH=10></TD>
+
+<TD class="navbar" NOWRAP ALIGN="CENTER">
+<FORM NAME="Product" ACTION="http://www6.netrition.com/cgi/redirect_pid.cgi" METHOD="POST" STYLE="margin: 0px; padding: 0px;">
+<FONT SIZE="-1">
+<SELECT NAME="pid" onChange="GoToProduct(this);">
+<OPTION VALUE="cat:">Select a Product Category
+<OPTION VALUE="cat:">Browse All Categories
+<OPTION VALUE="cat:ZONE">40-30-30 Zone Diet
+<OPTION VALUE="cat:5HTP">5-HTP
+<OPTION VALUE="cat:7KEDH">7-KETO DHEA
+<OPTION VALUE="cat:ACAI">Acai
+<OPTION VALUE="cat:ALC">Acetyl L-Carnitine
+<OPTION VALUE="cat:ADREN">Adrenal Support
+<OPTION VALUE="cat:AGAV">Agave Nectar
+<OPTION VALUE="cat:ALA">Alpha Lipoic Acid
+<OPTION VALUE="cat:AMI">Amino Acids
+<OPTION VALUE="cat:AMGN">Aminogen
+<OPTION VALUE="cat:AND">Androgenic Product
+<OPTION VALUE="cat:ANTIA">Anti-Aging
+<OPTION VALUE="cat:ANTIE">Anti-Estrogen
+<OPTION VALUE="cat:ANTI">Antioxidants
+<OPTION VALUE="cat:CLO">Apparel
+<OPTION VALUE="cat:APP">Appetite Suppressant
+<OPTION VALUE="cat:ARGI">Arginine
+<OPTION VALUE="cat:AROM">Aromatherapy
+<OPTION VALUE="cat:BAKE">Baking Products
+<OPTION VALUE="cat:BARI">Bariatric Approved
+<OPTION VALUE="cat:BAR">Bars
+<OPTION VALUE="cat:BETAL">Beta-Alanine
+<OPTION VALUE="cat:BEV">Beverages
+<OPTION VALUE="cat:BONE">Bone Health
+<OPTION VALUE="cat:BOOK">Books
+<OPTION VALUE="cat:SMART">Brain and Memory
+<OPTION VALUE="cat:BCAA">Branched Chain Amino Acids
+<OPTION VALUE="cat:BRED">Bread Products
+<OPTION VALUE="cat:BFAST">Breakfast Foods
+<OPTION VALUE="cat:BREAST">Breast Health
+<OPTION VALUE="cat:CAFF">Caffeine
+<OPTION VALUE="cat:CALC">Calcium
+<OPTION VALUE="cat:CBLOC">Carbohydrate Blocker
+<OPTION VALUE="cat:CARB">Carbohydrate Powders and Gels
+<OPTION VALUE="cat:CAROT">Carotenoids (Lutein, Lycopene, etc.)
+<OPTION VALUE="cat:CERL">Cereal
+<OPTION VALUE="cat:CHIT">Chitosan
+<OPTION VALUE="cat:CHOC">Chocolate and Candy
+<OPTION VALUE="cat:CHOL">Cholesterol Support
+<OPTION VALUE="cat:CHON">Chondroitin
+<OPTION VALUE="cat:CHROM">Chromium
+<OPTION VALUE="cat:CITR">Citrulline Malate
+<OPTION VALUE="cat:CITA">Citrus Aurantium (Bitter Orange)
+<OPTION VALUE="cat:CLA">CLA
+<OPTION VALUE="cat:COQ10">Co-enzyme Q10
+<OPTION VALUE="cat:COCO">Coconut Products (Oil, Flour, etc.)
+<OPTION VALUE="cat:COND">Condiments
+<OPTION VALUE="cat:CRE">Creatine
+<OPTION VALUE="cat:DETX">Detoxification/Cleansing
+<OPTION VALUE="cat:DHEA">DHEA
+<OPTION VALUE="cat:DIET">Diet and Weight Loss
+<OPTION VALUE="cat:DIGE">Digestion/Enzymes
+<OPTION VALUE="cat:DIUR">Diuretics
+<OPTION VALUE="cat:DMAE">DMAE
+<OPTION VALUE="cat:ECDY">Ecdysterone
+<OPTION VALUE="cat:ECHI">Echinacea
+<OPTION VALUE="cat:ENER">Energy/Pre-Workout
+<OPTION VALUE="cat:ERYT">Erythritol
+<OPTION VALUE="cat:LONG">Eurycoma Longifolia
+<OPTION VALUE="cat:EYE">Eye/Vision Health
+<OPTION VALUE="cat:FATB">Fat Burning
+<OPTION VALUE="cat:FIBR">Fiber
+<OPTION VALUE="cat:FISH">Fish Oil (Omega-3)
+<OPTION VALUE="cat:FITN">Fitness Accessories
+<OPTION VALUE="cat:FLAV">Flavorings
+<OPTION VALUE="cat:FLAX">Flax
+<OPTION VALUE="cat:GABA">GABA
+<OPTION VALUE="cat:GRLC">Garlic
+<OPTION VALUE="cat:GNKO">Ginkgo Biloba
+<OPTION VALUE="cat:GNSG">Ginseng
+<OPTION VALUE="cat:GLUC">Glucosamine
+<OPTION VALUE="cat:GLU">Glutamine
+<OPTION VALUE="http://www.netrition.com/cgi/gluten_free_products_page.html">Gluten Free
+<OPTION VALUE="cat:GREEN">Green Foods/Super Foods
+<OPTION VALUE="cat:GTEA">Green Tea
+<OPTION VALUE="cat:HGH">Growth Hormone Booster
+<OPTION VALUE="cat:GUAR">Guarana
+<OPTION VALUE="cat:GUG">Gugglesterones
+<OPTION VALUE="cat:HAIR">Hair, Skin, Nails
+<OPTION VALUE="cat:COSM">Health and Beauty
+<OPTION VALUE="cat:HEART">Heart Health
+<OPTION VALUE="cat:HERB">Herbs
+<OPTION VALUE="cat:HMB">HMB
+<OPTION VALUE="cat:HOME">Homeopathic
+<OPTION VALUE="cat:HOOD">Hoodia
+<OPTION VALUE="cat:HOR">Hormones
+<OPTION VALUE="cat:HGW">Horny Goat Weed
+<OPTION VALUE="cat:FORT">Humanofort
+<OPTION VALUE="cat:IMM">Immune System Support
+<OPTION VALUE="cat:INFL">Inflammation
+<OPTION VALUE="cat:IRON">Iron
+<OPTION VALUE="cat:JOI">Joint Support
+<OPTION VALUE="cat:KETON">Ketone Test Strips
+<OPTION VALUE="cat:KOSH">Kosher
+<OPTION VALUE="cat:KRILL">Krill Oil
+<OPTION VALUE="cat:CARN">L-Carnitine
+<OPTION VALUE="cat:LEUC">Leucine
+<OPTION VALUE="cat:LIVER">Liver Health
+<OPTION VALUE="http://www.netrition.com/cgi/low_carb_products_page.html">Low Carbohydrate
+<OPTION VALUE="cat:LUTE">Lutein
+<OPTION VALUE="cat:LYCO">Lycopene
+<OPTION VALUE="cat:LYSN">Lysine
+<OPTION VALUE="cat:MACA">Maca
+<OPTION VALUE="cat:MAC">Macadamia Products
+<OPTION VALUE="cat:MAGN">Magnesium
+<OPTION VALUE="cat:MCT">MCT
+<OPTION VALUE="cat:MRP">Meal Replacement
+<OPTION VALUE="cat:MELA">Melatonin
+<OPTION VALUE="cat:METH">Methoxyflavone
+<OPTION VALUE="cat:MIN">Minerals
+<OPTION VALUE="cat:MSM">MSM
+<OPTION VALUE="cat:MUFF">Muffins
+<OPTION VALUE="cat:MUL">Multi-vitamins
+<OPTION VALUE="cat:MUSC">Muscle Builders
+<OPTION VALUE="cat:MYOS">Myostatin Inhibitors
+<OPTION VALUE="cat:NAC">N-Acetyl-Cysteine
+<OPTION VALUE="cat:NEURO">Neurotransmitter Support
+<OPTION VALUE="cat:NITRO">Nitric Oxide Support
+<OPTION VALUE="cat:OAT">Oatmeal
+<OPTION VALUE="cat:OILS">Oils/EFAs
+<OPTION VALUE="cat:ORG">Organic
+<OPTION VALUE="cat:PCAK">Pancakes
+<OPTION VALUE="cat:PASTA">Pasta
+<OPTION VALUE="cat:PS">Phosphatidyl Serine
+<OPTION VALUE="cat:PITA">Pita
+<OPTION VALUE="cat:POST">Post Workout Muscle Recovery
+<OPTION VALUE="cat:POTA">Potassium
+<OPTION VALUE="cat:PROB">Probiotics
+<OPTION VALUE="cat:PROS">Prostate Health
+<OPTION VALUE="cat:PRO">Protein (Bars/Powder/MRP/RTD)
+<OPTION VALUE="cat:PBLND">Protein - Blend
+<OPTION VALUE="cat:CASE">Protein - Casein (Milk)
+<OPTION VALUE="cat:EGG">Protein - Egg
+<OPTION VALUE="cat:PROO">Protein - Other
+<OPTION VALUE="cat:SOYP">Protein - Soy
+<OPTION VALUE="cat:CONC">Protein - Whey Concentrate
+<OPTION VALUE="cat:ISO">Protein - Whey Isolate
+<OPTION VALUE="cat:PYRU">Pyruvate
+<OPTION VALUE="cat:QUER">Quercetin
+<OPTION VALUE="cat:RTD">Ready To Drink
+<OPTION VALUE="cat:MEAL">Ready-To-Eat Meals
+<OPTION VALUE="cat:RELAX">Relaxation
+<OPTION VALUE="cat:RESV">Resveratrol
+<OPTION VALUE="cat:RHORO">Rhodiola Rosea
+<OPTION VALUE="cat:RIBS">Ribose
+<OPTION VALUE="cat:SAME">SAM-e (S-Adenosyl-Methionine)
+<OPTION VALUE="cat:SAWP">Saw Palmetto
+<OPTION VALUE="cat:SELE">Selenium
+<OPTION VALUE="cat:SEXH">Sexual Health
+<OPTION VALUE="cat:SHKR">Shaker Bottles
+<OPTION VALUE="cat:SLP">Sleep Aid
+<OPTION VALUE="cat:SNACK">Snack Products
+<OPTION VALUE="cat:DRINK">Soft Drinks (Ready-to-Drink and Mixes)
+<OPTION VALUE="cat:SOY">Soy Products
+<OPTION VALUE="cat:STJ">St. Johns Wort
+<OPTION VALUE="cat:STEV">Stevia
+<OPTION VALUE="cat:SUCR">Sucralose (Splenda)
+<OPTION VALUE="cat:SALC">Sugar Alcohol (Polyol)
+<OPTION VALUE="cat:SWEET">Sweeteners
+<OPTION VALUE="cat:SYR">Syrups
+<OPTION VALUE="cat:TAN">Tanning
+<OPTION VALUE="cat:TAUR">Taurine
+<OPTION VALUE="cat:TEA">Tea/Coffee
+<OPTION VALUE="cat:TESTB">Testosterone Boosters
+<OPTION VALUE="cat:THYR">Thyroid Boosters
+<OPTION VALUE="cat:TOP">Topical
+<OPTION VALUE="cat:TORT">Tortilla Wraps
+<OPTION VALUE="cat:TRIB">Tribulus Terrestris
+<OPTION VALUE="cat:TYRO">Tyrosine
+<OPTION VALUE="cat:VAN">Vanadyl Sulfate
+<OPTION VALUE="cat:VID">Videos
+<OPTION VALUE="cat:VITA">Vitamin A
+<OPTION VALUE="cat:VITB">Vitamin B
+<OPTION VALUE="cat:VITC">Vitamin C
+<OPTION VALUE="cat:VITD">Vitamin D
+<OPTION VALUE="cat:VITE">Vitamin E
+<OPTION VALUE="cat:VIT">Vitamins
+<OPTION VALUE="cat:GAIN">Weight Gainer
+<OPTION VALUE="cat:XYL">Xylitol
+<OPTION VALUE="cat:YOHM">Yohimbe
+<OPTION VALUE="cat:ZINC">Zinc
+<OPTION VALUE="cat:ZMA">ZMA
+</SELECT>
+<INPUT TYPE=SUBMIT VALUE="Go"></FONT></FORM></TD>
+
+<TD class="navbar" WIDTH=10></TD>
+
+<TD class="navbar" NOWRAP ALIGN="LEFT">
+<FORM METHOD="post" ACTION="http://www6.netrition.com/cgi/advanced_search.cgi" STYLE="margin: 0px; padding: 0px;">
+<INPUT TYPE="text" NAME="part_product_name" SIZE=15>
+<INPUT TYPE="hidden" NAME="primary_search_button" VALUE="true">
+<INPUT TYPE="submit" VALUE="Search">
+</FORM>
+</TD>
+
+<TD></TD>
+
+
+</TR></TABLE>
+
+
+
+</TD></TR></TABLE>
+
+
+<!-- Start Body Table -->
+
+<TABLE WIDTH="100%" style="table-layout:fixed;">
+<TR>
+
+
+<!-- Start Left Column -->
+<TD width="175" VALIGN="TOP">
+
+<table width="100%" ALIGN=LEFT cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+<tr>
+ <td><table width="100%" cellspacing=0 cellpadding=3 border=0 bgcolor="#FFFFFF">
+
+<tr>
+<td>
+
+<B class="h4color">Popular Categories</B><BR>
+
+<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/product_categories_display.cgi'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/product_categories_display.cgi" TARGET="_top" class="highlight"><B>All Categories</B></a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/low_carb_products_page.html'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/low_carb_products_page.html" TARGET="_top" class="highlight">Low Carb Products</a></td>
+</TR>
+
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/gluten_free_products_page.html'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/gluten_free_products_page.html" TARGET="_top" class="highlight">Gluten Free Products</a></td>
+</TR>
+
+
+<TR>
+<!-- bars_page.html -->
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/product_categories_display.cgi?categories=BAR'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/product_categories_display.cgi?categories=BAR" TARGET="_top" class="highlight">Nutrition Bars</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/product_categories_display.cgi?categories=PRO'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/product_categories_display.cgi?categories=PRO" TARGET="_top" class="highlight">Protein</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/product_categories_display.cgi?categories=MUSC'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/product_categories_display.cgi?categories=MUSC" TARGET="_top" class="highlight">Muscle Builders</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/product_categories_display.cgi?categories=DIET'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/product_categories_display.cgi?categories=DIET" TARGET="_top" class="highlight">Diet and Weight Loss</a></td>
+</TR>
+<!--
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/lowfat_mrp_page.html'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/lowfat_mrp_page.html" TARGET="_top" class="highlight">Drink Mixes</a></td>
+</TR>
+-->
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/product_categories_display.cgi?categories=VIT'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/product_categories_display.cgi?categories=VIT" TARGET="_top" class="highlight">Vitamins</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/product_categories_display.cgi?categories=MIN'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/product_categories_display.cgi?categories=MIN" TARGET="_top" class="highlight">Minerals</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/product_categories_display.cgi?categories=HERB'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/product_categories_display.cgi?categories=HERB" TARGET="_top" class="highlight">Herbs</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/specials.html'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/specials.html" TARGET="_top" class="highlight">Sale Items!</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/clearance_display.cgi'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/clearance_display.cgi" TARGET="_top" class="highlight">Clearance Sale!</a></td>
+</TR>
+<!--
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/product_categories_display.cgi'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/product_categories_display.cgi" TARGET="_top" class="highlight">More...</a></td>
+</TR>
+-->
+<TR>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/product_search.cgi'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/product_search.cgi" TARGET="_top" class="highlight">Product Analyzer</a></td>
+</TR>
+</TABLE>
+
+ 
+<P>
+
+
+<B class="h4color">Popular Brands</B><BR>
+
+
+<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/prices.html'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/prices.html" TARGET="_top" class="highlight"><B>All Brands</B></a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/prices.cgi?manu_id=89'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/prices.cgi?manu_id=89" TARGET="_top" class="highlight">Atkins</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/prices.cgi?manu_id=200'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/prices.cgi?manu_id=200" TARGET="_top" class="highlight">BSN</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/prices.cgi?manu_id=74'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/prices.cgi?manu_id=74" TARGET="_top" class="highlight">EAS</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/prices.cgi?manu_id=71'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/prices.cgi?manu_id=71" TARGET="_top" class="highlight">MuscleTech</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/prices.cgi?manu_id=153'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/prices.cgi?manu_id=153" TARGET="_top" class="highlight">NOW</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/prices.cgi?manu_id=84'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/prices.cgi?manu_id=84" TARGET="_top" class="highlight">Optimum Nutrition</a></td>
+</TR>
+
+</TABLE>
+
+<P>
+
+<B class="h4color">Information</B><BR>
+
+<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/advanced_search.cgi'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/advanced_search.cgi" TARGET="_top" class="highlight"><B>New Customer Help</B></a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www.lowcarbfriends.com/bbs/'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www.lowcarbfriends.com/bbs/" TARGET="_top" class="highlight">Message Boards</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/healthnotes.html'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/healthnotes.html" TARGET="_top" class="highlight">HealthNotes</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/news.cgi'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/news.cgi" TARGET="_top" class="highlight">Health News</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cgi/foods.cgi'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cgi/foods.cgi" TARGET="_top" class="highlight">Food Nutrients</a></td>
+</TR>
+</TABLE>
+
+<P>
+
+<B class="h4color">Ordering</B><BR>
+
+<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/myaccount.html'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/myaccount.html" TARGET="_top" class="highlight">My Account</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/cart.html'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/cart.html" TARGET="_top" class="highlight">Shopping Cart</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/checkout.html'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/checkout.html" TARGET="_top" class="highlight">Checkout</a></td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/policies.html'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/policies.html" TARGET="_top" class="highlight">Policies</a></td>
+</TR>
+<TR>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<td onmouseover="this.bgColor='E5E5E5';" 
+    onclick="self.location='http://www6.netrition.com/contact.html'" 
+    onmouseout="this.bgColor='ffffff';" 
+class="highlight">&#149;&nbsp;<a href="http://www6.netrition.com/contact.html" TARGET="_top" class="highlight">Contact Us</a></td>
+</TR>
+</TABLE> 
+
+<BR>
+<TABLE width="100%" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+<a href="http://www.facebook.com/pages/Netritioncom/210889832433?ref=mf" TARGET="_blank">
+<img src="http://www.netrition.com/images/facebook_small.jpg" width="40" height="40" alt="Join Netrition on Facebook!" style="border-style: solid; border-width: 0px; margin: 0px 2px; height: 40px; width: 40px; float: left;">
+<b>Join us on Facebook!</b></a>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+<TABLE width="100%">
+<TR>
+<TD align="center">
+<a target="_blank" href="http://www.bbbonline.org/cks.asp?id=108010894234"><img 
+src="http://www.netrition.com/images/bbbseal1.gif" WIDTH="53" HEIGHT="84"
+border=0  
+title="Click to verify BBB accreditation and to see a BBB report." 
+alt="Click to verify BBB accreditation and to see a BBB report."
+oncontextmenu="alert('Use without permission is prohibited. The BBB Accredited Business seal is a trademark of the Council of Better Business Bureaus, Inc.'); return false;" /></a>
+</TD>
+</TR>
+</TABLE>
+
+
+</td>
+ </tr>
+
+
+ </table>
+
+</td></tr>
+</table>
+
+
+</TD>
+<!-- End Left Column -->
+
+
+<!-- Spacer column -->
+<TD width="6"></TD>
+
+
+<!-- Start Body Column -->
+<TD VALIGN="TOP">
+<DIV style="width: 100%; overflow: auto;">
+<FONT face="Verdana, Arial, Helvetica" SIZE="-1">
+<BR>
+
+
+
+
+
+
+<!--/ignore_perlfect_search-->
+<!--END_NETRITION_HEADER-->
+<A HREF="http://www.netrition.com/healthnotes.html"><IMG SRC="http://images.netrition.com/images/healthnotes.gif" ALT="Health Information" WIDTH=250 HEIGHT=31 BORDER=0></A>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<TR><TD VALIGN="top" COLSPAN=4>
+<TABLE BORDER=0 ALIGN="LEFT" CELLSPACING=0 CELLPADDING=8>
+<TR><TD VALIGN="top" NOWRAP>
+<P CLASS="Condition-Summary-Heading">Indexes: </P>
+<FORM METHOD="post" NAME="form1" ACTION="http://www.netrition.com/cgi/hn_index.cgi">
+<SELECT NAME="ContentID" SIZE=1 QUERY="index" DISPLAY="title">
+<OPTION selected>Select an Index</OPTION>
+<OPTION VALUE="2392008">Appetizer Recipes</OPTION>
+<OPTION VALUE="2393003">Asian Recipes</OPTION>
+<OPTION VALUE="4070001">Bacon Recipes</OPTION>
+<OPTION VALUE="2395005">Basic Recipes</OPTION>
+<OPTION VALUE="4034004">Beef Brisket Recipes</OPTION>
+<OPTION VALUE="4036002">Beef Ribs Recipes</OPTION>
+<OPTION VALUE="4037006">Beef Round Roast Recipes</OPTION>
+<OPTION VALUE="4038001">Beef Stir-Fry Recipes</OPTION>
+<OPTION VALUE="4039009">Beef Tenderloin Roast Recipes</OPTION>
+<OPTION VALUE="4040006">Beef Tri-Tip Roast Recipes</OPTION>
+<OPTION VALUE="2397002">Beverage Recipes</OPTION>
+<OPTION VALUE="2398007">Bread Recipes</OPTION>
+<OPTION VALUE="2399004">Breakfast Recipes</OPTION>
+<OPTION VALUE="4052004">Catfish Recipes</OPTION>
+<OPTION VALUE="4041005">Chuck Roast Recipes</OPTION>
+<OPTION VALUE="4077003">Clams Recipes</OPTION>
+<OPTION VALUE="4053009">Cod Recipes</OPTION>
+<OPTION VALUE="2409007">Cooking with the Diabetic Chef Recipes</OPTION>
+<OPTION VALUE="2404002">Corn-Free Recipes</OPTION>
+<OPTION VALUE="4078008">Crab Recipes</OPTION>
+<OPTION VALUE="2406000">Dairy-Free Recipes</OPTION>
+<OPTION VALUE="4713000">Del Monte Recipes</OPTION>
+<OPTION VALUE="2407009">Delicious Living Magazine Recipes</OPTION>
+<OPTION VALUE="2408004">Dessert Recipes</OPTION>
+<OPTION VALUE="4412009">Diet &amp; Fitness</OPTION>
+<OPTION VALUE="2413000">Easy Recipes</OPTION>
+<OPTION VALUE="2414006">Egg-Free Recipes</OPTION>
+<OPTION VALUE="2415007">Fall Recipes</OPTION>
+<OPTION VALUE="4042003">Flank Steak Recipes</OPTION>
+<OPTION VALUE="4054003">Flounder Recipes</OPTION>
+<OPTION VALUE="2418009">Food Guide</OPTION>
+<OPTION VALUE="5205006">Gluten-Free Recipes</OPTION>
+<OPTION VALUE="4043008">Ground Beef Recipes</OPTION>
+<OPTION VALUE="4071002">Ground Pork Recipes</OPTION>
+<OPTION VALUE="4055002">Halibut Recipes</OPTION>
+<OPTION VALUE="4072009">Ham Recipes</OPTION>
+<OPTION VALUE="2402003">Health Conditions</OPTION>
+<OPTION VALUE="2391001">Healthnotes Indexes</OPTION>
+<OPTION VALUE="4414005">Healthy Lifestyle</OPTION>
+<OPTION VALUE="4600004">Heart-Healthy Recipes</OPTION>
+<OPTION VALUE="2420007">Herbal Remedies</OPTION>
+<OPTION VALUE="3262009">Herbal Remedies by Botanical Name</OPTION>
+<OPTION VALUE="2423009">High Fiber Recipes</OPTION>
+<OPTION VALUE="2424003">Holiday and Festive Recipes</OPTION>
+<OPTION VALUE="2426001">Homeopathic Remedies</OPTION>
+<OPTION VALUE="2425002">Homeopathy</OPTION>
+<OPTION VALUE="4714006">Horizon Organic Recipes</OPTION>
+<OPTION VALUE="2428000">Indian Recipes</OPTION>
+<OPTION VALUE="2431004">Italian Recipes</OPTION>
+<OPTION VALUE="4601000">Kid-Friendly Recipes</OPTION>
+<OPTION VALUE="4030008">Low-Carb Recipes</OPTION>
+<OPTION VALUE="2434007">Low-Fat and Fast Recipes</OPTION>
+<OPTION VALUE="2433001">Low-Fat Recipes</OPTION>
+<OPTION VALUE="2432006">Low-Sodium Recipes</OPTION>
+<OPTION VALUE="4602007">Low-Sugar Recipes</OPTION>
+<OPTION VALUE="4056001">Mahi Mahi Recipes</OPTION>
+<OPTION VALUE="2435008">Main Dish Recipes</OPTION>
+<OPTION VALUE="2411003">Medicine Interactions - Using Medicines with Vitamins and Herbs</OPTION>
+<OPTION VALUE="2421006">Medicine Interactions by Herbal Remedy</OPTION>
+<OPTION VALUE="2462000">Medicine Interactions by Nutritional Supplement</OPTION>
+<OPTION VALUE="2437000">Mediterranean Recipes</OPTION>
+<OPTION VALUE="2439002">Mexican Recipes</OPTION>
+<OPTION VALUE="2440000">Middle Eastern Recipes</OPTION>
+<OPTION VALUE="4057005">Monkfish Recipes</OPTION>
+<OPTION VALUE="4080002">Mussels Recipes</OPTION>
+<OPTION VALUE="4089001">National Cattleman&#8217;s Beef Association Recipes</OPTION>
+<OPTION VALUE="4711003">National Chicken Council Recipes</OPTION>
+<OPTION VALUE="4088009">National Fisheries Institute Recipes</OPTION>
+<OPTION VALUE="4090005">National Pork Board Recipes</OPTION>
+<OPTION VALUE="2441001">Nutrition Booster Recipes</OPTION>
+<OPTION VALUE="4058000">Orange Roughy Recipes</OPTION>
+<OPTION VALUE="4081003">Oysters Recipes</OPTION>
+<OPTION VALUE="2444009">Popular Recipes</OPTION>
+<OPTION VALUE="4073004">Pork Chops Recipes</OPTION>
+<OPTION VALUE="4074005">Pork Cutlets Recipes</OPTION>
+<OPTION VALUE="4075006">Pork Ribs Recipes</OPTION>
+<OPTION VALUE="4076007">Pork Roast Recipes</OPTION>
+<OPTION VALUE="2445005">Potluck Recipes</OPTION>
+<OPTION VALUE="4082005">Prawns Recipes</OPTION>
+<OPTION VALUE="2416008">Quick &amp; Easy Recipes</OPTION>
+<OPTION VALUE="4715007">R.W. Knudsen Recipes</OPTION>
+<OPTION VALUE="2446006">Recipe Search</OPTION>
+<OPTION VALUE="2429008">Recipes by Main Ingredient</OPTION>
+<OPTION VALUE="5122003">Recipes from 12 Best Foods Cookbook</OPTION>
+<OPTION VALUE="5123008">Recipes from Canyon Ranch Cooks</OPTION>
+<OPTION VALUE="4742008">Recipes from Eat, Drink, and Weigh Less</OPTION>
+<OPTION VALUE="5124002">Recipes from Fit and Fast Meals in Minutes</OPTION>
+<OPTION VALUE="5125001">Recipes from In Great Taste</OPTION>
+<OPTION VALUE="4744009">Recipes from Rotisserie Chickens to the Rescue</OPTION>
+<OPTION VALUE="5121005">Recipes from The Balanced Plate</OPTION>
+<OPTION VALUE="4741001">Recipes from The Daily Soup Cookbook</OPTION>
+<OPTION VALUE="4743003">Recipes from The Pump Energy Food Cookbook</OPTION>
+<OPTION VALUE="5126000">Recipes from The Sugar Solution Cookbook</OPTION>
+<OPTION VALUE="3663005">Recipes with Apples</OPTION>
+<OPTION VALUE="3664004">Recipes with Apricots</OPTION>
+<OPTION VALUE="3665003">Recipes with Artichoke</OPTION>
+<OPTION VALUE="3666002">Recipes with Asparagus</OPTION>
+<OPTION VALUE="3667006">Recipes with Bananas</OPTION>
+<OPTION VALUE="3668001">Recipes with Beans and Grains</OPTION>
+<OPTION VALUE="3669009">Recipes with Beef</OPTION>
+<OPTION VALUE="3670005">Recipes with Beets</OPTION>
+<OPTION VALUE="3671009">Recipes with Berries</OPTION>
+<OPTION VALUE="3672002">Recipes with Broccoli</OPTION>
+<OPTION VALUE="3673007">Recipes with Cabbage</OPTION>
+<OPTION VALUE="3674001">Recipes with Carrots</OPTION>
+<OPTION VALUE="3675000">Recipes with Cauliflower</OPTION>
+<OPTION VALUE="3676004">Recipes with Celery</OPTION>
+<OPTION VALUE="3677008">Recipes with Cheese</OPTION>
+<OPTION VALUE="3678003">Recipes with Cheese Alternatives</OPTION>
+<OPTION VALUE="3679006">Recipes with Cherries</OPTION>
+<OPTION VALUE="3680009">Recipes with Chile Peppers</OPTION>
+<OPTION VALUE="3681008">Recipes with Chocolate</OPTION>
+<OPTION VALUE="3682001">Recipes with Citrus</OPTION>
+<OPTION VALUE="3683006">Recipes with Coconut</OPTION>
+<OPTION VALUE="3684000">Recipes with Corn</OPTION>
+<OPTION VALUE="3685004">Recipes with Cucumbers</OPTION>
+<OPTION VALUE="3686003">Recipes with Dairy Foods</OPTION>
+<OPTION VALUE="3687007">Recipes with Eggplant</OPTION>
+<OPTION VALUE="3688002">Recipes with Eggs</OPTION>
+<OPTION VALUE="3689005">Recipes with Fish</OPTION>
+<OPTION VALUE="3690001">Recipes with Fruit</OPTION>
+<OPTION VALUE="3691002">Recipes with Garlic</OPTION>
+<OPTION VALUE="3692009">Recipes with Grains</OPTION>
+<OPTION VALUE="3693004">Recipes with Greens</OPTION>
+<OPTION VALUE="3694005">Recipes with Herbs</OPTION>
+<OPTION VALUE="3695006">Recipes with Lamb and Mutton</OPTION>
+<OPTION VALUE="3696007">Recipes with Leeks</OPTION>
+<OPTION VALUE="3697003">Recipes with Lentils</OPTION>
+<OPTION VALUE="3698008">Recipes with Lettuce</OPTION>
+<OPTION VALUE="3699000">Recipes with Mushrooms</OPTION>
+<OPTION VALUE="3700004">Recipes with Natural Sweeteners</OPTION>
+<OPTION VALUE="3701000">Recipes with Nut Butters</OPTION>
+<OPTION VALUE="3702007">Recipes with Nuts and Seeds</OPTION>
+<OPTION VALUE="3703002">Recipes with Olives</OPTION>
+<OPTION VALUE="3704008">Recipes with Onions</OPTION>
+<OPTION VALUE="2442008">Recipes with Pasta</OPTION>
+<OPTION VALUE="3705009">Recipes with Pears</OPTION>
+<OPTION VALUE="3706005">Recipes with Peas</OPTION>
+<OPTION VALUE="3707001">Recipes with Pork</OPTION>
+<OPTION VALUE="3708006">Recipes with Potatoes</OPTION>
+<OPTION VALUE="3709003">Recipes with Poultry</OPTION>
+<OPTION VALUE="3711007">Recipes with Raisins</OPTION>
+<OPTION VALUE="3712000">Recipes with Rice</OPTION>
+<OPTION VALUE="3714004">Recipes with Sausage</OPTION>
+<OPTION VALUE="3715003">Recipes with Sea Vegetables</OPTION>
+<OPTION VALUE="2449004">Recipes with Seafood</OPTION>
+<OPTION VALUE="2453002">Recipes with Soy</OPTION>
+<OPTION VALUE="3717006">Recipes with Spinach</OPTION>
+<OPTION VALUE="3718001">Recipes with Summer Squash</OPTION>
+<OPTION VALUE="3719009">Recipes with Sweet Peppers</OPTION>
+<OPTION VALUE="3720003">Recipes with Sweet Potatoes</OPTION>
+<OPTION VALUE="3721004">Recipes with Tomatoes</OPTION>
+<OPTION VALUE="3722006">Recipes with Tortillas</OPTION>
+<OPTION VALUE="3723001">Recipes with Turnips</OPTION>
+<OPTION VALUE="4606005">Recipes with Vegetables</OPTION>
+<OPTION VALUE="3724007">Recipes with Winter Squash</OPTION>
+<OPTION VALUE="4060003">Red Snapper Recipes</OPTION>
+<OPTION VALUE="4044002">Rib-Eye Steak Recipes</OPTION>
+<OPTION VALUE="4061004">Rockfish Recipes</OPTION>
+<OPTION VALUE="4045001">Round Tip Steak Recipes</OPTION>
+<OPTION VALUE="2447002">Salad Recipes</OPTION>
+<OPTION VALUE="4062006">Salmon Recipes</OPTION>
+<OPTION VALUE="4716008">Santa Cruz Organic Recipes</OPTION>
+<OPTION VALUE="2448007">Sauces and Spreads Recipes</OPTION>
+<OPTION VALUE="4083000">Scallops Recipes</OPTION>
+<OPTION VALUE="4063001">Sea Bass Recipes</OPTION>
+<OPTION VALUE="2450004">Seasonal Recipes</OPTION>
+<OPTION VALUE="4064007">Shark Recipes</OPTION>
+<OPTION VALUE="4084006">Shrimp Recipes</OPTION>
+<OPTION VALUE="2451000">Side Dish Recipes</OPTION>
+<OPTION VALUE="4046000">Sirloin Steak Recipes</OPTION>
+<OPTION VALUE="4562002">Soup and Salad Recipes</OPTION>
+<OPTION VALUE="2452007">Soup Recipes</OPTION>
+<OPTION VALUE="2454008">Soy-Free Recipes</OPTION>
+<OPTION VALUE="2459003">Spring Recipes</OPTION>
+<OPTION VALUE="4085007">Squid Recipes</OPTION>
+<OPTION VALUE="4712005">Stonyfield Farms Recipes</OPTION>
+<OPTION VALUE="2460008">Summer Recipes</OPTION>
+<OPTION VALUE="4086008">Surimi Recipes</OPTION>
+<OPTION VALUE="4065008">Swordfish Recipes</OPTION>
+<OPTION VALUE="4047009">T-Bone Steak Recipes</OPTION>
+<OPTION VALUE="4048004">Tenderloin Steak Recipes</OPTION>
+<OPTION VALUE="4066009">Tilapia Recipes</OPTION>
+<OPTION VALUE="4049007">Top Blade Steak Recipes</OPTION>
+<OPTION VALUE="4050007">Top Loin Steak Recipes</OPTION>
+<OPTION VALUE="4067000">Trout Recipes</OPTION>
+<OPTION VALUE="4068005">Tuna Recipes</OPTION>
+<OPTION VALUE="4087004">Veal Recipes</OPTION>
+<OPTION VALUE="2466002">Vegan Recipes</OPTION>
+<OPTION VALUE="2467006">Vegetarian Recipes</OPTION>
+<OPTION VALUE="4413004">Vitamin &amp; Herb Safety</OPTION>
+<OPTION VALUE="2461007">Vitamin Guide</OPTION>
+<OPTION VALUE="4416007">Vitamins, Minerals, &amp; Herbs</OPTION>
+<OPTION VALUE="2471009">Wheat-Free Recipes</OPTION>
+<OPTION VALUE="4069002">Whitefish Recipes</OPTION>
+<OPTION VALUE="2472002">Winter Recipes</OPTION>
+</SELECT>
+<INPUT TYPE="image" BORDER=0 NAME="imageField" SRC="http://images.netrition.com/healthnotes/images/go.jpg" WIDTH=20 HEIGHT=20 ALIGN="middle">
+</FORM></TD>
+<TD VALIGN="top" NOWRAP>
+<P CLASS="Condition-Summary-Heading">Search:</P>
+<FORM METHOD="post" ACTION="http://www.netrition.com/cgi/hn_search.cgi">
+<INPUT TYPE="text" NAME="keywords" SIZE=25>
+<INPUT TYPE="image" BORDER=0 NAME="imageField" SRC="http://images.netrition.com/healthnotes/images/go.jpg" WIDTH=20 HEIGHT=20 ALIGN="middle">
+</FORM>
+</TD></TR>
+</TABLE>
+</TD>
+<TD COLSPAN=2>&nbsp;</TD>
+</TR>
+<TR>
+<TD COLSPAN=4>
+<!--ignore_perlfect_search-->
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=6>
+<TR>
+<TD><FONT FACE="Arial, Helvetica" SIZE="1"><A HREF="http://www.netrition.com/cgi/healthnotes_display_for_print.cgi?content_id=1059007" TARGET="_blank"><IMG SRC="http://images.netrition.com/images/icon_printer.gif" BORDER=0 WIDTH=18 HEIGHT=16 ALIGN=LEFT>Printer-friendly format</A></FONT></TD>
+</TR>
+</TABLE>
+<!--/ignore_perlfect_search-->
+<P>
+<table ALIGN=RIGHT cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99"><tr><td><table width=100% cellspacing=0 cellpadding=4 border=0 bgcolor="#FFFFCC"><font face="Verdana, Arial, Helvetica" size="-1"><TR><TD><B>Find Related Products</B></TD>
+</TR>
+<TR>
+<TD><A HREF="http://www6.netrition.com/cgi/product_categories_display.cgi?categories=DIET">Diet and Weight Loss</A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://www6.netrition.com/cgi/product_categories_display.cgi?categories=VLC">Low Carbohydrate</A></TD>
+</TR>
+</font></TABLE>
+</TD></TR>
+</TABLE>
+<P>
+<div id="Article-Title"><a name="Article-Title"></a>
+<p class="Article-Title">Atkins Diet</p>
+</div>
+<div id="Sidebar-Element">
+<div class="sidebar-content">
+<h3 class="Sidebar-Heading">Skip to:</h3>
+<ul class="sidebar">
+<li class="Introductory"><a href="#Introductory">Introduction</a></li>
+<li class="Diet-Rationale"><a href="#Diet-Rationale">Why this diet?</a></li>
+<li class="Diet-Advocates"><a href="#Diet-Advocates">Pros</a></li>
+<li class="Diet-Critics"><a href="#Diet-Critics">Cons</a></li>
+<li class="Resource-List"><a href="#Resource-List">Resources</a></li>
+<li class="Bibliography"><a href="#Bibliography">Bibliography</a></li>
+</ul>
+</div>
+</div>
+<div id="Illustration" class="Illustration"><img src="http://images.netrition.com/healthnotes/images/Diet/Atkins_Diet.totem.jpg" alt=
+"Illustration"></div>
+<div id="Sidebar-Display" class="Sidebar-Main-Column">
+<div class="sidebar-content">
+<h3 class="Sidebar-Heading">Skip to:</h3>
+<ul class="sidebar">
+<li class="Introductory"><a href="#Introductory">Introduction</a></li>
+<li class="Diet-Rationale"><a href="#Diet-Rationale">Why this diet?</a></li>
+<li class="Diet-Advocates"><a href="#Diet-Advocates">Pros</a></li>
+<li class="Diet-Critics"><a href="#Diet-Critics">Cons</a></li>
+<li class="Resource-List"><a href="#Resource-List">Resources</a></li>
+<li class="Bibliography"><a href="#Bibliography">Bibliography</a></li>
+</ul>
+</div>
+</div>
+<div id="Introductory" class="Introductory"><a name="Introductory"></a>
+<p class="Food-Sub-Heading"><em>The basics</em></p>
+<p><b>The Atkins Diet</b> is a high-protein, low-carbohydrate weight-loss diet developed by
+Robert Atkins, MD. Atkins dieters can eat as many calories from protein and fat as they want,
+as long as they restrict their carbohydrates.</p>
+<p>The diet is divided into four phases:</p>
+<ul>
+<li><em>Induction (the first 14 days)</em>&#8212;Carbs are limited to no more than 20 grams
+per day. No fruit, bread, grains, starchy vegetables, or dairy products (except cheese, cream,
+and butter) are allowed during this phase.</li>
+</ul>
+<ul>
+<li><em>Ongoing weight loss</em>&#8212;Dieters experiment until they find a carbohydrate
+intake that allows them to continue to lose weight until their weight-loss goals are met.</li>
+</ul>
+<ul>
+<li><em>Premaintenance and maintenance</em>&#8212;Dieters determine the level of carbohydrate
+intake that allows them to maintain their weight.</li>
+</ul>
+<p><b>Best bets:</b> Meats, eggs, dairy products (except milk), Atkins-labeled products, or
+check the nutrition label to see the carb content for any food. See our <a href=
+"http://www.netrition.com/cgi/healthnotes.cgi?ContentID=3930000">Low-Carbohydrate Diet</a> article for more low-carb
+ideas.</p>
+<p class="Food-Sub-Heading"><em>More about this diet</em></p>
+<p>Originally developed in the 1960s, in the early 1990s Dr. Atkins brought his diet back into
+the nutrition spotlight with the publication of his best-selling book <em>Dr. Atkins&#8217;
+New Diet Revolution</em>.</p>
+<p>The Atkins Diet severely restricts the consumption of carbohydrate-rich foods and
+encourages the consumption of protein and fat. The diet is divided into four phases:
+Induction, Ongoing Weight Loss, Premaintenance, and Maintenance. During the Induction phase
+(the first 14 days of the diet), carbohydrate intake is limited to no more than 20 grams per
+day. No <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1768000">fruit</a>, <a href=
+"http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1675009">bread</a>, <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1774000">
+grains</a>, starchy <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1987000">vegetables</a>, or <a href=
+"http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1734006">dairy products</a> (except <a href=
+"http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1701009">cheese</a>, <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1728004">
+cream</a>, and <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1683003">butter</a>) are allowed during this
+phase. During the Ongoing Weight Loss phase, dieters experiment with various levels of
+carbohydrate consumption until they determine the most liberal level of carbohydrate intake
+that allows them to continue to lose weight. Dieters are encouraged to maintain this level of
+carbohydrate intake until their weight loss goals are met. During the Premaintenance and
+Maintenance phases, dieters determine the level of carbohydrate consumption that allows them
+to maintain their weight. To prevent weight regain, dieters are told to maintain this level of
+carbohydrate consumption, perhaps for the rest of their lives. According to Dr. Atkins, most
+people must limit their carbohydrate intake to no more than 60 grams per day to keep lost
+weight off.</p>
+<p><b>Note:</b> The dietary recommendations issued by various organizations, including the
+United States Department of Agriculture, the National Institutes of Health, and the American
+Heart Association, encourage a daily carbohydrate intake of approximately 300 grams.</p>
+<p>In addition to the dietary restrictions discussed above, Dr. Atkins&#8217; weight loss
+program recommends regular exercise and nutritional supplementation.</p>
+</div>
+<div id="Diet-Rationale" class="Diet-Rationale"><a name="Diet-Rationale"></a>
+<h3 class="Food-Heading">Why do people follow this diet?</h3>
+<p>The Atkins Diet is attractive to dieters who have tried unsuccessfully to lose weight on <a
+href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1293004">low-fat</a>, low-calorie diets. Atkins dieters can
+eat as many calories as desired from protein and fat, as long as carbohydrate consumption is
+restricted. As a result, many Atkins dieters are spared the feelings of hunger and deprivation
+that accompany other weight loss regimens.</p>
+</div>
+<div id="Diet-Advocates" class="Diet-Advocates"><a name="Diet-Advocates"></a>
+<h3 class="Food-Heading">What do the advocates say?</h3>
+<p>The underlying premise of the Atkins Diet is that diets high in carbohydrates cause some
+people to gain weight and can ultimately lead to <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1054002">
+obesity</a>. Such diets increase the production of insulin (a hormone secreted by the
+pancreas). When insulin levels are high, the food we eat is quickly and easily converted into
+fat, and stored in our cells. By restricting the consumption of carbohydrates, the production
+of insulin is moderated. In addition, the lack of available carbohydrate (the body&#8217;s
+preferred fuel source) forces the body to burn stored fat as energy.</p>
+<p>The changes in metabolism that occur with severe carbohydrate restriction also cause the
+body to excrete ketones (breakdown product of fat metabolism) in the urine. Since ketones
+contain calories, the loss of ketones in the urine may enhance weight loss.</p>
+<p>Until his death in 2003, Dr. Atkins and his colleagues at The Atkins Center for
+Complementary Medicine in New York have used this diet to treat patients with obesity, as well
+as non-insulin dependent (type 2) <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1202003">diabetes</a>
+mellitus (NIDDM), <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1028005">high cholesterol</a> and <a
+href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1030007">triglycerides</a>, and <a href=
+"http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1033009">elevated blood pressure</a>. His colleagues continue to
+treat patients at the Atkins Center for Complementary Medicine in New York using this diet.
+Although there has been little scientific research investigating the diet, several supportive
+studies were published around the time of Dr. Atkins&#8217; death.</p>
+</div>
+<div id="Diet-Critics" class="Diet-Critics"><a name="Diet-Critics"></a>
+<h3 class="Food-Heading">What do the critics say?</h3>
+<p>Many nutrition experts disagree with the basic premise of the Atkins Diet&#8212;the notion
+that high-carbohydrate, low-fat diets cause obesity. For evidence of the implausibility of the
+Atkins Diet, some nutritionists point out that the traditional Japanese diet is very high in
+carbohydrates, low in protein, and very low in fat; however, before the introduction of
+high-fat and high-protein Western foods, being overweight was rare in Japan. Such findings
+make sense because ounce for ounce, carbohydrates contain far fewer calories than do fats.
+These critics blame eating too many calories (from any source) and lack of physical activity
+as the primary causes of obesity.</p>
+<p>Critics also express concern about the impact of the Atkins Diet on the overall health of
+the dieter. Depending on the foods chosen by the dieter, the diet may contain a large amount
+of saturated fat and cholesterol, putting those at risk for <a href=
+"http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1184008">heart disease</a> in danger. Recent research has found
+that high-protein diets speed up the progression of hardening of the arteries (<a href=
+"http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1013005">atherosclerosis</a>), the main cause of <a href=
+"http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1025008">heart attacks</a>. Moreover, contrary to
+Atkins<em>&#8217;</em> claims, extremely low-fat diets have been found to partially reverse
+heart disease. In addition, the lack of <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1774000">
+grains</a>, <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1768000">fruits</a>, and <a href=
+"http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1987000">vegetables</a> in the Atkins Diet may lead to deficiencies
+of key nutrients, including dietary <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=2842000">fiber</a>, <a
+href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=2929001">vitamin C</a>, <a href=
+"http://www.netrition.com/cgi/healthnotes.cgi?ContentID=2846002">folic acid</a>, and several minerals. Finally, high
+protein diets may increase the risk of <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=1050006">
+osteoporosis</a> and accelerate the rate of deterioration in kidney function associated with
+aging.</p>
+<p>Critics concede that Atkins dieters often experience significant weight loss during the
+initial stages of the diet. However, these critics argue that the diet has a diuretic effect
+and that the initial weight loss is due to water loss, not fat loss. Eventually the body
+restores its water and sodium balance, and the rate of weight loss declines. Critics also note
+that there is no evidence showing that the Atkins diet leads to greater weight loss than do
+other diets that provide more carbohydrates, yet the same number of calories.</p>
+<p>Studies published between 2002 and 2006 tend to support the short-term effectiveness of the
+Atkins diet, although not unquestionably. When compared with people who eat a low-fat diet,
+Atkins dieters can lose more weight in the first 6 months, but by 12 months there is no
+difference in the amount of total weight lost. In addition, while the Atkins diet does not
+appear to cause some of the adverse effects about which critics are concerned, there is
+evidence that the diet might cause bone loss, and other concerns about long-term safety still
+remain.</p>
+<p>In a six-month study of overweight adults, many of whom had diabetes, those following the
+Atkins diet lost an average of 12.8 pounds, compared with only 4.2 pounds for those consuming
+a low-fat diet. Similar results were seen in a study of non-diabetic overweight adults,
+although the advantage of the Atkins diet over the low-fat diet diminished after six months.
+In a study of overweight adolescents, the average weight loss after 12 weeks was 21.8 pounds
+in the children consuming the Atkins diet, compared with 9 pounds in those consuming a low-fat
+diet. The greater weight loss occurred even though the Atkins group consumed 67% more calories
+per day than did the low-fat group.</p>
+<p>With regard to safety factors, there were no adverse effects on cholesterol and
+triglyceride levels. On the contrary, in one study the Atkins diet was more effective than the
+low-fat diet for improving triglyceride levels. Other laboratory tests, however, suggested
+that long-term use of the Atkins diet could increase the risk of kidney stones and
+osteoporosis. Furthermore, one study found a 2.2% reduction in bone density after only six
+weeks on the diet.</p>
+</div>
+<div id="Resource-List" class="Resource-List"><a name="Resource-List"></a>
+<h3 class="Food-Heading">Are there any groups or books associated with this diet?</h3>
+<p>Dr. Atkins&#8217; books on the Atkins Diet include</p>
+<p class="Resource-Book"><em>Dr. Atkins&#8217; New Diet Revolution</em>. Thorndike, ME: G.K.
+Hall, 2000.</p>
+<p class="Resource-Book"><em>Dr. Atkins&#8217; Age-Defying Diet Revolution</em>. New York: St.
+Martin&#8217;s Press, 2000.</p>
+<p class="Resource-Book"><em>Dr. Atkins&#8217; New Diet Cookbook</em>. New York: M. Evans and
+Company, 1997.</p>
+<p class="Resource-Book"><em>Dr. Atkins&#8217; New Carbohydrate Gram Counter: More than 1200
+Brand-name and Generic Foods Listed with Carbohydrate, Protein, and Fat Contents</em>. New
+York: M. Evans and Company, 1996.</p>
+<p class="Resource-Book"><em>Dr. Atkins&#8217; Vita-Nutrient Solution: Nature&#8217;s Answer
+To Drugs</em>. New York: Simon &amp; Schuster, 1999.</p>
+<p class="Resource-Web">Official Web site for the Atkins Diet<br>
+www.atkinsdiet.com</p>
+<p class="Resource-Web">The American Dietetics Association Web site provides information on
+eating healthy<br>
+www.eatright.org</p>
+</div>
+<div id="Bibliography" class="Bibliography"><a name="Bibliography"></a>
+<h3 class="Food-Heading">Bibliography</h3>
+<p class="Biblio-Entry">Atkins, RC. <em>Dr. Atkins&#8217; New Diet Revolution (revised and
+updated)</em>. New York: Avon Books, 1999.</p>
+<p class="Biblio-Entry">Bravata DM, Sanders L, Huang J, et al. Efficacy and safety of
+low-carbohydrate diets: a systematic review. <em>JAMA</em> 2003;289:1837-50 [review].</p>
+<p class="Biblio-Entry">Brehm BJ, Seeley RJ, Daniels SR, D'Alessio DA. A randomized trial
+comparing a very low carbohydrate diet and a calorie-restricted low fat diet on body weight
+and cardiovascular risk factors in healthy women. <em>J Clin Endocrinol Metab</em>
+2003;88:1617-23.</p>
+<p class="Biblio-Entry">Fleming RM, Boyd LB. The effect of high-protein diets on coronary
+blood flow. <em>Angiology</em> 2000;51:817&#8211;26.</p>
+<p class="Biblio-Entry">Foster GD, Wyatt HR, Hill JO, et al. A randomized trial of a
+low-carbohydrate diet for obesity. <em>N Engl J Med</em> 2003 22;348:2082&#8211;90.</p>
+<p class="Biblio-Entry">Gould KL, Ornish D, Scherwitz L, et al. Changes in myocardial
+perfusion abnormalities by positron emission tomography after long-term, intense risk factor
+modification. <em>JAMA</em> 1995;274:894&#8211;901.</p>
+<p class="Biblio-Entry">Nordmann AJ, Nordmann A, Briel M,et al. Effects of low-carbohydrate vs
+low-fat diets on weight loss and cardiovascular risk factors: a meta-analysis of randomized
+controlled trials. <em>Arch Intern Med</em> 2006;166:285&#8211;93.</p>
+<p class="Biblio-Entry">Raykowski LK. Popular diets: what practitioners should know. <em>Nurse
+Pract</em> 2006;31:55&#8211;7.</p>
+<p class="Biblio-Entry">Reddy ST, Wang CY, Sakhaee K, et al. Effect of low-carbohydrate&nbsp;
+high-protein diets on acid-base balance, stone-forming propensity, and calcium metabolism.
+<em>Am J Kidney Dis</em> 2002;40:265&#8211;74.</p>
+<p class="Biblio-Entry">Samaha FF, Iqbal N, Seshadri P, et al. A low-carbohydrate as compared
+with a low-fat diet in severe obesity. <em>N Engl J Med</em> 2003;348:2074&#8211;81.</p>
+<p class="Biblio-Entry">Sondike SB, Copperman N, Jacobson MS. Effects of a low-carbohydrate
+diet on weight loss and cardiovascular risk factor in overweight adolescents. <em>J
+Pedriatr</em> 2003;142:25&#8211;8.</p>
+<p class="Biblio-Entry">Stein, Karen. High-protein, low-carbohydrate diets: Do they work? <em>
+J Am Diet Assoc</em> 2000;100:760&#8211;1.</p>
+<p class="Biblio-Entry">Volek JS. Personal communication. (Source of the figure of 2.2% bone
+loss)</p>
+<p class="Biblio-Entry">Volek JS, Sharman MJ, Gomez AL, et al. An isoenergetic very low
+carbohydrate diet improves serum HDL cholesterol and triacylglycerol concentrations, the total
+cholesterol to HDL cholesterol ratio and postprandial pipemic responses compared with a low
+fat diet in normal weight, normolipidemic women. <em>J Nutr</em> 2003;133:2756&#8211;61.</p>
+<p class="Biblio-Entry">Volek JS, Sharman MJ, Love DM, et al. Body composition and hormonal
+responses to a carbohydrate-restricted diet. <em>Metabolism</em> 2002;51:864&#8211;70.</p>
+</div>
+<div id="Copyright-Notice" class="Copyright-Notice"><a
+name="Copyright-Notice"></a>
+<hr>
+<p class="Copyright">Copyright &#169; 2009 Aisle7&nbsp; All rights reserved.</p>
+<p class="Copyright">Learn more about
+<a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=2474001">Aisle7</a>, and <a href="http://www.netrition.com/cgi/healthnotes.cgi?ContentID=2475000">the authors of Aisle7 products</a>.</p>
+<p class="Fineprint">The information presented in the Food Guide is for informational
+purposes only and was created by a team of US&#8211;registered dietitians and food experts.
+Consult your doctor, practitioner, and/or pharmacist for any health problem and before using
+any supplements, making dietary changes, or before making any changes in prescribed
+medications. Information expires February 2010.</p>
+<p class="Fineprint">Aisle7 is an independent publication of Aisle7 and is designed to report published information on various dietary ingredients
+and health issues.</p>
+<p class="Fineprint">Netrition, Inc. is not affiliated with Aisle7 and has no involvement in, or control over, the contents of this publication. Netrition, Inc. has not reviewed, and does not adopt or endorse, the information contained in Aisle7.</p>
+<hr>
+</div>
+</TD></TR>
+</TABLE>
+<!--ignore_perlfect_search-->
+
+
+<!--  End Body Column -->
+</FONT>
+</DIV>
+</TD>
+<!-- Spacer column -->
+<TD width="6"></TD>
+
+
+<!-- Start Right Column -->
+
+<TD WIDTH="15%" VALIGN="TOP">
+
+<table width="100%" ALIGN=LEFT cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+<tr>
+ <td><table width=100% cellspacing=0 cellpadding=3 border=0 bgcolor="#FFFFFF">
+
+<tr>
+<td>
+
+<FONT COLOR="#FF0000" FACE="Verdana, Arial, Helvetica" SIZE="+0">
+<B class="h3color">Hot Products</B>
+</FONT>
+<BR>
+
+</td>
+</tr>
+
+<tr>
+<td>
+<FONT FACE="Verdana, Arial, Helvetica" SIZE="-2">
+
+
+<!-- ads here -->
+
+
+<table width="100%" cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+ <tr>
+  <td><table width="100%" cellspacing=0 cellpadding=3 border=0 bgcolor="#FFFFFF">
+   <tr>
+    <td>
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.netrition.com/ads/www/delivery/ajs.php':'http://ads.netrition.com/ads/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?campaignid=8&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'></scr"+"ipt>");
+//]]>--></script><noscript><a href='http://ads.netrition.com/ads/www/delivery/ck.php?n=a8f646ba&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.netrition.com/ads/www/delivery/avw.php?campaignid=8&amp;n=a8f646ba' border='0' alt='' /></a></noscript>
+
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<BR>
+
+<table width="100%" cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+ <tr>
+  <td><table width=100% cellspacing=0 cellpadding=3 border=0 bgcolor="#FFFFFF">
+   <tr>
+    <td>
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.netrition.com/ads/www/delivery/ajs.php':'http://ads.netrition.com/ads/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?campaignid=8&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'></scr"+"ipt>");
+//]]>--></script><noscript><a href='http://ads.netrition.com/ads/www/delivery/ck.php?n=a8f646ba&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.netrition.com/ads/www/delivery/avw.php?campaignid=8&amp;n=a8f646ba' border='0' alt='' /></a></noscript>
+
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<BR>
+
+<table width="100%" cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+ <tr>
+  <td><table width=100% cellspacing=0 cellpadding=3 border=0 bgcolor="#FFFFFF">
+   <tr>
+    <td>
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.netrition.com/ads/www/delivery/ajs.php':'http://ads.netrition.com/ads/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?campaignid=8&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'></scr"+"ipt>");
+//]]>--></script><noscript><a href='http://ads.netrition.com/ads/www/delivery/ck.php?n=a8f646ba&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.netrition.com/ads/www/delivery/avw.php?campaignid=8&amp;n=a8f646ba' border='0' alt='' /></a></noscript>
+
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+<BR>
+
+<table width="100%" cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+ <tr>
+  <td><table width=100% cellspacing=0 cellpadding=3 border=0 bgcolor="#FFFFFF">
+   <tr>
+    <td>
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.netrition.com/ads/www/delivery/ajs.php':'http://ads.netrition.com/ads/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?campaignid=8&amp;block=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'></scr"+"ipt>");
+//]]>--></script><noscript><a href='http://ads.netrition.com/ads/www/delivery/ck.php?n=a8f646ba&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.netrition.com/ads/www/delivery/avw.php?campaignid=8&amp;n=a8f646ba' border='0' alt='' /></a></noscript>
+
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+
+
+
+<!-- end ads -->
+
+
+</FONT>
+</td>
+ </tr>
+
+ </table>
+</td></tr>
+</table>
+
+
+</TD>
+
+<!-- End Right Column -->
+<!--  End Body Table -->
+
+</TR>
+</TABLE>
+<!--   -->
+
+
+
+
+
+<BR CLEAR=ALL>
+<P>
+
+<A NAME="SelectionLinks">
+<A NAME="Bottom">
+<CENTER>
+<TABLE WIDTH="100%" BGCOLOR="#FFFFFF" BORDER=0 CELLPADDING=0 CELLSPACING=6 ALIGN="CENTER">
+<TR VALIGN=MIDDLE>
+
+<TD WIDTH="19%" VALIGN=MIDDLE ALIGN=CENTER>
+
+ <table width="100%" height="100%" ALIGN=CENTER cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+     <tr>
+      <td><table width="100%" height="100%" cellspacing=0 cellpadding=4 border=0 bgcolor="#EEEECC">
+       <tr><TD class="tiny">
+Shop quickly using your personal 
+<A HREF="http://www6.netrition.com/youraccount.html">Order History</A>!
+View prior purchases to re-order the same products!
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+
+<TD WIDTH="15%" VALIGN=MIDDLE ALIGN=CENTER>
+
+ <table width="100%" height="100%" ALIGN=CENTER cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+     <tr>
+      <td><table width="100%" height="100%" cellspacing=0 cellpadding=4 border=0 bgcolor="#EEEECC">
+       <tr><TD class ="tiny">
+<B>$4.95</B> shipping charge for the entire order within the contiguous 48 United States.
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+
+
+<TD WIDTH="17%" VALIGN=MIDDLE ALIGN=CENTER>
+
+ <table width="100%" height="100%" ALIGN=CENTER cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+     <tr>
+      <td><table width="100%" height="100%" cellspacing=0 cellpadding=4 border=0 bgcolor="#EEEECC">
+       <tr><TD class="tiny">
+5% Discount on Orders of $200 or more! 
+Retailers: <A HREF="http://www6.netrition.com/faq.html">Volume Discounts</A> Available.
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+
+
+<TD WIDTH="15%" height="100%" VALIGN=MIDDLE ALIGN=CENTER>
+ <table width="100%" height="100%" ALIGN=CENTER cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+     <tr>
+      <td><table width="100%" height="100%" cellspacing=0 cellpadding=4 border=0 bgcolor="#EEEECC">
+       <tr><TD class="tiny">
+All Products Are <B>In Stock</B> Unless Marked <A HREF="http://www6.netrition.com/oos_page.html">Out Of Stock</A>. 
+Really! Don't Settle for Less.
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+<TD WIDTH="25%" VALIGN=MIDDLE ALIGN=CENTER>
+ <table width="100%" height="100%" ALIGN=CENTER cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+     <tr>
+      <td><table width="100%" height="100%" cellspacing=0 cellpadding=4 border=0 bgcolor="#EEEECC">
+       <tr><TD class="tiny">
+<A HREF="http://www6.netrition.com/freebies_page.html">Learn how to get FREE stuff!</A> - T-Shirts, Shaker Bottles, and More!
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+<TD VALIGN=MIDDLE ALIGN=RIGHT>
+ <table width="100%" height="100%" ALIGN=CENTER cellspacing=0 cellpadding=1 border=0 bgcolor="#CCCC99">
+     <tr>
+      <td><table width="100%" height="100%" cellspacing=0 cellpadding=4 border=0 bgcolor="#FFFFFF">
+       <tr><TD ALIGN=CENTER>
+<A HREF="#Top"><img src="http://www.netrition.com/images/backtotop.gif" ALT="Go To Top of Page" WIDTH=66 HEIGHT=37 HSPACE=3 VSPACE=2 ALIGN=RIGHT BORDER=0></A>
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</TD>
+</TR>
+</TABLE>
+<BR>
+
+
+<!--  Website Feature and PRODUCT SPOTLIGHT WAS HERE -->
+<P>
+
+
+
+<TABLE>
+<TR VALIGN=TOP>
+<TD>
+<A class="highlight" HREF="http://www6.netrition.com/policies.html">Ordering Instructions</A> 
+<BR><A class="highlight" HREF="http://www6.netrition.com/cart.html">Display Shopping Cart</A> 
+<BR><A class="highlight" HREF="http://www6.netrition.com/checkout.html">Checkout</A> 
+<BR><A class="highlight" HREF="http://www6.netrition.com/youraccount.html">Update Account / Order History</A> 
+<BR><A class="highlight" HREF="http://www6.netrition.com/subscribe.html">Update Email Subscriptions</A> 
+<BR><A class="highlight" HREF="http://www6.netrition.com/prices.html">All Brands/Prices</A> 
+<BR><A class="highlight" HREF="http://www6.netrition.com/links.html">Links To Other Sites</A> 
+<BR><A class="highlight" HREF="http://www6.netrition.com/">Home</A> 
+</TD>
+<TD WIDTH=10>
+</TD>
+<TD>
+<A class="highlight" HREF="http://www6.netrition.com/faq.html">Frequently Asked Questions</A> 
+<BR><A class="highlight" HREF="http://www6.netrition.com/contact.html">Contact Us</A> 
+<BR><A class="highlight" HREF="http://www6.netrition.com/cgi/news.cgi">Health News</A> 
+<BR><A class="highlight" HREF="http://www6.netrition.com/healthnotes.html">HealthNotes</A> 
+<!--
+<BR><A class="highlight" HREF="http://www6.netrition.com/cgi/magazine_display.cgi">Naturally Ripped News</A> 
+-->
+<BR><A class="highlight" HREF="http://www6.netrition.com/cgi/foods.cgi">Food Nutrients</A>
+<BR><A class="highlight" HREF="http://www6.netrition.com/affiliates_overview.html">Affiliate Program</A> 
+<BR><A class="highlight" HREF="http://www6.netrition.com/netrition_gift_certificates.html">Gift Certificates</A> 
+<BR><A class="highlight" HREF="http://service.netrition.com/cgi/secure_ordering_info.cgi">Secure Ordering</A> 
+</TD>
+<TD WIDTH=10>
+</TD>
+<TD width=250>
+
+<P>
+<B>If you have a website, join 
+<A HREF="http://www6.netrition.com/affiliates_overview.html">Netrition's 
+Affiliate Program</A><SUP>*</SUP> 
+and start earning cash today! 
+Now paying 20%<SUP>*</SUP></B>
+<P>
+</TD>
+</TR>
+</TABLE>
+</CENTER> <!-- table -->
+<P>
+<HR SIZE=1>
+<FONT COLOR="#666666" SIZE=1 FACE="Arial, Helvetica">Netrition&#174; is a registered mark of Netrition, Inc. 
+Products and companies referred to herein are trademarks or registered trademarks of their respective companies or
+mark holders. 
+Images/Data &#169; Copyright 1996-2010 Netrition, Inc. and/or its content providers. 
+All rights reserved. The material
+on this site may not be reproduced, distributed, proxy cached or otherwise used, 
+without written permission of content owners.
+<BR><B>Disclaimers:</B> * No claims found on our web pages or in print have been evaluated by the
+Food and Drug Administration. These products are not intended to diagnose,
+treat, cure, or prevent any disease. 
+No claim or opinion on these pages is intended to be, nor should be construed to be, medical advice.
+Please consult with a healthcare professional before starting any diet or exercise program.
+Netrition and its associates are not responsible for product claims made by manufacturers on this web site.
+Netrition, Inc. is not responsible for typographical errors.
+Prices and information on these pages are subject to change without notice.
+</FONT>
+<HR SIZE=1>
+<P>
+<CENTER>
+<FONT COLOR="#666666" SIZE="-1" FACE="Arial, Helvetica">
+<A HREF="http://www6.netrition.com/copyright.html">Copyright</A> &#169; 1996-2010 Netrition, Inc. All Rights Reserved. 
+<A HREF="http://www6.netrition.com/privacy_statement.html">Privacy Statement</A>
+
+</FONT>
+</CENTER>
+</FONT>
+<P>
+<!--/ignore_perlfect_search-->
+</BODY>
+
+<!-- Mirrored from www.netrition.com/cgi/healthnotes.cgi?ContentID=1059007 by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 16 Jul 2010 00:28:15 GMT -->
+</HTML>

@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><!-- InstanceBegin template="/Templates/down_one_notch_php.dwt" codeOutsideHTMLIsLocked="false" -->
+<HEAD>
+
+<!-- style type="text/css">
+
+#popitmenu{
+position: absolute;
+background-color: #FFFFFF;
+border:1px solid black;
+line-height: 18px;
+z-index: 100;
+visibility: hidden;
+}
+
+#popitmenu a{
+text-decoration: none;
+padding-left: 6px;
+color: #083463;
+display: block;
+}
+
+#popitmenu a:hover{ /*hover background color*/
+background-color: #083463;
+color: #FFFFFF;
+}
+
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+* Pop-it menu- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var defaultMenuWidth="200px" //set default menu width.
+
+var linkset=new Array()
+//SPECIFY MENU SETS AND THEIR LINKS. FOLLOW SYNTAX LAID OUT
+
+linkset[1]='<a href="http://www.vhl.org/aboutvhl">Basic Facts About VHL</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/whatis.php">Introduction to VHL</a>'
+linkset[1]+='<a href="http://www.vhl.org/handbook">VHLFA Handbook</a>'
+linkset[1]+='<a href="http://www.vhl.org/profinfo">Information for Professionals</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/famindex.php">Information for Families</a>'
+linkset[1]+='<a href="http://www.vhl.org/aboutvhl/famindex.php#mystory">Personal Stories</a>'
+linkset[1]+='<a href="http://www.vhl.org/newsletter">Newsletter</a>'
+linkset[1]+='<a href="http://www.vhl.org/press/presskit">Press Kit</a>'
+linkset[1]+='<a href="http://www.vhl.org/press">In the News</a>'
+linkset[1]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[2]='<a href="http://www.vhl.org/healthcare">Caring for Your Health</a>'
+linkset[2]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[2]+='<a href="http://www.vhl.org/aboutvhlfa/clinics.php">Clinical Care Centers</a>'
+linkset[2]+='<a href="http://www.vhl.org/healthcare/index.php#services">Services</a>'
+linkset[2]+='<a href="http://www.vhl.org/support">Support Groups</a>'
+linkset[2]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[2]+='<a href="http://www.vhl.org/support/egroups.php">Online Discussion</a>'
+linkset[2]+='<a href="http://www.vhl.org/nutrition">Nutrition</a>'
+linkset[2]+='<a href="http://www.vhl.org/handbook">VHL Handbook</a>'
+linkset[2]+='<a href="http://www.vhl.org/dna">DNA Testing</a>'
+linkset[2]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[2]+='<a href="http://www.vhl.org/bookstore">Books</a>'
+linkset[2]+='<a href="http://www.vhl.org/newsletter">Online Newsletter</a>'
+linkset[2]+='<a href="http://www.powerfulpatient.org/">Be a Powerful Patient</a>'
+linkset[2]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[3]='<a href="http://www.vhl.org/research">Research</a>'
+linkset[3]+='<a href="http://www.vhl.org/bank">Tissue Bank</a>'
+linkset[3]+='<a href="http://www.vhl.org/handbook">VHL Handbook</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/resdb.php">Research Database</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/beroud.php">VHL Mutations Database</a>'
+linkset[3]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[3]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/index.php#grants">Grants Available</a>'
+linkset[3]+='<a href="http://www.vhl.org/research/index.php#awarded">Grants Awarded</a>'
+linkset[3]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[3]+='<a href="http://www.vhl.org/profinfo/medindex.php">Medical Topics</a>'
+linkset[3]+='<a href="http://www.vhl.org/aboutvhl/famindex.php">Family Topics</a>'
+linkset[3]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[4]='<a href="http://www.vhl.org/profinfo">Professional Information</a>'
+linkset[4]+='<a href="http://www.vhl.org/handbook" class="top_nav">What you need to know about VHL</a>'
+linkset[4]+='<a href="http://www.vhl.org/healthcare" class="top_nav">Information for Patients</a>'
+linkset[4]+='<a href="http://www.vhl.org/aboutvhlfa/clinics.php">Clinical Care Centers</a>'
+linkset[4]+='<a href="http://www.vhl.org/bank" class="top_nav">Tissue Bank</a>'
+linkset[4]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[4]+='<a href="http://www.vhl.org/meetings" class="top_nav">VHL Conferences</a>'
+linkset[4]+='<a href="http://www.vhl.org/profinfo/index.php#infopacket" class="top_nav">Information Packet</a>'
+linkset[4]+='<a href="http://www.vhl.org/support/intlsprt.php" class="top_nav">Support Groups</a>'
+linkset[4]+='<a href="http://www.vhl.org/support/egroups.php" class="top_nav">Online Discussion</a>'
+linkset[4]+='<a href="http://www.vhl.org/links.php" class="top_nav">VHL Links</a>'
+linkset[4]+='<a href="http://www.vhl.org/newsletter" class="top_nav">Newsletter</a>'
+linkset[4]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+
+linkset[5]='<a href="http://www.vhl.org/aboutvhlfa">About VHL Family Alliance</a>'
+linkset[5]+='<a href="http://www.vhl.org/press/presskit">Press Kit</a>'
+linkset[5]+='<a href="http://www.vhl.org/links.php">VHL Links</a>'
+linkset[5]+='<a href="http://www.vhl.org/support/intlsprt.php">Support Groups</a>'
+linkset[5]+='<a href="http://www.vhl.org/meetings">Meetings</a>'
+linkset[5]+='<a href="http://www.vhl.org/support/egroups.php">Online Discussion</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/membership.php">Membership</a>'
+linkset[5]+='<a href="http://www.vhl.org/newsletter">Newsletter</a>'
+linkset[5]+='<a href="http://www.vhl.org/bank">Tissue Bank</a>'
+linkset[5]+='<a href="http://www.vhl.org/press">In the News</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/board.php">Board Members</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.php">Privacy Policy</a>'
+linkset[5]+='<a href="http://www.vhl.org/vhlsales">Online Shopping</a>'
+linkset[5]+='<a href="http://www.vhl.org/helpnow/index.php">Click to Donate</a>'
+linkset[5]+='<a href="http://www.vhl.org/aboutvhlfa/contactus.php">Contact Us</a>'
+
+////No need to edit beyond here
+
+var ie5=document.all && !window.opera
+var ns6=document.getElementById
+
+if (ie5||ns6)
+document.write('<div id="popitmenu" onMouseover="clearhidemenu();" onMouseout="dynamichide(event)"></div>')
+
+function iecompattest(){
+return (document.compatMode && document.compatMode.indexOf("CSS")!=-1)? document.documentElement : document.body
+}
+
+function showmenu(e, which, optWidth){
+if (!document.all&&!document.getElementById)
+return
+clearhidemenu()
+menuobj=ie5? document.all.popitmenu : document.getElementById("popitmenu")
+menuobj.innerHTML=which
+menuobj.style.width=(typeof optWidth!="undefined")? optWidth : defaultMenuWidth
+menuobj.contentwidth=menuobj.offsetWidth
+menuobj.contentheight=menuobj.offsetHeight
+eventX=ie5? event.clientX : e.clientX
+eventY=ie5? event.clientY : e.clientY
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie5? iecompattest().clientWidth-eventX : window.innerWidth-eventX
+var bottomedge=ie5? iecompattest().clientHeight-eventY : window.innerHeight-eventY
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<menuobj.contentwidth)
+//move the horizontal position of the menu to the left by it's width
+menuobj.style.left=ie5? iecompattest().scrollLeft+eventX-menuobj.contentwidth+"px" : window.pageXOffset+eventX-menuobj.contentwidth+"px"
+else
+//position the horizontal position of the menu where the mouse was clicked
+menuobj.style.left=ie5? iecompattest().scrollLeft+eventX+"px" : window.pageXOffset+eventX+"px"
+//same concept with the vertical position
+if (bottomedge<menuobj.contentheight)
+menuobj.style.top=ie5? iecompattest().scrollTop+eventY-menuobj.contentheight+"px" : window.pageYOffset+eventY-menuobj.contentheight+"px"
+else
+menuobj.style.top=ie5? iecompattest().scrollTop+event.clientY+"px" : window.pageYOffset+eventY+"px"
+menuobj.style.visibility="visible"
+return false
+}
+
+function contains_ns6(a, b) {
+//Determines if 1 element in contained in another- by Brainjar.com
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function hidemenu(){
+if (window.menuobj)
+menuobj.style.visibility="hidden"
+}
+
+function dynamichide(e){
+if (ie5&&!menuobj.contains(e.toElement))
+hidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+hidemenu()
+}
+
+function delayhidemenu(){
+delayhide=setTimeout("hidemenu()",500)
+}
+
+function clearhidemenu(){
+if (window.delayhide)
+clearTimeout(delayhide)
+}
+
+function preloadImages(){
+}
+
+if (ie5||ns6)
+document.onclick=hidemenu
+
+</script --><!-- meta tags file here -->
+      <!-- InstanceBeginEditable name="doctitle" -->
+	  <TITLE>VHLFA: What is VHL?</TITLE>
+<meta name="keywords" content="vhl von hippel lindau vhlfa family alliance what is vhl vhl reference page introduction to vhl">
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="MetaTags" -->
+<meta name="description" content="Introduction to vhl von hippel lindau disease.">
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="http://www.vhl.org/global.css">
+<!-- end meta tag include -->
+</HEAD>
+<body align="center">
+<table border="0" cellspacing="0" cellpadding="0" width="790" align="center">
+<!-- header -->
+<tr><td bgcolor="#FFFFFF" style="z-index: 3000; position:relative;">
+<link rel="stylesheet" href="/menu.css" type="text/css">
+<a href="#skiptop"></a>
+<map name="top_nav_w_imagemaps_Map">
+	<area shape="rect" alt="" coords="0,0,74,150" href="http://www.vhl.org">
+	<area shape="circle" alt="" coords="708,65,49" href="http://www.vhl.org/aboutvhlfa">
+	<area shape="circle" alt="" coords="572,65,49" href="http://www.vhl.org/profinfo">
+	<area shape="circle" alt="" coords="430,64,49" href="http://www.vhl.org/research">
+	<area shape="circle" alt="" coords="292,63,49" href="http://www.vhl.org/healthcare">
+	<area shape="circle" alt="" coords="147,64,50" href="http://www.vhl.org/aboutvhl">
+	</map>
+
+	<img src="/images/top_nav.gif" width="800" height="128" hspace="0" vspace="0" border="0" usemap="#top_nav_w_imagemaps_Map" />
+<div id="menu">
+	<ul>
+		<li style="width: 100px;">&nbsp;</li>
+	</ul>
+	<ul style="margin-left: 30px;">
+		<li><a href="http://www.vhl.org/aboutvhl">Basic Facts<br />about VHL</a>
+			<ul>
+				<li><a href="http://www.vhl.org/aboutvhl">Basic Facts about VHL</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/whatis.htm">Introduction to VHL</a></li>
+				<li><a href="http://www.vhl.org/handbook">VHLFA Handbook</a></li>
+				<li><a href="http://www.vhl.org/profinfo">Information for Professionals</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Information for Families</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Personal Stories</a></li>
+				<li><a href="http://www.vhl.org/newsletter">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/press/presskit">Press Kit</a></li>
+				<li><a href="http://www.vhl.org/press">In the News</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 60px;" >
+		<li><a href="http://www.vhl.org/healthcare">Caring for<br />Your Health</a>
+			<ul>
+				<li><a href="http://www.vhl.org/healthcare">Caring for Your Health</a></li>
+				<li><a href="http://www.vhl.org/healthcare/index.php#membership">Membership</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/clinics2.htm">Clinical Care Centers</a></li>
+				<li><a href="http://www.vhl.org/healthcare/index.php#services">Services</a></li>
+				<li><a href="http://www.vhl.org/support">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/guest/guest.htm">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/nutrition">Nutrition</a></li>
+				<li><a href="http://www.vhl.org/handbook">VHL Handbook</a></li>
+				<li><a href="http://www.vhl.org/dna">DNA Testing</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/bookstore">Books</a></li>
+				<li><a href="http://www.vhl.org/newsletter">Online Newsletter</a></li>
+				<li><a href="http://www.powerfulpatient.org">Be a powerful patient</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 45px;" >
+		<li><a href="http://www.vhl.org/research">Research</a>
+			<ul>
+				<li><a href="http://www.vhl.org/research">Research</a></li>
+				<li><a href="http://www.vhl.org/bank">Tissue Bank</a></li>
+				<li><a href="http://www.vhl.org/research/resdb.htm">Research Database</a></li>
+				<li><a href="http://www.vhl.org/research/beroud.htm">VHL Mutations Database</a></li>
+				<li><a href="http://www.vhl.org/meetings">Meetings</a></li>
+				<li><a href="http://www.vhl.org/research/06dodgrants.htm">Grants Available</a></li>
+				<li><a href="http://www.vhl.org/research/index.php#awarded">Grants Awarded</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/profinfo/medindex.htm">Medical Topics</a></li>
+				<li><a href="http://www.vhl.org/aboutvhl/famindex.htm">Family Topics</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul style="margin-left: 70px;" >
+		<li><a href="http://www.vhl.org/profinfo">Professional <br />Information</a>
+			<ul>
+				<li><a href="http://www.vhl.org/profinfo">Professional Information</a></li>
+				<li><a href="http://www.vhl.org/healthcare" class="top_nav">Information for Patients</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/clinics2.htm">Clinical Care Centers</a></li>
+				<li><a href="http://www.vhl.org/bank" class="top_nav">Tissue Bank</a></li>
+				<li><a href="http://www.vhl.org/meetings" class="top_nav">VHL Conferences</a></li>
+				<li><a href="http://www.vhl.org/profinfo/index.php#infopacket" class="top_nav">Information Packet</a></li>
+				<li><a href="http://www.vhl.org/support/intlsprt.htm" class="top_nav">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/support/egroups.htm" class="top_nav">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/links.htm" class="top_nav">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/newsletter" class="top_nav">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+	<ul style="margin-left: 35px;" >
+		<li><a href="http://www.vhl.org/aboutvhlfa">About VHL<br /> Family Alliance</a>
+			<ul>
+				<li><a href="http://www.vhl.org/aboutvhlfa">About VHL Family Alliance</a></li>
+				<li><a href="http://www.vhl.org/press/presskit">Press Kit</a></li>
+				<li><a href="http://www.vhl.org/links.htm">VHL Links</a></li>
+				<li><a href="http://www.vhl.org/support/intlsprt.htm">Support Groups</a></li>
+				<li><a href="http://www.vhl.org/support/egroups.htm">Online Discussion</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/orderfrm.htm">Membership</a></li>
+			    <li><a href="http://www.vhl.org/newsletter">Newsletter</a></li>
+				<li><a href="http://www.vhl.org/bank">Tissue Bank</a></li>
+			    <li><a href="http://www.vhl.org/press">In the News</a></li>
+				<li><a href="http://www.vhl.org/aboutvhlfa/board.htm">Board Members</a></li>
+			    <li><a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.htm">Privacy Policy</a></li>
+			   <li> <a href="http://www.vhl.org/vhlsales">Online Shopping</a></li>
+			   <li><a href="http://www.vhl.org/helpnow">Click to Donate</a></li>
+			   <li><a href="http://www.vhl.org/aboutvhlfa/contactus.php">Contact Us</a></li>
+			</ul>	
+		</li>	
+	</ul>	
+</div>
+</td></tr>
+<tr><td><img src="http://www.vhl.org/images/powerful_patient.gif" width="1" height="5" alt="" border="0"></td></tr>
+
+<!-- end header -->
+
+
+<!-- body -->
+<tr><td>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+<!-- left column -->
+
+<td bgcolor="#083463" width="130" valign="top">
+<table border="0" cellspacing="0" cellpadding="0"><tr>
+<td><a name="#skiptop"></a><a href="#skipleft"><img src="http://www.vhl.org/images/skipleftnav.gif" width="8" height="1" alt="Skip The Left Navigation" border="0"></a></td>
+<td>
+
+<p><a href="http://www.vhl.org/" class="lftnav">Home</a></p>
+<p>&nbsp;</p>
+<p><a href="../search.php" class="lftnav">Site Search</a></p>
+<p>&nbsp;</p>
+<p><a href="whatis.php" class="lftnav">Introduction to VHL</a></p>
+<p>&nbsp;</p>
+<p><a href="/handbook" class="lftnav">VHLFA Handbook</a></p>
+<p>&nbsp;</p>
+<p><a href="/profinfo" class="lftnav">Information for Professionals</a></p>
+<p>&nbsp;</p>
+<p><a href="famindex.php" class="lftnav">Information for Families</a></p>
+<p>&nbsp;</p>
+<p><a href="famindex.php" class="lftnav">Personal Stories</a></p>
+<p>&nbsp;</p>
+<p><a href="/newsletter" class="lftnav">Newsletter</a></p>
+<p>&nbsp;</p>
+<p><a href="/press/presskit/index.php" class="lftnav">Press Kit</a></p>
+<p>&nbsp;</p>
+<p><a href="/press/index.php" class="lftnav">In the News</a></p>
+<p>&nbsp;</p>
+<p><a href="/aboutvhlfa/contactus.php" class="lftnav">Contact Us</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<! -- start signup form -->
+<div align="center" class="search">Keep Informed <br>
+  with our free newsletter<br>
+<form name="form1" method="post" action="https://www.mcssl.com/app/contactsave.asp">
+<input name="merchantid" type="hidden" id="merchantid" value="120791">
+  <input name="ARThankyouURL" type="hidden" id="ARThankyouURL" value="www.vhl.org/signup_thankyou.php">
+  <input name="copyarresponse" type="hidden" id="copyarresponse" value="1">
+  <input name="custom" type="hidden" id="custom" value="0">
+  <input name="defaultar" type="hidden" id="defaultar" value="309650">
+  <input name="allowmulti" type="hidden" id="allowmulti" value="0">
+  <input name="visiblefields" type="hidden" id="visiblefields" value="Name,Email1">
+  <input name="requiredfields" type="hidden" id="requiredfields" value="Email1">
+</div>
+<form name="form1" method="post" action="https://www.mcssl.com/app/contactsave.asp">
+  <table>
+    <tr>
+      <td></td>
+      <td><input name="Name" type="text" size="13" value="name"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input name="Email1" type="text" size="13" value="e-mail address"></td>
+    </tr>
+	<tr align="center">
+		<td colspan="2">
+			<input type="Submit" name="cmdSubmit" value="Sign Me Up">
+		</td>
+	</tr>
+  </table>
+</form>
+<! -- end signup form -->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td></tr></table>
+</td>
+<!-- p align="center" valign="bottom"><img src="images/seal_small.gif" width="82" height="136" alt="" border="0"></p -->
+<!-- end left column -->
+<!-- spacer -->
+<td><img src="../images/powerful_patient.gif" width="10" height="1" alt="" border="0"></td>
+<!-- end spacer -->
+
+<!-- right column -->
+<td valign="top">
+
+<a name="#skipleft"></a>
+
+    <!-- InstanceBeginEditable name="Title" -->
+	  	  <h1><i>What is VHL?</i> </h1>
+	<!-- InstanceEndEditable -->
+
+
+<!-- InstanceBeginEditable name="SubTitle" -->
+<span class="byline"><em>&copy;1993-2008, VHL Family Alliance</em>, Last update
+  <!-- #BeginDate format:En2 -->29-May-2008<!-- #EndDate -->
+</span><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Description" --> 
+ 
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Image" -->
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Story" -->
+<p>&nbsp;</p>
+<p><strong>Von Hippel-Lindau</strong>, abbreviated VHL, is a genetic condition involving the abnormal growth of blood vessels in some parts of the body which are particularly rich in blood vessels. 
+</p>
+<p>&nbsp;</p>
+<p>While blood vessels normally grow like trees, in people with VHL little knots of capillaries sometimes occur. These little knots are called angiomas, or hemangioblastomas. </p>
+<p>&nbsp;</p>
+<p>These angiomas may cause problems, and problems can develop around them. For this reason they need to be carefully monitored by the medical team. </p>
+<p>&nbsp;</p>
+<p>The disease can be different in every patient. Even in the same family, people may show only one, or several of the symptoms of VHL. Since it is impossible to predict which one or more symptoms of VHL each person will have, it is important to check for all the possibilities. </p>
+<p>&nbsp;</p>
+<p>Dr. Eugen von Hippel described the angiomas in the eye in 1904. His name is usually associated with VHL in the retina, though even in his original case study his patients had tumors in places other than the eye. </p>
+<p>&nbsp;</p>
+<p>Dr. Arvid Lindau described the angiomas of the cerebellum and spine in 1926. His name is usually associated with occurrence of VHL in the central nervous system.&nbsp;</p>
+<p>&nbsp; </p>
+<p><b>Types of Angiomas:</b> The angioma may occur in a delicate place where the pressure it exerts may cause symptoms. Angiomas in the brain or spinal cord, for example, may press on nerve or brain tissue and cause symptoms such as headaches. </p>
+<p>&nbsp;</p>
+<p>As the angioma grows, the walls of the blood vessels may weaken and some blood leakage may occur, causing damage to surrounding tissues. Blood leakage from angiomas in the retina can interfere with vision. Early detection and careful monitoring of the eye are very important to maintain healthy vision. </p>
+<p>&nbsp;</p>
+<p>Cysts may also grow around angiomas. Cysts are fluid-filled sacs which may exert pressure or create blockages which can cause symptoms. Some male patients experience tumors in the scrotal sacs. These tumors are almost always benign, but should be examined by a urologist. Similarly, some women develop benign cystadenomas in the female reproductive tract (uterus, fallopian tubes, ovaries). </p>
+<p>&nbsp;</p>
+<p>Cysts and tumors may also occur in the kidney, pancreas, liver, or adrenal glands. Symptoms here may include high blood pressure. Some of these tumors are benign, while others are cancerous. Early detection and careful monitoring are particularly important for these organ systems, usually with CT, MRI, or ultrasound scanning yearly. </p>
+<p>&nbsp;</p>
+<p><b>How Do People get VHL?</b> Von Hippel-Lindau is a genetically transmitted condition. It is caused by a dominant gene. Even in people who have this gene, however, there is a wide variation in the date of onset of the disease, the organ system in which the problem occurs, or the severity of the involvement. Every person is different. </p>
+<p>&nbsp;</p>
+<p>The VHL Family Alliance has prepared a <a href="../handbook/index.php">booklet</a> which discusses VHL in greater detail, and helps to explain some of the medical terminology that health care professionals may use in discussing diagnosis and treatment. </p>
+<p>&nbsp;</p>
+<p><b>Early Detection:</b> Because VHL varies so widely, there is not a consistent set of symptoms in each person. Each possible evidence of the disease has its own diagnostic evaluation. </p>
+<p>&nbsp;</p>
+<p>If someone has a family history of VHL, it is important to begin screening early, before any symptoms occur. The doctor should be consulted about the best time to begin screening, and the right schedule for return visits. It is generally recommended to begin regular screening by age six, or even earlier. </p>
+<p>&nbsp;</p>
+<p>One clear screening does not necessarily mean there is no VHL present. Serious issues may occur for the first time later in life. The definitive test for VHL is DNA testing.&nbsp; Using DNA testing, people with no symptoms have been found to have a change in the VHL gene even at age 84.&nbsp; Even though they themselves have no symptoms, <a href="#inheritance">their children</a> were still at risk for VHL.</p>
+<p>&nbsp;</p>
+<p>Depending on the outcome of screening, the doctor will determine what particular symptoms need to be followed closely. Certainly any vomiting, headaches, balance problems, or persistent pain lasting more than 1-2 days and which stays in one place, should be checked with a doctor. If you experience an appreciable change in hearing or vision, you should see a retinal or hearing specialist immediately, and tell them you have VHL, or that there is VHL in your family. </p>
+<p>&nbsp;</p>
+<p>Once VHL has been diagnosed in any one part of the body, it is important to undergo a full screening for other possible evidences of the disease in other parts of the body, and to return for additional screening on the schedule recommended by the medical team. </p>
+<p>&nbsp;</p>
+<p>With early detection and treatment, there is more hope today for families with von Hippel-Lindau disease than ever before. Research on VHL and related diseases has led to better methods of diagnosing and treating it. Our knowledge about VHL is increasing rapidly. The VHL Family Forum will bring you the latest news about VHL. </p>
+<p>&nbsp;</p>
+<h2><a name="inheritance">Inheritance of VHL</a></h2>
+<meta name="AUTHOR" content="Christopher Owen">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td valign="top">
+
+      <table border="1" width="100%">
+        <tr>
+          <td width="50%"><img src="../gifs/Domgene.gif" alt="Domgene.gif (4845 bytes)" width="350" height="289"></td>
+          <td width="50%">A child receives one gene in each pair from each patent.&nbsp; If one parent has a Dominant gene (D), each child has a fifty-fifty chance of inheriting the condition.&nbsp; Dominant genes dominate their normal counterparts (n).&nbsp; A dominant gene can be inherited by either a male or a female child.
+              <p>For more information, see the <a href="../handbook/index.php">VHL Handbook</a>.</td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+<!-- InstanceEndEditable --> </td>
+<!-- end right column -->
+
+</tr>
+</table>
+</td></tr>
+<!-- end body -->
+
+
+
+<!-- footer -->
+<!-- InstanceBegin template="/Templates/zadmin_footer_html.dwt" codeOutsideHTMLIsLocked="false" --><tr><td bgcolor="#FFFFFF"><img src="http://www.vhl.org/images/cancer_treatment_t.gif" width="600" height="10" alt="" border="0"></td></tr>
+<tr><td bgcolor="#083463"><img src="http://www.vhl.org/images/cancer_treatment_t.gif" width="600" height="1" alt="" border="0"></td></tr>
+<tr><td class="footer">
+<p>&nbsp;</p>
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+<td width="110" class="footer"><a href="HTTP://WWW.VHL.ORG/aboutvhlfa/contactus.php">Contact Us</a></td>
+<td width="110" class="footer"><div align="center"><a href="http://www.vhl.org/aboutvhlfa/aboutwebsite.php">Privacy</a></div></td>
+<td width="160" class="footer"><div align="center">Copyright 1993-2009</div></td>
+<td width="110" class="footer"><div align="center"><a href="http://www.vhl.org/awards.php">Awards</a></div></td>
+<td width="110" class="footer"><div align="center"><a href="http://vhl.org/helpnow/index.php">Donate Now</a></div></td>
+</tr></table>
+<p>&nbsp;</p>
+<!-- InstanceEndEditable -->
+<!-- The following script is essential to the working of Google Analytics  leave intact -->
+<p>&nbsp;</p>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6229758-1");
+pageTracker._trackPageview();
+</script>
+<!-- End Google Analytics script -->
+</td></tr>
+<!-- End table and end body are in the php file --><!-- InstanceEnd --><!-- end footer -->
+
+</table>
+</body>
+<!-- InstanceEnd --></HTML>
